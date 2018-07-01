@@ -1,6 +1,6 @@
 # **iOS Curriculum**
 
-This is a series of workshops designed to walk you through everystep in the iOS app development process; from installing Xcode oxn your mac, all the way through how to submit your app to the App Store.
+This is a series of 6 workshops designed to walk you through everystep in the iOS app development process; from installing Xcode oxn your mac, all the way through how to submit your app to the App Store.
 
 Each workshop will build on the previous ones; if anyone missed a workshop or just wants to join in halfway through the series, all the material covered in each workshop can be found in the workshop folder.
 
