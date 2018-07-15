@@ -1,8 +1,10 @@
 # **iOS Curriculum**
 
-This is a series of 6 workshops designed to walk you through everystep in the iOS app development process; from installing Xcode oxn your mac, all the way through how to submit your app to the App Store.
+This is a series of 5 workshops designed to walk you through everystep in the iOS app development process: how to install Xcode, how do design and program your app, and how to put your app on your phone.
 
 Each workshop will build on the previous ones; if anyone missed a workshop or just wants to join in halfway through the series, all the material covered in each workshop can be found in the workshop folder.
+
+This series of workshops is designed for beginners. Even if you have never created a program before, you should be able to follow along. If you get lost while actually attending the workshops, you can view all the material online and work on it at your own pace on the [GitHub repo](github.com/riconaranjo/iOS-Curriculum/tree/master).
 
 ## **0. Prelude: Installing Xcode on a macOS VM**
 
@@ -54,6 +56,10 @@ Topics:
 - How to save custom class
 - Implementing CoreData in Places App [from workshop 3]
 
-## **5. The Finish Line**
+## The Finish Line
 
-In this workshop we will learn how to submit apps to the App Store, and how to ensure your app gets approved.
+If you made it through all of these workshop, then congratulations! You are now a totally super officially certified 🔥 iOS Master. I hope you learned a lot and enjoyed participating in my workshops.
+
+After this I would suggest you continue, try and make something you think would be cool to make; perhaps make something that you can't find on the app store, or perhaps see if you can replicate an already famous app.
+
+If you have any questions, or [feedback]() [good or bad] I would love to hear from you. 
