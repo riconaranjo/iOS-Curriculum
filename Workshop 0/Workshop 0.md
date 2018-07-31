@@ -24,6 +24,13 @@ If you are attending this workshop: since I own a mac, I have already downloaded
 
 ## Creating a Virtual Machine
 
+There are a few ways to create a macOS VM:
+
+- you can install macOS on a blank VM disk image
+- you can use an VM disk image provided from someone else
+
+The quicker of these two methods is the latter, therefore I have gone through the hassle of downloading
+
 ---
 
 ## Minor Tweaks
@@ -54,7 +61,13 @@ Next you will have to run the following commands, but make sure you have changed
 
 ---
 
-### Changing Resolution
+### Changing Resolution + Scaling
+
+By default, the VM will open in a small window of 1024x768 px. In order to fix this, we will first change the resolution to something appropriate for whatever device you are working on, and then change the window size with VirtualBox's Scale mode.
+
+---
+
+#### Resolution
 
 Unfortunately the only way to change the resolution of the VM is by once again using the command line. There are three methods, of which the first two are very similar.
 
@@ -97,6 +110,12 @@ With this method you can chose the following resolutions, replace the 5 above wi
 - 3 : 1280x1024
 - 4 : 1440x900
 - 5 : 1900x1200
+
+---
+
+#### Scaling
+
+In order to enter scaling mode...
 
 ---
 
