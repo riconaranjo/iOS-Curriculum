@@ -18,6 +18,8 @@ If you want to be able to participate with everything throughout this workshop, 
 
 I recommend if you plan on attending this workshop, you should preinstall VirtualBox; you can download it from [virtualbox.org](https://virtualbox.org).
 
+Any resourced used to create this workshop can be found at the bottom of this file.
+
 ---
 
 ## Getting a copy of macOS
@@ -100,9 +102,11 @@ After creating your virtual machine and changing some settings, there are still 
 
 In order to change these settings we will have to use the command line. Open the Command Prompt with administrator permissions. _If you're on linux_, you already know how to open the command line terminal.
 
-First close VirtualBox, otherwise these changes will not take effect and be overwritten next time the VM is booted.
+First **close VirtualBox**, otherwise these changes **will not take effect** and be overwritten without taking effect.
 
 You can do this by pressing <kbd>windows key</kbd> + <kbd>s</kbd> and typing `cmd`. Next right-click on Command Prompt and select _Run as Adminstrator_.
+
+![virtualbox-terminal](img/virtualbox-terminal.png)
 
 Next you will have to run the following commands, but make sure you have changed the VM name [here I used `macOS VM`] if your VM is named differently.
 
@@ -123,6 +127,8 @@ Next you will have to run the following commands, but make sure you have changed
 ### Changing Resolution + Scaling
 
 By default, the VM will open in a small window of 1024x768 px. In order to fix this, we will first change the resolution to something appropriate for whatever device you are working on, and then change the window size with VirtualBox's Scale mode.
+
+![ui-for-ants](img/ui-for-ants.png)
 
 #### Resolution
 
@@ -174,11 +180,19 @@ With method 3 you only choose from the following resolutions, replacing the 5 ab
 
 #### Scaling
 
-In order to enter scaling mode...
+VirtualBox has a scaling mode which allows the VM to be displayed at other display scalings other than simply one-to-one pixels. This is especially an issue with high pixel density screens such as on a 13" 4k laptop or Surface Pro, where a 1080p VM will only take up a small portion of the screen with a UI for ants.
+
+To enter **Scaling Mode**, you can select it from the menubar under {something}...
+
+In order to make sure the VM isn't warped when you re-scale it, you can use a third party application such as {something}...
 
 ---
 
+## Installing macOS
+
 ## References
+
+These are all the articles I used to created this workshop:
 
 - main reference: [howtogeek.com](https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virtualbox-on-windows-10/)
 - resolution changes methods 1 + 2: [wikigain.com](http://www.wikigain.com/fix-virtualbox-macos-high-sierra-screen-resolution-1920x1080-4k-5k/)
