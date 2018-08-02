@@ -78,7 +78,7 @@ Hard disk file type: select **VDI (VirtualBox Disk Image)**.
 
 Press **Continue**.
 
-Now you should be on the Storage on Physical hard disk pane, here you will see two options: **_Dynamically allocated_** and **_Fixed size_**. If you select Dynamically allocated, the disk will take up much less space locally, but at a perfomance hit.
+Now you should be on the Storage on Physical hard disk pane, here you will see two options: **_Dynamically allocated_** and **_Fixed size_**. If you select Dynamically allocated, the disk will take up much less space locally, but at a performance hit.
 
 Since the purpose of this VM is to run Xcode, which is a rather powerful program, I have chosen **Fixed Size**, but this choice is up to your circumstances.
 
@@ -196,5 +196,5 @@ These are all the articles I used to created this workshop:
 
 - main reference: [howtogeek.com](https://www.howtogeek.com/289594/how-to-install-macos-sierra-in-virtualbox-on-windows-10/)
 - resolution changes methods 1 + 2: [wikigain.com](http://www.wikigain.com/fix-virtualbox-macos-high-sierra-screen-resolution-1920x1080-4k-5k/)
-- reolutions changes method 3: [wikigain.com](http://www.wikigain.com/fix-macos-high-sierra-screen-resolution-virtualbox/)
+- resolutions changes method 3: [wikigain.com](http://www.wikigain.com/fix-macos-high-sierra-screen-resolution-virtualbox/)
 - alternate method: [makeuseof.com](https://www.makeuseof.com/tag/macos-windows-10-virtual-machine/)

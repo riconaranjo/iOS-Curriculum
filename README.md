@@ -1,8 +1,8 @@
 # iOS Curriculum
 
-This is a series of **5 workshops** designed to walk you through everystep in the iOS app development process: how to install Xcode, how do design and program your app, and how to put your app on your phone.
+This is a series of **5 workshops** designed to walk you through every step in the iOS app development process: how to install Xcode, how to design and program your app, and how to put your app on your phone.
 
-**Each workshop will build on the previous ones;** if you missed a workshop or you just want to join in halfway through the series, all the material covered in each workshop can be found in its repective workshop folder.
+**Each workshop will build on the previous ones;** if you missed a workshop or you just want to join in halfway through the series, all the material covered in each workshop can be found in its respective workshop folder.
 
 // todo insert folder links here:
 
@@ -10,7 +10,7 @@ This series of workshops is designed for beginners. Even if you have never creat
 
 ## 0. Prelude: Installing Xcode on a macOS VM
 
-This workshop will cover how to setup your own macOS Virtual Machine [VM], in case you don't have access to your own mac but you still want to develop iOS/macOS apps.
+This workshop will cover how to setup your own macOS Virtual Machine [VM], in case you don't have access to your own mac but you still want to develop iOS / macOS apps.
 
 ## 1. Getting Started
 
@@ -60,7 +60,7 @@ Here we will learn about CoreData and how use it to save data between sessions. 
 
 ## The Finish Line
 
-If you made it through all of these workshop, then congratulations! You are now a super totally official certified 🔥 iOS Master. I hope you learned a lot and enjoyed participating in my workshops.
+If you made it through all of these workshops, then congratulations! You are now a super totally officially certified 🔥 iOS Master. I hope you learned a lot and enjoyed participating in my workshops.
 
 After this I would suggest you keep going, try and make something you think would be cool to make; perhaps make something that you can't find on the app store, or perhaps see if you can replicate an already famous app.
 
