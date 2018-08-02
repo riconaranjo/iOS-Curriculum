@@ -182,9 +182,11 @@ With method 3 you only choose from the following resolutions, replacing the 5 ab
 
 VirtualBox has a scaling mode which allows the VM to be displayed at other display scalings other than simply one-to-one pixels. This is especially an issue with high pixel density screens such as on a 13" 4k laptop or Surface Pro, where a 1080p VM will only take up a small portion of the screen with a UI for ants.
 
-To enter **Scaling Mode**, you can select it from the menubar under {something}...
+To enter **Scaled Mode**, you can select it from the menubar under **View**. This will allow you to resize the VM window, although this can warp everything in the window.
 
-In order to make sure the VM isn't warped when you re-scale it, you can use a third party application such as {something}...
+To exit *Scaled Mode**, press <kbd>right contro/l<kbd> + <kbd>c</kbd>. If your keyboard doesn't have a right control [as many laptops don't]. You can remap this key [**_Host Key_**] in **Preferences** > **Input** > **Virtual Machine**, and find **Host Key Combination**. I decided to use <kbd>right alt</kbd> as my host key.
+
+In order to make sure the VM isn't warped when you re-scale it, you can use a third party application such as [Sizer](http://www.brianapps.net/sizer/). On my Surface Pro, the perfect windows size was 1366x768.
 
 ---
 
