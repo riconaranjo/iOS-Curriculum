@@ -132,11 +132,11 @@ Click on the empty CD under **Storage Devices**. In the **Attributes*** section,
 
 ### Command Line Tweaks
 
-In order to change these settings we will have to use the command line. Open the Command Prompt with administrator permissions. _If you're on linux_, you already know how to open the command line terminal.
+In order to change these settings we will have to use the command line. There are many different ways to open **Command Prompt**, I find the quickest way is to press. You can do this by pressing <kbd>windows key</kbd> + <kbd>s</kbd> and typing `cmd`, and pressing <kbd>enter</kbd> after **Command Prompt** appears and is highighted.
+
+_If you're on linux_, you already know how to open the command line terminal.
 
 First **close VirtualBox**, otherwise these changes **will not take effect** and be overwritten without taking effect.
-
-You can do this by pressing <kbd>windows key</kbd> + <kbd>s</kbd> and typing `cmd`. Next right-click on Command Prompt and select _Run as Adminstrator_.
 
 ![virtualbox-terminal](img/virtualbox-terminal.png)
 
@@ -164,7 +164,7 @@ By default, the VM will open in a small window of 1024x768 px. In order to fix t
 
 #### Resolution
 
-Unfortunately the only way to change the resolution of the VM is by once again using the command line. There are three methods, of which the first two are very similar.
+Unfortunately the only way to change the resolution of the VM is by once again using the command line. There are three methods, of which the first two are very similar. Choose only one
 
 First navigate to the correct directory:
 
@@ -174,7 +174,7 @@ _Method 1:_
 
     VBoxManage setextradata “macOS VM” VBoxInternal2/EfiGraphicsResolution 1920x1080
 
-_Method 2:_
+_Method 2:_ with this method you can mix and match the veritical and horizontal resolutions, such as 1920x1440.
 
     VBoxManage setextradata “macOS VM” VBoxInternal2/EfiHorizontalResolution 1920
 
@@ -216,9 +216,11 @@ VirtualBox has a scaling mode which allows the VM to be displayed at other displ
 
 To enter **Scaled Mode**, you can select it from the menubar under **View**. This will allow you to resize the VM window, although this can warp everything in the window.
 
-To exit *Scaled Mode**, press <kbd>right contro/l</kbd> + <kbd>c</kbd>. If your keyboard doesn't have a right control [as many laptops don't]. You can remap this key [**_Host Key_**] in **Preferences** > **Input** > **Virtual Machine**, and find **Host Key Combination**. I decided to use <kbd>right alt</kbd> as my host key.
+To exit **Scaled Mode**, press <kbd>right contro/l</kbd> + <kbd>c</kbd>. If your keyboard doesn't have a right control [as many laptops don't]. You can remap this key [**_Host Key_**] in **Preferences** > **Input** > **Virtual Machine**, and find **Host Key Combination**. I decided to use <kbd>right alt</kbd> as my host key.
 
-In order to make sure the VM isn't warped when you re-scale it, you can use a third party application such as [Sizer](http://www.brianapps.net/sizer/). On my Surface Pro, the perfect windows size was 1366x768.
+In order to make sure the VM isn't warped when you re-scale it, you can also use 
+
+you can use a third party application such as [Sizer](http://www.brianapps.net/sizer/). On my Surface Pro, the perfect windows size was 1366x768.
 
 ---
 
@@ -230,21 +232,51 @@ The first step is simple. Boot up your VM. You should see a bunch of text scroll
 
 ![virtualbox-verbose](img/virtualbox-verbose.png)
 
-After some time, you should see a grey screen with a few options: Disk Utility, Install macOS, {...}, {...} . This is macOS's recovery mode and it allows you to reformat the hard drive, install a new oparting system, and a few other things.  // todo: finish
+After some time, you should see a grey screen and shortly after a window with different language options should appear. Select whichever language you are comfortable with, and press the arrow [or press <kbd>enter</kbd>]. This will take you the **macOS utilities** window.
+
+![virtualbox-languages](img/virtualbox-languages.png)
+
+Here you will find a few options: **Restore from Time Machine Backup**, **Reinstall macOS**, **Get Help Online**, and **Disk Utility**. This is macOS's recovery mode and it allows you to restore your mac, reformat the hard drive, install a new oparting system, and several useful features.
 
 ![virtualbox-recovery](img/virtualbox-recovery.png)
 
-What we need to do is first reformat our VM's hard drive to HFS+, Apple's own file system [like NTFS on windows]. Do do this select **Disk Utility**. You then want to select the VM hard drive, which should be named {...}. If you cannot see it, select **View** > **View all drives**; it should appear on the left hand pane.
+What we need to do is first reformat our VM's hard drive to HFS+, Apple's own file system [like NTFS on windows]. Do do this select **Disk Utility** and press **Continue**. You then want to select the VM hard drive, which should be named VBOX **_HARDDISK Media_**. If you cannot see it, select **View** > **Show All Devices**; it should appear on the left hand pane.
 
 ![virtualbox-disk-utility](img/virtualbox-disk-utility.png)
 
-After selecting the drive, click on the **Erase** button. This will allows us to reformat the hard drive with **HTFS+**. In the window that appears, change the drive name to **Macintosh HD**, select HTFS+ [**do not select APFS, as this is not supported by VirtualBox, and you will have to restart with a new VM**].
+After selecting the drive, click on the **Erase** button. This will allows us to reformat the hard drive with **HTFS+**.
+
+In the window that appears, change the drive name to `Macintosh HD`, select **Mac OS Extended (Journaled)** or **Mac OS Extended (Case-sensative, Journaled)**. The case sensitive version will differenitate [betweeen folder names](https://support.apple.com/en-ca/guide/disk-utility/erase-a-volume-dskutl14079/mac) based-off upper / lower case [`HOMEWORK` and `Homework` would be the same in the former]. **_Do not select APFS, as this is not supported by VirtualBox, and you will have to restart with a new VM_**.
+
+Keep the Scheme as GUID Partition Map.
 
 ![virtualbox-reformat](img/virtualbox-reformat.png)
 
 Press **Erase**.
 
-![virtualbox-reformat](img/virtualbox-reformat.png)
+You should see a small window with a progress bar as the drive is reformattted. Once it is done you should see a green checkmark, press **Done**; if you instead get a red x, re-try reformatting, then try **First Aid** and reformatting after. This should work on the first try though.
+
+Press the **red x** on the upper left hand corner to exit out of **Disk Utility**. This will take you back to the **macOS Utilities** window.
+
+Select **Reinstall macOS** and press **Continue**.
+
+Once the **Install macOS High Sierra** tool loads, press **Continue** again.
+
+![virtualbox-install](img/virtualbox-install.png)
+
+You should see the _software license agreement_, press **Agree**, and again when it asks to confirm that you read it.
+
+![virtualbox-license](img/virtualbox-license.png)
+
+Now you should see a prompt to selec the disk where you want to install macOS. Select the hard drive you reformatted earlier; if you don't see it, you did something wrong, go back and reformat it again.
+
+![virtualbox-select-disk](img/virtualbox-select-disk.png)
+
+Click on `Macintosh HD`, and press **Install**
+
+// start the install
+// disconnect the iso file
+// log in
 
 ## References
 
