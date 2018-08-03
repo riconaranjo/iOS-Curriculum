@@ -1,4 +1,24 @@
-# 0. Prelude: Installing Xcode on a macOS VM
+# 1. Getting Started
+
+This workshop is about learning how to code in Swift, using Xcode Playgrounds.
+
+| Topics                                    |
+| ----------------------------------------- |
+| Data-types                                |
+| Functions                                 |
+| How to create a project in Xcode          |
+| Building a super basic iOS app            |
+| How to set up your iphone for app testing |
+
+
+
+
+
+
+
+
+
+
 
 The purpose of this workshop is to **teach you how to create a macOS Virtual Machine [VM]** because you want **to learn iOS / macOS app development** using Xcode, but have no easy access to a mac.
 
@@ -98,39 +118,7 @@ You should now see your new VM in the VirtualBox Manager. Success!
 
 ### Minor Tweaks
 
-After creating your virtual machine, we can change some settings in VirtualBox. There are a few more settings that need to modified but unfortunately VirtualBox doesn't let us do this through a GUI, but we can use the command line for this.
-
-### Virtual Box Tweaks
-
-In the VirtualBox Manager, select your new VM. After doing so, press **Settings**. This will open a pop-up window.
-
-![virtualbox-settings](img/virtualbox-settings.png)
-
-Select **System**. You should be in the **Motherboard** tab.
-
-In the **Boot Order**, unselect **Floppy**, we will be using the Optical option to boot from the installer, and then the Hard Disk to boot from after that.
-
-![virtualbox-motherboard](img/virtualbox-motherboard.png)
-
-Go to the **Processor** tab.
-
-Increase the number of processors, as this will dramatically increase the speed of your VM. We are now done with the System settings.
-
-![virtualbox-processor](img/virtualbox-processor.png)
-
-Select **Display**. You should be in the **Screen** tab.
-
-You want to increase the **Video Memory** to the maximum, as this will also heavily impact performance.
-
-![virtualbox-display](img/virtualbox-display.png)
-
-Select **Storage**.
-
-Click on the empty CD under **Storage Devices**. In the **Attributes*** section, click on the icon next to the dropdown menu, and click choose **Virtual Optical Disk File...**. Find the macOS ISO file on your computer, and select it.
-
-![virtualbox-optical](img/virtualbox-optical.png)
-
-### Command Line Tweaks
+After creating your virtual machine and changing some settings, there are still a few more settings that need to modified but unfortunately VirtualBox doesn't let us do this through a GUI.
 
 In order to change these settings we will have to use the command line. Open the Command Prompt with administrator permissions. _If you're on linux_, you already know how to open the command line terminal.
 
@@ -216,35 +204,13 @@ VirtualBox has a scaling mode which allows the VM to be displayed at other displ
 
 To enter **Scaled Mode**, you can select it from the menubar under **View**. This will allow you to resize the VM window, although this can warp everything in the window.
 
-To exit *Scaled Mode**, press <kbd>right contro/l</kbd> + <kbd>c</kbd>. If your keyboard doesn't have a right control [as many laptops don't]. You can remap this key [**_Host Key_**] in **Preferences** > **Input** > **Virtual Machine**, and find **Host Key Combination**. I decided to use <kbd>right alt</kbd> as my host key.
+To exit *Scaled Mode**, press <kbd>right contro/l<kbd> + <kbd>c</kbd>. If your keyboard doesn't have a right control [as many laptops don't]. You can remap this key [**_Host Key_**] in **Preferences** > **Input** > **Virtual Machine**, and find **Host Key Combination**. I decided to use <kbd>right alt</kbd> as my host key.
 
 In order to make sure the VM isn't warped when you re-scale it, you can use a third party application such as [Sizer](http://www.brianapps.net/sizer/). On my Surface Pro, the perfect windows size was 1366x768.
 
 ---
 
 ## Installing macOS
-
-Now that you have your VM all set up, only one thing remains: actually installing macOS.
-
-The first step is simple. Boot up your VM. You should see a bunch of text scrolling by. This will go on for a few minutes. If this continues for upwards lof 20 min, and you can tell that it is repeatedly looping through the same text, then this is a sign that you did something wrong; probably changing settings with the command line while VirtualBox was open.
-
-![virtualbox-verbose](img/virtualbox-verbose.png)
-
-After some time, you should see a grey screen with a few options: Disk Utility, Install macOS, {...}, {...} . This is macOS's recovery mode and it allows you to reformat the hard drive, install a new oparting system, and a few other things.  // todo: finish
-
-![virtualbox-recovery](img/virtualbox-recovery.png)
-
-What we need to do is first reformat our VM's hard drive to HFS+, Apple's own file system [like NTFS on windows]. Do do this select **Disk Utility**. You then want to select the VM hard drive, which should be named {...}. If you cannot see it, select **View** > **View all drives**; it should appear on the left hand pane.
-
-![virtualbox-disk-utility](img/virtualbox-disk-utility.png)
-
-After selecting the drive, click on the **Erase** button. This will allows us to reformat the hard drive with **HTFS+**. In the window that appears, change the drive name to **Macintosh HD**, select HTFS+ [**do not select APFS, as this is not supported by VirtualBox, and you will have to restart with a new VM**].
-
-![virtualbox-reformat](img/virtualbox-reformat.png)
-
-Press **Erase**.
-
-![virtualbox-reformat](img/virtualbox-reformat.png)
 
 ## References
 
