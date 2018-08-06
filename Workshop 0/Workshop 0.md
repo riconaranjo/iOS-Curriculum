@@ -212,15 +212,15 @@ With method 3 you only choose from the following resolutions, replacing the 5 ab
 
 #### Scaling
 
-VirtualBox has a scaling mode which allows the VM to be displayed at other display scalings other than simply one-to-one pixels. This is especially an issue with high pixel density screens such as on a 13" 4k laptop or Surface Pro, where a 1080p VM will only take up a small portion of the screen with a UI for ants.
+VirtualBox has a two scaling methods which allows the VM to be displayed at other display scalings other than simply one-to-one pixels. This is especially an issue with high pixel density screens such as on a 13" 4k laptop or Surface Pro, where a 1080p VM will only take up a small portion of the screen with a UI for ants.
 
-To enter **Scaled Mode**, you can select it from the menubar under **View**. This will allow you to resize the VM window, although this can warp everything in the window.
+There is the **Scaled Factor** which can be adjusted to make each virtual pixel larger. This is the easier of the two methods, and preserves the height and width ratios.
+
+The second method is **Scaled Mode**, which you can select it from the menubar under **View**. This will allow you to resize the VM window, although this can warp everything in the window.
 
 To exit **Scaled Mode**, press <kbd>right contro/l</kbd> + <kbd>c</kbd>. If your keyboard doesn't have a right control [as many laptops don't]. You can remap this key [**_Host Key_**] in **Preferences** > **Input** > **Virtual Machine**, and find **Host Key Combination**. I decided to use <kbd>right alt</kbd> as my host key.
 
-In order to make sure the VM isn't warped when you re-scale it, you can also use 
-
-you can use a third party application such as [Sizer](http://www.brianapps.net/sizer/). On my Surface Pro, the perfect windows size was 1366x768.
+In order to make sure the VM isn't warped when you re-scale it, you can also use a third party application such as [Sizer](http://www.brianapps.net/sizer/). On my Surface Pro, the perfect windows size was 1366x768.
 
 ---
 
@@ -268,15 +268,43 @@ You should see the _software license agreement_, press **Agree**, and again when
 
 ![virtualbox-license](img/virtualbox-license.png)
 
-Now you should see a prompt to selec the disk where you want to install macOS. Select the hard drive you reformatted earlier; if you don't see it, you did something wrong, go back and reformat it again.
+Now you should see a prompt to select the disk where you want to install macOS. You should see the hard drive you reformatted earlier; if you don't see it, you did something wrong: go back and reformat it again.
 
 ![virtualbox-select-disk](img/virtualbox-select-disk.png)
 
 Click on `Macintosh HD`, and press **Install**
 
-// start the install
-// disconnect the iso file
-// log in
+This process can take quite a long time, easily more than an hour.
+
+At some point you will see your VM restart and go back to the **macOS Utilities** screen. This is normal. What we need to do now is to remove the installer ISO file, reboot the VM, and start the second part of the installer.
+
+At this point the installer has copied files onto the main hard drive and is expecting to boot from there. This does not work properly on a virtual machine, and so we have to help it a bit.
+
+Let's start by turning off the VM, and going to its **Storage** settings. Select the the macOS ISO file and then select the small CD icon on the right of the optical drive dropdown menu.
+
+Select **Remove Disk from Virtual Drive**.
+
+![virtualbox-remove-installer](virtualbox-remove-installer.png)
+
+Now let's boot up the virtual machine again. You should see a command line with some scary looking text. This is just the [EFI Internal Shell](https://kb.stonegroup.co.uk/how-to-access-the-efi-shell-to-carry-out-systems-diagnostics-or-updates_84.html), basically a small operating system which allows you to troubleshoot outside of the operating system [which we have yet to finsih installing]. If you see `FS1` listed in yellow, then we can launch the second part of the installer.
+
+![virtualbox-installer-part2](virtualbox-installer-part2.png)
+
+Click on the VM window, to allow the machine to capture your mouse and keyboard, you should get a pop-up when you do this.
+
+The rest of the installer is located on the `FS1` directory, so we need to navigate through it and then run the installer.
+
+Type the following commands into the shell:
+
+    fs1
+    cd "macOS Install Data"
+    cd "Locked Files"
+    cd "Boot Files"
+    boot.efi
+
+After a series of text you will see the installer window again on the grey background. This will take a while longer, so feel free to go get a coffee or watch some youtube videos. Or perhaps you can get started on that assignment you're procrastinating from by learning how to create a macOS VM. Up to you.
+
+Once the installer finishes, the only thing you have left is to go through the inital mac setup process and congratulations you have now created your first macOS VM.
 
 ## References
 
