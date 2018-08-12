@@ -12,19 +12,28 @@ This series of workshops is designed for beginners. Even if you have never creat
 
 This workshop will cover how to setup your own macOS Virtual Machine [VM], in case you don't have access to your own mac but you still want to develop iOS / macOS apps.
 
-## 1. Getting Started
+## 1. Getting Started with Swift
 
 This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
+| Topics                 |
+| ---------------------- |
+| Data-types             |
+| Conditional Statements |
+| Functions              |
+| Optionals              |
+
+## 2. Getting all Set-up
+
+Learning how to set yourself up with Xcode to create your own iOS apps.
+
 | Topics                                    |
 | ----------------------------------------- |
-| Data-types                                |
-| Functions                                 |
 | How to create a project in Xcode          |
 | Building a super basic iOS app            |
 | How to set up your iphone for app testing |
 
-## 2. Mastering the Basics
+## 3. Mastering the Basics
 
 In this workshop, we will learn how to create apps with more than one View in the Storyboard, how to create UI elements, and create actions for when you press a button. Then we will learn about colour schemes, why they're important, and how to apply one to your app.
 
@@ -36,7 +45,7 @@ In this workshop, we will learn how to create apps with more than one View in th
 | Creating segues                |
 | Applying a colour scheme       |
 
-## 3. Next Level
+## 4. Next Level
 
 This workshop is about how to create an app that uses the MapKit framework. We will create a basic app to save different places on a map.
 
@@ -47,7 +56,7 @@ This workshop is about how to create an app that uses the MapKit framework. We w
 | Saving locations from a long press on map |
 | Showing saved locations from segue        |
 
-## 4. iOS Master
+## 5. iOS Master
 
 Here we will learn about CoreData and how use it to save data between sessions. Also we will learn how to add a settings menu where you can change the colour theme of your app.
 
