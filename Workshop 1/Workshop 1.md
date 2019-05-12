@@ -67,5 +67,5 @@ These are some useful topics that I would suggest reading into, and learning how
 
 ## References
 
-[Swift Documentation](https://developer.apple.com/reference/swift)
-[Swift Language Guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
+- [Swift Documentation](https://developer.apple.com/reference/swift)
+- [Swift Language Guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
