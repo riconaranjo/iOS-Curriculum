@@ -31,11 +31,11 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
 ## 2. Getting all Set-up
 
-Learning how to set yourself up with Xcode to create your own iOS apps.
+This workshop is about learning how to set yourself up with Xcode to create your own iOS apps. We will how to create UI elements, and create actions for when you press a button.
 
 | Topics                             |
 | ---------------------------------- |
-| Create Xcode Project               |
+| Creating an Xcode Project          |
 | Xcode layout + shortcuts           |
 | Creating buttons + textfields      |
 | Creating outlets + actions         |
@@ -43,17 +43,19 @@ Learning how to set yourself up with Xcode to create your own iOS apps.
 
 ## 3. Mastering the Basics
 
-In this workshop, we will learn how to create apps with more than one View in the Storyboard, how to create UI elements, and create actions for when you press a button. Then we will learn about colour schemes, why they're important, and how to apply one to your app.
+In this workshop, we will learn how to add a splash screen and how to create apps with more than one View in the Storyboard; we will also learn more about colour schemes, why they're important, and how to apply one to your app. We will learn how to add app icons, and then we will use all the knowledge we've learn so far to make our very own TicTacToe app.
 
 | Topics                         |
 | ------------------------------ |
+| Creating a splash screen       |
 | Multiple Views + Segues        |
 | Applying a basic colour scheme |
+| Adding an app icon             |
 | Create your own TicTacToe app  |
 
 ## 4. Next Level
 
-This workshop is about how to create an app that uses the MapKit framework. We will create a basic app to save different places on a map using a long press.
+This workshop is about how to create a more complex app that uses the MapKit framework. We will create a simple app to with two views to save different places on a map using a long press.
 
 | Topics                                    |
 | ----------------------------------------- |
@@ -66,12 +68,13 @@ This workshop is about how to create an app that uses the MapKit framework. We w
 
 Here we will learn about CoreData and how use it to save data between sessions. Also we will learn how to add a settings menu where you can change the colour theme of your app.
 
-| Topics                                                |
-| ----------------------------------------------------- |
-| Creating project with CoreData                        |
-| Adding CoreData to existing Project                   |
-| How to save custom class                              |
-| Implementing CoreData in Places App [from workshop 3] |
+| Topics                              |
+| ----------------------------------- |
+| Creating project with CoreData      |
+| Adding CoreData to existing Project |
+| How to save a custom class          |
+| Implementing CoreData in Places App |
+| Adding Settings to your app         |
 
 ## The Finish Line
 
