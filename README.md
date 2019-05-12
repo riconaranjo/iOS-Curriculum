@@ -33,11 +33,13 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
 Learning how to set yourself up with Xcode to create your own iOS apps.
 
-| Topics                                    |
-| ----------------------------------------- |
-| How to create a project in Xcode          |
-| Building a super basic iOS app            |
-| How to set up your iphone for app testing |
+| Topics                             |
+| ---------------------------------- |
+| Create Xcode Project               |
+| Xcode layout + shortcuts           |
+| Creating buttons + textfields      |
+| Creating outlets + actions         |
+| Build + Run app on your own iPhone |
 
 ## 3. Mastering the Basics
 
@@ -45,15 +47,13 @@ In this workshop, we will learn how to create apps with more than one View in th
 
 | Topics                         |
 | ------------------------------ |
-| Xcode layout + shortcuts       |
-| Creating buttons + textfields  |
-| Creating outlets + actions     |
-| Creating segues                |
-| Applying a colour scheme       |
+| Multiple Views + Segues        |
+| Applying a basic colour scheme |
+| Create your own TicTacToe app  |
 
 ## 4. Next Level
 
-This workshop is about how to create an app that uses the MapKit framework. We will create a basic app to save different places on a map.
+This workshop is about how to create an app that uses the MapKit framework. We will create a basic app to save different places on a map using a long press.
 
 | Topics                                    |
 | ----------------------------------------- |
