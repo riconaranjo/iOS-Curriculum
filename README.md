@@ -18,10 +18,16 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
 | Topics                 |
 | ---------------------- |
-| Data-types             |
+| Datatypes              |
 | Conditional Statements |
 | Functions              |
 | Optionals              |
+| Playgrounds            |
+
+### References
+
+[Swift Documentation](https://developer.apple.com/reference/swift)
+[Swift Language Guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
 
 ## 2. Getting all Set-up
 
