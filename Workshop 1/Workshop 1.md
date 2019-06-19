@@ -69,3 +69,5 @@ These are some useful topics that I would suggest reading into, and learning how
 
 - [Swift Documentation](https://developer.apple.com/reference/swift)
 - [Swift Language Guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
+- [How to make something with Swift Playgrounds](https://www.freecodecamp.org/news/how-to-make-something-with-swift-playgrounds-33e560b84184/)
+- [Awesome Swift Playgrounds](https://github.com/uraimo/Awesome-Swift-Playgrounds)
