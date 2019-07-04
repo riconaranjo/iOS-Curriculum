@@ -47,17 +47,68 @@ You should see the result on the right side of the code editor. Congrats you hav
 
 ## Datatypes
 
+Now that we have our playground setup, let's talk about Swift.
+
+Swift like any other programming languages uses datatypes and variables. A **datatype** is a particular type of data item, defined by:
+
+- the values it can take
+- the operations that can be performed by it
+
+A **variable** is an instance of a datatype.
+
+Datatypes and variables are the tools used by programmers to solve larger problems, and in order to know which tools is best for a given problem, you need to understand the strengths and weaknesses of each datatype.
+
+In this workshop we will only cover a few of the basic datatypes in Swift such as:
+
+- `Int` (integer)
+- `Double` (decimal number)
+- `Boolean` (true / false)
+- `String` (text)
+- `Array` (ordered list)
+- `Dictionary` (list with key + value pairs)
+
 ### Declarations
 
+In order to create a datatype we must declare it. If we don't declare it and try to use it, Xcode will complain telling you **Use of unresolved identifier 'x'** (where x is the variable name).
+
+_This — by the way — is called a compile error._
+
+In order to avoid this error, we have two ways of declaring a variable:
+
+1. `let` (constant)
+2. `var` (variable)
+
 #### `let`
+
+You can define a constant variable such as pi by typing the following:
+
+``` swift
+let pi = 3.1415926
+```
+
+Let's use pi to compute the circumference of Earth's path around the sun (approx.). The average distance between the Earth and the Sun is about 149.6 million km according to Google, so let's use that.
+
+``` swift
+let distance = 149_600_000.0
+let circumference = 2 * pi * distance
+
+print("the earth travels about \(circumference) km every year")
+```
+
+You might have noticed two interesting things about Swift in that example:
+
+- You can add `_` to numbers as separators to make it more readable.
+  - _e.g. `100_000_000` as opposed to `100000000`_
+- You can print variable values using **String Interpolation**.
+  - e.g. `"x has the value: \(x)"`
 
 #### `var`
 
 ### `Int`
 
-### `Boolean`
-
 ### `Double`
+
+### `Boolean`
 
 ### `String`
 
