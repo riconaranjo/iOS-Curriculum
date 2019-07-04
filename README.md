@@ -30,6 +30,7 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 - [Swift Language Guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
 - [How to make something with Swift Playgrounds](https://www.freecodecamp.org/news/how-to-make-something-with-swift-playgrounds-33e560b84184/)
 - [Awesome Swift Playgrounds](https://github.com/uraimo/Awesome-Swift-Playgrounds)
+- [WWDC 2018: Getting the Most out of Playgrounds in Xcode](https://developer.apple.com/videos/play/wwdc2018/402/)
 
 ## 2. Getting all Set-up
 
