@@ -13,10 +13,10 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 # 1.1 A Swift Start
 
 This will be a quick introduction into how to write Swift code.
-- how to create and modify variables
+- **how to create and modify variables**
   - _and how to print them_
-- how to write control flow
-- what are Optionals?
+- **how to write control flow**
+- **what are Optionals?**
   - _and why should I use them?_
 
 ## Opening Playgrounds
@@ -43,7 +43,9 @@ Press <kbd>shift</kbd> + <kbd>enter</kbd> to run this line, or press the **Run**
 
 `// todo: add run playground buttons image`
 
-You should see the result on the right side of the code editor. Congrats you have now written your first line of Swift code!
+You should see the result on the right side of the code editor. and at the bottom in the console panel.
+
+_Congrats you have now written your first line of Swift code!_
 
 ## Datatypes
 
@@ -71,7 +73,7 @@ In this workshop we will only cover a few of the basic datatypes in Swift such a
 
 In order to create a datatype we must declare it. If we don't declare it and try to use it, Xcode will complain telling you **Use of unresolved identifier 'x'** (where x is the variable name).
 
-_This — by the way — is called a compile error._
+_This —by the way— is called a compile error._
 
 In order to avoid this error, we have two ways of declaring a variable:
 
@@ -86,13 +88,13 @@ You can define a constant variable such as pi by typing the following:
 let pi = 3.1415926
 ```
 
-Let's use pi to compute the circumference of Earth's path around the sun (approx.). The average distance between the Earth and the Sun is about 149.6 million km according to Google, so let's use that.
+Let's use pi to compute the  Earth's orbital path around the sun (approx.). The average distance between the Earth and the Sun is about 149.6 million km according to Google, so let's use that.
 
 ``` swift
-let distance = 149_600_000.0
+let distance = 149_600_000.0    // 149.6 million km
 let circumference = 2 * pi * distance
 
-print("the earth travels about \(circumference) km every year")
+print("the Earth travels about \(circumference) km every year")
 ```
 
 You might have noticed two interesting things about Swift in that example:
@@ -102,7 +104,34 @@ You might have noticed two interesting things about Swift in that example:
 - You can print variable values using **String Interpolation**.
   - e.g. `"x has the value: \(x)"`
 
+Additionally we added the `.0` to the distance to make it easier to multiply it with pi when both the same datatype (`Double`). If one was a whole number and the other a decimal number, Xcode would have complained. We talk about this later.
+
 #### `var`
+
+Using the `let` keyword allows us to create constant variables, but what if we want to change the distance so that instead of the Earth, we wanted to know Mercury's orbit?
+
+Add these two lines below our code to calculate the Earth's orbit:
+
+``` swift
+distance = 57_910_000.0    // 57.91 million km
+circumference = 2 * pi * distance
+
+print("Mercury travels about \(circumference) km every year")
+```
+
+Xcode doesn't like that, does it?
+
+See we told Xcode that we would never change the values of `distance` and `circumference` but here we are trying to change it. We lied to Xcode.
+
+It's ok, Xcode will forgive us; Xcode even offers to fix our problem for us. If you notice on the right side of the lines where we are trying to change the values of `distance` and `circumference`, there is a message in red: **Cannot assign to value: 'distance' is a 'let' constant**.
+
+If you click on this message, it will expand with a small message **Change 'let' to make it mutable** and a **Fix** button (Mutable means it can change; not a constant). If you press the **Fix** button Xcode will change the `let` declaration to a `var` declaration.
+
+`// todo: add image for fix error`
+
+Do this for both the `distance` and `circumference` variables and run your code.
+
+You should see both of the orbital distances travelled by the Earth and Mercury printed to the console.
 
 ### `Int`
 
