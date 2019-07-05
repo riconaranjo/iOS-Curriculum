@@ -4,7 +4,7 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
 | Topics       | Details            |
 | ------------ | ------------------ |
-| Datatypes   | declarations, `Int`, `Double`, `String`, `Array`, `Dictionary`, `Boolean` |
+| Datatypes   | declarations, `Int`, `Double`, `String`, `Array`, `Dictionary`, `Bool` |
 | Control flow | `if`, `for`, Scoping |
 | Functions    | calling + writing functions, nested functions |
 | Optionals    | what are they?     |
@@ -154,7 +154,57 @@ let z = Int(100.0)  // explicit
 
 ### `Double`
 
-### `Boolean`
+In Swift we can represent decimal numbers —properly known as floating-point numbers— using the `Double` datatype. Floating-point numbers are numbers that have fractional components, colloquially referred to as as decimal values.
+
+``` swift
+let p = 1.0          // implicit
+let q:Double = -2    // explicit
+let r = Double (99)  // explicit
+```
+
+You may have noticed that Xcode does not implicitly converts numbers from type `Int` into `Double`.
+
+Try this code:
+
+``` swift
+let d1 = 5.0     // this is a Double
+let i1:Int = d1   // cannot implicitly covert Double to Int
+```
+
+Or the opposite
+
+``` swift
+let i2 = 5         // this is an Int
+let d2:Double = i2  // cannot implicitly covert Int to Double
+```
+
+Xcode in both cases will complain with something along the lines of: **Cannot convert value of type 'Double' to specified type 'Int'**.
+
+How do we fix this? The simple solution is to cast the value to the desired datatype using either `Int()` or `Double()`
+
+``` swift
+let d1 = 5.0     // this is a Double
+let i1:Int = Int(d1)
+```
+
+``` swift
+let i2 = 5         // this is an Int
+let d2:Double = Double(i2)
+```
+
+### `Bool`
+
+In Swift we can represent boolean values using the `Bool` datatype. A boolean value can only `true` or `false`.
+
+``` swift
+let schoolIsFun = false
+var codingIsFun = true    // only when I'm not debugging
+
+let bool:Bool = true
+let piGreaterThanFive = pi > 5
+```
+
+Since a logical operation results in a boolean value, you can set a `Bool` equal to its result as shown above.
 
 ### `String`
 
