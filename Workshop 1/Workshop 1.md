@@ -150,7 +150,7 @@ You can declare integers in a couple of different ways:
 
 ``` swift
 let x = 1           // implicit
-let y:Int = -2      // explicit
+let y: Int = -2      // explicit
 let z = Int(100.0)  // explicit
 ```
 
@@ -160,7 +160,7 @@ In Swift we can represent decimal numbers — properly known as floating-point n
 
 ``` swift
 let p = 1.0          // implicit
-let q:Double = -2    // explicit
+let q: Double = -2    // explicit
 let r = Double (99)  // explicit
 ```
 
@@ -170,14 +170,14 @@ Try this code:
 
 ``` swift
 let d1 = 5.0     // this is a Double
-let i1:Int = d1   // cannot implicitly covert Double to Int
+let i1: Int = d1   // cannot implicitly covert Double to Int
 ```
 
 Or the opposite
 
 ``` swift
 let i2 = 5         // this is an Int
-let d2:Double = i2  // cannot implicitly covert Int to Double
+let d2: Double = i2  // cannot implicitly covert Int to Double
 ```
 
 Xcode in both cases will complain with something along the lines of: **Cannot convert value of type 'Double' to specified type 'Int'**.
@@ -186,12 +186,12 @@ How do we fix this? The simple solution is to cast the value to the desired data
 
 ``` swift
 let d1 = 5.0     // this is a Double
-let i1:Int = Int(d1)  // explicit conversion
+let i1: Int = Int(d1)  // explicit conversion
 ```
 
 ``` swift
 let i2 = 5         // this is an Int
-let d2:Double = Double(i2)
+let d2: Double = Double(i2)
 ```
 
 ### `Bool`
@@ -202,7 +202,7 @@ In Swift we can represent boolean values using the `Bool` datatype. A boolean va
 let schoolIsFun = false
 var codingIsFun = true    // only when I'm not debugging
 
-let bool:Bool = true
+let bool: Bool = true
 let piGreaterThanFive = pi > 5
 
 if piGreaterThanFive {
@@ -296,7 +296,7 @@ In Swift we can represent a collection of values using the `Array` datatype. An 
 
 ``` swift
 var intArray = [1, 2, 3]
-var emptyArray = [Int]()
+var emptyArray = [Int]()  // this is shorthand for Array<Int>()
 
 print("not empty: \(intArray)")
 print("empty: \(emptyArray)")
@@ -304,6 +304,12 @@ print("empty: \(emptyArray)")
   not empty: [1, 2, 3]
   empty: []
 */
+```
+
+You can get the number of items in an array using the `.count` method.
+
+``` swift
+print("intArray has \(intArray.count) items")
 ```
 
 #### Appending
@@ -367,7 +373,56 @@ Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGui
 
 ### Set
 
+Another way of representing a collection of values in Swift is by using a `Set`. You can use a `Set` when the order of the elements doesn't matter, or when you want to make sure there are no duplicate items in the list.
+
+``` swift
+var intSet: Set<Int> = [1, 2, 3, 2]
+
+for item in intSet {
+    print("unsorted: \(item)")
+}
+/*
+   unsorted: 3
+   unsorted: 1
+   unsorted: 2
+*/
+```
+
+If you want to go over the set elements in a specific order you can use the `.sorted` method.
+
+``` swift
+for item in intSet.sorted() {
+    print("sorted: \(item)")
+}
+/*
+   sorted: 1
+   sorted: 2
+   sorted: 3
+*/
+```
+
 ### `Dictionary`
+
+In swift we can use the `Dictionary` datatype to organize key-value pairs. It functions like a set, but each value has a key that can be used to retrieve the value.
+
+``` swift
+var students = [Int: String]()   // [Key: Value]
+
+students[101] = "Jeremy Smith"
+students[102] = "Carlos Gutierrez"
+students[103] = "Emma Martin"
+
+for student in students {
+    print("\(student.key): \(student.value)")
+}
+/*
+   103: Emma Martin
+   101: Jeremy Smith
+   102: Carlos Gutierrez
+*/
+```
+
+Notice that the items in a dictionary are also unordered like in a set. If you want to go over the items in a specific order, use the `.sorted` method.
 
 ## Control flow
 
