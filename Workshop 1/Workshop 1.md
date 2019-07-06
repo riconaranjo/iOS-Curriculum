@@ -210,6 +210,14 @@ if piGreaterThanFive {
 }
 ```
 
+You can negate (invert) a boolean value using the negation `!` operator.
+
+``` swift
+if !piGreaterThanFive {
+    print("Physics is fine")
+}
+```
+
 You can see above that Since a logical operation results in a boolean value, you can set a `Bool` equal to its result as shown above.
 
 ### `String`
@@ -401,12 +409,15 @@ for item in intSet.sorted() {
 */
 ```
 
+Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#).
+
 ### `Dictionary`
 
 In swift we can use the `Dictionary` datatype to organize key-value pairs. It functions like a set, but each value has a key that can be used to retrieve the value.
 
 ``` swift
-var students = [Int: String]()   // [Key: Value]
+var students: [Int: String] = [:]   // [Key: Value]
+// empty dictionary
 
 students[101] = "Jeremy Smith"
 students[102] = "Carlos Gutierrez"
@@ -424,11 +435,74 @@ for student in students {
 
 Notice that the items in a dictionary are also unordered like in a set. If you want to go over the items in a specific order, use the `.sorted` method.
 
+You can update dictionary values using the `.updateValue` method.
+
+``` swift
+if let oldValue = airports.updateValue("Emma Rae Martin", forKey: 103) {
+    print("The old value for 103 was \(oldValue).")
+}
+```
+
+Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#).
+
 ## Control flow
+
+Now that we've learned about different datatypes and how to create and use them, we now need to learn about another fundamental building block of programming: **Control Flow**.
+
+Control flow allows us to create different actions and combinations of actions based on certain conditions.
+
+You might have already seen some control flow in the examples we've used, but now we're going to go over them in-depth.
+
+_"Swift provides a variety of control flow statements. These include while loops to perform a task multiple times; if, guard, and switch statements to execute different branches of code based on certain conditions; and statements such as break and continue to transfer the flow of execution to another point in your code"_ - [Swift Book](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html)
+
+### Example
+
+Let's say you want to create a simple program to send a welcome message to every student at the school. We already have our dictionary with student numbers matched to a student name, but let's add a few empty student numbers reserved for future students.
+
+``` swift
+students[104] = ""
+students[105] = ""
+students[106] = ""
+
+print("\n# sorted dictionary\n")
+
+for student in students.sorted(by: <) {
+    print("\(student.key): \(student.value)")
+}
+
+print("\n# greetings\n")
+
+for student in students.sorted(by: <) {
+    print("Hello, welcome to school, \(student.value)!")
+}
+```
+
+You'll notice that we now have a bunch of greetings with no name. How could we make it so that the greeting is only printed if that student number has a name?
+
+**Control flow** \*cough cough\*
 
 ### `if`
 
-### `for`
+The simplest solution to our problem is to check if the string (value) associated with a key is empty, and if it isn't, then we print our greeting message.
+
+``` swift
+for student in students.sorted(by: <) {
+    if !student.value.isEmpty { // if the string is not empty
+        print("Hello, welcome to school, \(student.value)!")
+    }
+}
+```
+
+As you can see, an `if` loop allows us to create specific actions based on other variables.
+
+### `switch`
+
+### `while` / `for`
+
+### `continue` / `break`
+
+- continue
+- break
 
 ## Functions
 
