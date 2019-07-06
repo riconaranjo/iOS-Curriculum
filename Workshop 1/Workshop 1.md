@@ -4,7 +4,7 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
 | Topics       | Details            |
 | ------------ | ------------------ |
-| Datatypes   | declarations, `Int`, `Double`, `String`, `Array`, `Dictionary`, `Bool` |
+| Datatypes   | declarations, `Int`, `Double`, `Bool`, `String`, `Array`, `Set`, `Dictionary` |
 | Control flow | `if`, `for`, Scoping |
 | Functions    | calling + writing functions, nested functions |
 | Optionals    | what are they?     |
@@ -249,13 +249,13 @@ var anotherEmptyString = String()  // initializer syntax
 // these two strings are both empty, and are equivalent to each other
 ```
 
-And to check if a string is empty you can use the `.Empty` method.
+And to check if a string is empty you can use the `.isEmpty` method.
 
 ``` swift
 if emptyString.isEmpty {
     print("Nothing to see here")
 }
-// Prints "Nothing to see here"
+// prints "Nothing to see here"
 ```
 
 #### String Concatenation
@@ -266,6 +266,16 @@ You can add / concatenate strings together which allows you to build longer and 
 let firstName = "Elon"
 let message = "Hello there " + firstName + "!"
 print(message)
+// prints "Hello there Elon!"
+```
+
+You can also append to the end of a string using either the `.append` method or with the `+=` operator.
+
+``` swift
+message.append(" Welcome")
+message += "!"
+print(message)
+// prints "Hello there Elon! Welcome!"
 ```
 
 #### String Interpolation
@@ -281,6 +291,81 @@ print(newMessage)
 Read more about [Strings and Characters](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html).
 
 ### `Array`
+
+In Swift we can represent a collection of values using the `Array` datatype. An `Array` is an ordered lists of values. These values must all be of the same type, otherwise Xcode will complain — or worse you'll get a runtime error.
+
+``` swift
+var intArray = [1, 2, 3]
+var emptyArray = [Int]()
+
+print("not empty: \(intArray)")
+print("empty: \(emptyArray)")
+/*
+  not empty: [1, 2, 3]
+  empty: []
+*/
+```
+
+#### Appending
+
+You can append elements to an array using either the `.append` method or with the `+=` operator, just as with `String`.
+
+``` swift
+intArray.append(4)
+intArray += [5]
+intArray += [6, 7]
+print(intArray)
+// [1, 2, 3, 4, 5, 6, 7]
+```
+
+#### Subscript Operator
+
+You can also access specific elements in an `Array` using the subscript `[]` operator.
+
+``` swift
+print("the first element in the array is \(intArray[0])")
+print("the second element in the array is \(intArray[1])")
+```
+
+#### Iterating
+
+You can iterate across every element in an array using a `for-in` loop:
+
+``` swift
+for item in intArray {
+    print(item)
+}
+/*
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+*/
+```
+
+If you need the index, you can also use the `.enumerated` method as shown:
+
+``` swift
+for (index, value) in intArray.enumerated() {
+    print("index \(index): \(value)")
+}
+/*
+   index 0: 1
+   index 1: 2
+   index 2: 3
+   index 3: 4
+   index 4: 5
+   index 5: 6
+   index 6: 7
+*/
+```
+
+Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#).
+
+### Set
 
 ### `Dictionary`
 
