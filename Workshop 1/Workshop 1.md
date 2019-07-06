@@ -69,11 +69,13 @@ In this workshop we will only cover a few of the basic datatypes in Swift such a
 - `Array` (ordered list)
 - `Dictionary` (list with key + value pairs)
 
+For more informations read [The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html), from the Swift Organization.
+
 ### Declarations
 
 In order to create a datatype we must declare it. If we don't declare it and try to use it, Xcode will complain telling you **Use of unresolved identifier 'x'** (where x is the variable name).
 
-_This —by the way— is called a compile error._
+_This — by the way — is called a compile error._
 
 In order to avoid this error, we have two ways of declaring a variable:
 
@@ -141,7 +143,7 @@ In Swift we can represent integers using the `Int` datatype. Integers can be pos
 
 You can declare integers in a couple of different ways:
 
-1. You can either let Xcode infer that the number is an integer —by the absence of decimals.
+1. You can either let Xcode infer that the number is an integer — by the absence of decimals.
 2. You can explicitly tell Xcode the datatype
     - either by writing `:Int` after the variable name.
     - or by assigning its value to `Int(someNumber)` and converting `someNumber` to an integer.
@@ -154,7 +156,7 @@ let z = Int(100.0)  // explicit
 
 ### `Double`
 
-In Swift we can represent decimal numbers —properly known as floating-point numbers— using the `Double` datatype. Floating-point numbers are numbers that have fractional components, colloquially referred to as as decimal values.
+In Swift we can represent decimal numbers — properly known as floating-point numbers — using the `Double` datatype. Floating-point numbers are numbers that have fractional components, colloquially referred to as as decimal values.
 
 ``` swift
 let p = 1.0          // implicit
@@ -184,7 +186,7 @@ How do we fix this? The simple solution is to cast the value to the desired data
 
 ``` swift
 let d1 = 5.0     // this is a Double
-let i1:Int = Int(d1)
+let i1:Int = Int(d1)  // explicit conversion
 ```
 
 ``` swift
@@ -204,9 +206,36 @@ let bool:Bool = true
 let piGreaterThanFive = pi > 5
 ```
 
-Since a logical operation results in a boolean value, you can set a `Bool` equal to its result as shown above.
+You can see above that Since a logical operation results in a boolean value, you can set a `Bool` equal to its result as shown above.
 
 ### `String`
+
+In Swift we can represent text using the `String` datatype. A `String` is a series of characters — _a string of characters_.
+
+``` swift
+let aString = "this is a string"
+
+let multiLine = """
+this is a multiline string
+
+you can include multiple lines of text
+- all in the same string
+"""
+
+let aMultiLine = """
+this is a string
+"""
+
+// aString and aMultiLine are both the same
+```
+
+Sometimes you want to include special characters such as quotations in your strings; this is called escaping, and you do this by using a backslash `\` before that character you want to escape. _You will have to do this for each  character you want to escape._
+
+``` swift
+let escape = "I shouted \"FREEDOM\" as I jumped out the window!"
+```
+
+Read more about [Strings and Characters](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html).
 
 ### `Array`
 
