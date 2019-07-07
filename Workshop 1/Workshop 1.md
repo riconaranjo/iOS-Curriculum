@@ -5,10 +5,10 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 | Topics       | Details            |
 | ------------ | ------------------ |
 | Datatypes   | declarations, `Int`, `Double`, `Bool`, `String`, `Array`, `Set`, `Dictionary` |
-| Control flow | `if`, `for`, Scoping |
+| Control flow | `if`, `for-in`, Scoping |
 | Functions    | calling + writing functions, nested functions |
 | Optionals    | what are they?     |
-| Playgrounds  | how to play around with swift code |
+| Playgrounds  | how to play around with Swift code |
 
 # 1.1 A Swift Start
 
@@ -360,7 +360,7 @@ for item in intArray {
 */
 ```
 
-If you need the index, you can also use the `.enumerated` method as shown:
+If you need the index, you can also use the `.enumerated` method as shown, since that method returns tuples of (index, value).
 
 ``` swift
 for (index, value) in intArray.enumerated() {
@@ -413,7 +413,7 @@ Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGui
 
 ### `Dictionary`
 
-In swift we can use the `Dictionary` datatype to organize key-value pairs. It functions like a set, but each value has a key that can be used to retrieve the value.
+In Swift we can use the `Dictionary` datatype to organize key-value pairs. It functions like a set, but each value has a key that can be used to retrieve the value.
 
 ``` swift
 var students: [Int: String] = [:]   // [Key: Value]
@@ -439,7 +439,7 @@ You can update dictionary values using the `.updateValue` method.
 
 ``` swift
 if let oldValue = airports.updateValue("Emma Rae Martin", forKey: 103) {
-    print("The old value for 103 was \(oldValue).")
+    print("The old value for student 103 was \(oldValue).")
 }
 ```
 
@@ -485,6 +485,8 @@ You'll notice that we now have a bunch of greetings with no name. How could we m
 
 The simplest solution to our problem is to check if the string (value) associated with a key is empty, and if it isn't, then we print our greeting message.
 
+We can do this with an `if` statement.
+
 ``` swift
 for student in students.sorted(by: <) {
     if !student.value.isEmpty { // if the string is not empty
@@ -493,11 +495,187 @@ for student in students.sorted(by: <) {
 }
 ```
 
-As you can see, an `if` loop allows us to create specific actions based on other variables.
+As you can see, an `if` loop allows us to create specific actions based on certain conditions or variables. In this example we used the `if` code block at it's most basic: just a simple check for a condition, and some code that is executed if that condition is true.
+
+#### `if let`
+
+You can use the `let` in the condition of an `if` statement to find out if an optional contains a value, or if a conversion is valid (such as from `String` to `Int`).
+
+``` swift
+var perhapsNumber = "1010"
+if let number = Int(perhapsNumber) {
+    print("'\(perhapsNumber)' is a valid integer: \(number)")
+}
+else {
+    print("'\(perhapsNumber)' is not a valid integer")
+}
+
+```
+
+#### `else` / `else if`
+
+We can spice up the `if` statement with `else` and `else if` for additional branches of execution.
+
+```swift
+let temperature = -32
+
+if temperature >= 25 {
+    print("it's quite hot, make sure to stay hydrated!")
+} else if temperature <= -20 {
+    print("it's quite cold, make sure to bundle up!")
+} else {
+    print("it's nice outside")
+}
+// it's quite cold, make sure to bundle up!
+```
+
+Using `else if` allows us to add a condition that is only checked if the preceding conditions don't match. Since temperature is less than -20, a message to bundle up was printed.
+
+The final `else` statement is optional, and can be removed if no default case is needed.
+
+```swift
+
+let temperature = 15
+
+if temperature >= 25 {
+    print("it's quite hot, make sure to stay hydrated!")
+} else if temperature <= -20 {
+    print("it's quite cold, make sure to bundle up!")
+}
+```
+
+In this case, nothing is printed since the temperature is neither hot nor cold enough to trigger either the `if` or `else if` conditions.
 
 ### `switch`
 
-### `while` / `for`
+What if you have a bunch of `if` cases?
+
+``` swift
+let value = "M"
+
+switch value {
+case "k":
+    print("\(value) is the same as 10^3")
+case "M":
+    print("\(value) is the same as 10^6")
+case "G":
+    print("\(value) is the same as 10^9")
+default:
+    print("value doesn't match any case")
+}
+// M is the same as 10^6
+```
+
+The `switch` code block above is identical to the `if` code block below, but it is both quicker to write and easier to read.
+
+``` swift
+if value == "k" {
+    print("\(value) is the same as 10^3")
+} else if value == "M" {
+    print("\(value) is the same as 10^6")
+} else if value == "G" {
+    print("\(value) is the same as 10^9")
+} else {
+    print("value doesn't match any case")
+}
+// M is the same as 10^6
+```
+
+You can add multiple conditions to one case, for example:
+
+``` swift
+let value = "m"
+
+switch value {
+case "k":
+    print("\(value) is the same as 10^3")
+case "M":
+    print("\(value) is the same as 10^6")
+case "G":
+    print("\(value) is the same as 10^9")
+case "c", "m", "u":
+    print("\(value) is too small")
+default:
+    print("value doesn't match any case")
+}
+// m is too small
+```
+
+#### `fallthrough`
+
+One key difference between Swift and other languages such as C and Objective-C is that there is no default fallthrough between cases; instead they require and explicit `break` at the end of every case. Once the first matching case finishes executing, the `switch` statement finishes executing. This makes `switch` statements in Swift much more concise and predictable than in C, avoiding accidentally executing multiple cases.
+
+If you want C-style fallthrough behaviour, you can use the `fallthrough` keyword.
+
+``` swift
+let letter = "a"
+var message = "\(letter) is a "
+
+switch letter {
+case "a", "e", "i", "o", "u":
+    message += "vowel "
+    fallthrough
+default:
+    message += "letter"
+}
+print(message)
+// a is a vowel letter
+```
+
+The `fallthrough` keyword causes the case condition of the next case not to be checked, it simply directly moves code execution to the statements inside the following case.
+
+### Loops
+
+In addition to `if` and `switch` statements, we can loop over code using `while`, `for-in` statements.
+
+#### `for-in`
+
+`for-in` statements are quite useful for iterating over element in a collection, or perform the same task, as we've done several times in this workshop.
+
+``` swift
+for student in students {
+    print("\(student.key): \(student.value)")
+}
+```
+
+A different version of this `for-in` statement uses a (key, value) tuple:
+
+``` swift
+for (number, name) in students {
+    print("\(number): \(name)")
+}
+```
+
+We can also do `for-in` with numeric ranges, shown with the three-times table:
+
+``` swift
+for i in 1...5 {
+    print("3 x \(i) = \(3 * i)")
+}
+
+// this is the same as above
+// since ..< excludes the final value
+for i in 1..<6 {
+    print("3 x \(i) = \(3 * i)")
+}
+```
+
+#### `while`
+
+A `while` loop is similar to a `for-in` loop, but it will keep executing until a certain condition is not met.
+
+``` swift
+var number = 0
+
+while number != 5 {
+    print("\(number) is not five!")
+    number = Int.random(in: 0...10)
+}
+
+print("\(number) is five!")
+```
+
+Here each time the code is run, it will loop a different amount of times, since only when number is 5 will the condition `number != 5` is broken, thus exiting out of the loop.
 
 ### `continue` / `break`
 
