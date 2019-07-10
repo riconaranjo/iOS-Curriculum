@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='Intro'/>
+        <page name='Datatypes'/>
+        <page name='Declarations'/>
+        <page name='Integers'/>
+        <page name='Doubles'/>
+        <page name='Booleans'/>
+        <page name='Strings'/>
+        <page name='Arrays'/>
+        <page name='Sets'/>
+        <page name='Dictionaries'/>
+        <page name='Control Flow'/>
+        <page name='Conditional Statments'/>
+        <page name='Switches'/>
+        <page name='Loops'/>
+    </pages>
+</playground>
