@@ -2,13 +2,18 @@
 
 This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
-| Topics       | Details            |
-| ------------ | ------------------ |
-| Datatypes   | declarations, `Int`, `Double`, `Bool`, `String`, `Array`, `Set`, `Dictionary` |
-| Control flow | `if`, `for-in`, Scoping |
-| Functions    | calling + writing functions, nested functions |
-| Optionals    | what are they?     |
-| Playgrounds  | how to play around with Swift code |
+| Topics       | Details                               |
+| ------------ | ------------------------------------- |
+| Datatypes    | declarations + a view basic datatypes |
+| Control flow | what is it + what is used for         |
+| Functions    | calling + writing functions           |
+| Playgrounds  | how to play around with Swift code    |
+
+- **Datatypes:** declarations + a view basic datatypes
+- **Control flow:** what is it + what is used for
+- **Functions:** calling + writing functions
+- **Optionals:** what are they?
+- **Playgrounds:** how to play around with Swift code
 
 # 1.1 A Swift Start
 
@@ -64,7 +69,7 @@ In this workshop we will only cover a few of the basic datatypes in Swift such a
 
 - `Int` (integer)
 - `Double` (decimal number)
-- `Boolean` (true / false)
+- `Bool` (true / false)
 - `String` (text)
 - `Array` (ordered list)
 - `Dictionary` (list with key + value pairs)
@@ -82,7 +87,7 @@ In order to avoid this error, we have two ways of declaring a variable:
 1. `let` (constant)
 2. `var` (variable)
 
-#### `let`
+#### Using `let`
 
 You can define a constant variable such as pi by typing the following:
 
@@ -96,7 +101,7 @@ Let's use pi to compute the  Earth's orbital path around the sun (approx.). The 
 let distance = 149_600_000.0    // 149.6 million km
 let circumference = 2 * pi * distance
 
-print("the Earth travels about \(circumference) km every year")
+print("Earth travels about \(circumference) km every year")
 ```
 
 You might have noticed two interesting things about Swift in that example:
@@ -108,7 +113,7 @@ You might have noticed two interesting things about Swift in that example:
 
 Additionally we added the `.0` to the distance to make it easier to multiply it with pi when both the same datatype (`Double`). If one was a whole number and the other a decimal number, Xcode would have complained. We talk about this later.
 
-#### `var`
+#### Using `var`
 
 Using the `let` keyword allows us to create constant variables, but what if we want to change the distance so that instead of the Earth, we wanted to know Mercury's orbit?
 
@@ -135,7 +140,11 @@ Do this for both the `distance` and `circumference` variables and run your code.
 
 You should see both of the orbital distances travelled by the Earth and Mercury printed to the console.
 
-### `Int`
+### Optionals
+ 
+`// todo: add something about Optionals`
+
+### Integers
 
 Now that we know how to declare constants and variables, let's get back to datatypes.
 
@@ -150,11 +159,11 @@ You can declare integers in a couple of different ways:
 
 ``` swift
 let x = 1           // implicit
-let y: Int = -2      // explicit
+let y: Int = -2     // explicit
 let z = Int(100.0)  // explicit
 ```
 
-### `Double`
+### Doubles
 
 In Swift we can represent decimal numbers — properly known as floating-point numbers — using the `Double` datatype. Floating-point numbers are numbers that have fractional components, colloquially referred to as as decimal values.
 
@@ -169,15 +178,17 @@ You may have noticed that Xcode does not implicitly converts numbers from type `
 Try this code:
 
 ``` swift
-let d1 = 5.0     // this is a Double
-let i1: Int = d1   // cannot implicitly covert Double to Int
+let aDouble = 5.0     // this is a Double
+let anInteger: Int = aDouble
+// cannot implicitly covert Double to Int
 ```
 
-Or the opposite
+_Or the opposite_
 
 ``` swift
-let i2 = 5         // this is an Int
-let d2: Double = i2  // cannot implicitly covert Int to Double
+let someInteger = 5   // this is an Int
+let someDouble: Double = someInteger
+// cannot implicitly covert Int to Double
 ```
 
 Xcode in both cases will complain with something along the lines of: **Cannot convert value of type 'Double' to specified type 'Int'**.
@@ -185,16 +196,16 @@ Xcode in both cases will complain with something along the lines of: **Cannot co
 How do we fix this? The simple solution is to cast the value to the desired datatype using either `Int()` or `Double()`
 
 ``` swift
-let d1 = 5.0     // this is a Double
-let i1: Int = Int(d1)  // explicit conversion
+let myDouble = 5.0
+let myInteger: Int = Int(myDouble)  // explicit conversion
 ```
 
 ``` swift
-let i2 = 5         // this is an Int
-let d2: Double = Double(i2)
+let yourInteger = 5
+let yourDouble: Double = Double(yourInteger)
 ```
 
-### `Bool`
+### Boolean
 
 In Swift we can represent boolean values using the `Bool` datatype. A boolean value can only `true` or `false`.
 
@@ -220,7 +231,7 @@ if !piGreaterThanFive {
 
 You can see above that Since a logical operation results in a boolean value, you can set a `Bool` equal to its result as shown above.
 
-### `String`
+### Strings
 
 In Swift we can represent text using the `String` datatype. A `String` is a series of characters — _a string of characters_.
 
@@ -237,7 +248,6 @@ you can include multiple lines of text
 let aMultiLine = """
 this is a string
 """
-
 // aString and aMultiLine are both the same
 ```
 
@@ -291,14 +301,13 @@ print(message)
 Sometimes, instead of adding strings it makes more sense to insert a value into a string — this value can also be a string, but it could be an integer or another datatype.
 
 ``` swift
-
 let newMessage = "Hello there \(firstName)!"
 print(newMessage)
 ```
 
 Read more about [Strings and Characters](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html).
 
-### `Array`
+### Arrays
 
 In Swift we can represent a collection of values using the `Array` datatype. An `Array` is an ordered lists of values. These values must all be of the same type, otherwise Xcode will complain — or worse you'll get a runtime error.
 
@@ -377,9 +386,9 @@ for (index, value) in intArray.enumerated() {
 */
 ```
 
-Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#).
+Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#) in the Swift Book.
 
-### Set
+### Sets
 
 Another way of representing a collection of values in Swift is by using a `Set`. You can use a `Set` when the order of the elements doesn't matter, or when you want to make sure there are no duplicate items in the list.
 
@@ -411,7 +420,7 @@ for item in intSet.sorted() {
 
 Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#).
 
-### `Dictionary`
+### Dictionaries
 
 In Swift we can use the `Dictionary` datatype to organize key-value pairs. It functions like a set, but each value has a key that can be used to retrieve the value.
 
@@ -438,8 +447,9 @@ Notice that the items in a dictionary are also unordered like in a set. If you w
 You can update dictionary values using the `.updateValue` method.
 
 ``` swift
-if let oldValue = airports.updateValue("Emma Rae Martin", forKey: 103) {
+if let oldValue = students.updateValue("Emma Rae Martin", forKey: 103) {
     print("The old value for student 103 was \(oldValue).")
+    print("The new value for student 103 is \(students[103]!).")
 }
 ```
 
@@ -464,13 +474,7 @@ students[104] = ""
 students[105] = ""
 students[106] = ""
 
-print("\n# sorted dictionary\n")
-
-for student in students.sorted(by: <) {
-    print("\(student.key): \(student.value)")
-}
-
-print("\n# greetings\n")
+print("\n# greetings [attempt]\n")
 
 for student in students.sorted(by: <) {
     print("Hello, welcome to school, \(student.value)!")
@@ -481,13 +485,15 @@ You'll notice that we now have a bunch of greetings with no name. How could we m
 
 **Control flow** \*cough cough\*
 
-### `if`
+### If Statements
 
 The simplest solution to our problem is to check if the string (value) associated with a key is empty, and if it isn't, then we print our greeting message.
 
 We can do this with an `if` statement.
 
 ``` swift
+print("\n# greetings [correct]\n")
+
 for student in students.sorted(by: <) {
     if !student.value.isEmpty { // if the string is not empty
         print("Hello, welcome to school, \(student.value)!")
@@ -497,20 +503,25 @@ for student in students.sorted(by: <) {
 
 As you can see, an `if` loop allows us to create specific actions based on certain conditions or variables. In this example we used the `if` code block at it's most basic: just a simple check for a condition, and some code that is executed if that condition is true.
 
-#### `if let`
+#### Optional Binding: `if let`
 
-You can use the `let` in the condition of an `if` statement to find out if an optional contains a value, or if a conversion is valid (such as from `String` to `Int`).
+You can use the `let` in the condition of an `if` statement to find out if an optional contains a value, or if a conversion is valid (such as from `String` to `Int`). This is called optional binding.
 
 ``` swift
-var perhapsNumber = "1010"
+let randomInput = [ "123", "five" ]
+
+let randomIndex = Int.random(in: 0...1)
+var perhapsNumber = randomInput[randomIndex]
+
 if let number = Int(perhapsNumber) {
     print("'\(perhapsNumber)' is a valid integer: \(number)")
 }
 else {
     print("'\(perhapsNumber)' is not a valid integer")
 }
-
 ```
+
+In this example the if the optional `Int?` returned by `Int()` is an integer value, tht value is used to create a new constant `number`.
 
 #### `else` / `else if`
 
@@ -534,7 +545,6 @@ Using `else if` allows us to add a condition that is only checked if the precedi
 The final `else` statement is optional, and can be removed if no default case is needed.
 
 ```swift
-
 let temperature = 15
 
 if temperature >= 25 {
@@ -546,7 +556,7 @@ if temperature >= 25 {
 
 In this case, nothing is printed since the temperature is neither hot nor cold enough to trigger either the `if` or `else if` conditions.
 
-### `switch`
+### Switch`
 
 What if you have a bunch of `if` cases?
 
@@ -668,7 +678,7 @@ A `while` loop is similar to a `for-in` loop, but it will keep executing until a
 var number = 0
 
 while number != 5 {
-    print("\(number) is not five!")
+    print("\(number) is not five")
     number = Int.random(in: 0...10)
 }
 
@@ -679,12 +689,83 @@ Here each time the code is run, it will loop a different amount of times, since 
 
 ### `continue` / `break`
 
-- continue
-- break
+Using `while` and `for-in` loops to repeat code execution is super common, especially when you want to perform an action on multiple collection items. But what happens when you want to ignore some elements? Or if you want to stop looping once you've found a specific item?
+
+In these cases we use either the `continue` or `break` keywords.
+
+#### `continue`
+
+You can use the `continue` keyword when you want to finish a loop iteration, but you don't want to stop looping altogether. The code will continue executing at the start of the next loop.
+
+``` swift
+let children = [
+    "Sam": "bad",
+    "Peter": "good",
+    "Joanna": "good",
+    "Ben": "bad"
+]
+
+for child in children {
+    if child.value == "bad" {
+        continue // ignore naughty children
+    }
+    print("\(child.key) is a good child")
+}
+/*
+   Peter is a good child
+   Joanna is a good child
+*/
+```
+
+In this example, if a child was bad, we ignored them but we still kept looping through all the children.
+
+#### `break`
+
+What if you want to stop looping entirely?
+
+You can use the `break` keyword to exit the `while` or `for-in` statement altogether.
+
+``` swift
+let lotteryTickets: Set<String> = [
+    "10209",
+    "87123",
+    "12334",
+    "98232",
+    "12353",
+]
+
+let winningTicket = "12334"
+
+for numbers in lotteryTickets {
+    if numbers == winningTicket {
+        print("You won the lottery!")
+        break
+    }
+}
+/*
+   Try again...
+   Try again...
+   You won the lottery!
+*/
+```
+
+In this example, as soon as we found the winning lottery, we stop looking and we stop looping altogether.
 
 ## Functions
 
-## Optionals
+Functions (methods) allow programmers to encapsulate code and call on it when it's needed instead of copying and pasting it several times across an application. This means that if you find a bug or you need to update the code, you only do so once, and not in every place you use the code.
+
+_**DRY:** Don't Repeat Yourself_
+
+According to the [Swift Book](https://docs.swift.org/swift-book/LanguageGuide/Functions.html):
+
+_**Functions are self-contained chunks of code that perform a specific task.** You give a function a name that identifies what it does, and this name is used to “call” the function to perform its task when needed._
+
+
+
+``` swift
+func 
+```
 
 # 1.2 Playing around with Swift
 
@@ -706,3 +787,4 @@ These are some useful topics that I would suggest reading into, and learning how
 - [How to make something with Swift Playgrounds](https://www.freecodecamp.org/news/how-to-make-something-with-swift-playgrounds-33e560b84184/)
 - [Awesome Swift Playgrounds](https://github.com/uraimo/Awesome-Swift-Playgrounds)
 - [WWDC 2018: Getting the Most out of Playgrounds in Xcode](https://developer.apple.com/videos/play/wwdc2018/402/)
+- [Markup Documentation](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/AddingMarkup.html#//apple_ref/doc/uid/TP40016497-CH100-SW1)
