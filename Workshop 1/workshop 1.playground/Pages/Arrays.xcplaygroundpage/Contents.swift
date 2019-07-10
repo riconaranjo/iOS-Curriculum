@@ -19,6 +19,8 @@ print("empty: \(emptyArray)")
 print("intArray has \(intArray.count) items")
 /*:
  
+ ---
+ 
  ## Appending
  
  You can append elements to an array using either the `.append` method or with the `+=` operator, just as with `String`.
@@ -32,6 +34,8 @@ print("\n# printing all array elements\n")
 print(intArray)
 /*:
  
+ ---
+ 
  ## Subscript Operator
  
  You can also access specific elements in an `Array` using the subscript `[]` operator.
@@ -40,6 +44,8 @@ print(intArray)
 print("the first element in the array is \(intArray[0])")
 print("the second element in the array is \(intArray[1])")
 /*:
+ 
+ ---
  
  ## Iterating
  

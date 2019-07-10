@@ -12,6 +12,8 @@
  1. `let` (constant)
  2. `var` (variable)
  
+ ---
+ 
  ## Using `let`
  
  You can define a constant variable such as pi by typing the following:
@@ -38,8 +40,7 @@ print("Earth travels about \(circumference) km every year")
  
  Additionally we added the `.0` to the distance to make it easier to multiply it with pi when both the same datatype (`Double`). If one was a whole number and the other a decimal number, Xcode would have complained. We talk about this later.
  
- */
-/*:
+ ---
  
  ## Using `var`
  
@@ -65,8 +66,7 @@ print("Mercury travels about \(circumference) km every year")
  
  You should see both of the orbital distances travelled by the Earth and Mercury printed to the console.
  
- */
-/*:
+ ---
  
  ## Optionals
  

@@ -3,9 +3,9 @@
  
  ## Switch
  
- What if you have a bunch of `if` cases?
+ What if you have a bunch of `if` cases for the same variable?
  
- _Like this_
+ _Like this..._
  
  */
 var value = "M"
@@ -19,9 +19,6 @@ if value == "k" {
 } else {
     print("value doesn't match any case")
 }
-// M is the same as 10^6
-
-// M is the same as 10^6
 /*:
  
  The `switch` code block below is identical to the `if` code block above, but it is both quicker to write and easier to read.
@@ -51,19 +48,22 @@ case "M":
     print("\(value) is the same as 10^6")
 case "G":
     print("\(value) is the same as 10^9")
-case "c", "m", "u":
+case "c", "m", "u":                       // multiple conditions
     print("\(value) is too small")
 default:
     print("value doesn't match any case")
 }
-// m is too small
 /*:
  
- ## `fallthrough`
+ ---
+ 
+ ## Fallthrough
  
  One key difference between Swift and other languages such as C and Objective-C is that there is no default fallthrough between cases; instead they require and explicit `break` at the end of every case. Once the first matching case finishes executing, the `switch` statement finishes executing. This makes `switch` statements in Swift much more concise and predictable than in C, avoiding accidentally executing multiple cases.
  
  If you want C-style fallthrough behaviour, you can use the `fallthrough` keyword.
+ 
+ // todo: remove this section??
  
  */
 let letter = "a"

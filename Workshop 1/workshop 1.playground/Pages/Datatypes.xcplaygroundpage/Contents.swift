@@ -3,7 +3,7 @@
  
  # Datatypes
 
- Now that we have our playground setup, let's talk about Swift.
+ _Now that we have our playground setup, let's talk about Swift._
 
  Swift like any other programming languages uses datatypes and variables. A **datatype** is a particular type of data item, defined by:
 
@@ -14,7 +14,9 @@
 
  Datatypes and variables are the tools used by programmers to solve larger problems, and in order to know which tools is best for a given problem, you need to understand the strengths and weaknesses of each datatype.
 
- **In this workshop we will only cover a few of the basic datatypes in Swift such as:**
+ ---
+ 
+ ## Topics
 
  - `Int` (integer)
  - `Double` (decimal number)
@@ -23,6 +25,8 @@
  - `Array` (ordered list)
  - `Dictionary` (list with key + value pairs)
 
+ ---
+ 
  For more informations read [The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html), from the Swift Organization.
  
  */

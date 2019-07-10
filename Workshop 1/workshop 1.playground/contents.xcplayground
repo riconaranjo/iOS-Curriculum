@@ -13,7 +13,7 @@
         <page name='Dictionaries'/>
         <page name='Control Flow'/>
         <page name='Conditional Statments'/>
-        <page name='Switches'/>
+        <page name='Switch'/>
         <page name='Loops'/>
         <page name='Functions'/>
         <page name='Playing around with Swift'/>

@@ -9,13 +9,17 @@
  
  You might have already seen some control flow in the examples we've used, but now we're going to go over them in-depth.
  
- _"Swift provides a variety of control flow statements. These include while loops to perform a task multiple times; if, guard, and switch statements to execute different branches of code based on certain conditions; and statements such as break and continue to transfer the flow of execution to another point in your code"_ - [Swift Book](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html)
+ - _"Swift provides a variety of control flow statements. These include while loops to perform a task multiple times; if, guard, and switch statements to execute different branches of code based on certain conditions; and statements such as break and continue to transfer the flow of execution to another point in your code"_ — [Swift Book](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html)
  
- **Topics we will cover are:**
+ ---
+ 
+ ## Topics
  
  - Conditional Statements
  - Switches
  - Loops
  
+ ---
+ 
  */
-//: [Next](@next)
+//: [Conditional Statements](@next)

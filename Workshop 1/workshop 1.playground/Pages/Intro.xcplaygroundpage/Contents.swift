@@ -4,13 +4,16 @@
 
  _This workshop is about learning how to code in Swift, using Xcode Playgrounds._
  
+ ---
+ 
  ## Topics
  
- - **Datatypes:** declarations + a view basic datatypes
+ - **Datatypes:** declarations + basic datatypes
  - **Control flow:** what is it + what is used for
  - **Functions:** calling + writing functions
- - **Optionals:** what are they?
  - **Playgrounds:** how to play around with Swift code
+ 
+ ---
  
  */
 //: _Let's write your first line of Swift code._

@@ -1,9 +1,11 @@
-//: [Switches](@previous)
+//: [Switch](@previous)
 /*:
  
  # Loops
  
  In addition to `if` and `switch` statements, we can loop over code using `while`, `for-in` statements.
+ 
+ ---
  
  ## `for-in`
  
@@ -47,6 +49,8 @@ print("3 x \(i) = \(3 * i)")
 }
 /*:
  
+ ---
+ 
  ## `while`
  
  A `while` loop is similar to a `for-in` loop, but it will keep executing until a certain condition is not met.
@@ -64,11 +68,15 @@ print("\(number) is five!")
  
  Here each time the code is run, it will loop a different amount of times, since only when number is 5 will the condition `number != 5` is broken, thus exiting out of the loop.
  
+ ---
+ 
  ## `continue` / `break`
  
  Using `while` and `for-in` loops to repeat code execution is super common, especially when you want to perform an action on multiple collection items. But what happens when you want to ignore some elements? Or if you want to stop looping once you've found a specific item?
  
  In these cases we use either the `continue` or `break` keywords.
+ 
+ ---
  
  ### `continue`
  
@@ -88,13 +96,11 @@ for child in children {
     }
     print("\(child.key) is a good child")
 }
-/*
-   Peter is a good child
-   Joanna is a good child
- */
 /*:
  
  In this example, if a child was bad, we ignored them but we still kept looping through all the children.
+ 
+ ---
  
  ### `break`
  
@@ -124,7 +130,7 @@ for numbers in lotteryTickets {
 }
 /*:
  
- In this example, as soon as we found the winning lottery, we stop looking and we stop looping altogether.
+ In this example, as soon as we found the winning lottery, we stopped looking for a winning ticket, thus we stopped looping altogether.
  
  */
 //: [Functions](@next)

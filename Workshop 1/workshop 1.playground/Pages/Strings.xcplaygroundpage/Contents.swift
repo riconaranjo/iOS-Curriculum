@@ -27,6 +27,10 @@ this is a string
 let escape = "I shouted \"FREEDOM\" as I jumped out the window!"
 /*:
  
+ Common escaped characters are `\n` for new line, and `\t` for tab.
+ 
+ ---
+ 
  ## Empty Strings
  
  You can create empty strings — to be filled in later by user input or online data — in two ways (source: [Initializing an Empty String](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html)):
@@ -45,6 +49,8 @@ if emptyString.isEmpty {
 }
 /*:
  
+ ---
+ 
  ## String Concatenation
  
  You can add / concatenate strings together which allows you to build longer and more complex strings, such as a greeting.
@@ -62,6 +68,8 @@ message.append(" Welcome")
 message += "!"
 print(message)
 /*:
+ 
+ ---
  
  ## String Interpolation
  

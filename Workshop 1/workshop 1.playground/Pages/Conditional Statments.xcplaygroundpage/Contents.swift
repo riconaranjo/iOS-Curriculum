@@ -26,8 +26,7 @@ for student in students.sorted(by: <) {
  
  **Control flow** \*cough cough\*
  
- */
-/*:
+ ---
  
  ## If Statements
  
@@ -47,8 +46,7 @@ for student in students.sorted(by: <) {
  
  As you can see, an `if` loop allows us to create specific actions based on certain conditions or variables. In this example we used the `if` code block at it's most basic: just a simple check for a condition, and some code that is executed if that condition is true.
  
- */
-/*:
+ ---
  
  ## Optional Binding: `if let`
  
@@ -70,8 +68,7 @@ else {
  
  In this example the if the optional `Int?` returned by `Int()` is an integer value, tht value is used to create a new constant `number`.
  
- */
-/*:
+ ---
  
  ## `else` / `else if`
  
@@ -87,7 +84,6 @@ if temperature >= 25 {
 } else {
     print("it's nice outside")
 }
-// it's quite cold, make sure to bundle up!
 /*:
  
  Using `else if` allows us to add a condition that is only checked if the preceding conditions don't match. Since temperature is less than -20, a message to bundle up was printed.
@@ -107,4 +103,4 @@ if temperature >= 25 {
  In this case, nothing is printed since the temperature is neither hot nor cold enough to trigger either the `if` or `else if` conditions.
  
  */
-//: [Next](@next)
+//: [Switch](@next)
