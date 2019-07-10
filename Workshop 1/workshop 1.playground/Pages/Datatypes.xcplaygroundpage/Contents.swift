@@ -14,7 +14,7 @@
 
  Datatypes and variables are the tools used by programmers to solve larger problems, and in order to know which tools is best for a given problem, you need to understand the strengths and weaknesses of each datatype.
 
- In this workshop we will only cover a few of the basic datatypes in Swift such as:
+ **In this workshop we will only cover a few of the basic datatypes in Swift such as:**
 
  - `Int` (integer)
  - `Double` (decimal number)

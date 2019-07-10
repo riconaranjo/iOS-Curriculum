@@ -14,14 +14,11 @@ students[101] = "Jeremy Smith"
 students[102] = "Carlos Gutierrez"
 students[103] = "Emma Martin"
 
+print("\n printing all students \n")
+
 for student in students {
     print("\(student.key): \(student.value)")
 }
-/*
- 103: Emma Martin
- 101: Jeremy Smith
- 102: Carlos Gutierrez
- */
 /*:
  
  Notice that the items in a dictionary are also unordered like in a set. If you want to go over the items in a specific order, use the `.sorted` method.
@@ -33,7 +30,6 @@ if let oldValue = students.updateValue("Emma Rae Martin", forKey: 103) {
     print("The old value for student 103 was \(oldValue).")
     print("The new value for student 103 is \(students[103]!).")
 }
-
 /*:
  
  Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#).

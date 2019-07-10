@@ -43,7 +43,6 @@ var anotherEmptyString = String()  // initializer syntax
 if emptyString.isEmpty {
     print("Nothing to see here")
 }
-// prints "Nothing to see here"
 /*:
  
  ## String Concatenation
@@ -54,7 +53,6 @@ if emptyString.isEmpty {
 let firstName = "Elon"
 var message = "Hello there " + firstName + "!"
 print(message)
-// prints "Hello there Elon!"
 /*:
  
  You can also append to the end of a string using either the `.append` method or with the `+=` operator.
@@ -63,7 +61,6 @@ print(message)
 message.append(" Welcome")
 message += "!"
 print(message)
-// prints "Hello there Elon! Welcome!"
 /*:
  
  ## String Interpolation

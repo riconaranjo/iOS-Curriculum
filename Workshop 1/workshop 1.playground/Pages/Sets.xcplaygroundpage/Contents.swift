@@ -9,27 +9,22 @@
 
 var intSet: Set<Int> = [1, 2, 3, 2]
 
+print("\n printing all set elements [unsorted] \n")
+
 for item in intSet {
     print("unsorted set: \(item)")
 }
-/*
- unsorted set: 3
- unsorted set: 1
- unsorted set: 2
- */
 /*:
  
  If you want to go over the set elements in a specific order you can use the `.sorted` method.
  
  */
+
+print("\n printing all set elements [sorted] \n")
+
 for item in intSet.sorted() {
     print("sorted: \(item)")
 }
-/*
- sorted: 1
- sorted: 2
- sorted: 3
- */
 /*:
  
  Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#) in the Swift Book.

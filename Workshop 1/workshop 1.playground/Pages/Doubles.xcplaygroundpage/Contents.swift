@@ -28,9 +28,11 @@ let someInteger = 5   // this is an Int
 let someDouble: Double = someInteger
 // cannot implicitly covert Int to Double
 /*:
+ 
  Xcode in both cases will complain with something along the lines of: **Cannot convert value of type 'Double' to specified type 'Int'**.
  
  How do we fix this? The simple solution is to cast the value to the desired datatype using either `Int()` or `Double()`
+ 
  */
 let myDouble = 5.0
 let myInteger: Int = Int(myDouble)  // explicit conversion

@@ -15,5 +15,6 @@
         <page name='Conditional Statments'/>
         <page name='Switches'/>
         <page name='Loops'/>
+        <page name='Functions'/>
     </pages>
 </playground>

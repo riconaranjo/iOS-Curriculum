@@ -1,6 +1,6 @@
 # 0. Prelude: Installing Xcode on a macOS VM
 
-`// todo update this`
+`// todo update this for macOS Catalina`
 
 The purpose of this workshop is to **teach you how to create a macOS Virtual Machine [VM]** because you want **to learn iOS / macOS app development** using Xcode, but have no easy access to a mac.
 

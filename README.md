@@ -4,7 +4,7 @@ This is a series of **5 workshops** designed to walk you through every step in t
 
 **Each workshop will build on the previous ones;** if you missed a workshop or you just want to join in halfway through the series, all the material covered in each workshop can be found in its respective workshop folder.
 
-// todo insert folder links here:
+`// todo insert folder links here:`
 
 This series of workshops is designed for beginners. Even if you have never created a program before, you should be able to follow along. If you get lost while actually attending the workshops, you can view all the material online and work on it at your own pace at the [GitHub repo](github.com/riconaranjo/iOS-Curriculum/tree/master).
 

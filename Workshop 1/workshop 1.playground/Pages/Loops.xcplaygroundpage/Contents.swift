@@ -10,6 +10,14 @@
  `for-in` statements are quite useful for iterating over element in a collection, or perform the same task, as we've done several times in this workshop.
  
  */
+var students = [
+    101: "Jeremy Smith",
+    102: "Carlos Gutierrez",
+    103: "Emma Martin",
+]
+
+print("\n regular for-in loop\n")
+
 for student in students {
     print("\(student.key): \(student.value)")
 }
@@ -18,6 +26,8 @@ for student in students {
  A different version of this `for-in` statement uses a (key, value) tuple:
  
  */
+print("\nfor-in loop using tuple\n")
+
 for (number, name) in students {
     print("\(number): \(name)")
 }
@@ -103,20 +113,17 @@ let lotteryTickets: Set<String> = [
 
 let winningTicket = "12334"
 
+print("\n playing the lottery...\n")
+
 for numbers in lotteryTickets {
     if numbers == winningTicket {
         print("You won the lottery!")
         break
     }
 }
- /*
-   Try again...
-   Try again...
-   You won the lottery!
-  */
 /*:
  
  In this example, as soon as we found the winning lottery, we stop looking and we stop looping altogether.
  
  */
-//: [Next](@next)
+//: [Functions](@next)
