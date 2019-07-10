@@ -28,7 +28,7 @@ intArray.append(4)
 intArray += [5]
 intArray += [6, 7]
 
-print("\n printing all array elements\n")
+print("\n# printing all array elements\n")
 print(intArray)
 /*:
  

@@ -16,7 +16,7 @@ var students = [
     103: "Emma Martin",
 ]
 
-print("\n regular for-in loop\n")
+print("\n# regular for-in loop\n")
 
 for student in students {
     print("\(student.key): \(student.value)")
@@ -26,7 +26,7 @@ for student in students {
  A different version of this `for-in` statement uses a (key, value) tuple:
  
  */
-print("\nfor-in loop using tuple\n")
+print("\n# for-in loop using tuple\n")
 
 for (number, name) in students {
     print("\(number): \(name)")
@@ -113,9 +113,10 @@ let lotteryTickets: Set<String> = [
 
 let winningTicket = "12334"
 
-print("\n playing the lottery...\n")
+print("\n# playing the lottery...\n")
 
 for numbers in lotteryTickets {
+    print("checking \(numbers)...")
     if numbers == winningTicket {
         print("You won the lottery!")
         break

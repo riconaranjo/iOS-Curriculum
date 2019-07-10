@@ -14,7 +14,7 @@ students[101] = "Jeremy Smith"
 students[102] = "Carlos Gutierrez"
 students[103] = "Emma Martin"
 
-print("\n printing all students \n")
+print("\n# printing all students \n")
 
 for student in students {
     print("\(student.key): \(student.value)")

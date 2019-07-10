@@ -16,5 +16,8 @@
         <page name='Switches'/>
         <page name='Loops'/>
         <page name='Functions'/>
+        <page name='Playing around with Swift'/>
+        <page name='Additional Topics'/>
+        <page name='References'/>
     </pages>
 </playground>

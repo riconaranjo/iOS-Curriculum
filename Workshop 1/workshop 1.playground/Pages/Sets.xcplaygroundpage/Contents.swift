@@ -9,7 +9,7 @@
 
 var intSet: Set<Int> = [1, 2, 3, 2]
 
-print("\n printing all set elements [unsorted] \n")
+print("\n# printing all set elements [unsorted] \n")
 
 for item in intSet {
     print("unsorted set: \(item)")
@@ -20,7 +20,7 @@ for item in intSet {
  
  */
 
-print("\n printing all set elements [sorted] \n")
+print("\n# printing all set elements [sorted] \n")
 
 for item in intSet.sorted() {
     print("sorted: \(item)")
