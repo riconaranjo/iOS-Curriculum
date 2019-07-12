@@ -68,10 +68,6 @@ print("Mercury travels about \(circumference) km every year")
  
  ---
  
- ## Optionals
- 
- // todo: add something about Optionals
- 
- Read more about [Optionals](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html) in the Swift Book.
+ Read more about declarations in [The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html) in the Swift Book.
  */
-//: [Integers](@next)
+//: [Optionals](@next)

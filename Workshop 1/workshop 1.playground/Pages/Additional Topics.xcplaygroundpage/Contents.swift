@@ -1,5 +1,5 @@
 //: [Playing around with Swift](@previous)
-/*
+/*:
  
  # Additional Topics
  

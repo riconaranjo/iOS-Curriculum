@@ -13,10 +13,8 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
 This will be a quick introduction into how to write Swift code.
 - **how to create and modify variables**
-  - _and how to print them_
 - **how to write control flow**
-- **what are Optionals?**
-  - _and why should I use them?_
+- **how to create functions**
 
 ## Opening Playgrounds
 
@@ -50,7 +48,9 @@ _Congrats you have now written your first line of Swift code!_
 
 Now that we have our playground setup, let's talk about Swift.
 
-Swift like any other programming languages uses datatypes and variables. A **datatype** is a particular type of data item, defined by:
+Swift, like any other programming language uses datatypes and variables. Swift is a _type-safe_ language, which means that it helps you be clear about which types of values your code works with. This ensures that you don't pass the wrong types of values by mistake, helping you catch errors quicker in the development process.
+
+A **datatype** is a particular type of data item, defined by:
 
 - the values it can take
 - the operations that can be performed by it
@@ -784,14 +784,17 @@ Below we have an example function that greets a person when given their name. It
 ``` swift
 /**
  Simple greeting function.
- - parameters:
-     - person: the person's name to be greeted
+ - parameters: person: the person's name to be greeted
  */
 func greet(person: String) -> String {
     let greeting = "Hello, " + person + "!"
     return greeting
 }
 ```
+
+You might have noticed the markup used before the function defintion. This is called documentation and it is very important when you are working with other developers so that they know what your function is, what it does, and exactly what each parameter is.
+
+You can see your documentation by clicking on the function name and holding the `option` key.
 
 ### Calling Functions
 
@@ -874,6 +877,11 @@ By default, the parameter name becomes the label, but you can override this by d
 In this example the `person` parameter label and name are the same, but the `hometown` parameter is labelled `from`.
 
 ``` swift
+/**
+ Slightly more complex greeting function.
+ - parameters:
+     - person: the person's name to be greeted
+ */
 func greet(person: String, from hometown: String) {
     print("Hello \(person)!  Glad you could visit from \(hometown).")
 }

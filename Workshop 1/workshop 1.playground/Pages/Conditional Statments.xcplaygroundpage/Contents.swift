@@ -64,7 +64,7 @@ if let number = Int(perhapsNumber) {
 else {
     print("'\(perhapsNumber)' is not a valid integer")
 }
-/*
+/*:
  
  In this example the if the optional `Int?` returned by `Int()` is an integer value, tht value is used to create a new constant `number`.
  

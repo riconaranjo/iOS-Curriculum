@@ -2,8 +2,10 @@
 <playground version='6.0' target-platform='ios' display-mode='raw'>
     <pages>
         <page name='Intro'/>
+        <page name='1.1 A Swift Start'/>
         <page name='Datatypes'/>
         <page name='Declarations'/>
+        <page name='Optionals'/>
         <page name='Integers'/>
         <page name='Doubles'/>
         <page name='Booleans'/>

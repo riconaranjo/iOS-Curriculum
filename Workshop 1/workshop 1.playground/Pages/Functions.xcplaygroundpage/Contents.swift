@@ -32,14 +32,18 @@
  */
 /**
  Simple greeting function.
- - parameters:
-     - person: the person's name to be greeted
+ - parameter person: The person's name to be greeted
+
  */
 func greet(person: String) -> String {
     let greeting = "Hello, " + person + "!"
     return greeting
 }
 /*:
+ 
+ You might have noticed the markup used before the function defintion. This is called documentation and it is very important when you are working with other developers so that they know what your function is, what it does, and exactly what each parameter is.
+ 
+ You can see your documentation by clicking on the function name and holding the `option` key.
  
  ---
  
@@ -133,6 +137,12 @@ greeting(person: "Dave")
  
  In this example the `person` parameter label and name are the same, but the `hometown` parameter is labelled `from`.
  
+ */
+/**
+ Slightly more complex greeting function.
+ - parameters:
+    - person: The person's name to be greeted
+    - hometown: Where the person lives
  */
 func greet(person: String, from hometown: String) {
     print("Hello \(person)!  Glad you could visit from \(hometown).")

@@ -5,7 +5,9 @@
 
  _Now that we have our playground setup, let's talk about Swift._
 
- Swift like any other programming languages uses datatypes and variables. A **datatype** is a particular type of data item, defined by:
+ Swift, like any other programming language uses datatypes and variables. Swift is a _type-safe_ language, which means that it helps you be clear about which types of values your code works with. This ensures that you don't pass the wrong types of values by mistake, helping you catch errors quicker in the development process.
+ 
+ A **datatype** is a particular type of data item, defined by:
 
  - the values it can take
  - the operations that can be performed by it
