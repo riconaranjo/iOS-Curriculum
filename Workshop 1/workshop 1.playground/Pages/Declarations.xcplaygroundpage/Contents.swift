@@ -5,7 +5,7 @@
  
  In order to create a datatype we must declare it. If we don't declare it and try to use it, Xcode will complain telling you **Use of unresolved identifier 'x'** (where x is the variable name).
  
- _This — by the way — is called a compile error._
+ _This — by the way — is called a compilation error._
  
  In order to avoid this error, we have two ways of declaring a variable:
  
