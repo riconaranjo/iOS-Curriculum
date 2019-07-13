@@ -22,11 +22,11 @@
  7.  [Arrays](Arrays)
  8.  [Sets](Sets)
  9.  [Dictionaries](Dictionaries)
- 10.  [Control Flow](Control%20Flow)
- 11.  [Conditional Statments](Conditional%20Statments)
- 12.  [Switch](Switch)
- 13.  [Loops](Loops)
- 14.  [Functions](Functions)
+ 10. [Control Flow](Control%20Flow)
+ 11. [Conditional Statments](Conditional%20Statments)
+ 12. [Switch](Switch)
+ 13. [Loops](Loops)
+ 14. [Functions](Functions)
  
  ---
 */

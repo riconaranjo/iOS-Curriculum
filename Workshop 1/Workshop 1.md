@@ -925,7 +925,10 @@ Now that we have a basic understanding of how to write some Swift code, let's bu
 
 These are some useful topics that I would suggest reading into, and learning how to use them.
 
-- Enums / Structs / Classes
+- [Basic Operators](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html)
+- [Enumerations](https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html)
+- [Structures and Classes](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html)
+- [Google](https://google.ca)
 
 ## References
 

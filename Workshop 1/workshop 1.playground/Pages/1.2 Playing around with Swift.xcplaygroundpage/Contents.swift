@@ -10,15 +10,17 @@ import UIKit
  
  Your first tic tac toe app in playgrounds, that's what!
  
+ ---
+ 
  ## Tic Tac Toe
  
  I've already built a skeleton for this tic tac toe app to help you get started, including the labels and buttons. We're just going to add a few functions to finish up the game.
  
- 1. Add a function that is triggered when you play a move.
- 2. Add a function that checks if a winning move has been played.
- 3. Add a function that updates the game board
+ 1. **Add a function that is triggered when you play a move.**
+ 2. **Add a function that checks if a winning move has been played.**
+ 3. **Add a function that updates the game board**
  
- The function definitions are shown below. We will implement in the next page.
+ _The function definitions are shown below. We will implement in the next page._
  
  */
 /**
