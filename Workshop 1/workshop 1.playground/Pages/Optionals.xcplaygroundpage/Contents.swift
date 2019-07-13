@@ -15,6 +15,8 @@ var twentyThree = Int("23") // -> 23
 var five = Int("five")      // -> nil
 /*:
  
+ ---
+ 
  ## nil
  
  In Swift, you can set an optional value to nil, but you cannot do this with non-optional values. By default optional variables are set to nil
@@ -23,6 +25,8 @@ var five = Int("five")      // -> nil
 twentyThree = nil
 var optionalValue: Int? // -> nil
 /*:
+ 
+ ---
  
  ## Unwrapping Optionals
  
@@ -37,6 +41,8 @@ if optionalValue != nil {
     print("the optional has a value of \(optionalValue!)")
 }
 /*:
+ 
+ ---
  
  ## Optional Binding
  

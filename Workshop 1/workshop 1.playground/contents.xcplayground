@@ -18,7 +18,8 @@
         <page name='Switch'/>
         <page name='Loops'/>
         <page name='Functions'/>
-        <page name='Playing around with Swift'/>
+        <page name='1.2 Playing around with Swift'/>
+        <page name='Tic Tac Toe Playground'/>
         <page name='Additional Topics'/>
         <page name='References'/>
     </pages>

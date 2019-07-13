@@ -53,34 +53,4 @@ case "c", "m", "u":                       // multiple conditions
 default:
     print("value doesn't match any case")
 }
-/*:
- 
- ---
- 
- ## Fallthrough
- 
- One key difference between Swift and other languages such as C and Objective-C is that there is no default fallthrough between cases; instead they require and explicit `break` at the end of every case. Once the first matching case finishes executing, the `switch` statement finishes executing. This makes `switch` statements in Swift much more concise and predictable than in C, avoiding accidentally executing multiple cases.
- 
- If you want C-style fallthrough behaviour, you can use the `fallthrough` keyword.
- 
- // todo: remove this section??
- 
- */
-let letter = "a"
-var message = "\(letter) is a "
-
-switch letter {
-case "a", "e", "i", "o", "u":
-    message += "vowel "
-    fallthrough
-default:
-    message += "letter"
-}
-print(message)
-// a is a vowel letter
-/*:
- 
- The `fallthrough` keyword causes the case condition of the next case not to be checked, it simply directly moves code execution to the statements inside the following case.
- 
- */
 //: [Loops](@next)

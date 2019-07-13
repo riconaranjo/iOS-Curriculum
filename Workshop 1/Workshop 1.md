@@ -662,29 +662,6 @@ default:
 // m is too small
 ```
 
-#### `fallthrough`
-
-One key difference between Swift and other languages such as C and Objective-C is that there is no default fallthrough between cases; instead they require and explicit `break` at the end of every case. Once the first matching case finishes executing, the `switch` statement finishes executing. This makes `switch` statements in Swift much more concise and predictable than in C, avoiding accidentally executing multiple cases.
-
-If you want C-style fallthrough behaviour, you can use the `fallthrough` keyword.
-
-``` swift
-let letter = "a"
-var message = "\(letter) is a "
-
-switch letter {
-case "a", "e", "i", "o", "u":
-    message += "vowel "
-    fallthrough
-default:
-    message += "letter"
-}
-print(message)
-// a is a vowel letter
-```
-
-The `fallthrough` keyword causes the case condition of the next case not to be checked, it simply directly moves code execution to the statements inside the following case.
-
 ### Loops
 
 In addition to `if` and `switch` statements, we can loop over code using `while`, `for-in` statements.
@@ -805,7 +782,7 @@ In this example, as soon as we found the winning lottery, we stop looking and we
 ## Functions
 
 # Functions
- 
+
 Functions (methods) allow programmers to encapsulate code and call on it when it's needed instead of copying and pasting it several times across an application. This means that if you find a bug or you need to update the code, you only do so once, and not in every place you use the code.
 
 **`DRY:`** `Don't Repeat Yourself`
