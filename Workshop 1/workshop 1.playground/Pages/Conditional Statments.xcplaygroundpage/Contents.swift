@@ -102,5 +102,59 @@ if temperature >= 25 {
  
  In this case, nothing is printed since the temperature is neither hot nor cold enough to trigger either the `if` or `else if` conditions.
  
+ ---
+ 
+ ## Logical Operators
+ 
+ To create more complex conditions we can use the `!` (negation), the `&&` (AND), `||` (OR) logical operators.
+ 
+ ### Negation operator (`!`)
+ 
+ The negation operator will invert the value of a boolean:
+ 
+ - true -> false
+ - false -> true
+ 
+ The value `!allowedEntry` can be read as 'not `allowedEntry`', as shown below.
+ 
  */
+let allowedEntry = false
+if !allowedEntry {
+    print("ACCESS DENIED")
+}
+/*:
+ 
+ ### AND Operator (`&&`)
+
+ The logical AND operator is an expression that is true if **both** boolean values are true. If one is false then the overall expression is false.
+
+ In the following example, access is only granted if both `enteredDoorCode` and `passedRetinaScan` are both true.
+
+ */
+let enteredDoorCode = true
+let passedRetinaScan = false
+if enteredDoorCode && passedRetinaScan {
+    print("Welcome!")
+} else {
+    print("ACCESS DENIED")
+}
+/*:
+ 
+ ### OR Operator (`||`)
+ 
+ The logical OR operator is an expression that is true if just **one** boolean value is true. If one is true then the overall expression is true.
+ 
+ In the example below, if either `hasDoorKey` or `knowsOverridePassword` is **true** (or both are true), then the access would be granted.
+ 
+ Only if both `hasDoorKey` or `knowsOverridePassword` are **false**, then access would be granted.
+ 
+ */
+let hasDoorKey = false
+let knowsOverridePassword = true
+if hasDoorKey || knowsOverridePassword {
+    print("Welcome!")
+} else {
+    print("ACCESS DENIED")
+}
+
 //: [Switch](@next)
