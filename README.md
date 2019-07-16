@@ -4,24 +4,28 @@ This is a series of **5 workshops** designed to walk you through every step in t
 
 **Each workshop will build on the previous ones;** if you missed a workshop or you just want to join in halfway through the series, all the material covered in each workshop can be found in its respective workshop folder.
 
-`// todo insert folder links here:`
+`// todo: insert folder links here`
 
 This series of workshops is designed for beginners. Even if you have never created a program before, you should be able to follow along. If you get lost while actually attending the workshops, you can view all the material online and work on it at your own pace at the [GitHub repo](github.com/riconaranjo/iOS-Curriculum/tree/master).
 
 ## 0. Prelude: Installing Xcode on a macOS VM
 
+`// work in progress`
+
 This workshop will cover how to setup your own macOS Virtual Machine [VM], in case you don't have access to your own mac but you still want to develop iOS / macOS apps.
 
 ## 1. Getting Started with Swift
 
+`// rough draft done`
+
 This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
-| Topics       |
-| ------------ |
-| Datatypes    |
-| Control flow |
-| Functions    |
-| Playgrounds  |
+| Topics       | Details                            |
+| ------------ | ---------------------------------- |
+| Datatypes    | declarations + basic datatypes     |
+| Control flow | what is it + what is used for      |
+| Functions    | calling + writing functions        |
+| Playgrounds  | how to play around with Swift code |
 
 ### References
 
@@ -35,6 +39,8 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
 ## 2. Getting all Set-up
 
+`// work in progress`
+
 This workshop is about learning how to set yourself up with Xcode to create your own iOS apps. We will how to create UI elements, and create actions for when you press a button.
 
 | Topics                             |
@@ -46,6 +52,8 @@ This workshop is about learning how to set yourself up with Xcode to create your
 | Build + Run app on your own iPhone |
 
 ## 3. Mastering the Basics
+
+`// work in progress`
 
 In this workshop, we will learn how to add a splash screen and how to create apps with more than one View in the Storyboard; we will also learn more about colour schemes, why they're important, and how to apply one to your app. We will learn how to add app icons, and then we will use all the knowledge we've learn so far to make our very own TicTacToe app.
 
@@ -59,6 +67,8 @@ In this workshop, we will learn how to add a splash screen and how to create app
 
 ## 4. Next Level
 
+`// work in progress`
+
 This workshop is about how to create a more complex app that uses the MapKit framework. We will create a simple app to with two views to save different places on a map using a long press.
 
 | Topics                                    |
@@ -69,6 +79,8 @@ This workshop is about how to create a more complex app that uses the MapKit fra
 | Showing saved locations from segue        |
 
 ## 5. iOS Master
+
+`// work in progress`
 
 Here we will learn about CoreData and how use it to save data between sessions. Also we will learn how to add a settings menu where you can change the colour theme of your app.
 
@@ -82,6 +94,8 @@ Here we will learn about CoreData and how use it to save data between sessions. 
 
 ## The Finish Line
 
+`// work in progress`
+
 If you made it through all of these workshops, then congratulations! You are now a super totally officially certified 🔥 iOS Master. I hope you learned a lot and enjoyed participating in my workshops.
 
 After this I would suggest you keep going, try and make something you think would be cool to make; perhaps make something that you can't find on the app store, or perhaps see if you can replicate an already famous app.
@@ -94,4 +108,5 @@ After this I would suggest you keep going, try and make something you think woul
 | Package Delivery Tracker |
 | Twitter Clone            |
 
+`// todo: add link for feedback`
 If you have any questions, or [feedback]() [good or bad] I would love to hear from you.
