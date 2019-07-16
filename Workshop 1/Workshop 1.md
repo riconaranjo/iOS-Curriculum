@@ -1,6 +1,6 @@
 # 1. Getting Started with Swift
 
-This workshop is about learning how to code in Swift, using Xcode Playgrounds.
+_This workshop is about learning how to code in Swift, using Xcode Playgrounds._
 
 | Topics       | Details                            |
 | ------------ | ---------------------------------- |
@@ -15,6 +15,23 @@ This will be a quick introduction into how to write Swift code.
 - **how to create and modify variables**
 - **how to write control flow**
 - **how to create functions**
+
+## Topics
+
+1. [Datatypes](Datatypes)
+2. [Declarations](Declarations)
+3. [Integers](Integers)
+4. [Doubles](Doubles)
+5. [Booleans](Booleans)
+6. [Strings](Strings)
+7. [Arrays](Arrays)
+8. [Sets](Sets)
+9. [Dictionaries](Dictionaries)
+10. [Control Flow](Control%20Flow)
+11. [Conditional Statements](Conditional%20Statements)
+12. [Switch](Switch)
+13. [Loops](Loops)
+14. [Functions](Functions)
 
 ## Opening Playgrounds
 
@@ -70,7 +87,7 @@ In this workshop we will only cover a few of the basic datatypes in Swift such a
 
 For more informations read [The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html), from the Swift Organization.
 
-### Declarations
+## Declarations
 
 In order to create a datatype we must declare it. If we don't declare it and try to use it, Xcode will complain telling you **Use of unresolved identifier 'x'** (where x is the variable name).
 
@@ -81,7 +98,7 @@ In order to avoid this error, we have two ways of declaring a variable:
 1. `let` (constant)
 2. `var` (variable)
 
-#### Using `let`
+### Using `let`
 
 You can define a constant variable such as pi by typing the following:
 
@@ -107,7 +124,7 @@ You might have noticed two interesting things about Swift in that example:
 
 Additionally we added the `.0` to the distance to make it easier to multiply it with pi when both the same datatype (`Double`). If one was a whole number and the other a decimal number, Xcode would have complained. We talk about this later.
 
-#### Using `var`
+### Using `var`
 
 Using the `let` keyword allows us to create constant variables, but what if we want to change the distance so that instead of the Earth, we wanted to know Mercury's orbit?
 
@@ -134,12 +151,14 @@ Do this for both the `distance` and `circumference` variables and run your code.
 
 You should see both of the orbital distances travelled by the Earth and Mercury printed to the console.
 
-### Optionals
+## Optionals
 
 Optionals are used in Swift where a variable's value may be absent (`nil`).
 
-- Either there is a value, and you have to unwrap the optional
-- Or there is is no value at all
+**Either:**
+
+- there is a value, and you have to unwrap the optional
+- or, there is is no value at all
 
 The `Int()` initializer returns an `Int?` instead of `Int` because it might fail to convert the `String` to a numeric value.
 
@@ -148,7 +167,7 @@ var twentyThree = Int("23") // -> 23
 var five = Int("five")      // -> nil
 ```
 
-#### nil
+### nil
 
 In Swift, you can set an optional value to nil, but you cannot do this with non-optional values. By default optional variables are set to nil
 
@@ -157,9 +176,9 @@ twentyThree = nil
 var optionalValue: Int? // -> nil
 ```
 
-#### Unwrapping Optionals
+### Unwrapping Optionals
 
-You can check if an optional has a value using an `if` statement (these are explained in [Conditional Statements](Conditional%20Statements)) to check if the value is `nil`.
+You can check if an optional has a value using an `if` statement (these are explained in [Conditional Statements](#Conditional%20Statements)) to check if the value is `nil`.
 
 You can then use the `!` operator to force unwrap the value contained in the optional. If you use the `!` you **must** be sure that the optional contains a non-nil value, otherwise your program will crash, and you will be unhappy.
 
@@ -172,7 +191,7 @@ if optionalValue != nil {
 // the optional has a value of 20
 ```
 
-#### Optional Binding
+### Optional Binding
 
 Another way of checking if an optional has a non-nil value, is to use optional binding:
 
@@ -185,7 +204,7 @@ if let value = optionalValue {
 
 Read more about optionals in [The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html) in the Swift Book.
 
-### Integers
+## Integers
 
 Now that we know how to declare constants and variables, let's get back to datatypes.
 
@@ -204,7 +223,7 @@ let y: Int = -2     // explicit
 let z = Int(100.0)  // explicit
 ```
 
-### Doubles
+## Doubles
 
 In Swift we can represent decimal numbers — properly known as floating-point numbers — using the `Double` datatype. Floating-point numbers are numbers that have fractional components, colloquially referred to as as decimal values.
 
@@ -246,7 +265,7 @@ let yourInteger = 5
 let yourDouble: Double = Double(yourInteger)
 ```
 
-### Boolean
+## Boolean
 
 In Swift we can represent boolean values using the `Bool` datatype. A boolean value can only `true` or `false`.
 
@@ -260,6 +279,7 @@ let piGreaterThanFive = pi > 5
 if piGreaterThanFive {
     print("Physics is broken!?")
 }
+// Physics is broken!?
 ```
 
 You can negate (invert) a boolean value using the negation `!` operator.
@@ -268,11 +288,12 @@ You can negate (invert) a boolean value using the negation `!` operator.
 if !piGreaterThanFive {
     print("Physics is fine")
 }
+// Physics is fine
 ```
 
-You can see above that Since a logical operation results in a boolean value, you can set a `Bool` equal to its result as shown above.
+You can see above that Since a logical operation `(pi > 5)` results in a boolean value, you can set a `Bool` equal to its result as shown above.
 
-### Strings
+## Strings
 
 In Swift we can represent text using the `String` datatype. A `String` is a series of characters — _a string of characters_.
 
@@ -298,7 +319,7 @@ Sometimes you want to include special characters such as quotations in your stri
 let escape = "I shouted \"FREEDOM\" as I jumped out the window!"
 ```
 
-#### Empty Strings
+### Empty Strings
 
 You can create empty strings — to be filled in later by user input or online data — in two ways (source: [Initializing an Empty String](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html)):
 
@@ -314,10 +335,10 @@ And to check if a string is empty you can use the `.isEmpty` method.
 if emptyString.isEmpty {
     print("Nothing to see here")
 }
-// prints "Nothing to see here"
+// Nothing to see here
 ```
 
-#### String Concatenation
+### String Concatenation
 
 You can add / concatenate strings together which allows you to build longer and more complex strings, such as a greeting.
 
@@ -337,7 +358,7 @@ print(message)
 // prints "Hello there Elon! Welcome!"
 ```
 
-#### String Interpolation
+### String Interpolation
 
 Sometimes, instead of adding strings it makes more sense to insert a value into a string — this value can also be a string, but it could be an integer or another datatype.
 
@@ -348,7 +369,7 @@ print(newMessage)
 
 Read more about [Strings and Characters](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html).
 
-### Arrays
+## Arrays
 
 In Swift we can represent a collection of values using the `Array` datatype. An `Array` is an ordered lists of values. These values must all be of the same type, otherwise Xcode will complain — or worse you'll get a runtime error.
 
@@ -370,7 +391,7 @@ You can get the number of items in an array using the `.count` method.
 print("intArray has \(intArray.count) items")
 ```
 
-#### Appending
+### Appending
 
 You can append elements to an array using either the `.append` method or with the `+=` operator, just as with `String`.
 
@@ -382,7 +403,7 @@ print(intArray)
 // [1, 2, 3, 4, 5, 6, 7]
 ```
 
-#### Subscript Operator
+### Subscript Operator
 
 You can also access specific elements in an `Array` using the subscript `[]` operator.
 
@@ -391,7 +412,7 @@ print("the first element in the array is \(intArray[0])")
 print("the second element in the array is \(intArray[1])")
 ```
 
-#### Iterating
+### Iterating
 
 You can iterate across every element in an array using a `for-in` loop:
 
@@ -429,17 +450,23 @@ for (index, value) in intArray.enumerated() {
 
 Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#) in the Swift Book.
 
-### Sets
+## Sets
 
 Another way of representing a collection of values in Swift is by using a `Set`. You can use a `Set` when the order of the elements doesn't matter, or when you want to make sure there are no duplicate items in the list.
 
 ``` swift
 var intSet: Set<Int> = [1, 2, 3, 2]
 
+intSet.update(with: 7)      // adding to the set
+
+print("\n# printing all set elements [unsorted] \n")
+
 for item in intSet {
     print("unsorted: \(item)")
 }
 /*
+  # printing all set elements [unsorted]
+
    unsorted: 3
    unsorted: 1
    unsorted: 2
@@ -449,19 +476,29 @@ for item in intSet {
 If you want to go over the set elements in a specific order you can use the `.sorted` method.
 
 ``` swift
+print("\n# printing all set elements [sorted] \n")
 for item in intSet.sorted() {
     print("sorted: \(item)")
 }
 /*
+  # printing all set elements [sorted]
+
    sorted: 1
    sorted: 2
    sorted: 3
 */
 ```
 
+### Arrays vs. Sets
+
+- Think of any **array** as a bookshelf where each item is next to each other (ordered).
+  - _good for reading_
+- A **set** is a bag of items where it doesn't matter where each item is.
+  - _good for inserting_
+
 Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#).
 
-### Dictionaries
+## Dictionaries
 
 In Swift we can use the `Dictionary` datatype to organize key-value pairs. It functions like a set, but each value has a key that can be used to retrieve the value.
 
@@ -473,10 +510,14 @@ students[101] = "Jeremy Smith"
 students[102] = "Carlos Gutierrez"
 students[103] = "Emma Martin"
 
+print("\n# printing all students \n")
+
 for student in students {
     print("\(student.key): \(student.value)")
 }
 /*
+  # printing all students
+
    103: Emma Martin
    101: Jeremy Smith
    102: Carlos Gutierrez
@@ -514,20 +555,41 @@ You might have already seen some control flow in the examples we've used, but no
 
 _"Swift provides a variety of control flow statements. These include while loops to perform a task multiple times; if, guard, and switch statements to execute different branches of code based on certain conditions; and statements such as break and continue to transfer the flow of execution to another point in your code"_ - [Swift Book](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html)
 
-### Example
+### Topics
+
+- Conditional Statements
+- Switches
+- Loops
+
+### Conditional Statements
 
 Let's say you want to create a simple program to send a welcome message to every student at the school. We already have our dictionary with student numbers matched to a student name, but let's add a few empty student numbers reserved for future students.
 
 ``` swift
-students[104] = ""
-students[105] = ""
-students[106] = ""
+var students = [
+    101: "Jeremy Smith",
+    102: "Carlos Gutierrez",
+    103: "Emma Martin",
+    104: "",
+    105: "",
+    106: "",
+]
 
 print("\n# greetings [attempt]\n")
 
 for student in students.sorted(by: <) {
     print("Hello, welcome to school, \(student.value)!")
 }
+/*
+  # greetings [attempt]
+
+  Hello, welcome to school, Jeremy Smith!
+  Hello, welcome to school, Carlos Gutierrez!
+  Hello, welcome to school, Emma Martin!
+  Hello, welcome to school, !
+  Hello, welcome to school, !
+  Hello, welcome to school, !
+ */
 ```
 
 You'll notice that we now have a bunch of greetings with no name. How could we make it so that the greeting is only printed if that student number has a name?
@@ -548,6 +610,13 @@ for student in students.sorted(by: <) {
         print("Hello, welcome to school, \(student.value)!")
     }
 }
+/*
+  # greetings [correct]
+
+  Hello, welcome to school, Jeremy Smith!
+  Hello, welcome to school, Carlos Gutierrez!
+  Hello, welcome to school, Emma Martin!
+ */
 ```
 
 As you can see, an `if` loop allows us to create specific actions based on certain conditions or variables. In this example we used the `if` code block at it's most basic: just a simple check for a condition, and some code that is executed if that condition is true.
@@ -601,9 +670,69 @@ if temperature >= 25 {
 } else if temperature <= -20 {
     print("it's quite cold, make sure to bundle up!")
 }
+// prints nothing
 ```
 
 In this case, nothing is printed since the temperature is neither hot nor cold enough to trigger either the `if` or `else if` conditions.
+
+### Logical Operators
+
+To create more complex conditions we can use the `!` (negation), the `&&` (AND), `||` (OR) logical operators.
+
+#### Negation operator (`!`)
+
+The negation operator will invert the value of a boolean:
+
+- true -> false
+- false -> true
+
+The value `!allowedEntry` can be read as 'not `allowedEntry`', as shown below.
+
+``` swift
+let allowedEntry = false
+if !allowedEntry {
+    print("ACCESS DENIED")
+}
+// ACCESS DENIED
+```
+
+#### AND Operator (`&&`)
+
+The logical AND operator is an expression that is true if **both** boolean values are true. If one is false then the overall expression is false.
+
+In the following example, access is only granted if both `enteredDoorCode` and `passedRetinaScan` are both true.
+
+``` swift
+let enteredDoorCode = true
+let passedRetinaScan = false
+if enteredDoorCode && passedRetinaScan {
+    print("Welcome!")
+} else {
+    print("ACCESS DENIED")
+}
+// ACCESS DENIED
+```
+
+### OR Operator (`||`)
+
+The logical OR operator is an expression that is true if just **one** boolean value is true. If one is true then the overall expression is true.
+
+In the example below, if either `hasDoorKey` or `knowsOverridePassword` is **true** (or both are true), then the access would be granted.
+
+Only if both `hasDoorKey` or `knowsOverridePassword` are **false**, then access would be granted.
+
+``` swift
+let hasDoorKey = false
+let knowsOverridePassword = true
+if hasDoorKey || knowsOverridePassword {
+    print("Welcome!")
+} else {
+    print("ACCESS DENIED")
+}
+// Welcome!
+```
+
+You can find these examples and more information in [Basic Operators](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html) in the Swift Book.
 
 ### Switch
 
@@ -614,6 +743,21 @@ _Like this..._
 ``` swift
 let value = "M"
 
+if value == "k" {
+    print("\(value) is the same as 10^3")
+} else if value == "M" {
+    print("\(value) is the same as 10^6")
+} else if value == "G" {
+    print("\(value) is the same as 10^9")
+} else {
+    print("value doesn't match any case")
+}
+// M is the same as 10^6
+```
+
+The `switch` code block below is identical to the `if` code block above, but it is both quicker to write and easier to read.
+
+``` swift
 switch value {
 case "k":
     print("\(value) is the same as 10^3")
@@ -622,21 +766,6 @@ case "M":
 case "G":
     print("\(value) is the same as 10^9")
 default:
-    print("value doesn't match any case")
-}
-// M is the same as 10^6
-```
-
-The `switch` code block above is identical to the `if` code block below, but it is both quicker to write and easier to read.
-
-``` swift
-if value == "k" {
-    print("\(value) is the same as 10^3")
-} else if value == "M" {
-    print("\(value) is the same as 10^6")
-} else if value == "G" {
-    print("\(value) is the same as 10^9")
-} else {
     print("value doesn't match any case")
 }
 // M is the same as 10^6
@@ -662,6 +791,8 @@ default:
 // m is too small
 ```
 
+More infomation about [Switch Statements](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html).
+
 ### Loops
 
 In addition to `if` and `switch` statements, we can loop over code using `while`, `for-in` statements.
@@ -671,17 +802,41 @@ In addition to `if` and `switch` statements, we can loop over code using `while`
 `for-in` statements are quite useful for iterating over element in a collection, or perform the same task, as we've done several times in this workshop.
 
 ``` swift
+var students = [
+    101: "Jeremy Smith",
+    102: "Carlos Gutierrez",
+    103: "Emma Martin",
+]
+
+print("\n# regular for-in loop\n")
+
 for student in students {
     print("\(student.key): \(student.value)")
 }
+/*
+  # regular for-in loop
+
+  103: Emma Martin
+  101: Jeremy Smith
+  102: Carlos Gutierrez
+ */
 ```
 
 A different version of this `for-in` statement uses a (key, value) tuple:
 
 ``` swift
+print("\n# for-in loop using tuple\n")
+
 for (number, name) in students {
     print("\(number): \(name)")
 }
+/*
+  # for-in loop using tuple
+
+  103: Emma Martin
+  101: Jeremy Smith
+  102: Carlos Gutierrez
+ */
 ```
 
 We can also do `for-in` with numeric ranges, shown with the three-times table:
@@ -713,11 +868,14 @@ while number != 5 {
 print("\(number) is five!")
 ```
 
-Here each time the code is run, it will loop a different amount of times, since only when number is 5 will the condition `number != 5` is broken, thus exiting out of the loop.
+Here each time the code is run, it will loop a different amount of times, since only when number is 5 will the condition `number != 5` be `false`, thus exiting out of the loop.
 
 ### `continue` / `break`
 
-Using `while` and `for-in` loops to repeat code execution is super common, especially when you want to perform an action on multiple collection items. But what happens when you want to ignore some elements? Or if you want to stop looping once you've found a specific item?
+Using `while` and `for-in` loops to repeat code execution is super common, especially when you want to perform an action on multiple collection items.
+
+- But what happens when you want to ignore some elements?
+- Or if you want to stop looping once you've found a specific item?
 
 In these cases we use either the `continue` or `break` keywords.
 
@@ -733,6 +891,8 @@ let children = [
     "Ben": "bad"
 ]
 
+print("\n# all the good children...\n")
+
 for child in children {
     if child.value == "bad" {
         continue // ignore naughty children
@@ -740,6 +900,8 @@ for child in children {
     print("\(child.key) is a good child")
 }
 /*
+  # all the good children...
+
    Peter is a good child
    Joanna is a good child
 */
@@ -764,6 +926,8 @@ let lotteryTickets: Set<String> = [
 
 let winningTicket = "12334"
 
+print("\n# playing the lottery...\n")
+
 for numbers in lotteryTickets {
     if numbers == winningTicket {
         print("You won the lottery!")
@@ -771,9 +935,14 @@ for numbers in lotteryTickets {
     }
 }
 /*
-   Try again...
-   Try again...
-   You won the lottery!
+  # playing the lottery...
+
+  checking 87123...
+  checking 10209...
+  checking 98232...
+  checking 12353...
+  checking 12334...
+  You won the lottery!
 */
 ```
 
@@ -781,15 +950,13 @@ In this example, as soon as we found the winning lottery, we stop looking and we
 
 ## Functions
 
-# Functions
-
 Functions (methods) allow programmers to encapsulate code and call on it when it's needed instead of copying and pasting it several times across an application. This means that if you find a bug or you need to update the code, you only do so once, and not in every place you use the code.
 
 **`DRY:`** `Don't Repeat Yourself`
 
 - _**Functions are self-contained chunks of code that perform a specific task.** You give a function a name that identifies what it does, and this name is used to “call” the function to perform its task when needed._ — [Swift Book](https://docs.swift.org/swift-book/LanguageGuide/Functions.html):
 
-## Defining and Calling Functions
+### Defining and Calling Functions
 
 A function is defined by using these three concepts:
 
@@ -799,7 +966,7 @@ A function is defined by using these three concepts:
 
 Function definitions must be unique to a function, otherwise you will get an error that you are redefining an existing function. As long as the parameters or return type is different, then you can have multiple functions with the same name.
 
-When we use a function, we "call" the function by using the **function name** and passing any input values — arguments — that match the function's parameters.
+When we use a function, we _"call"_ the function by using the **function name** and passing any input values — _arguments_ — that match the function's parameters.
 
 ### Function Defintion
 
@@ -814,11 +981,15 @@ func greet(person: String) -> String {
     let greeting = "Hello, " + person + "!"
     return greeting
 }
+/*
+  Hello, Anna!
+  Hello, Brian!
+ */
 ```
 
 You might have noticed the markup used before the function defintion. This is called documentation and it is very important when you are working with other developers so that they know what your function is, what it does, and exactly what each parameter is.
 
-You can see your documentation by clicking on the function name and holding the `option` key.
+_You can see your function documentation by clicking on the function name and holding the `option` key._
 
 ### Calling Functions
 
@@ -839,11 +1010,14 @@ This function can be simplified, by combining the message creation and the retur
 func greetAgain(person: String) -> String {
     return "Hello again, " + person + "!"
 }
+
+print(greetAgain(person: "Anna"))
+// Hello again, Anna!
 ```
 
-## Function Parameters and Return Values
+### Function Parameters and Return Values
 
-You have a lot of freedom in how you define parameters and return values when using Swift. You can create very simple utility functions or something complex to suit your needs.
+You have a lot of freedom in how you define parameters and return values when using Swift. You can create very simple utility functions or something more complex to suit your needs.
 
 ### Functions Without Parameters
 
@@ -855,11 +1029,12 @@ func sayHelloWorld() -> String {
 }
 
 print(sayHelloWorld())
+// hello world
 ```
 
 ### Functions With Multiple Parameters
 
-You can also define functions that have many parameters for more complex logic. The first parameter can be left unnamed — by using `_` — but all parameters after that must be named.
+You can also define functions that have many parameters for more complex logic. The first parameter can be left unnamed — by using the underscore '`_`' character — but all parameters after that must be named.
 
 Here we are defining a second function named `greet()` but here it has two parameters which makes it unique from the earlier `greet()` function.
 
@@ -873,13 +1048,17 @@ func greet(person: String, alreadyGreeted: Bool) -> String {
 
 print(greet(person: "Anna", alreadyGreeted: true))
 print(greet(person: "Jenny", alreadyGreeted: false))
+/*
+  Hello again, Brian!
+  Hello, Jenny!
+ */
 ```
 
 ### Functions Without Return Values
 
 If you don't need to reuse the result of you function, ir might make more sense to not have a return value for your function. This is common with functions that print to the console, or otherwise something to the user.
 
-The return type and `->` is then optional if it is of type `Void`.
+The return type and the `->` is then optional if the return type is `Void`.
 
 ``` swift
 func greeting(person: String) -> Void {
@@ -887,14 +1066,15 @@ func greeting(person: String) -> Void {
 }
 
 greeting(person: "Dave")
+// Greetings, Dave!
 ```
 
-## Function Argument Labels and Parameter Names
+### Function Argument Labels and Parameter Names
 
 Parameters each have a label and a name:
 
-- the label is what you see when you are calling the function
-- the name is the variable name inside the function
+- the **label** is what you see when you are calling the function
+- the **name** is the variable name inside the function
 
 By default, the parameter name becomes the label, but you can override this by defining your own label.
 
@@ -907,19 +1087,449 @@ In this example the `person` parameter label and name are the same, but the `hom
      - person: the person's name to be greeted
  */
 func greet(person: String, from hometown: String) {
-    print("Hello \(person)!  Glad you could visit from \(hometown).")
+    print("Hello \(person)! Glad you could visit from \(hometown).")
 }
 
-greet(person: "Bill", from: "Cupertino")
+greet(person: "Tim", from: "Cupertino")
+// Hello Tim! Glad you could visit from Cupertino.
 ```
 
 If you want to learn more about functions in Swift, read the  [Functions](https://docs.swift.org/swift-book/LanguageGuide/Functions.html) page in the Swift Book — _many of these examples come directly from there._
 
 # 1.2 Playing around with Swift
 
-Now that we have a basic understanding of how to write some Swift code, let's build a basic app in playgrounds.
+Now that we have a firm basic understanding of how to write Swift code, let's use it to build something cool.
 
-## Playgrounds
+What's a cooler thing to make than a revolutionary app with over a million downloads within it's first week?
+
+Your first tic tac toe app in playgrounds, that's what!
+
+## Tic Tac Toe
+
+I've already built a skeleton for this tic tac toe app to help you get started, including the labels and buttons. We're just going to add a few functions to finish up the game.
+
+1. **Add a function that is triggered when you play a move.**
+2. **Add a function that checks if a winning move has been played.**
+3. **Add a function that updates the game board**
+
+_The function definitions are shown below. We will implement later._
+
+``` swift
+/**
+ Action triggered when any game board button is pressed
+ - parameter sender: A reference to the button that was pressed
+ */
+func buttonPressed(sender: UIButton!) {}
+```
+
+``` swift
+/**
+ Checks game board and checks if any winning moves were made.
+ - returns: True if a winning move was found in `board`
+ */
+func winner() -> Bool { return false }
+```
+
+``` swift
+/**
+ Updates `board` with the last move
+ - parameter button: button ID for button pressed (1...9)
+ */
+func updateBoard(button: Int) {}
+```
+
+## Tic Tac Toe Playground
+
+A simple tic tac toe game implemented in Swift Playgrounds.
+
+### Import Statements
+
+This bit of code imports tools so we can create our tic tac toe game in Swift Playgrounds.
+- [UIKit](https://developer.apple.com/documentation/uikit) is the UI framework for iOS applications.
+- [Playground Support](https://developer.apple.com/documentation/playgroundsupport) allows us to display and interact with live views in playgrounds.
+
+``` swift
+import UIKit
+import PlaygroundSupport
+```
+
+### Global Constants
+
+These are values that are _globally_ accessible, that means you can use them anywhere in your program. Usually you want to avoid using these since it can create unforeseen problems in a large project and can be quite difficult to debug.
+
+We are using them here since we're just starting out and our program is small.
+
+``` swift
+let background = UIColor(red:0.04, green:0.04, blue:0.03, alpha:1.0)
+let lavaRed    = UIColor(red:0.78, green:0.06, blue:0.18, alpha:1.0)
+let mustard    = UIColor(red:1.00, green:0.82, blue:0.32, alpha:1.0)
+let navajo     = UIColor(red:1.00, green:0.90, blue:0.63, alpha:1.0)
+```
+
+### View Controller
+
+View controllers are a super important concept in iOS development as every single app has at least one view controller, and often more than one. They manage your user interface and it's interactions with the underlying data.
+
+Each view controller manages a top level view which contains smaller subviews / UI element, but it does not necessary manage the subviews — _here in our simple example, it does_.
+
+Read more about view controllers in Apple's [programming guide](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/)
+
+``` swift
+class MyViewController : UIViewController {
+```
+
+### Class Properties
+
+Class properties are values that are associated wth a class. Just like a car has four wheels (each wheel is a property of a car), our tic tac toe game has 9 buttons (one for each position on the board). Our game view also has two text labels: a title and a subtitle. The title will just simply say the name of the game, and the subtitle will give current player's turn or the winner.
+
+``` swift
+/*
+     Board values
+     - initial state value: 0
+     - player x state value: 1
+     - player o state value: -1
+     */
+    var board = [0,0,0, 0,0,0, 0,0,0]
+    var turnCount = 0
+    var turnX = true
+
+    var button1: UIButton!
+    var button2: UIButton!
+    var button3: UIButton!
+    var button4: UIButton!
+    var button5: UIButton!
+    var button6: UIButton!
+    var button7: UIButton!
+    var button8: UIButton!
+    var button9: UIButton!
+
+    var label: UILabel!
+    var subtitle: UILabel!
+```
+
+### Loading the View
+
+This function is what actually loads all of our labels and buttons into the playground live view. Here we create our `UIView` and we change its background colour. We setup the labels and buttons, adding them to the view, and then we give the view to the view controller.
+
+`setupLabel(with: view)` and `setupButtons(with: view)` were created to make this a bit easier; they put all the buttons and labels in the right place and setting them to their initial values, they are defined below in this class.
+
+``` swift
+    override func loadView() {
+        let view = UIView()     // default view size: (375.0, 668.0)
+        view.backgroundColor = background
+
+        setupLabels(with: view)
+        setupButtons(with: view)
+
+        self.view = view
+    }
+
+    /**
+     Creates and adds title and subtitle labels to the view passed.
+     - parameter view: View created in `loadView()`
+     */
+    @objc func setupLabels(with view: UIView) {
+        // label (title) //
+        label = UILabel()
+        label.frame = CGRect(x: 187.5-60, y: 100, width: 200, height: 60)
+        label.text = "Tic Tac Toe"
+        label.font = UIFont(name: "Helvetica", size: 24)
+        label.textColor = .white
+
+        // subtitle //
+        subtitle = UILabel()
+        subtitle.frame = CGRect(x: 187.5-30, y: 140, width: 200, height: 60)
+        subtitle.text = "X's turn"
+        subtitle.font = UIFont(name: "Helvetica", size: 18)
+        subtitle.textColor = .gray
+
+        view.addSubview(label)
+        view.addSubview(subtitle)
+    }
+
+    /**
+     Creates and adds all 9 buttons for tic tac toe game board.
+     - parameter view: View created in `loadView()`
+     */
+    @objc func setupButtons(with view: UIView) {
+        button1 = UIButton()
+        button2 = UIButton()
+        button3 = UIButton()
+        button4 = UIButton()
+        button5 = UIButton()
+        button6 = UIButton()
+        button7 = UIButton()
+        button8 = UIButton()
+        button9 = UIButton()
+
+        button1.tag = 1
+        button2.tag = 2
+        button3.tag = 3
+        button4.tag = 4
+        button5.tag = 5
+        button6.tag = 6
+        button7.tag = 7
+        button8.tag = 8
+        button9.tag = 9
+
+        button1.setTitle("#", for: .normal)
+        button2.setTitle("#", for: .normal)
+        button3.setTitle("#", for: .normal)
+        button4.setTitle("#", for: .normal)
+        button5.setTitle("#", for: .normal)
+        button6.setTitle("#", for: .normal)
+        button7.setTitle("#", for: .normal)
+        button8.setTitle("#", for: .normal)
+        button9.setTitle("#", for: .normal)
+
+        button1.setTitleColor(mustard, for: .normal)
+        button2.setTitleColor(mustard, for: .normal)
+        button3.setTitleColor(mustard, for: .normal)
+        button4.setTitleColor(mustard, for: .normal)
+        button5.setTitleColor(mustard, for: .normal)
+        button6.setTitleColor(mustard, for: .normal)
+        button7.setTitleColor(mustard, for: .normal)
+        button8.setTitleColor(mustard, for: .normal)
+        button9.setTitleColor(mustard, for: .normal)
+
+        button1.setTitleColor(navajo, for: .highlighted)
+        button2.setTitleColor(navajo, for: .highlighted)
+        button3.setTitleColor(navajo, for: .highlighted)
+        button4.setTitleColor(navajo, for: .highlighted)
+        button5.setTitleColor(navajo, for: .highlighted)
+        button6.setTitleColor(navajo, for: .highlighted)
+        button7.setTitleColor(navajo, for: .highlighted)
+        button8.setTitleColor(navajo, for: .highlighted)
+        button9.setTitleColor(navajo, for: .highlighted)
+
+        button1.frame = CGRect(x: 62.5,  y: 300, width: 40, height: 40)
+        button2.frame = CGRect(x: 167.5, y: 300, width: 40, height: 40)
+        button3.frame = CGRect(x: 272.5, y: 300, width: 40, height: 40)
+        button4.frame = CGRect(x: 62.5,  y: 405, width: 40, height: 40)
+        button5.frame = CGRect(x: 167.5, y: 405, width: 40, height: 40)
+        button6.frame = CGRect(x: 272.5, y: 405, width: 40, height: 40)
+        button7.frame = CGRect(x: 62.5,  y: 510, width: 40, height: 40)
+        button8.frame = CGRect(x: 167.5, y: 510, width: 40, height: 40)
+        button9.frame = CGRect(x: 272.5, y: 510, width: 40, height: 40)
+
+        button1.addTarget(
+            self, action: #selector(buttonPressed), for: .touchUpInside
+        )
+        button2.addTarget(
+            self, action: #selector(buttonPressed), for: .touchUpInside
+        )
+        button3.addTarget(
+            self, action: #selector(buttonPressed), for: .touchUpInside
+        )
+        button4.addTarget(
+            self, action: #selector(buttonPressed), for: .touchUpInside
+        )
+        button5.addTarget(
+            self, action: #selector(buttonPressed), for: .touchUpInside
+        )
+        button6.addTarget(
+            self, action: #selector(buttonPressed), for: .touchUpInside
+        )
+        button7.addTarget(
+            self, action: #selector(buttonPressed), for: .touchUpInside
+        )
+        button8.addTarget(
+            self, action: #selector(buttonPressed), for: .touchUpInside
+        )
+        button9.addTarget(
+            self, action: #selector(buttonPressed), for: .touchUpInside
+        )
+
+        view.addSubview(button1)
+        view.addSubview(button2)
+        view.addSubview(button3)
+        view.addSubview(button4)
+        view.addSubview(button5)
+        view.addSubview(button6)
+        view.addSubview(button7)
+        view.addSubview(button8)
+        view.addSubview(button9)
+    }
+```
+
+### Button Pressed
+
+When a button is pressed we want to do a few different things:
+
+1. We want to update that button with that player's move
+    - but only if that button hasn't already been pressed
+2. We want to check if that move was a winning move
+    - and if so we want to stop the game
+3. We want to show that it's the next player's turn
+
+``` swift
+/**
+     Action triggered when any game board button is pressed
+     - parameter sender: A reference to the button that was pressed
+     */
+    @objc func buttonPressed(sender: UIButton!) {
+        // quit if game is over or button has already been pressed
+        if winner() || board[sender.tag-1] != 0 {
+            return
+        }
+
+        let symbol = turnX ? "X" : "O"
+        let nextSymbol = !turnX ? "X" : "O"
+
+        // update button with player symbol
+        sender.setTitle(symbol, for: .normal)
+        turnX = !turnX
+        turnCount += 1
+
+        // update board struct with new move
+        updateBoard(button: sender.tag)
+
+        // check for winner
+        if winner() {
+            subtitle.text = "\(symbol) wins!"
+            return
+        }
+
+        // check for draw since no winner was found
+        if turnCount == 9 {
+            subtitle.text = "Draw!"
+            return
+        }
+
+        // update subtitle to say who's turn it is
+        subtitle.text = "\(nextSymbol)'s turn"
+    }
+```
+
+### Winning Combinations
+
+There are 8 possible winning combinations for any particular player. We can check for these if there are three game positions with the same value in a line. We can describe these winning combinations by comparing the values as shown below. (rows: a, b, c | col: 1, 2, 3)
+
+The player could get all three in a row:
+
+1. a1 == a2 == a3
+2. b1 == b2 == b3
+3. c1 == c2 == c3
+
+The player could get all three in a column:
+
+4. a1 == b1 == c1
+5. a2 == b2 == c2
+6. a3 == b3 == c3
+
+Or the player could get one of the diagonals:
+
+7. a1 == b2 == c3
+8. a3 == b2 == c1
+
+## Winner
+
+Let's make this function check for each of these 8 cases, and if we find a winning combination we return true, but false if we don't find any.
+
+Once we get that working, let's make it change the colour of the winning positions red as well so we can show the players exactly what the winning moves were.
+
+_hint: conditional statements_
+
+``` swift
+    /**
+     Checks game board and checks if any winning moves were made.
+     - returns: True if a winning move was found in `board`
+     */
+    @objc func winner() -> Bool {
+        if board[0] == board[1]
+            && board[0] == board[2]
+            && board[0] != 0 {
+            // row 1 //
+            button1.setTitleColor(lavaRed, for: .normal)
+            button2.setTitleColor(lavaRed, for: .normal)
+            button3.setTitleColor(lavaRed, for: .normal)
+            return true
+        } else if board[3] == board[4]
+            && board[3] == board[5]
+            && board[3] != 0 {
+            // row 2 //
+            button4.setTitleColor(lavaRed, for: .normal)
+            button5.setTitleColor(lavaRed, for: .normal)
+            button6.setTitleColor(lavaRed, for: .normal)
+            return true
+        } else if board[6] == board[7]
+            && board[6] == board[8]
+            && board[6] != 0 {
+            // row 3 //
+            button7.setTitleColor(lavaRed, for: .normal)
+            button8.setTitleColor(lavaRed, for: .normal)
+            button9.setTitleColor(lavaRed, for: .normal)
+            return true
+        } else if board[0] == board[3]
+            && board[0] == board[6]
+            && board[0] != 0 {
+            // col 1 //
+            button1.setTitleColor(lavaRed, for: .normal)
+            button4.setTitleColor(lavaRed, for: .normal)
+            button7.setTitleColor(lavaRed, for: .normal)
+            return true
+        } else if board[1] == board[4]
+            && board[1] == board[7]
+            && board[1] != 0 {
+            // col 2 //
+            button2.setTitleColor(lavaRed, for: .normal)
+            button5.setTitleColor(lavaRed, for: .normal)
+            button8.setTitleColor(lavaRed, for: .normal)
+            return true
+        } else if board[2] == board[5]
+            && board[2] == board[8]
+            && board[2] != 0 {
+            // col 1 //
+            button3.setTitleColor(lavaRed, for: .normal)
+            button6.setTitleColor(lavaRed, for: .normal)
+            button9.setTitleColor(lavaRed, for: .normal)
+            return true
+        } else if board[0] == board[4]
+            && board[0] == board[8]
+            && board[0] != 0 {
+            // diagonal 1 //
+            button1.setTitleColor(lavaRed, for: .normal)
+            button5.setTitleColor(lavaRed, for: .normal)
+            button9.setTitleColor(lavaRed, for: .normal)
+            return true
+        } else if board[2] == board[4]
+            && board[2] == board[6]
+            && board[2] != 0 {
+            // diagonal 2 //
+            button3.setTitleColor(lavaRed, for: .normal)
+            button5.setTitleColor(lavaRed, for: .normal)
+            button7.setTitleColor(lavaRed, for: .normal)
+            return true
+        }
+        return false
+    }
+```
+
+### Updating Board
+
+We want to update our integer array which stores the states of each button so we don't have to go through each button every time we check for a winner. How can we update the `board` values using only the button ID?
+
+_hint: ternary operator_
+
+``` swift
+    /**
+     Updates `board` with the last move
+     - parameter button: button ID for button pressed (1...9)
+     */
+    @objc func updateBoard(button: Int) {
+        board[button-1] = turnX ? 1 : -1
+    }
+}
+```
+
+This line loads and shows the view in playgrounds.
+
+``` swift
+PlaygroundPage.current.liveView = MyViewController()
+```
+
+``` swift
+```
 
 ## Additional Topics
 
@@ -931,6 +1541,8 @@ These are some useful topics that I would suggest reading into, and learning how
 - [Google](https://google.ca)
 
 ## References
+
+This are some of the resources I used to make this workshop, all of them are worth reading / watching.
 
 - [Get Started With Xcode Playgrounds](https://learnappmaking.com/xcode-playground-get-started-with-swift/)
 - [Swift Documentation](https://developer.apple.com/reference/swift)

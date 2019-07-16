@@ -25,7 +25,7 @@ print("hello world")
 
   You should see the result on the right side of the code editor. and at the bottom in the console panel.
 
-  **Congrats you have now written your first line of Swift code!**
+  _Congrats you have now written your first line of Swift code!_
  
  */
 //:  Click here for [Datatypes](@next)

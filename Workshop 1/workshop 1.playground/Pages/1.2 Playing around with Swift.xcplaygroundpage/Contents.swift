@@ -4,7 +4,7 @@ import UIKit
  
  # 1.2 Playing around with Swift
  
- Now that we have a firm basic understanding of how to write Swift code, let's use it to build soomething cool.
+ Now that we have a firm basic understanding of how to write Swift code, let's use it to build something cool.
  
  What's a cooler thing to make than a revolutionary app with over a million downloads within it's first week?
  

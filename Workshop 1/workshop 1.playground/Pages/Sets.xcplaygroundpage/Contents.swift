@@ -34,7 +34,7 @@ for item in intSet.sorted() {
  
  ---
  
- ## Arrays vs Sets
+ ## Arrays vs. Sets
  
  - Think of any **array** as a bookshelf where each item is next to each other (ordered).
      - _good for reading_

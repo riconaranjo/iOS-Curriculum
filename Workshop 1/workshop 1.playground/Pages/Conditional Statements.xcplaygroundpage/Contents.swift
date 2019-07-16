@@ -1,4 +1,4 @@
-//: [Previous](@previous)
+//: [Control Flow](@previous)
 /*:
  
  # Conditional Statements
@@ -108,6 +108,8 @@ if temperature >= 25 {
  
  To create more complex conditions we can use the `!` (negation), the `&&` (AND), `||` (OR) logical operators.
  
+ ---
+ 
  ### Negation operator (`!`)
  
  The negation operator will invert the value of a boolean:
@@ -123,6 +125,8 @@ if !allowedEntry {
     print("ACCESS DENIED")
 }
 /*:
+ 
+ ---
  
  ### AND Operator (`&&`)
 
@@ -140,6 +144,8 @@ if enteredDoorCode && passedRetinaScan {
 }
 /*:
  
+ ---
+ 
  ### OR Operator (`||`)
  
  The logical OR operator is an expression that is true if just **one** boolean value is true. If one is true then the overall expression is true.
@@ -156,5 +162,9 @@ if hasDoorKey || knowsOverridePassword {
 } else {
     print("ACCESS DENIED")
 }
+/*:
 
+ You can find these examples and more information in [Basic Operators](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html) in the Swift Book.
+ 
+ */
 //: [Switch](@next)

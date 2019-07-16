@@ -1,12 +1,14 @@
-//: [Declaraions](@previous)
+//: [Declarations](@previous)
 /*:
  
  # Optionals
  
  Optionals are used in Swift where a variable's value may be absent (`nil`).
  
- - Either there is a value, and you have to unwrap the optional
- - Or there is is no value at all
+ **Either:**
+ 
+ - there is a value, and you have to unwrap the optional
+ - or, there is is no value at all
  
  The `Int()` initializer returns an `Int?` instead of `Int` because it might fail to convert the `String` to a numeric value.
  

@@ -45,7 +45,7 @@ for i in 1...5 {
 // this is the same as above
 // since ..< excludes the final value
 for i in 1..<6 {
-print("3 x \(i) = \(3 * i)")
+    print("3 x \(i) = \(3 * i)")
 }
 /*:
  
@@ -66,13 +66,16 @@ while number != 5 {
 print("\(number) is five!")
 /*:
  
- Here each time the code is run, it will loop a different amount of times, since only when number is 5 will the condition `number != 5` is broken, thus exiting out of the loop.
+ Here each time the code is run, it will loop a different amount of times, since only when number is 5 will the condition `number != 5` be `false`, thus exiting out of the loop.
  
  ---
  
  ## `continue` / `break`
  
- Using `while` and `for-in` loops to repeat code execution is super common, especially when you want to perform an action on multiple collection items. But what happens when you want to ignore some elements? Or if you want to stop looping once you've found a specific item?
+ Using `while` and `for-in` loops to repeat code execution is super common, especially when you want to perform an action on multiple collection items.
+ 
+ - But what happens when you want to ignore some elements?
+ - Or if you want to stop looping once you've found a specific item?
  
  In these cases we use either the `continue` or `break` keywords.
  
@@ -89,6 +92,8 @@ let children = [
     "Joanna": "good",
     "Ben": "bad"
 ]
+
+print("\n# all the good children...\n")
 
 for child in children {
     if child.value == "bad" {

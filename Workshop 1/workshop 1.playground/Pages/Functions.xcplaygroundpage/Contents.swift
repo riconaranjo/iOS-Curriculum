@@ -21,7 +21,7 @@
  
  Function definitions must be unique to a function, otherwise you will get an error that you are redefining an existing function. As long as the parameters or return type is different, then you can have multiple functions with the same name.
  
- When we use a function, we "call" the function by using the **function name** and passing any input values — arguements — that match the function's parameters.
+ When we use a function, we _"call"_ the function by using the **function name** and passing any input values — _arguements_ — that match the function's parameters.
  
  ---
  
@@ -43,7 +43,7 @@ func greet(person: String) -> String {
  
  You might have noticed the markup used before the function defintion. This is called documentation and it is very important when you are working with other developers so that they know what your function is, what it does, and exactly what each parameter is.
  
- You can see your documentation by clicking on the function name and holding the `option` key.
+ _You can see your function documentation by clicking on the function name and holding the `option` key._
  
  ---
  
@@ -66,13 +66,15 @@ print(greet(person: "Brian"))
 func greetAgain(person: String) -> String {
     return "Hello again, " + person + "!"
 }
+
+print(greetAgain(person: "Anna"))
 /*:
  
  ---
  
  ## Function Parameters and Return Values
  
- You have a lot of freedom in how you define parameters and return values when using Swift. You can create very simple utility functions or something complex to suit your needs.
+ You have a lot of freedom in how you define parameters and return values when using Swift. You can create very simple utility functions or something more complex to suit your needs.
  
  ---
  
@@ -92,7 +94,7 @@ print(sayHelloWorld())
  
  ### Functions With Multiple Parameters
 
- You can also define functions that have many parameters for more complex logic. The first parameter can be left unnamed — by using `_` — but all parameters after that must be named.
+ You can also define functions that have many parameters for more complex logic. The first parameter can be left unnamed — by using the underscore '`_`' character — but all parameters after that must be named.
  
  Here we are defining a second function named `greet()` but here it has two parameters which makes it unique from the earlier `greet()` function.
  
@@ -104,7 +106,7 @@ func greet(person: String, alreadyGreeted: Bool) -> String {
     return greet(person: person)
 }
 
-print(greet(person: "Anna", alreadyGreeted: true))
+print(greet(person: "Brian", alreadyGreeted: true))
 print(greet(person: "Jenny", alreadyGreeted: false))
 /*:
  
@@ -114,7 +116,7 @@ print(greet(person: "Jenny", alreadyGreeted: false))
 
  If you don't need to reuse the result of you function, ir might make more sense to not have a return value for your function. This is common with functions that print to the console, or otherwise something to the user.
  
- The return type and `->` is then optional if it is of type `Void`.
+ The return type and the `->` is then optional if the return type is `Void`.
  
  */
 func greeting(person: String) -> Void {
@@ -130,8 +132,8 @@ greeting(person: "Dave")
  
  Parameters each have a label and a name:
  
- - the label is what you see when you are calling the function
- - the name is the variable name inside the function
+ - the **label** is what you see when you are calling the function
+ - the **name** is the variable name inside the function
  
  By default, the parameter name becomes the label, but you can override this by defining your own label.
  
@@ -145,13 +147,13 @@ greeting(person: "Dave")
     - hometown: Where the person lives
  */
 func greet(person: String, from hometown: String) {
-    print("Hello \(person)!  Glad you could visit from \(hometown).")
+    print("Hello \(person)! Glad you could visit from \(hometown).")
 }
 
-greet(person: "Bill", from: "Cupertino")
+greet(person: "Tim", from: "Cupertino")
 /*:
  
- If you want to learn more about functions in Swift, read the  [Functions](https://docs.swift.org/swift-book/LanguageGuide/Functions.html) page in the Swift Book — _many of these examples come directly from there._
+ If you want to learn more about functions in Swift, read the [Functions](https://docs.swift.org/swift-book/LanguageGuide/Functions.html) page in the Swift Book — _many of these examples come directly from there._
  
  */
 //: [Playing around with Swift](@next)

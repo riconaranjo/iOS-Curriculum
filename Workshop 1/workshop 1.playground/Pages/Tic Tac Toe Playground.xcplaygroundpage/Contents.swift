@@ -6,9 +6,6 @@
  
  A simple tic tac toe game implemented in Swift Playgrounds.
  
- */
-/*:
- 
  ---
  
  ## Import Statements
@@ -46,7 +43,6 @@ let navajo     = UIColor(red:1.00, green:0.90, blue:0.63, alpha:1.0)
  
  */
 class MyViewController : UIViewController {
-
 /*:
  
  ---
@@ -75,10 +71,9 @@ class MyViewController : UIViewController {
     var button7: UIButton!
     var button8: UIButton!
     var button9: UIButton!
-    
+
     var label: UILabel!
     var subtitle: UILabel!
-    
 /*:
  
  ---
@@ -93,10 +88,10 @@ class MyViewController : UIViewController {
     override func loadView() {
         let view = UIView()     // default view size: (375.0, 668.0)
         view.backgroundColor = background
-        
+
         setupLabels(with: view)
         setupButtons(with: view)
-        
+
         self.view = view
     }
 
@@ -226,7 +221,6 @@ class MyViewController : UIViewController {
         view.addSubview(button8)
         view.addSubview(button9)
     }
-    
 /*:
  
  ---
@@ -251,30 +245,30 @@ class MyViewController : UIViewController {
         if winner() || board[sender.tag-1] != 0 {
             return
         }
-        
+
         let symbol = turnX ? "X" : "O"
         let nextSymbol = !turnX ? "X" : "O"
-        
+
         // update button with player symbol
         sender.setTitle(symbol, for: .normal)
         turnX = !turnX
         turnCount += 1
-        
+
         // update board struct with new move
         updateBoard(button: sender.tag)
-        
+
         // check for winner
         if winner() {
             subtitle.text = "\(symbol) wins!"
             return
         }
-        
+
         // check for draw since no winner was found
         if turnCount == 9 {
             subtitle.text = "Draw!"
             return
         }
-        
+
         // update subtitle to say who's turn it is
         subtitle.text = "\(nextSymbol)'s turn"
     }
@@ -310,7 +304,7 @@ class MyViewController : UIViewController {
  Let's make this function check for each of these 8 cases, and if we find a winning combination we return true, but false if we don't find any.
  
  Once we get that working, let's make it change the colour of the winning positions red as well so we can show the players exactly what the winning moves were.
-     
+
  _hint: conditional statements_
  
  */
@@ -386,7 +380,6 @@ class MyViewController : UIViewController {
         }
         return false
     }
-    
 /*:
  
  ---
@@ -394,7 +387,7 @@ class MyViewController : UIViewController {
  ## Updating Board
  
  We want to update our integer array which stores the states of each button so we don't have to go through each button every time we check for a winner. How can we update the `board` values using only the button ID?
-     
+
  _hint: ternary operator_
  
  */
@@ -406,11 +399,10 @@ class MyViewController : UIViewController {
         board[button-1] = turnX ? 1 : -1
     }
 }
-
 /*:
  
  This line loads and shows the view in playgrounds.
  
  */
 PlaygroundPage.current.liveView = MyViewController()
-//: [Next](@next)
+//: [Additional Topics](@next)

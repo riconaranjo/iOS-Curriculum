@@ -1,7 +1,7 @@
 //: [Conditional Statments](@previous)
 /*:
  
- ## Switch
+ # Switch
  
  What if you have a bunch of `if` cases for the same variable?
  
@@ -53,4 +53,9 @@ case "c", "m", "u":                       // multiple conditions
 default:
     print("value doesn't match any case")
 }
+/*:
+ 
+ More infomation about [Switch Statements](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html).
+ 
+ */
 //: [Loops](@next)
