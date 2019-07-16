@@ -989,7 +989,7 @@ func greet(person: String) -> String {
 
 You might have noticed the markup used before the function defintion. This is called documentation and it is very important when you are working with other developers so that they know what your function is, what it does, and exactly what each parameter is.
 
-_You can see your function documentation by clicking on the function name and holding the `option` key._
+_You can see your function documentation by clicking on the function name and holding the <kbd>option</kbd> key._
 
 ### Calling Functions
 
