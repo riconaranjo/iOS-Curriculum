@@ -1528,9 +1528,6 @@ This line loads and shows the view in playgrounds.
 PlaygroundPage.current.liveView = MyViewController()
 ```
 
-``` swift
-```
-
 ## Additional Topics
 
 These are some useful topics that I would suggest reading into, and learning how to use them.
