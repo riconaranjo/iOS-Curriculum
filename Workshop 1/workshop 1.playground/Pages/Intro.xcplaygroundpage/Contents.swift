@@ -29,4 +29,3 @@ print("hello world")
  
  */
 //:  Click here for [Datatypes](@next)
-// todo: update code snippets in markdown version
