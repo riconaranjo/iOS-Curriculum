@@ -9,7 +9,7 @@
  ## Topics
  
  - **Datatypes:** declarations + basic datatypes
- - **Control flow:** what is it + what is used for
+ - **Control flow:** what is it + what is it used for
  - **Functions:** calling + writing functions
  - **Playgrounds:** how to play around with Swift code
  

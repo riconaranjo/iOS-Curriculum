@@ -66,7 +66,7 @@ else {
 }
 /*:
  
- In this example the if the optional `Int?` returned by `Int()` is an integer value, tht value is used to create a new constant `number`.
+ In this example the if the optional `Int?` returned by `Int()` is an integer value, that value is used to create a new constant `number`.
  
  ---
  

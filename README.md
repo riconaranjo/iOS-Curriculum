@@ -37,7 +37,7 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 - [WWDC 2018: Getting the Most out of Playgrounds in Xcode](https://developer.apple.com/videos/play/wwdc2018/402/)
 - [Markup Documentation](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/AddingMarkup.html#//apple_ref/doc/uid/TP40016497-CH100-SW1)
 
-## 2. Getting all Set-up
+## 2. Getting All Set-up
 
 `// work in progress`
 

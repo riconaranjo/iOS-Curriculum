@@ -6,9 +6,9 @@
  In Swift we can represent decimal numbers — properly known as floating-point numbers — using the `Double` datatype. Floating-point numbers are numbers that have fractional components, colloquially referred to as as decimal values.
  
  */
-let p = 1.0           // implicit
-let q: Double = -2    // explicit
-let r = Double (99)   // explicit
+let p = 1.0          // implicit
+let q: Double = -2   // explicit
+let r = Double (99)  // explicit
 /*:
  
  You may have noticed that Xcode does not implicitly converts numbers from type `Int` into `Double`.

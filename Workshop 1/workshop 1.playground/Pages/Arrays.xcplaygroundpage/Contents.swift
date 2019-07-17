@@ -3,7 +3,7 @@
  
  # Arrays
  
- In Swift we can represent a collection of values using the `Array` datatype. An `Array` is an ordered lists of values. These values must all be of the same type, otherwise Xcode will complain — or worse you'll get a runtime error.
+ In Swift we can represent a collection of values using the `Array` datatype. An `Array` is an ordered list of values. These values must all be of the same type, otherwise Xcode will complain — or worse you'll get a runtime error.
  
  */
 var intArray = [1, 2, 3]
