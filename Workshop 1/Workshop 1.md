@@ -5,7 +5,7 @@ _This workshop is about learning how to code in Swift, using Xcode Playgrounds._
 | Topics       | Details                            |
 | ------------ | ---------------------------------- |
 | Datatypes    | declarations + basic datatypes     |
-| Control flow | what is it + what is used for      |
+| Control flow | what is it + what is it used for   |
 | Functions    | calling + writing functions        |
 | Playgrounds  | how to play around with Swift code |
 
@@ -18,20 +18,20 @@ This will be a quick introduction into how to write Swift code.
 
 ## Topics
 
-1. [Datatypes](Datatypes)
-2. [Declarations](Declarations)
-3. [Integers](Integers)
-4. [Doubles](Doubles)
-5. [Booleans](Booleans)
-6. [Strings](Strings)
-7. [Arrays](Arrays)
-8. [Sets](Sets)
-9. [Dictionaries](Dictionaries)
-10. [Control Flow](Control%20Flow)
-11. [Conditional Statements](Conditional%20Statements)
-12. [Switch](Switch)
-13. [Loops](Loops)
-14. [Functions](Functions)
+1. [Datatypes](#Datatypes)
+2. [Declarations](#Declarations)
+3. [Integers](#Integers)
+4. [Doubles](#Doubles)
+5. [Booleans](#Booleans)
+6. [Strings](#Strings)
+7. [Arrays](#Arrays)
+8. [Sets](#Sets)
+9. [Dictionaries](#Dictionaries)
+10. [Control Flow](#Control%20Flow)
+11. [Conditional Statements](#Conditional%20Statements)
+12. [Switch](#Switch)
+13. [Loops](#Loops)
+14. [Functions](#Functions)
 
 ## Opening Playgrounds
 
@@ -229,7 +229,7 @@ In Swift we can represent decimal numbers — properly known as floating-point n
 
 ``` swift
 let p = 1.0          // implicit
-let q: Double = -2    // explicit
+let q: Double = -2   // explicit
 let r = Double (99)  // explicit
 ```
 
@@ -240,7 +240,7 @@ Try this code:
 ``` swift
 let aDouble = 5.0     // this is a Double
 let anInteger: Int = aDouble
-// cannot implicitly covert Double to Int
+// cannot implicitly convert Double to Int
 ```
 
 _Or the opposite_
@@ -248,7 +248,7 @@ _Or the opposite_
 ``` swift
 let someInteger = 5   // this is an Int
 let someDouble: Double = someInteger
-// cannot implicitly covert Int to Double
+// cannot implicitly convert Int to Double
 ```
 
 Xcode in both cases will complain with something along the lines of: **Cannot convert value of type 'Double' to specified type 'Int'**.
@@ -371,7 +371,7 @@ Read more about [Strings and Characters](https://docs.swift.org/swift-book/Langu
 
 ## Arrays
 
-In Swift we can represent a collection of values using the `Array` datatype. An `Array` is an ordered lists of values. These values must all be of the same type, otherwise Xcode will complain — or worse you'll get a runtime error.
+In Swift we can represent a collection of values using the `Array` datatype. An `Array` is an ordered list of values. These values must all be of the same type, otherwise Xcode will complain — or worse you'll get a runtime error.
 
 ``` swift
 var intArray = [1, 2, 3]
