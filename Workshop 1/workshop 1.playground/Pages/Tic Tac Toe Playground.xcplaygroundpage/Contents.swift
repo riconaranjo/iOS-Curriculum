@@ -49,7 +49,7 @@ class MyViewController : UIViewController {
  
  ## Class Properties
  
- Class properties are values that are associated wth a class. Just like a car has four wheels (each wheel is a property of a car), our tic tac toe game has 9 buttons (one for each position on the board). Our game view also has two text labels: a title and a subtitle. The title will just simply say the name of the game, and the subtitle will give current player's turn or the winner.
+ Class properties are values that are associated with a class. Just like a car has four wheels (each wheel is a property of a car), our tic tac toe game has 9 buttons (one for each position on the board). Our game view also has two text labels: a title and a subtitle. The title will just simply say the name of the game, and the subtitle will give current player's turn or the winner.
  
  */
     /*

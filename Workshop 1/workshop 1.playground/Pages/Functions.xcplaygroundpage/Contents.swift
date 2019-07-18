@@ -114,7 +114,7 @@ print(greet(person: "Jenny", alreadyGreeted: false))
  
  ### Functions Without Return Values
 
- If you don't need to reuse the result of you function, ir might make more sense to not have a return value for your function. This is common with functions that print to the console, or otherwise something to the user.
+ If you don't need to reuse the result of your function, it might make more sense to not have a return value for your function. This is common with functions that print to the console, or otherwise something to the user.
  
  The return type and the `->` is then optional if the return type is `Void`.
  

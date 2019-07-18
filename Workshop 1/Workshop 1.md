@@ -12,6 +12,7 @@ _This workshop is about learning how to code in Swift, using Xcode Playgrounds._
 # 1.1 A Swift Start
 
 This will be a quick introduction into how to write Swift code.
+
 - **how to create and modify variables**
 - **how to write control flow**
 - **how to create functions**
@@ -1056,7 +1057,7 @@ print(greet(person: "Jenny", alreadyGreeted: false))
 
 ### Functions Without Return Values
 
-If you don't need to reuse the result of you function, ir might make more sense to not have a return value for your function. This is common with functions that print to the console, or otherwise something to the user.
+If you don't need to reuse the result of your function, it might make more sense to not have a return value for your function. This is common with functions that print to the console, or otherwise something to the user.
 
 The return type and the `->` is then optional if the return type is `Void`.
 
@@ -1180,7 +1181,7 @@ class MyViewController : UIViewController {
 
 ### Class Properties
 
-Class properties are values that are associated wth a class. Just like a car has four wheels (each wheel is a property of a car), our tic tac toe game has 9 buttons (one for each position on the board). Our game view also has two text labels: a title and a subtitle. The title will just simply say the name of the game, and the subtitle will give current player's turn or the winner.
+Class properties are values that are associated with a class. Just like a car has four wheels (each wheel is a property of a car), our tic tac toe game has 9 buttons (one for each position on the board). Our game view also has two text labels: a title and a subtitle. The title will just simply say the name of the game, and the subtitle will give current player's turn or the winner.
 
 ``` swift
 /*
