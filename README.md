@@ -8,6 +8,12 @@ This is a series of **5 workshops** designed to walk you through every step in t
 
 This series of workshops is designed for beginners. Even if you have never created a program before, you should be able to follow along. If you get lost while actually attending the workshops, you can view all the material online and work on it at your own pace at the [GitHub repo](github.com/riconaranjo/iOS-Curriculum/tree/master).
 
+## Xcode
+
+For these workshops you will need to download and install [Xcode](https://apps.apple.com/ca/app/xcode/id497799835) beforehand as it can take a long time to download from the App Store.
+
+Xcode is an IDE for developing software for Apples platforms such as iOS and macOS.
+
 ## 0. Prelude: Installing Xcode on a macOS VM
 
 `// work in progress`
