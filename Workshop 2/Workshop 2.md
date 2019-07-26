@@ -71,9 +71,58 @@ Once your app finishes building, it should automatically run on your iOS simulat
 
 You can quit the simulator app using <kbd>cmd</kbd> + <kbd>q</kbd>.
 
+### Source Code
+
+The single view app template we created comes with a few predefined source code files that help us set up the app environment.
+
+Let's start with the `AppDelegate.swift` file, you can find it in the project navigator (left). If the project navigator is not visible you can open it with <kbd>cmd</kbd> + <kbd>1</kbd>.
+
+If you click on the file in the project navigator it should open it the editor area; if you double click on the file it will open in a new editor window.
+
 ### AppDelegate.swift
 
-[Breaking Down the AppDelegate (swift 3)](https://medium.com/@Dougly/breaking-down-the-appdelegate-swift-3-258e48f907d6)
+The `AppDelegate.swift` source file is automatically created by Xcode in any new project, and you should use it to initialize your app and respond to app-level events.
+
+**This file has two primary functions:**
+
+1. Defining the `AppDelegate` class which creates the root window to display all your content, and also serves as the main point for your app to handle state transitions.
+    - _such as your app moving from foreground to the background execution._
+2. Creating an entry point to your application — _like a `main()` function_ — and a run loop which delivers input events and notifications to your application.
+    - this is done by the `@UIApplicationMain` attribute, which can be found at the top of the class definition.
+    - this creates an application object which is responsible for the lifecycle of your app, then assigns it to a singleton `AppDelegate` object, and then the system launches your app.
+
+You can see the `AppDelegate` class definition which contains the `@UIApplicationMain` attribute and shows that it implements the `UIResponder` interface and adopts `UIApplicationDelegate` protocol near the top of the file.
+
+- The `UIResponder` interface defines methods for your app for responding and handling events
+- The `UIApplicationDelegate` protocol defines the methods you'll need to set up your app, respond to app state changes, and to handle app-level events.
+
+``` swift
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+```
+
+The `AppDelegate class` has one property for a reference to the root window object of your application. This property is an optional, which means that it may be `nil` at some point.
+
+``` swift
+    var window: UIWindow?
+```
+
+This class also has six stub implementations of the `UIApplicationDelegate` methods. These methods allow your application object to communicate with the app delegate and handle app state transitions. During these transitions — such as app launch, moving to background, or termination — the application object will call the app delegate, giving it time to respond and prepare for the transition. The state transition calls are handled by the application object, so you don't have to worry about that.
+
+``` swift
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+    func applicationWillResignActive(_ application: UIApplication)
+    func applicationDidEnterBackground(_ application: UIApplication)
+    func applicationWillEnterForeground(_ application: UIApplication)
+    func applicationDidBecomeActive(_ application: UIApplication)
+    func applicationWillTerminate(_ application: UIApplication)
+```
+
+You can leave the stubs with the default behaviour, but once you have a more complex app you might custom behaviour such as saving data to persistent storage before terminating.
+
+In this workshop we won't be defining any custom behaviours here, so there is no need to modify the `AppDelegate.swift` file.
+
+For more information about the `AppDelegate.swift` file, check out this article which breaks it down and explains each section, although it is slightly outdated: [Breaking Down the AppDelegate (swift 3)](https://medium.com/@Dougly/breaking-down-the-appdelegate-swift-3-258e48f907d6)
 
 ### ViewController.swift
 
