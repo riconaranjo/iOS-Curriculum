@@ -42,7 +42,7 @@ Xcode is a tool used by developers to create and test applications for all of Ap
 
 For a more thorough run-through of Xcode's layout, check out this tutorial created by Apple: [Build a Basic UI](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/BuildABasicUI.html#//apple_ref/doc/uid/TP40015214-CH5-SW1).
 
-### Xcode Layout
+## Xcode Layout
 
 The **Xcode workspace window** is composed of four main components:
 
@@ -55,7 +55,7 @@ We will go over each of these components in greater detail when we need them.
 
 Additionally, if you wish to learn more about Xcode, I recommend watching Apple's WWDC 2016 video  [Introduction to Xcode](https://developer.apple.com/videos/play/wwdc2016/413/).
 
-### iOS Simulator
+## iOS Simulator
 
 By downloading and installing Xcode, you automatically get an **iOS simulator** so you can actually test your app running on iOS, even if you don't own an iPhone. It also allows you to test your app on various different iPhone models with different screen sizes and resolutions to make sure it works fine on the smallest and biggest iPhones.
 
@@ -71,7 +71,7 @@ Once your app finishes building, it should automatically run on your iOS simulat
 
 You can quit the simulator app using <kbd>cmd</kbd> + <kbd>q</kbd>.
 
-### Source Code
+## Source Code
 
 The single view app template we created comes with a few predefined source code files that help us set up the app environment.
 
@@ -79,7 +79,7 @@ Let's start with the `AppDelegate.swift` file, you can find it in the project na
 
 If you click on the file in the project navigator it should open it the editor area; if you double click on the file it will open in a new editor window.
 
-### AppDelegate.swift
+## AppDelegate.swift
 
 The `AppDelegate.swift` source file is automatically created by Xcode in any new project, and you should use it to initialize your app and respond to app-level events.
 
@@ -124,9 +124,49 @@ In this workshop we won't be defining any custom behaviours here, so there is no
 
 For more information about the `AppDelegate.swift` file, check out this article which breaks it down and explains each section, although it is slightly outdated: [Breaking Down the AppDelegate (swift 3)](https://medium.com/@Dougly/breaking-down-the-appdelegate-swift-3-258e48f907d6)
 
-### ViewController.swift
+## ViewController.swift
 
-### Main.storyboard
+The `ViewController.swift` source file is also automatically created by Xcode when using the single view application template; this file contains one class and is used to manage a specific screen in your app.
+
+The `ViewController` class is a subclass of `UIViewController` which is used for managing the view hierarchy in your iOS app. A view hierarchy in the context means the hierarchy of UI elements, and how they are displayed; for example a view can have have a background image as well as text and buttons above that, all of these  are considered _views_ since they are displayed to the user.
+
+_A view represents a single item on the user interface._
+
+Our default `ViewController` class has only one method; `viewDidLoad()` is called once the view controller's view hierarchy is loaded into memory — _you can see more info if you <kbd>option</kbd> and click on the function name_.
+
+``` swift
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+    // we will be adding additional functions here
+}
+```
+
+We will be adding more code in here to give our app more functionality than just a blank screen.
+
+You'll also see that this source file, as well as `AppDelegate.swift` imports the [UIKit](https://developer.apple.com/documentation/uikit) which is the UI framework for iOS applications.
+
+## Main.storyboard
+
+The `Main.storyboard` file is the default storyboard for your new app, it is where you define the user interface design for different screens within your app. You can define the content of each screen and transitions between screens here. It allows you to see exactly what the flow — _or story_ — of your app; it allows you to get immediate feedback on how things look, what works, what doesn't work, and allows you to change things quickly and easily.
+
+Select the `Main.storyboard` file in the project navigator. The file will open in the interface builder, which allows you to edit the user interface and see all your app's screens on the canvas. If you had a complicated app you would have several storyboard files that linked to each other, but since our app is simple, we will just stick to this storyboard file.
+
+Our storyboard by default has one screen with an arrow pointing into it, this is our initial screen for our app which is the screen which our app opens to, the **storyboard entry point**.
+
+You can change the size of the screens on the canvas to different iPhone models, which allows you to make sure your UI is adaptive to different screen sizes, not just one model of iPhone.
+
+## LaunchScreen.storyboard
+
+There is a second storyboard file created by Xcode, and that is the `LaunchScreen.storyboard` and this is used to display a static screen when your app is launched, such as a logo or other design.
+
+We won't be modifying this file in this workshop.
 
 # 2.2 Building Your Own App
 
