@@ -265,6 +265,8 @@ Press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> to bring up the object li
 
 Our users are going to enter their names into this field, but how will they know to do so? We can add placeholder text that says something like **Enter your name here** to guide our user. To do this, select the text field and click on the attribute inspector in the utility area on the right. Enter the text in the **Placeholder** field.
 
+We can also change the **Text Input Traits** such as capitalizing all words or changing the return key to say **Done** or something else. Set the capitalization trait to words since we want names to be capitalized.
+
 Now let's add constraints so it always appears centred below our title, and spans the width of our screen, even on different iPhone models like the SE or iPhone Xs Max.
 
 Press the **Add new Constraints** button again and select the top, left, and right constraints. Change the top constraint value to 100, and the left and right constraints to 50 each. Press the **Add 3 Constraints** button to apply these.
@@ -320,10 +322,16 @@ _more info about weak vs. strong references: [Should IBOutlets be weak or strong
 Press **Connect**. This will create a line of code in your `ViewController` class:
 
 ``` swift
-    @IBOutlet weak var greetingLabel: UILabel!
+@IBOutlet weak var greetingLabel: UILabel!
 ```
 
 We need this reference in order to update the text in our label once we press our button.
+
+Let's repeat this with the text field so we can read the user's first name, naming it something descriptive like `nameTextField`.
+
+``` swift
+@IBOutlet weak var nameTextField: UITextField!
+```
 
 ### Actions
 
@@ -337,9 +345,93 @@ Leave the action **Type** fields with their default values:
 - **Touch Up Inside:** event where finger is inside bounds of view
   - _more info about events: [UIControl.event](https://developer.apple.com/documentation/uikit/uicontrol/event)_
 - **Sender:** how much info is sent to action, sender just means the button reference in this case.
-  - _useful explanation: [stackoverflow](https://stackoverflow.com/questions/24147222/what-is-the-difference-between-the-arguments-sender-and-none-for-an-ibaction)_
+  - _useful explanation: [Stack Overflow](https://stackoverflow.com/questions/24147222/what-is-the-difference-between-the-arguments-sender-and-none-for-an-ibaction)_
 
-A quick breakdown of the difference between actions and outlets can be found in the article: [Outlet vs Action Connections in Xcode](https://medium.com/@GanChau/outlet-vs-action-connections-in-xcode-b5331fb233a1)
+Instead of creating a variable as when creating an outlet, creating an action creates a function inside our view controller. It should look like this (without the comment):
+
+``` swift
+@IBAction func greetingButton(_ sender: Any) {
+    // code here is executed when our button is pressed
+}
+```
+
+Let's add a simple print function to make sure our button is actually triggering our action. Add the print statement inside our `greetingButton()` method.
+
+``` swift
+@IBAction func greetingButton(_ sender: Any) {
+    print("button was pressed")
+}
+```
+
+Run your app, and make sure that you can see the text `button was pressed` in Xcode's terminal every time you press your button.
+
+_A quick breakdown of the difference between actions and outlets can be found in the article: [Outlet vs Action Connections in Xcode](https://medium.com/@GanChau/outlet-vs-action-connections-in-xcode-b5331fb233a1)_
+
+### Personalized Greetings
+
+Now that we have everything set up and connected, let's make our app give a personalized greeting to the user.
+
+Write this logic in your `greetingButton()` function.
+
+``` swift
+@IBAction func greetingButton(_ sender: Any) {
+    if let name = nameTextField.text {
+        greetingLabel.text = "Hi there, \(name)!"
+    }
+}
+```
+
+The `if let` statement creates a `String` variable from the text field `String?` text attribute, which should hopefully hold our user's first name. If this conversion is successful, then we change the greeting label below our title to say **"Hey there, Timmy!"** — _assuming Timmy was in the text field_ —.
+
+_Run your app and see if this works._
+
+This works right? What if the text field is empty and the user presses our button? Our personalized greeting will say **"Hey there, !"**. This doesn't look so good.
+
+Let's make it so, if our text field is empty, the title reverts back to the default text **"Greetings!"**. Add a statement which checks if the text field is empty, and if it is, it sets the greeting label's text back to **"Greetings!"**.
+
+``` swift
+@IBAction func greetingButton(_ sender: Any) {
+    if nameTextField.text == "" {
+        greetingLabel.text = "Greetings!"
+    } else if let name = nameTextField.text {
+        greetingLabel.text = "Hi there, \(name)!"
+    }
+}
+```
+
+Now you might think our app is fool-proof, everything will work as expected always, right?
+
+What if the user simply puts a bunch of spaces instead of their name? Or, what if they add a bunch of spaces before or after their name? Try this and see what your personalized greetings look like in these use-cases.
+
+We can trim whitespace — tabs (`\t`) and blank spaces (`\b`) — in use the `.trimmingCharacters(in: .whitespaces)` method call to remove leading and trailing whitespaces from our name text field.
+
+``` text
+'  Timmy' becomes 'Timmy' (leading)
+```
+
+``` text
+'Anna   ' becomes 'Anna' (trailing)
+```
+
+``` text
+' Derek ' becomes 'Derek' (leading + trailing)
+```
+
+``` text
+'  ' becomes ''
+```
+
+Add this method to the conditionals of the `if` statements to check for empty strings as well as leading and trailing whitespaces.
+
+``` swift
+@IBAction func greetingButton(_ sender: Any) {
+    if nameTextField.text?.trimmingCharacters(in: .whitespaces) == "" {
+        greetingLabel.text = "Greetings!"
+    } else if let name = nameTextField.text?.trimmingCharacters(in: .whitespaces) {
+        greetingLabel.text = "Hi there, \(name)!"
+    }
+}
+```
 
 ## Running Your Own App
 
@@ -347,13 +439,14 @@ A quick breakdown of the difference between actions and outlets can be found in 
 
 `// todo: running app on your own phone`
 
-## Additional Topics
+# Additional Topics
 
 These are some useful topics that I would suggest reading into, and learning how to use them.
 
 - [Google](https://google.ca)
+- [Stack Overflow](https://stackoverflow.com)
 
-## References
+# References
 
 This are some of the resources I used to make this workshop, all of them are worth reading / watching.
 
