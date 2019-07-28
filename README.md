@@ -53,7 +53,7 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
 `// rough draft complete`
 
-This workshop is about learning how to set yourself up with Xcode to create your own iOS apps. We will how to create UI elements, and create actions for when you press a button.
+This workshop is about learning how to set yourself up with Xcode to create your own iOS apps. We will learn how to create UI elements, and create actions for when you press a button.
 
 | Topics                             |
 | ---------------------------------- |
@@ -73,14 +73,16 @@ This workshop is about learning how to set yourself up with Xcode to create your
 
 ## 3. Mastering the Basics
 
+- [Online version](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%203/Workshop%203.md)
+
 `// work in progress`
 
 In this workshop, we will learn how to add a splash screen and how to create apps with more than one View in the Storyboard; we will also learn more about colour schemes, why they're important, and how to apply one to your app. We will learn how to add app icons, and then we will use all the knowledge we've learn so far to make our very own TicTacToe app.
 
 | Topics                         |
 | ------------------------------ |
-| Creating a splash screen       |
-| Multiple Views + Segues        |
+| Creating a launch screen       |
+| Multiple Scenes + Segues       |
 | Applying a basic colour scheme |
 | Adding an app icon             |
 | Create your own TicTacToe app  |
