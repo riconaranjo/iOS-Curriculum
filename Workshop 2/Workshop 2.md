@@ -308,7 +308,7 @@ The easiest way of doing is by using the assistant editor in **Automatic**, this
 
 You should get a pop-up menu with a few options, we will only be editing the **Name** field.
 
-- **Connection:** type of connection (outlet or outlet collection for a label) 
+- **Connection:** type of connection (outlet or outlet collection for a label)
   - _we will leave it at outlet since it is only a reference to one label_
 - **Object:** object to which our item belongs to
 - **Name:** variable name for item reference
@@ -433,18 +433,22 @@ Add this method to the conditionals of the `if` statements to check for empty st
 }
 ```
 
+Now when a user wants a personalized and if they accidentally added spaces, then their name will still show up properly.
+
+_Congrats, you have finished your first iOS app!_
+
 ## Running Your Own App
 
-`// todo: running app on iOS simulator`
+We've already covered how to run your app in Xcode's included iOS simulator, using either the run button or <kbd>cmd</kbd> + <kbd>r</kbd>.
 
-`// todo: running app on your own phone`
+If you own an iPhone, you can use Xcode to load, run, and debug apps on it. This is how to set it up.
 
-# Additional Topics
+- Navigate to the Xcode project file: **Signing > Team >> Add an Account...** and log into your iCloud account
+- Plug your iPhone in to your computer
+- Select your iPhone to change your build scheme in the left side of the toolbar.
+  - if it's missing add your device in **Add Additional Simulators...**
 
-These are some useful topics that I would suggest reading into, and learning how to use them.
-
-- [Google](https://google.ca)
-- [Stack Overflow](https://stackoverflow.com)
+Here is a useful article by Twilio on how to set things up to run apps on your iPhone:[How to Test Your iOS Application on a Real Device](https://www.twilio.com/blog/2018/07/how-to-test-your-ios-application-on-a-real-device.html)
 
 # References
 
@@ -453,3 +457,5 @@ This are some of the resources I used to make this workshop, all of them are wor
 - [Build a Basic UI](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/BuildABasicUI.html#//apple_ref/doc/uid/TP40015214-CH5-SW1)
 - [Introduction to Xcode](https://developer.apple.com/videos/play/wwdc2016/413/)
 - [Breaking Down the AppDelegate (swift 3)](https://medium.com/@Dougly/breaking-down-the-appdelegate-swift-3-258e48f907d6)
+- [Google](https://google.ca)
+- [Stack Overflow](https://stackoverflow.com)
