@@ -2,12 +2,12 @@
 
 _In this workshop, we will learn how to add a splash screen and how to create apps with more than one View in the Storyboard; we will also learn more about colour schemes, why they're important, and how to apply one to your app. We will learn how to add app icons, and then we will use all the knowledge we've learn so far to make our very own TicTacToe app._
 
-| Topics                         | Details                            |
-| ------------------------------ | ---------------------------------- |
-| Creating a launch screen       | |
-| Multiple Scenes + Segues       | |
-| Applying a basic colour scheme | |
-| Adding an app icon             | |
+| Topics                           | Details                            |
+| -------------------------------- | ---------------------------------- |
+| Creating a launch screen         | |
+| Multiple Scenes + Segues         | |
+| Applying a basic colour scheme   | |
+| Adding an app icon               | |
 | Create your own Tic Tac Toe app  | |
 
 ## Launch Screens
