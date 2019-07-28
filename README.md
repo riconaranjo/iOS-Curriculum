@@ -63,6 +63,14 @@ This workshop is about learning how to set yourself up with Xcode to create your
 | Creating outlets + actions         |
 | Build + Run app on your own iPhone |
 
+### References
+
+- [Build a Basic UI](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/BuildABasicUI.html#//apple_ref/doc/uid/TP40015214-CH5-SW1)
+- [Introduction to Xcode](https://developer.apple.com/videos/play/wwdc2016/413/)
+- [Breaking Down the AppDelegate (swift 3)](https://medium.com/@Dougly/breaking-down-the-appdelegate-swift-3-258e48f907d6)
+- [Google](https://google.ca)
+- [Stack Overflow](https://stackoverflow.com)
+
 ## 3. Mastering the Basics
 
 `// work in progress`
