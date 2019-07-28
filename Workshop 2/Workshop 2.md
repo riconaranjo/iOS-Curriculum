@@ -1,6 +1,6 @@
 # 2. Getting All Set-up
 
-_This workshop is about learning how to set yourself up with Xcode to create your own iOS apps. We will how to create UI elements, and create actions for when you press a button._
+_This workshop is about learning how to set yourself up with Xcode to create your own iOS apps. We will learn how to create UI elements, and create actions for when you press a button._
 
 | Topics                             | Details                            |
 | ---------------------------------- | ---------------------------------- |
@@ -28,7 +28,7 @@ An [Xcode Project](https://developer.apple.com/library/archive/featuredarticles/
 
 _You can think of it as the box that holds all the pieces and assembly instructions we need to build our app._
 
-Let's create our first **Project** by opening Xcode and selecting the open _Create a new Xcode project_ option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
+Let's create our first **Project** by opening Xcode and selecting the open the _Create a new Xcode project_ option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
 
 In the window that appears, select the **iOS Single View App** and press next.
 
@@ -38,7 +38,7 @@ This should open your new project in the workspace window. You may have an error
 
 ## Xcode Crash Course
 
-Xcode is a tool used by developers to create and test applications for all of Apple's software platforms; it has everything you need to create your very own app. You can build, run, and debug applications a simulator for iOS devices and integrated debugger.
+Xcode is a tool used by developers to create and test applications for all of Apple's software platforms; it has everything you need to create your very own app. You can build, run, and debug applications using it's simulator for iOS devices and integrated debugger.
 
 For a more thorough run-through of Xcode's layout, check out this tutorial created by Apple: [Build a Basic UI](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/BuildABasicUI.html#//apple_ref/doc/uid/TP40015214-CH5-SW1).
 
@@ -300,7 +300,7 @@ Check that everything is correct in the assistant editor preview.
 
 Now that we have our UI all finished, it's now time to start coding the logic of our application.
 
-In order to access our UI elements in code, we to create a reference to the element in the interface builder in our code. We can do this by creating an outlet — _an outlet is simply a variable with the `@IBOutlet` property — in our view controller.
+In order to access our UI elements in code, we need to create a reference to the element in the interface builder in our code. We can do this by creating an outlet — _an outlet is simply a variable with the `@IBOutlet` property_ — in our view controller.
 
 The easiest way of doing is by using the assistant editor in **Automatic**, this should bring up the `ViewController.swift` file. Once you have it visible next to your storyboard, hold <kbd>ctrl</kbd> and drag the greeting text label into the code below the class definition.
 
