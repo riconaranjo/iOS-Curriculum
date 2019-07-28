@@ -22,6 +22,9 @@ This workshop will cover how to setup your own macOS Virtual Machine [VM], in ca
 
 ## 1. Getting Started with Swift
 
+- [Online version](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%201/Workshop%201.md)
+- [Playgrounds version](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%201/workshop%201.playground.zip)
+
 `// rough draft done`
 
 This workshop is about learning how to code in Swift, using Xcode Playgrounds.
@@ -45,7 +48,9 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
 ## 2. Getting All Set-up
 
-`// work in progress`
+- [Online version](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md)
+
+`// rough draft complete`
 
 This workshop is about learning how to set yourself up with Xcode to create your own iOS apps. We will how to create UI elements, and create actions for when you press a button.
 
