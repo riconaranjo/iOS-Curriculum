@@ -73,7 +73,7 @@ A **datatype** is a particular type of data item, defined by:
 - the values it can take
 - the operations that can be performed by it
 
-A **variable** is an instance of a datatype.
+A **variable** is an instance of a datatype, often given a descriptive name.
 
 Datatypes and variables are the tools used by programmers to solve larger problems, and in order to know which tools is best for a given problem, you need to understand the strengths and weaknesses of each datatype.
 
@@ -168,6 +168,8 @@ var twentyThree = Int("23") // -> 23
 var five = Int("five")      // -> nil
 ```
 
+_An initializer is used to create an instance of a datatype (otherwise known as constructors in other languages)_
+
 ### nil
 
 In Swift, you can set an optional value to nil, but you cannot do this with non-optional values. By default optional variables are set to nil
@@ -179,7 +181,7 @@ var optionalValue: Int? // -> nil
 
 ### Unwrapping Optionals
 
-You can check if an optional has a value using an `if` statement (these are explained in [Conditional Statements](#Conditional%20Statements)) to check if the value is `nil`.
+Unwrapping an optional means checking the value inside an optional variable. You can check if an optional has a value using an `if` statement (these are explained in [Conditional Statements](#Conditional%20Statements)) to check if the value is `nil`.
 
 You can then use the `!` operator to force unwrap the value contained in the optional. If you use the `!` you **must** be sure that the optional contains a non-nil value, otherwise your program will crash, and you will be unhappy.
 
@@ -1208,6 +1210,12 @@ Class properties are values that are associated with a class. Just like a car ha
     var subtitle: UILabel!
 ```
 
+You may have noticed that the button variables are all of type `UIButton!` which should look similar to optionals where we used `?` after a datatype like `UIButton?`.
+
+Using the `!` operator instead of `?` still makes the variable an optional, but instead it means we don't have to explicitly unwrap it every time we use it; this is called an **implicitly unwrapped optional**.
+
+We are using it here because we want to have class-wide access to the buttons, but we only want to create them once the view is loaded. For more info, here is an article explaining implicitly unwrapped optionals: [What are implicitly unwrapped optionals?](https://www.hackingwithswift.com/example-code/language/what-are-implicitly-unwrapped-optionals).
+
 ### Loading the View
 
 This function is what actually loads all of our labels and buttons into the playground live view. Here we create our `UIView` and we change its background colour. We setup the labels and buttons, adding them to the view, and then we give the view to the view controller.
@@ -1537,6 +1545,7 @@ These are some useful topics that I would suggest reading into, and learning how
 - [Enumerations](https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html)
 - [Structures and Classes](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html)
 - [Google](https://google.ca)
+- [Stack Overflow](http://stackoverflow.com/)
 
 ## References
 
@@ -1549,3 +1558,4 @@ This are some of the resources I used to make this workshop, all of them are wor
 - [Awesome Swift Playgrounds](https://github.com/uraimo/Awesome-Swift-Playgrounds)
 - [WWDC 2018: Getting the Most out of Playgrounds in Xcode](https://developer.apple.com/videos/play/wwdc2018/402/)
 - [Markup Documentation](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/AddingMarkup.html#//apple_ref/doc/uid/TP40016497-CH100-SW1)
+- [What are implicitly unwrapped optionals?](https://www.hackingwithswift.com/example-code/language/what-are-implicitly-unwrapped-optionals)

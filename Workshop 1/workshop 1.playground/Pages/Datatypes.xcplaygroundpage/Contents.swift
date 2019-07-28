@@ -12,7 +12,7 @@
  - the values it can take
  - the operations that can be performed by it
 
- A **variable** is an instance of a datatype.
+ A **variable** is an instance of a datatype, often given a descriptive name.
 
  Datatypes and variables are the tools used by programmers to solve larger problems, and in order to know which tools is best for a given problem, you need to understand the strengths and weaknesses of each datatype.
 

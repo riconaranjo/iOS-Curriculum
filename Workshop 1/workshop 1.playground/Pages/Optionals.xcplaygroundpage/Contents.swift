@@ -17,6 +17,8 @@ var twentyThree = Int("23") // -> 23
 var five = Int("five")      // -> nil
 /*:
  
+ _An initializer is used to create an instance of a datatype (otherwise known as constructors in other languages)_
+ 
  ---
  
  ## nil
@@ -32,7 +34,7 @@ var optionalValue: Int? // -> nil
  
  ## Unwrapping Optionals
  
- You can check if an optional has a value using an `if` statement (these are explained in [Conditional Statements](Conditional%20Statements)) to check if the value is `nil`.
+ Unwrapping an optional means checking the value inside an optional variable. You can check if an optional has a value using an `if` statement (these are explained in [Conditional Statements](#Conditional%20Statements)) to check if the value is `nil`.
  
  You can then use the `!` operator to force unwrap the value contained in the optional. If you use the `!` you **must** be sure that the optional contains a non-nil value, otherwise your program will crash, and you will be unhappy.
  

@@ -76,6 +76,12 @@ class MyViewController : UIViewController {
     var subtitle: UILabel!
 /*:
  
+ You may have noticed that the button variables are all of type `UIButton!` which should look similar to optionals where we used `?` after a datatype like `UIButton?`.
+ 
+ Using the `!` operator instead of `?` still makes the variable an optional, but instead it means we don't have to explicitly unwrap it every time we use it; this is called an **implicitly unwrapped optional**.
+ 
+ We are using it here because we want to have class-wide access to the buttons, but we only want to create them once the view is loaded. For more info, here is an article explaining implicitly unwrapped optionals: [What are implicitly unwrapped optionals?](https://www.hackingwithswift.com/example-code/language/what-are-implicitly-unwrapped-optionals).
+
  ---
  
  ## Loading the View
