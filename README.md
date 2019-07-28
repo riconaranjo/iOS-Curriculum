@@ -16,7 +16,7 @@ Xcode is an IDE for developing software for Apples platforms such as iOS and mac
 
 ## 0. Prelude: Installing Xcode on a macOS VM
 
-`// work in progress`
+`// work in progress (backburner)`
 
 This workshop will cover how to setup your own macOS Virtual Machine [VM], in case you don't have access to your own mac but you still want to develop iOS / macOS apps.
 
@@ -41,6 +41,7 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 - [Get Started With Xcode Playgrounds](https://learnappmaking.com/xcode-playground-get-started-with-swift/)
 - [Swift Documentation](https://developer.apple.com/reference/swift)
 - [Swift Language Guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
+- [What are implicitly unwrapped optionals?](https://www.hackingwithswift.com/example-code/language/what-are-implicitly-unwrapped-optionals)
 - [How to make something with Swift Playgrounds](https://www.freecodecamp.org/news/how-to-make-something-with-swift-playgrounds-33e560b84184/)
 - [Awesome Swift Playgrounds](https://github.com/uraimo/Awesome-Swift-Playgrounds)
 - [WWDC 2018: Getting the Most out of Playgrounds in Xcode](https://developer.apple.com/videos/play/wwdc2018/402/)
