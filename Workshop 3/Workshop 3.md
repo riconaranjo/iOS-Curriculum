@@ -32,6 +32,14 @@ The launch screen storyboard acts much like the main storyboard, but it doesn't 
 
 `// how to create multiple scenes and trigger segues`
 
+In our last [workshop](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md), we built a simple one view app. All it did was give a personalized greeting when you put your name in a text field and pressed a button. You can take those concepts and build a much more complex UI, but you would still be stuck on the same screen.
+
+How do we move between screens (in-app transitions) within our app? **Segues**.
+
+### Segues
+
+- [Using Segues](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
+
 ## Colours
 
 `// how to create a colour scheme and apply it to ui elements`
@@ -55,6 +63,8 @@ The launch screen storyboard acts much like the main storyboard, but it doesn't 
 This are some of the resources I used to make this workshop, all of them are worth reading / watching.
 
 - [Launch Screen](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/)
+- [Using Segues](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
+
 - [Coolors](https://coolors.co)
 - [Google](https://google.ca)
 - [Stack Overflow](https://stackoverflow.com)
