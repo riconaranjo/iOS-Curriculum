@@ -17,7 +17,21 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tAz-a1-rz2">
+                                <rect key="frame" x="168" y="425" width="78" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Segue"/>
+                                <connections>
+                                    <segue destination="Hp0-C1-bf8" kind="show" id="p0H-Kj-HX5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tAz-a1-rz2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6Xl-tN-B9H"/>
+                            <constraint firstItem="tAz-a1-rz2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ddB-Wj-iWB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -31,13 +45,25 @@
                     <view key="view" contentMode="scaleToFill" id="v9Y-YM-Azt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFz-Wc-y6O">
+                                <rect key="frame" x="116" y="431.5" width="182.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XFz-Wc-y6O" firstAttribute="centerX" secondItem="v9Y-YM-Azt" secondAttribute="centerX" id="Me4-TZ-Kiz"/>
+                            <constraint firstItem="XFz-Wc-y6O" firstAttribute="centerY" secondItem="v9Y-YM-Azt" secondAttribute="centerY" id="pxL-UF-Odc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dae-hV-HQG"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdX-LT-qWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1019" y="127"/>
+            <point key="canvasLocation" x="1018.840579710145" y="126.5625"/>
         </scene>
     </scenes>
 </document>

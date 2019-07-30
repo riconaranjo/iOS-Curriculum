@@ -14,13 +14,17 @@ _In this workshop, we will learn how to add a splash screen and how to create ap
 
 `// create xcode project`
 
+In this workshop we are going to create a simple Tic Tac Toe app with three scenes:
+
+1. Main menu
+2. Game board
+3. Game end screen
+
 To get started, let's create a **Project** by opening Xcode and selecting the open the _Create a new Xcode project_ option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
 
 Select **Single View App** under the iOS tab and press next.
 
 ## Launch Screens
-
-`// how to create your own launch screen`
 
 A launch screen is what appears as soon as your app is launched, quickly replaced by your app's first screen. It allows your app to seem to lead faster. According to Apple's [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/), the launch screen should have placeholder UI elements that appear identical to your app's first screen, without any text — _since it won't be localized_.
 
@@ -36,9 +40,7 @@ _We'll return to the launchscreen later once we have main screen UI done._
 
 ## App Transitions
 
-`// how to create multiple scenes and trigger segues`
-
-In our last [workshop](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md), we built a simple one view app. All it did was give a personalized greeting when you put your name in a text field and pressed a button. You can take those concepts and build a much more complex UI, but you would still be stuck on the same screen.
+In our last workshop [2. Getting All Set Up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md), we built a simple one view app. All it did was give a personalized greeting when you put your name in a text field and pressed a button. You can take those concepts and build a much more complex UI, but you would still be stuck on the same screen.
 
 How do we move between screens (in-app transitions) within our app? **Segues**.
 
@@ -62,7 +64,25 @@ Now that we are in our main story board, you can add a second view controller fr
 
 `// add picture of object libary view controller`
 
-Drag and drop the view controller to the right
+Drag and drop the view controller to the right of our inital view controller. You can use the guidelines both view controller in-line with each other.
+
+`// add picture of two view controllers with guidelines`
+
+Use the object library again to add a button to first view controller. Place it in the centre of the first view controller and change the text to **Segue** and increase the font size to 28. I'm going to add horizontal and vertical constraints so it's always in the centre at least for now.
+
+To add a segue when we press our button, click and drag from button to our second view controller, while holding down <kbd>ctrl</kbd>. A small pop up menu will appear, select the **Show** option; all this option does is move us from one view controller to another, the other options are beyond the scope of this workshop.
+
+_For more information on the other types of segues, read [Using Segues](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)._
+
+`// add picture of two view controllers adding segue`
+
+_Congrats you have created your first segue!_
+
+Let's add a text label to the second view controller so it's easier to see when we transitioned from one view to another. Add this to the centre of the second view controller, add constraints, change it's text to **Second Screen** and change the font size to 28.
+
+Now let's test our segue; press the **Run** button or use the shortcut <kbd>cmd</kbd> + <kbd>r</kbd> to run our app either in the iOs simulator or on a connected iPhone — _for steps on how to set up Xcode to run apps on your iPhone see [2. Getting All Set Up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md)_.
+
+Once you have your app running, press the button and make sure it transitions to the second screen.
 
 ## Colours
 
@@ -74,13 +94,13 @@ Drag and drop the view controller to the right
 
 `// how to add an app icon`
 
-# 3.2 The Fun Part
+# 3.2 The Fun Part (Coding)
 
 ## Tic Tac Toe
 
 `// create a tic tac toe game in xcode`
 
-### Launch Screen
+## Launch Screen
 
 # References
 
