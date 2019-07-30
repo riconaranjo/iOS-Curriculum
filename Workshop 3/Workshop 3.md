@@ -88,7 +88,28 @@ Once you have your app running, press the button and make sure it transitions to
 
 `// how to create a colour scheme and apply it to ui elements`
 
-- [Coolors](https://coolors.co)
+Let's take a quick break from Xcode and visit [Coolors](https://coolors.co). This is an online tool that really helps with coming up with a colour scheme that works and isn't just a bunch of random colours put together.
+
+### Why are colours important in your app?
+
+The colours you use in your app impact how your app is both perceived and how it is used. Choosing a good colour scheme will allow your users to navigate through your app effortlessly, and will allow you to differentiate UI elements easily.
+
+Colour draws your attention to things and pays a vital role in how your perceive your surroundings. Your app's colour scheme can have dramatic positive or negative effect on potential users. Colours can be jarring and make you want to leave the app, or can be pleasant and welcoming to the user.
+
+Different colours provoke certain emotions. You can decide to use this to create a certain feel or mood for you app. Generally:
+
+- **Blue:** calming
+- **Red:** love, passion, war, health
+- **Black:** elegance
+- **Purple:** royalty, wisdom
+- **White:** purity
+
+_For more about colour theory read [The Importance of Color Theory](https://www.webdesign.org/web-design-basics/color-theory/the-importance-of-color-in-web-designing.12437.html) and [How Important is Colour In Design](https://simplygraphic.co.za/2016/05/06/important-colour-design/)._
+
+### Colour Scheme
+
+**What is a colour scheme?** A colour scheme is a collection of colours that you will use to guide your app's visual design. Using a colour scheme helps you ensure your app appears balanced and that certain UI elements don't feel out of place due to their colours.
+
 
 ## App Icons
 
