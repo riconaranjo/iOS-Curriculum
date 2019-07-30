@@ -88,7 +88,7 @@ Once you have your app running, press the button and make sure it transitions to
 
 `// how to create a colour scheme and apply it to ui elements`
 
-Let's take a quick break from Xcode and visit [Coolors](https://coolors.co). This is an online tool that really helps with coming up with a colour scheme that works and isn't just a bunch of random colours put together.
+Now let's learn a bit about colours, because they are an integral part of designing any user interface. The colours you use will impact how your app is perceived and how it is used.
 
 ### Why are colours important in your app?
 
@@ -110,6 +110,31 @@ _For more about colour theory read [The Importance of Color Theory](https://www.
 
 **What is a colour scheme?** A colour scheme is a collection of colours that you will use to guide your app's visual design. Using a colour scheme helps you ensure your app appears balanced and that certain UI elements don't feel out of place due to their colours.
 
+### Coolors
+
+Let's take a quick break from Xcode and visit [Coolors](https://coolors.co). This is an online tool that really helps with coming up with a colour scheme that works and isn't just a bunch of random colours put together.
+
+Coolors is really good because you can just go through tons of potential colour schemes really easily, Just by pressing <kbd>space</kbd> you get a whole new colour scheme.
+
+If you like some of the colours in a colour scheme but you want to change some of the others, you can lock certain colours or select alternate shades, as well as many other features.
+
+Here is a colour scheme I generated on Coolors: [Colour Scheme](https://coolors.co/a9cef4-36494e-000000-7ea0b7-597081)
+
+`// add image of colour scheme`
+
+### Stories with Colour
+
+In your storyboard you may have noticed that you could change the colour of certain views such as buttons and font text. You can also change the background and tint colours of the view controllers themselves. You can find the options to do so in the **Utility Area** by selecting on the UI element, in the **Attributes Inspector**.
+
+Let's change our background to a light blue (hex: #A9CEF4)
+
+Select our initial view controller and open up our attributes inspector. In the **Background** pop up menu select the **Custom** option; this will bring up Apple's colour window.
+
+Click on the **Colour Sliders** tab and select **RGB Sliders**. This will allows us to put our colours in using the hex codes from [Coolers.co](Coolers.co). In the **Hex Color** field enter **A9CEF4** and press <kbd>enter</kbd>.
+
+Change the **Tint** colour of our view controller to **#597081**; this should change the colour of our button automatically.
+
+This should change the background colour and tint of our initial view. Repeat this for the second view controller.
 
 ## App Icons
 
