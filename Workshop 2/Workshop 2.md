@@ -128,7 +128,7 @@ For more information about the `AppDelegate.swift` file, check out this article 
 
 The `ViewController.swift` source file is also automatically created by Xcode when using the single view application template; this file contains one class and is used to manage a specific scene in your app.
 
-The `ViewController` class is a subclass of `UIViewController` which is used for managing the view hierarchy in your iOS app. A view hierarchy in the context means the hierarchy of UI elements, and how they are displayed; for example a view can have have a background image as well as text and buttons above that, all of these  are considered _views_ since they are displayed to the user.
+The `ViewController` class is a subclass of `UIViewController` which is used for managing the view hierarchy in your iOS app. In this context, a view hierarchy means the hierarchy of UI elements, and how they are displayed; for example a view can have have a background image as well as text and buttons above that, all of these are considered _views_ since they are displayed to the user.
 
 _A view represents a single item on the user interface._
 
