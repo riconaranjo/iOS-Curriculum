@@ -10,6 +10,8 @@ _This workshop is about learning how to set yourself up with Xcode to create you
 | Creating outlets + actions         | how to tie logic to your UI        |
 | Build + Run app on your own iPhone | how to run your own apps           |
 
+`// todo: add links to headers (+ playground pages?)`
+
 # 2.1 The Setup
 
 This workshop will be a quick introduction on how to use Xcode to create iOS apps.
@@ -19,8 +21,6 @@ This workshop will be a quick introduction on how to use Xcode to create iOS app
 3. **how to run your project on your own iPhone**
 
 _First let's start with how to create an Xcode project._
-
-`// todo: add links to headers (+ playground pages?)`
 
 ## Xcode Projects
 
@@ -197,7 +197,7 @@ Let's start by adding a simple text label; a text label is a `UILabel` object th
 
 Press the **Library** button in the toolbar or press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> to show the object library, and type **Label**. Drag and drop the label onto your scene and use the guidelines to centre it. Place it about a fifth of the way from the top.
 
-`// todo: add attributes inspector image`
+`// todo: add image of attributes inspector`
 
 _In the utility area [far left] you will find the attributes inspector, and a few other inspector which allow you to change the properties of certain UI elements and scenes._
 

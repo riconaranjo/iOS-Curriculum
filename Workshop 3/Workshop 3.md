@@ -10,9 +10,9 @@ _In this workshop, we will learn how to add a splash screen and how to create ap
 | Adding an app icon               | how to give your app a unique icon         |
 | Create your own Tic Tac Toe app  | how to create a proper app in Xcode        |
 
-# 3.1 The Setup
+`// todo: add links to headers (+ playground pages?)`
 
-`// create xcode project`
+# 3.1 The Setup
 
 In this workshop we are going to create a simple Tic Tac Toe app with three scenes:
 
@@ -62,11 +62,11 @@ We covered view controllers in our last workshop ([2. Getting All Set Up](https:
 
 Now that we are in our main story board, you can add a second view controller from the **Object Library** by pressing the button in the toolbar above the utility area. You can also use the shortcut  <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd>, typing view controller, and pressing enter.
 
-`// add picture of object libary view controller`
+`// todo: add image of object libary view controller`
 
 Drag and drop the view controller to the right of our inital view controller. You can use the guidelines both view controller in-line with each other.
 
-`// add picture of two view controllers with guidelines`
+`// todo: add image of two view controllers with guidelines`
 
 Use the object library again to add a button to first view controller. Place it in the centre of the first view controller and change the text to **Segue** and increase the font size to 28. I'm going to add horizontal and vertical constraints so it's always in the centre at least for now.
 
@@ -74,7 +74,7 @@ To add a segue when we press our button, click and drag from button to our secon
 
 _For more information on the other types of segues, read [Using Segues](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)._
 
-`// add picture of two view controllers adding segue`
+`// todo: add image of two view controllers adding segue`
 
 _Congrats you have created your first segue!_
 
@@ -85,8 +85,6 @@ Now let's test our segue; press the **Run** button or use the shortcut <kbd>cmd<
 Once you have your app running, press the button and make sure it transitions to the second screen.
 
 ## Colours
-
-`// how to create a colour scheme and apply it to ui elements`
 
 Now let's learn a bit about colours, because they are an integral part of designing any user interface. The colours you use will impact how your app is perceived and how it is used.
 
@@ -118,9 +116,33 @@ Coolors is really good because you can just go through tons of potential colour 
 
 If you like some of the colours in a colour scheme but you want to change some of the others, you can lock certain colours or select alternate shades, as well as many other features.
 
-Here is a colour scheme I generated on Coolors: [Colour Scheme](https://coolors.co/a9cef4-36494e-000000-7ea0b7-597081)
+Here is a colour scheme I generated on Coolors: [Colour Scheme](https://coolors.co/56e39f-465775-a9cef4-d9f0ff-ef6f6c)
 
-`// add image of colour scheme`
+3. Medium Aquamarine _(#56E39F)_
+4. Independence _(#465775)_
+3. Pale Cornflower Blue _(#A9CEF4)_
+4. Azureish White _(#D9F0FF)_
+5. Light Carmine Pink _(#EF6F6C)_
+
+`// todo: add image of colour scheme`
+
+Coolors gives us colour schemes with five colours, but it doesn't tell us how to use them; this part is up to us. A good rule of thumb is to use the 60-30-10 rule.
+
+- You should select one colour to be your primary colour — _use this one about 60% of the time_.
+- Select a second colour to be your secondary colour — _use this 10% of the time_.
+- select a third colour to be your accent colour — _use this 10% of the time_.
+- select a colour for your background — _this can often simply be white or black_.
+- select a second accent colour — _use this one an additional 10% of the time_.
+
+Using the colour scheme from above, this is how I decided to use the colours.
+
+`// todo: finalize these colours`
+
+- **Primary:** #A9CEF4
+- **Secondary:** #465775
+- **Accent:** #56E39F
+- **Background:** #D9F0FF
+- **Second Accent:** #EF6F6C
 
 ### Stories with Colour
 
@@ -130,11 +152,13 @@ Let's change our background to a light blue (hex: #A9CEF4)
 
 Select our initial view controller and open up our attributes inspector. In the **Background** pop up menu select the **Custom** option; this will bring up Apple's colour window.
 
-Click on the **Colour Sliders** tab and select **RGB Sliders**. This will allows us to put our colours in using the hex codes from [Coolers.co](Coolers.co). In the **Hex Color** field enter **A9CEF4** and press <kbd>enter</kbd>.
+Click on the **Colour Sliders** tab and select **RGB Sliders**. This will allows us to put our colours in using the hex codes from [Coolers.co](Coolers.co). In the **Hex Color** field enter **D9F0FF** and press <kbd>enter</kbd>.
 
-Change the **Tint** colour of our view controller to **#597081**; this should change the colour of our button automatically.
+Change the **Tint** colour of our view controller to **#465775**; this should change the colour of our button automatically.
 
 This should change the background colour and tint of our initial view. Repeat this for the second view controller.
+
+`// todo: add image of view controller with simple colour scheme`
 
 ## App Icons
 
@@ -154,7 +178,10 @@ This are some of the resources I used to make this workshop, all of them are wor
 
 - [Launch Screen](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/)
 - [Using Segues](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
-
+- [The Importance of Color Theory](https://www.webdesign.org/web-design-basics/color-theory/the-importance-of-color-in-web-designing.12437.html)
+- [How Important is Colour In Design](https://simplygraphic.co.za/2016/05/06/important-colour-design/)
 - [Coolors](https://coolors.co)
+
+
 - [Google](https://google.ca)
 - [Stack Overflow](https://stackoverflow.com)

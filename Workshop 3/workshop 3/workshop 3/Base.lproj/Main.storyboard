@@ -27,8 +27,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.66274509803921566" green="0.80784313725490198" blue="0.95686274509803915" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.21176470589999999" green="0.28627450980000002" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.94117647058823528" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.27450980392156865" green="0.3411764705882353" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tAz-a1-rz2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6Xl-tN-B9H"/>
                             <constraint firstItem="tAz-a1-rz2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ddB-Wj-iWB"/>
@@ -54,8 +54,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.66274509800000003" green="0.80784313730000001" blue="0.95686274510000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.85098039215686272" green="0.94117647058823528" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.27450980392156865" green="0.3411764705882353" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="XFz-Wc-y6O" firstAttribute="centerX" secondItem="v9Y-YM-Azt" secondAttribute="centerX" id="Me4-TZ-Kiz"/>
                             <constraint firstItem="XFz-Wc-y6O" firstAttribute="centerY" secondItem="v9Y-YM-Azt" secondAttribute="centerY" id="pxL-UF-Odc"/>
