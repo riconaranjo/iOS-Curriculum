@@ -134,6 +134,8 @@ Coolors gives us colour schemes with five colours, but it doesn't tell us how to
 - select a colour for your background — _this can often simply be white or black_.
 - select a second accent colour — _use this one an additional 10% of the time_.
 
+_Read more about this: [60-30-10 Color Rule: How to Use It, and How to Break It](https://www.thespruce.com/timeless-color-rule-797859)._
+
 Using the colour scheme from above, this is how I decided to use the colours.
 
 `// todo: finalize these colours`
