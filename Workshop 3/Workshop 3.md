@@ -150,15 +150,24 @@ Using the colour scheme from above, this is how I decided to use the colours.
 
 In your storyboard you may have noticed that you could change the colour of certain views such as buttons and font text. You can also change the background and tint colours of the view controllers themselves. You can find the options to do so in the **Utility Area** by selecting on the UI element, in the **Attributes Inspector**.
 
-Let's change our background to a light blue (hex: #A9CEF4)
+#### Changing the Background Colour
+
+Let's change our **background** to a light blue (hex: #A9CEF4)
 
 Select our initial view controller and open up our attributes inspector. In the **Background** pop up menu select the **Custom** option; this will bring up Apple's colour window.
 
 Click on the **Colour Sliders** tab and select **RGB Sliders**. This will allows us to put our colours in using the hex codes from [Coolers.co](Coolers.co). In the **Hex Color** field enter **D9F0FF** and press <kbd>enter</kbd>.
 
+#### Changing the Tint Colour
+
+The **Tint** colour for a `UIView` is it's "default" colour. It will be the colour of new views — _such as buttons_ — added to your view controller.
+
 Change the **Tint** colour of our view controller to **#465775**; this should change the colour of our button automatically.
 
 This should change the background colour and tint of our initial view. Repeat this for the second view controller.
+
+- **Background:** #D9F0FF
+- **Tint:** #465775
 
 `// todo: add image of view controller with simple colour scheme`
 
