@@ -134,7 +134,7 @@ Here is a colour scheme I generated using Coolors: [Colour Scheme](https://coolo
 
 Coolors gives us colour schemes with five colours, but it doesn't tell us how to use them; this part is up to us. A good rule of thumb is to use the 60-30-10 rule.
 
-- **Select one colour to be your **primary** colour**
+- *Select one colour to be your **primary** colour*
   - _use this one about **60%** of the time_.
 - Select a second colour to be your **secondary** colour
   - _use this **10%** of the time_.
@@ -221,10 +221,26 @@ As per the [HIG: App Icon Sizes](https://developer.apple.com/design/human-interf
 
 _There are other dimensions for icons in notifications and the Settings app, but we don't need those in the workshop. You can find them in the [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes)._
 
-We've learned how to create in-app transitions. We've learned about colour schemes and why they're an important part of designing your app. Now let's learn about iOS app icons and how to add one to your app.
+### Creating Your Own App Icon
 
-- [HIG: App Icon](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/)
+In this part of the workshop I'm going to show you how to create your own app icon. All the tools you need are available online for free.
 
+- We are going to use [flaticon.com](https://www.flaticon.com/) for pre-made icons that we can use for free — _as long as we credit the authors_.
+- We are also going to use the vector graphics editing tool [Vectr](https://vectr.com) to edit our app icon and export it to the various sizes we need.
+
+### Flaticon
+
+Go to [flaticon.com]()
+
+I will be using this [icon](https://www.flaticon.com/free-icon/tic-tac-toe_528297#term=tic%20tac%20toe&amp;page=1&amp;position=39)
+
+### Vectr
+
+### Scaled App Icons
+
+`// add image of finished app icon here`
+
+Modified icon used in design was created by [Those Icons](https://www.flaticon.com/authors/those-icons), licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
 
 # 3.2 The Fun Part (Coding)
 
@@ -246,6 +262,9 @@ This are some of the resources I used to make this workshop, all of them are wor
 - [How Important is Colour In Design](https://simplygraphic.co.za/2016/05/06/important-colour-design/)
 - [Coolors](https://coolors.co)
 - [HIG: App Icon](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/)
+- [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes)
+- [flaticon.com](https://www.flaticon.com/)
+- [Vectr](https://vectr.com)
 
 `// todo finish adding references`
 
