@@ -183,6 +183,11 @@ You can set the default tint colour globally for your view controllers for each 
 
 To set a global tint colour for a storyboard, click on the **File Inspector** in the utility area — _it's two icons to the left of the attributes inspector_. You can change the global tint now the same was as you did for any individual view controller in the **Global Tint** field.
 
+Let's go to the `LaunchScreen.storyboard` file and change it's global tint colour, and while we're at it let's also change the background colour.
+
+- **Background:** #465775
+- **Tint:** #2CABD8
+
 ## App Icons
 
 `// how to add an app icon`
