@@ -20,6 +20,14 @@ In this workshop we are going to create a simple Tic Tac Toe app with three scen
 2. Game board
 3. Game end screen
 
+## Human Interface Guidelines
+
+In this workshop, we will be referring to [Apple's Human Interface Guidelines (HIG)](https://developer.apple.com/design/human-interface-guidelines/) quite frequently. It is highly recommended you read it if you wish to become an iOS developer, but it isn't necessary for these workshops.
+
+If you want a quicker summary of the HIG here is a good Medium article: [iOS Human Interface Guidelines I](https://medium.com/nona-web/ios-human-interface-guideline-f012a5ba962e)
+
+## Getting Started
+
 To get started, let's create a **Project** by opening Xcode and selecting the open the _Create a new Xcode project_ option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
 
 Select **Single View App** under the iOS tab and press next.
@@ -221,26 +229,124 @@ As per the [HIG: App Icon Sizes](https://developer.apple.com/design/human-interf
 
 _There are other dimensions for icons in notifications and the Settings app, but we don't need those in the workshop. You can find them in the [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes)._
 
+The actual file sizes are without the brackets, and the screen resolution sizes are within the brackets, with the scaling factor based on the screen resolution denoted with the **@** sign; higher resolution displays have a greater scaling factor.
+
+_For more information read [HIG: Image Size and Resolution](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/)._
+
 ### Creating Your Own App Icon
 
 In this part of the workshop I'm going to show you how to create your own app icon. All the tools you need are available online for free.
 
-- We are going to use [flaticon.com](https://www.flaticon.com/) for pre-made icons that we can use for free — _as long as we credit the authors_.
+- We are going to use [Flaticon](https://www.flaticon.com/) for pre-made icons that we can use for free — _as long as we credit the authors_.
 - We are also going to use the vector graphics editing tool [Vectr](https://vectr.com) to edit our app icon and export it to the various sizes we need.
+
+_If you wish to save your icons ([Flaticon](https://www.flaticon.com/)) or artwork ([Vectr](https://vectr.com)) you will have to create an account for each (free)._
 
 ### Flaticon
 
-Go to [flaticon.com]()
+Go to [Flaticon](https://www.flaticon.com/). This website has a lot of free icons you can use in your projects as long as you credit the creators, and premium icons you may use if you pay. We will only be using free icons in this workshop.
 
-I will be using this [icon](https://www.flaticon.com/free-icon/tic-tac-toe_528297#term=tic%20tac%20toe&amp;page=1&amp;position=39)
+`// todo add image of flaticon with tic tac toe search results`
+
+Using the search bar, look for an icon you might want to use in your app icon / logo. I will be using this **tic tac toe** [icon](https://www.flaticon.com/free-icon/tic-tac-toe_1021315#term=tic%20tac%20toe&page=1&position=15) created by Freepik.
+
+### Changing Icon Colours
+
+Flaticon is a particularly useful online tool since it allows you to change the colour of certain icons — _as long as they don't have gradients_ —. **Select an icon** to use for your app icon.
+
+`// todo: add image of selected icon in flaticon`
+
+Next to the **Add to collection** button there is a button with a pencil within a colour wheel. If you press this button it will open a window where you can edit the colour of the icon. I will be changing the icon to my primary colour #2CABD8.
+
+_You can do the same or you can choose to use the secondary colour or an accent colour._
+
+`// todo: add image of modifying icon colour in flaticon`
+
+_If you created an account with Flaticon you will be able to save this a collection so if you want to download it again later you don't have to go through all these steps again._
+
+Download your modified icon at the highest resolution possible.
 
 ### Vectr
 
+Open [Vectr](https://vectr.com) in a new tab / window. This website allows us to edit vector graphics online without having to purchase or install programs such as [Adobe Illustrator](https://www.adobe.com/ca/products/illustrator.html), [Affinity Designer](https://affinity.serif.com/en-gb/designer/), or [Gimp](https://www.gimp.org) — _all of these are great options, but come either at a financial cost and a potentially steep learning curve_.
+
+- Industry standard: [Adobe Illustrator](https://www.adobe.com/ca/products/illustrator.html).
+- I personally use [Affinity Designer](https://affinity.serif.com/en-gb/designer/).
+- [Gimp](https://www.gimp.org) is free.
+
+`// todo: add image of Vectr homepage`
+
+_I recommend creating an account so you can save your progress, but it is not necessary, including not for this workshop._
+
+Create a new document by pressing **Use Online** or create a new account with the **Log In** button. If you create a new account create a new file using the **Create File** button.
+
+### Creating a Vectr File
+
+The first thing we want to do is to change our canvas size to **1024 x 1024** as this is the App Store icon size, which is the largest size we will need. We will use this design and scale it down for the other app icon sizes.
+
+Click on the **Pages** tab in the upper-left-hand-corner and the bottom change the **Page Settings** to **1024 px** for both the width and height; changing one should change the other by default since they are linked. You can unlink them with the button in between the two numbers.
+
+You will probably want to zoom out to see the entire canvas area. You can find the zoom level on the bottom right.
+
+`// todo: add image of blank canvas with 1024 size`
+
+Select the **Layers** tab. We're going to add a background to our canvas. Add a rectangle to the canvas by pressing the **Rectangle** button. You can ensure it is a square by holding the <kbd>shift</kbd> key.
+
+Move one of the corners to the canvas corner, and it should snap into place. Extend the background to cover the entirety of the canvas either by dragging the opposite corner of the rectangle across the canvas or by changing it's dimensions to 1024.
+
+### Changing the Background Colour
+
+Select your rectangle. Now let's change it's colour to one on our colour scheme. Try out different colours and think about how our icon will look on top of it. You can go back and change the icon colour if you think another colour would work better.
+
+I will be using my app background colour (#465775) as my icon background colour, but I could have used my secondary colour, or used the secondary colour for my icon and used my primary as the app icon background. Try different combinations and see what works best.
+
+Click on the coloured box under **Background** and enter the desired colour hex code.
+
+`// todo: add image of changing colour in vectr`
+
+### Adding Images
+
+Now it's time to add the icon we downloaded from Flaticon. Press the **Upload Image** button — _it looks like a cloud with an arrow going through it_. Upload your icon.
+
+You can increase it's size to something like **768 x 768** so it fills up 3/4 of the canvas (aesthetically pleasing).
+
+_Now how do we centre our icon, so it's perfectly in the centre?_
+
+Vectr allows us to place our icon in the very centre by using the **Snapping & Grid** options in the top right. Select **Grid** from the drop down menu.
+
+`// todo: add image of grid option`
+
+Now when you move around your icon you should see guidelines and you should be able to snap it right into the centre.
+
 ### Scaled App Icons
 
-`// add image of finished app icon here`
+_Congrats! You have created your very own app icon design._
 
-Modified icon used in design was created by [Those Icons](https://www.flaticon.com/authors/those-icons), licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
+Now that we have a design we need to export it. We need 3 different versions for an iPhone app as explained in [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes).
+
+- **iPhone:** 120px × 120px (40pt × 40pt @3x)
+- **iPhone:** 80px × 80px (40pt × 40pt @2x)
+- **App Store:** 1024px × 1024px (1024pt × 1024pt @1x)
+
+Let's start with the 1024 x 1024 version first, then the 120 x 120, then the 80 x 80 version.
+
+`// todo: add image of finished app icon here`
+
+Modified icon used in design was created by [Freepik](https://www.flaticon.com/authors/freepik), licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
+
+To export out icon images, click on the **Export** button in the top right. Change the file type to **png** and press **OPEN TAB**; this will open a new tab with your image where you can simply right click to download the image.
+
+**Repeat this but for all three resolutions:**
+
+- 1024px x 1024px
+- 120px x 120px
+- 80x x 80px
+
+You should have three download images. Rename them to have descriptive names.
+
+- 1024px x 1024px: **AppStore-1024@1x**
+- 120px x 120px: **Icon-40@3x**
+- 80x x 80px: **Icon-40@2x**
 
 # 3.2 The Fun Part (Coding)
 
@@ -254,6 +360,8 @@ Modified icon used in design was created by [Those Icons](https://www.flaticon.c
 
 This are some of the resources I used to make this workshop, all of them are worth reading / watching.
 
+- [Apple's Human Interface Guidelines (HIG)](https://developer.apple.com/design/human-interface-guidelines/)
+- [iOS Human Interface Guidelines I](https://medium.com/nona-web/ios-human-interface-guideline-f012a5ba962e)
 - [HIG: Launch Screen](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/)
 - [Using Segues](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
 - [HIG: Color](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/)
@@ -263,7 +371,8 @@ This are some of the resources I used to make this workshop, all of them are wor
 - [Coolors](https://coolors.co)
 - [HIG: App Icon](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/)
 - [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes)
-- [flaticon.com](https://www.flaticon.com/)
+- [HIG: Image Size and Resolution](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/)
+- [Flaticon](https://www.flaticon.com/)
 - [Vectr](https://vectr.com)
 
 `// todo finish adding references`
