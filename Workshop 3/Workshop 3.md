@@ -195,7 +195,31 @@ Let's go to the `LaunchScreen.storyboard` file and change it's global tint colou
 
 ## App Icons
 
-`// how to add an app icon`
+We've learned how to create in-app transitions. We've learned about colour schemes and why they're an important part of designing your app. Now let's learn about iOS app icons and how to add one to your app.
+
+Your app icon is important because it symbolizes your app, and is one of the most common ways your users will interact with your app and it's branding.
+
+**A good app icon is:**
+
+- simple and easily recognizable
+- matches your colour scheme
+- captures attention
+
+_For a more through explanation of how to design a proper app icon, read Apple's Human Interface Guidelines on app icons: [HIG: App Icon](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/)_
+
+If you want to distribute your app on the app store, you will have to provide various scaled versions of your app icon for different devices, as well as an app store version.
+
+As per the [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes), these are the icon sizes you'll need.
+
+| Device or context | Icon size                             |
+| ----------------- | ------------------------------------- |
+| iPhone            | 180px × 180px (60pt × 60pt @3x)       |
+|                   | 120px × 120px (60pt × 60pt @2x)       |
+| iPad Pro          | 167px × 167px (83.5pt × 83.5pt @2x)   |
+| iPad, iPad mini   | 152px × 152px (76pt × 76pt @2x)       |
+| App Store         | 1024px × 1024px (1024pt × 1024pt @1x) |
+
+_There are other dimensions for icons in notifications and the Settings app, but we don't need those in the workshop. You can find them in the [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes)._
 
 We've learned how to create in-app transitions. We've learned about colour schemes and why they're an important part of designing your app. Now let's learn about iOS app icons and how to add one to your app.
 
