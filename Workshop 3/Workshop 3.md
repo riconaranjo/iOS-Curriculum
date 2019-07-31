@@ -102,11 +102,17 @@ Different colours provoke certain emotions. You can decide to use this to create
 - **Purple:** royalty, wisdom
 - **White:** purity
 
+_For more information read Apple's own Human Interface Guidelines:[HIG: Color](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/)._
+
 _For more about colour theory read [The Importance of Color Theory](https://www.webdesign.org/web-design-basics/color-theory/the-importance-of-color-in-web-designing.12437.html) and [How Important is Colour In Design](https://simplygraphic.co.za/2016/05/06/important-colour-design/)._
 
 ### Colour Scheme
 
 **What is a colour scheme?** A colour scheme is a collection of colours that you will use to guide your app's visual design. Using a colour scheme helps you ensure your app appears balanced and that certain UI elements don't feel out of place due to their colours.
+
+When choosing a colour scheme you also want to make sure that it'll give your app contrast and allows different elements to be distinguished from each other. You should keep in mind that some forms of colour-blindness are unable to distinguish colours such as red, green, and grey. If you use these colours, you might want to provide an alternate colour scheme for distinguishing these colours.
+
+_For more information read: [HIG: Color and Contrast](https://developer.apple.com/design/human-interface-guidelines/accessibility/overview/color-and-contrast/)._
 
 ### Coolors
 
@@ -116,12 +122,12 @@ Coolors is really good because you can just go through tons of potential colour 
 
 If you like some of the colours in a colour scheme but you want to change some of the others, you can lock certain colours or select alternate shades, as well as many other features.
 
-Here is a colour scheme I generated on Coolors: [Colour Scheme](https://coolors.co/56e39f-465775-a9cef4-d9f0ff-ef6f6c)
+Here is a colour scheme I generated using Coolors: [Colour Scheme](https://coolors.co/56e39f-465775-2cabd8-e3f4ff-ef6f6c)
 
 3. Medium Aquamarine _(#56E39F)_
 4. Independence _(#465775)_
-3. Pale Cornflower Blue _(#A9CEF4)_
-4. Azureish White _(#D9F0FF)_
+3. Bright Cerulean _(#2CABD8)_
+4. Light Cyan _(#E3F4FF)_
 5. Light Carmine Pink _(#EF6F6C)_
 
 `// todo: add image of colour scheme`
@@ -140,11 +146,11 @@ Using the colour scheme from above, this is how I decided to use the colours.
 
 `// todo: finalize these colours`
 
-- **Primary:** #A9CEF4
-- **Secondary:** #465775
+- **Primary:** #2CABD8
+- **Secondary:** #E3F4FF
 - **Accent:** #56E39F
-- **Background:** #D9F0FF
 - **Second Accent:** #EF6F6C
+- **Background:** #465775
 
 ### Stories with Colour
 
@@ -152,28 +158,39 @@ In your storyboard you may have noticed that you could change the colour of cert
 
 #### Changing the Background Colour
 
-Let's change our **background** to a light blue (hex: #A9CEF4)
+Let's change our **background** to a dark blueish grey (hex: #465775).
 
 Select our initial view controller and open up our attributes inspector. In the **Background** pop up menu select the **Custom** option; this will bring up Apple's colour window.
 
-Click on the **Colour Sliders** tab and select **RGB Sliders**. This will allows us to put our colours in using the hex codes from [Coolers.co](Coolers.co). In the **Hex Color** field enter **D9F0FF** and press <kbd>enter</kbd>.
+Click on the **Colour Sliders** tab and select **RGB Sliders**. This will allows us to put our colours in using the hex codes from [Coolers.co](Coolers.co). In the **Hex Color** field enter **465775** and press <kbd>enter</kbd>.
 
 #### Changing the Tint Colour
 
-The **Tint** colour for a `UIView` is it's "default" colour. It will be the colour of new views — _such as buttons_ — added to your view controller.
+The **Tint** colour for a `UIView` is it's "default" colour for interactive elements. It will be the colour of new views — _such as buttons_ — added to your view controller. We will be using our primary colour as our tint colour.
 
-Change the **Tint** colour of our view controller to **#465775**; this should change the colour of our button automatically.
+Change the **Tint** colour of our view controller to **#2CABD8**; this should change the colour of our button automatically.
 
 This should change the background colour and tint of our initial view. Repeat this for the second view controller.
 
-- **Background:** #D9F0FF
-- **Tint:** #465775
+- **Background:** #465775
+- **Tint:** #2CABD8
 
 `// todo: add image of view controller with simple colour scheme`
+
+#### Global Tint
+
+You can set the default tint colour globally for your view controllers for each storyboard. This saves you from having to do what we just did, which is manually set the tint colour of each scene — _although you cannot set a global background colour_.
+
+To set a global tint colour for a storyboard, click on the **File Inspector** in the utility area — _it's two icons to the left of the attributes inspector_. You can change the global tint now the same was as you did for any individual view controller in the **Global Tint** field.
 
 ## App Icons
 
 `// how to add an app icon`
+
+We've learned how to create in-app transitions. We've learned about colour schemes and why they're an important part of designing your app. Now let's learn about iOS app icons and how to add one to your app.
+
+- [HIG: App Icon](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/)
+
 
 # 3.2 The Fun Part (Coding)
 
@@ -187,12 +204,16 @@ This should change the background colour and tint of our initial view. Repeat th
 
 This are some of the resources I used to make this workshop, all of them are worth reading / watching.
 
-- [Launch Screen](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/)
+- [HIG: Launch Screen](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/)
 - [Using Segues](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
+- [HIG: Color](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/)
+- [HIG: Color and Contrast](https://developer.apple.com/design/human-interface-guidelines/accessibility/overview/color-and-contrast/)
 - [The Importance of Color Theory](https://www.webdesign.org/web-design-basics/color-theory/the-importance-of-color-in-web-designing.12437.html)
 - [How Important is Colour In Design](https://simplygraphic.co.za/2016/05/06/important-colour-design/)
 - [Coolors](https://coolors.co)
+- [HIG: App Icon](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/)
 
+`// todo finish adding references`
 
 - [Google](https://google.ca)
 - [Stack Overflow](https://stackoverflow.com)

@@ -27,8 +27,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.85098039215686272" green="0.94117647058823528" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.27450980392156865" green="0.3411764705882353" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.27450980392156865" green="0.3411764705882353" blue="0.45882352941176469" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.17254901960784313" green="0.6705882352941176" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tAz-a1-rz2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6Xl-tN-B9H"/>
                             <constraint firstItem="tAz-a1-rz2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ddB-Wj-iWB"/>
@@ -38,6 +38,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="275" y="21"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rZJ-1q-Kin">
@@ -50,12 +51,12 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFz-Wc-y6O">
                                 <rect key="frame" x="116" y="431.5" width="182.5" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.85098039215686272" green="0.94117647058823528" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.27450980392156865" green="0.3411764705882353" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.27450980392156865" green="0.3411764705882353" blue="0.45882352941176469" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.17254901960784313" green="0.6705882352941176" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="XFz-Wc-y6O" firstAttribute="centerX" secondItem="v9Y-YM-Azt" secondAttribute="centerX" id="Me4-TZ-Kiz"/>
                             <constraint firstItem="XFz-Wc-y6O" firstAttribute="centerY" secondItem="v9Y-YM-Azt" secondAttribute="centerY" id="pxL-UF-Odc"/>
@@ -65,7 +66,8 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdX-LT-qWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1594" y="127"/>
+            <point key="canvasLocation" x="1077" y="21"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.17254901959999999" green="0.6705882353" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
 </document>
