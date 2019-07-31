@@ -134,11 +134,16 @@ Here is a colour scheme I generated using Coolors: [Colour Scheme](https://coolo
 
 Coolors gives us colour schemes with five colours, but it doesn't tell us how to use them; this part is up to us. A good rule of thumb is to use the 60-30-10 rule.
 
-- You should select one colour to be your primary colour — _use this one about 60% of the time_.
-- Select a second colour to be your secondary colour — _use this 10% of the time_.
-- select a third colour to be your accent colour — _use this 10% of the time_.
-- select a colour for your background — _this can often simply be white or black_.
-- select a second accent colour — _use this one an additional 10% of the time_.
+- **Select one colour to be your **primary** colour**
+  - _use this one about **60%** of the time_.
+- Select a second colour to be your **secondary** colour
+  - _use this **10%** of the time_.
+- Select a third colour to be your **accent** colour
+  - _use this **10%** of the time_.
+- Select a colour for your **background**
+  - _this can often simply be white or black, but doesn't have to be_.
+- Select a second **accent** colour
+  - _use this one an additional **10%** of the time_.
 
 _Read more about this: [60-30-10 Color Rule: How to Use It, and How to Break It](https://www.thespruce.com/timeless-color-rule-797859)._
 
