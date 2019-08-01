@@ -169,7 +169,7 @@ Using the colour scheme from above, this is how I decided to use the colours.
 
 In your storyboard you may have noticed that you could change the colour of certain views such as buttons and font text. You can also change the background and tint colours of the view controllers themselves. You can find the options to do so in the **Utility Area** by selecting on the UI element, in the **Attributes Inspector**.
 
-#### Changing the Background Colour
+### Changing the Background Colour
 
 Let's change our **background** to a dark blueish grey (hex: #465775).
 
@@ -177,7 +177,7 @@ Select our initial view controller and open up our attributes inspector. In the 
 
 Click on the **Colour Sliders** tab and select **RGB Sliders**. This will allows us to put our colours in using the hex codes from [Coolers.co](Coolers.co). In the **Hex Color** field enter **465775** and press <kbd>enter</kbd>.
 
-#### Changing the Tint Colour
+### Changing the Tint Colour
 
 The **Tint** colour for a `UIView` is it's "default" colour for interactive elements. It will be the colour of new views — _such as buttons_ — added to your view controller. We will be using our primary colour as our tint colour.
 
@@ -190,7 +190,7 @@ This should change the background colour and tint of our initial view. Repeat th
 
 `// todo: add image of view controller with simple colour scheme`
 
-#### Global Tint
+### Global Tint
 
 You can set the default tint colour globally for your view controllers for each storyboard. This saves you from having to do what we just did, which is manually set the tint colour of each scene — _although you cannot set a global background colour_.
 
@@ -213,11 +213,15 @@ Your app icon is important because it symbolizes your app, and is one of the mos
 - matches your colour scheme
 - captures attention
 
+It should not take someone more than a few seconds to figure out what your app does from the app icon at all. Keep your design focused on a single point that captures attention and identifies your app.
+
+You do not need to add rounded corner to your icon, the operating system will do so for you.
+
 _For a more through explanation of how to design a proper app icon, read Apple's Human Interface Guidelines on app icons: [HIG: App Icon](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/)_
 
 If you want to distribute your app on the app store, you will have to provide various scaled versions of your app icon for different devices, as well as an app store version.
 
-As per the [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes), these are the icon sizes you'll need.
+As per the [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes), these are the icon sizes you'll need for you app.
 
 | Device or context | Icon size                             |
 | ----------------- | ------------------------------------- |
@@ -238,9 +242,9 @@ _For more information read [HIG: Image Size and Resolution](https://developer.ap
 In this part of the workshop I'm going to show you how to create your own app icon. All the tools you need are available online for free.
 
 - We are going to use [Flaticon](https://www.flaticon.com/) for pre-made icons that we can use for free — _as long as we credit the authors_.
-- We are also going to use the vector graphics editing tool [Vectr](https://vectr.com) to edit our app icon and export it to the various sizes we need.
+- We are also going to use the vector graphics editing tool [Figma](https://figma.com) to edit our app icon and export it to the various sizes we need.
 
-_If you wish to save your icons ([Flaticon](https://www.flaticon.com/)) or artwork ([Vectr](https://vectr.com)) you will have to create an account for each (free)._
+_If you wish to save your icons ([Flaticon](https://www.flaticon.com/)) or artwork ([Figma](https://figma.com)) you will have to create an account for each (free)._
 
 ### Flaticon
 
@@ -268,19 +272,21 @@ Download your modified icon at the highest resolution possible.
 
 ### Vectr
 
-Open [Vectr](https://vectr.com) in a new tab / window. This website allows us to edit vector graphics online without having to purchase or install programs such as [Adobe Illustrator](https://www.adobe.com/ca/products/illustrator.html), [Affinity Designer](https://affinity.serif.com/en-gb/designer/), or [Gimp](https://www.gimp.org) — _all of these are great options, but come either at a financial cost and a potentially steep learning curve_.
+https://www.figma.com/file/HUboUyk2DsD1u3JYPHPMo7/iPhone-App-Icon-Template
+
+Open [Figma](https://figma.com) in a new tab / window. This website allows us to edit vector graphics online without having to purchase or install programs such as [Adobe Illustrator](https://www.adobe.com/ca/products/illustrator.html), [Affinity Designer](https://affinity.serif.com/en-gb/designer/), or [Gimp](https://www.gimp.org) — _all of these are great options, but come either at a financial cost and a potentially steep learning curve_.
 
 - Industry standard: [Adobe Illustrator](https://www.adobe.com/ca/products/illustrator.html).
 - I personally use [Affinity Designer](https://affinity.serif.com/en-gb/designer/).
 - [Gimp](https://www.gimp.org) is free.
 
-`// todo: add image of Vectr homepage`
+`// todo: add image of figma homepage`
 
 _I recommend creating an account so you can save your progress, but it is not necessary, including not for this workshop._
 
 Create a new document by pressing **Use Online** or create a new account with the **Log In** button. If you create a new account create a new file using the **Create File** button.
 
-### Creating a Vectr File
+### Creating a Figma File
 
 The first thing we want to do is to change our canvas size to **1024 x 1024** as this is the App Store icon size, which is the largest size we will need. We will use this design and scale it down for the other app icon sizes.
 
@@ -302,7 +308,7 @@ I will be using my app background colour (#465775) as my icon background colour,
 
 Click on the coloured box under **Background** and enter the desired colour hex code.
 
-`// todo: add image of changing colour in vectr`
+`// todo: add image of changing colour in figma`
 
 ### Adding Images
 
@@ -312,7 +318,7 @@ You can increase it's size to something like **768 x 768** so it fills up 3/4 of
 
 _Now how do we centre our icon, so it's perfectly in the centre?_
 
-Vectr allows us to place our icon in the very centre by using the **Snapping & Grid** options in the top right. Select **Grid** from the drop down menu.
+Figma allows us to place our icon in the very centre by using the **Snapping & Grid** options in the top right. Select **Grid** from the drop down menu.
 
 `// todo: add image of grid option`
 
@@ -324,9 +330,9 @@ _Congrats! You have created your very own app icon design._
 
 Now that we have a design we need to export it. We need 3 different versions for an iPhone app as explained in [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes).
 
-- **iPhone:** 120px × 120px (40pt × 40pt @3x)
-- **iPhone:** 80px × 80px (40pt × 40pt @2x)
 - **App Store:** 1024px × 1024px (1024pt × 1024pt @1x)
+- **iPhone:** 180px × 180px (60pt × 60pt @3x)
+- **iPhone:** 120px × 120px (60pt × 60pt @2x)
 
 Let's start with the 1024 x 1024 version first, then the 120 x 120, then the 80 x 80 version.
 
@@ -339,14 +345,20 @@ To export out icon images, click on the **Export** button in the top right. Chan
 **Repeat this but for all three resolutions:**
 
 - 1024px x 1024px
+- 180px x 180px
 - 120px x 120px
-- 80x x 80px
 
 You should have three download images. Rename them to have descriptive names.
 
 - 1024px x 1024px: **AppStore-1024@1x**
-- 120px x 120px: **Icon-40@3x**
-- 80x x 80px: **Icon-40@2x**
+- 180px x 180px: **Icon-60@3x**
+- 120px x 120px: **Icon-60@2x**
+
+### Adding Icons in Xcode
+
+To add icons to your app in Xcode navigate to **Assets.xcassets**. You can find it in the navigation area or use open quickly using <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>o</kbd>.
+
+Click on the **AppIcon** resource in the editor area. 
 
 # 3.2 The Fun Part (Coding)
 
