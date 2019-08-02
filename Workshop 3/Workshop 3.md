@@ -126,7 +126,7 @@ _For more information read: [HIG: Color and Contrast](https://developer.apple.co
 
 Let's take a quick break from Xcode and visit [Coolors](https://coolors.co). This is an online tool that really helps with coming up with a colour scheme that works and isn't just a bunch of random colours put together.
 
-Coolors is really good because you can just go through tons of potential colour schemes really easily, Just by pressing <kbd>space</kbd> you get a whole new colour scheme.
+One of Coolors' biggest advantages is that you can just go through tons of potential colour schemes quite effortlessly; simply by pressing <kbd>space</kbd> you get a whole new colour scheme, but if you go too far you can undo and go back to previous options.
 
 If you like some of the colours in a colour scheme but you want to change some of the others, you can lock certain colours or select alternate shades, as well as many other features.
 
@@ -165,6 +165,8 @@ Using the colour scheme from above, this is how I decided to use the colours.
 - **Second Accent:** #EF6F6C
 - **Background:** #465775
 
+Once you have decided on a colour scheme you can save it either by creating an account and pressing **Save** or by either bookmarking the colour scheme page or saving the link; the colour hex codes are included in the link, which is quite convenient.
+
 ### Stories with Colour
 
 In your storyboard you may have noticed that you could change the colour of certain views such as buttons and font text. You can also change the background and tint colours of the view controllers themselves. You can find the options to do so in the **Utility Area** by selecting on the UI element, in the **Attributes Inspector**.
@@ -192,7 +194,7 @@ This should change the background colour and tint of our initial view. Repeat th
 
 ### Global Tint
 
-You can set the default tint colour globally for your view controllers for each storyboard. This saves you from having to do what we just did, which is manually set the tint colour of each scene — _although you cannot set a global background colour_.
+You can set the default tint colour globally for your view controllers within each storyboard. This saves you from having to do what we just did, which is manually set the tint colour of each scene — _although you cannot set a global background colour_.
 
 To set a global tint colour for a storyboard, click on the **File Inspector** in the utility area — _it's two icons to the left of the attributes inspector_. You can change the global tint now the same was as you did for any individual view controller in the **Global Tint** field.
 
@@ -233,7 +235,7 @@ As per the [HIG: App Icon Sizes](https://developer.apple.com/design/human-interf
 
 _There are other dimensions for icons in notifications and the Settings app, but we don't need those in the workshop. You can find them in the [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes)._
 
-The actual file sizes are without the brackets, and the screen resolution sizes are within the brackets, with the scaling factor based on the screen resolution denoted with the **@** sign; higher resolution displays have a greater scaling factor.
+The actual file pixel sizes are without the brackets, and the screen resolution sizes are within the brackets, with the scaling factor (based on the screen resolution) denoted with the **@** sign; higher resolution displays have a greater scaling factor.
 
 _For more information read [HIG: Image Size and Resolution](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/)._
 
@@ -243,6 +245,7 @@ In this part of the workshop I'm going to show you how to create your own app ic
 
 - We are going to use [Flaticon](https://www.flaticon.com/) for pre-made icons that we can use for free — _as long as we credit the authors_.
 - We are also going to use the vector graphics editing tool [Figma](https://figma.com) to edit our app icon and export it to the various sizes we need.
+  - _This tool requires you to create an account._
 
 _If you wish to save your icons ([Flaticon](https://www.flaticon.com/)) or artwork ([Figma](https://figma.com)) you will have to create an account for each (free)._
 
@@ -252,7 +255,7 @@ Go to [Flaticon](https://www.flaticon.com/). This website has a lot of free icon
 
 `// todo add image of flaticon with tic tac toe search results`
 
-Using the search bar, look for an icon you might want to use in your app icon / logo. I will be using this **tic tac toe** [icon](https://www.flaticon.com/free-icon/tic-tac-toe_1021315#term=tic%20tac%20toe&page=1&position=15) created by Freepik.
+Using the **search bar**, look for an icon you might want to use in your app icon / logo. I will be using this **tic tac toe** [icon](https://www.flaticon.com/free-icon/tic-tac-toe_566294) created by Freepik.
 
 ### Changing Icon Colours
 
@@ -260,17 +263,28 @@ Flaticon is a particularly useful online tool since it allows you to change the 
 
 `// todo: add image of selected icon in flaticon`
 
-Next to the **Add to collection** button there is a button with a pencil within a colour wheel. If you press this button it will open a window where you can edit the colour of the icon. I will be changing the icon to my primary colour #2CABD8.
+Next to the **Add to collection** button there is a button with a pencil within a colour wheel. If you press this button it will open a window where you can edit the colour of the icon.
 
+- I will be changing the **icon background** to my background colour #465775.
+- The **icon shadow** will be a a darker shade of my background colour #2D384B.
+- The **Xs and Os light colour** will be my secondary colour #E3F4FF.
+- The **Xs and Os dark colour** will be a darker shade of my secondary colour #BAC8D1.
+
+You don't have to use your app's background as the app icon's background; try using **different** colour combinations and see what feel they give your app.
+
+In **alternate version** I used my primary colour instead of my background colour for the app icon background which gave it a more cheery and playful vibe.
+
+- I will be changing the **icon background** to my primary colour #2CABD8.
+- The **icon shadow** will be a a darker shade of my primary colour #217D9E.
 _You can do the same or you can choose to use the secondary colour or an accent colour._
 
 `// todo: add image of modifying icon colour in flaticon`
 
 _If you created an account with Flaticon you will be able to save this a collection so if you want to download it again later you don't have to go through all these steps again._
 
-Download your modified icon at the highest resolution possible.
+Download your modified icon at the highest resolution possible as a **png**.
 
-### Vectr
+### Figma
 
 https://www.figma.com/file/HUboUyk2DsD1u3JYPHPMo7/iPhone-App-Icon-Template
 
