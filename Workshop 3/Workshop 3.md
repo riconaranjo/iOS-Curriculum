@@ -416,7 +416,8 @@ This are some of the resources I used to make this workshop, all of them are wor
 - [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes)
 - [HIG: Image Size and Resolution](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/)
 - [Flaticon](https://www.flaticon.com/)
-- [Vectr](https://vectr.com)
+- [Figma](https://www.figma.com)
+- [iPhone App Icon Template](https://www.figma.com/file/HUboUyk2DsD1u3JYPHPMo7/iPhone-App-Icon-Template?node-id=0%3A1)
 
 `// todo finish adding references`
 
