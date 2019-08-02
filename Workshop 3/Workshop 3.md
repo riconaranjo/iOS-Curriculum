@@ -288,7 +288,9 @@ Download your modified icon at the highest resolution possible as a **png**.
 
 https://www.figma.com/file/HUboUyk2DsD1u3JYPHPMo7/iPhone-App-Icon-Template
 
-Open [Figma](https://figma.com) in a new tab / window. This website allows us to edit vector graphics online without having to purchase or install programs such as [Adobe Illustrator](https://www.adobe.com/ca/products/illustrator.html), [Affinity Designer](https://affinity.serif.com/en-gb/designer/), or [Gimp](https://www.gimp.org) — _all of these are great options, but come either at a financial cost and a potentially steep learning curve_.
+Icon background #67758E
+
+Open [Figma](https://figma.com) in a new tab / window. This tool allows us to edit vector graphics online without having to purchase or install programs such as [Adobe Illustrator](https://www.adobe.com/ca/products/illustrator.html), [Affinity Designer](https://affinity.serif.com/en-gb/designer/), or [Gimp](https://www.gimp.org) — _all of these are great options, but come either at a financial cost and a potentially steep learning curve_.
 
 - Industry standard: [Adobe Illustrator](https://www.adobe.com/ca/products/illustrator.html).
 - I personally use [Affinity Designer](https://affinity.serif.com/en-gb/designer/).
@@ -296,47 +298,47 @@ Open [Figma](https://figma.com) in a new tab / window. This website allows us to
 
 `// todo: add image of figma homepage`
 
-_I recommend creating an account so you can save your progress, but it is not necessary, including not for this workshop._
+This workshop is not on how to use Figma, or how to use design tools, we won't be going into too much detail about how to use it.
 
-Create a new document by pressing **Use Online** or create a new account with the **Log In** button. If you create a new account create a new file using the **Create File** button.
+If you don't already have an account create a new one by pressing the **Sign Up** button. Once you have completed this, go to this [link](https://www.figma.com/file/HUboUyk2DsD1u3JYPHPMo7/iPhone-App-Icon-Template) where I have set up a template file that will let you create and design your own app icon.
 
-### Creating a Figma File
+`// todo: add image of figma app icon template`
 
-The first thing we want to do is to change our canvas size to **1024 x 1024** as this is the App Store icon size, which is the largest size we will need. We will use this design and scale it down for the other app icon sizes.
+In this file you can see the full sized version of your app icon (1024px x 1024px) along side the 180px, 120px, and 80px sizes to compare how your app will look when scaled down.
 
-Click on the **Pages** tab in the upper-left-hand-corner and the bottom change the **Page Settings** to **1024 px** for both the width and height; changing one should change the other by default since they are linked. You can unlink them with the button in between the two numbers.
+The template app icon is composed of a square background and an icon modified and download from Flaticon. These can be found in the **App-Icon** layer (_technically a frame_). Double click the layer to expand it.
 
-You will probably want to zoom out to see the entire canvas area. You can find the zoom level on the bottom right.
+**Copy this file to your drafts, as you cannot directly modify the template.**
 
-`// todo: add image of blank canvas with 1024 size`
+`// todo: verify these instructions are correct`
 
-Select the **Layers** tab. We're going to add a background to our canvas. Add a rectangle to the canvas by pressing the **Rectangle** button. You can ensure it is a square by holding the <kbd>shift</kbd> key.
-
-Move one of the corners to the canvas corner, and it should snap into place. Extend the background to cover the entirety of the canvas either by dragging the opposite corner of the rectangle across the canvas or by changing it's dimensions to 1024.
+_It is also configured to export all the app icon sizes you'll need for iPhone plus the versions for Spotlight search._
 
 ### Changing the Background Colour
 
-Select your rectangle. Now let's change it's colour to one on our colour scheme. Try out different colours and think about how our icon will look on top of it. You can go back and change the icon colour if you think another colour would work better.
+To change our app icon **background colour**, select the square inside the **App-Icon** layer named **Background**. You can change the colour by putting in a new hex colour code in the  **Fill** field.
 
-I will be using my app background colour (#465775) as my icon background colour, but I could have used my secondary colour, or used the secondary colour for my icon and used my primary as the app icon background. Try different combinations and see what works best.
+`// todo: add image of Fill colour field in figma`
 
-Click on the coloured box under **Background** and enter the desired colour hex code.
+Try out different colours and shades from your colour scheme and think about how our icon will look on top of it. You can also go back and change the icon colour on Flaticon, if you think another colour would work better.
 
-`// todo: add image of changing colour in figma`
+I will be using a light shade of my app background colour (#67758E) as my icon background colour, but I could have used my secondary colour instead. I could have also used the secondary colour for my icon and used my primary as the app icon background. Try different combinations and see what works best.
 
 ### Adding Images
 
-Now it's time to add the icon we downloaded from Flaticon. Press the **Upload Image** button — _it looks like a cloud with an arrow going through it_. Upload your icon.
+Now it's time to add the icon we downloaded from Flaticon. Press the options button at the top left corner — _it looks like a stack of three horizontal lines_ — and search for **Place Image**. This will bring up a file selection window.
 
-You can increase it's size to something like **768 x 768** so it fills up 3/4 of the canvas (aesthetically pleasing).
+Alternately, use the shortcut <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>k</kbd>. Upload your icon.
+
+Click and drag your mouse to add your image. You can change it's size manually to something like **668 x 668** so it fills up 2/3 of the area (aesthetically pleasing).
 
 _Now how do we centre our icon, so it's perfectly in the centre?_
 
-Figma allows us to place our icon in the very centre by using the **Snapping & Grid** options in the top right. Select **Grid** from the drop down menu.
+If you move the uploaded image you will see that it snaps into place with guidelines at the centre of the frame.
 
-`// todo: add image of grid option`
+`// todo: add image of finished app icon here`
 
-Now when you move around your icon you should see guidelines and you should be able to snap it right into the centre.
+Modified icon used in design was created by [Freepik](https://www.flaticon.com/authors/freepik), licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
 
 ### Scaled App Icons
 
@@ -348,31 +350,46 @@ Now that we have a design we need to export it. We need 3 different versions for
 - **iPhone:** 180px × 180px (60pt × 60pt @3x)
 - **iPhone:** 120px × 120px (60pt × 60pt @2x)
 
+We are also exporting 2 more versions of the app for Spotlight search:
+
+- **iPhone:** 120px × 120px (40pt × 40pt @3x)
+- **iPhone:** 80px × 80px (40pt × 40pt @2x)
+
 Let's start with the 1024 x 1024 version first, then the 120 x 120, then the 80 x 80 version.
 
-`// todo: add image of finished app icon here`
+To export our icon at these different resolutions, click on the actual figma background and press **Export iPhone App Icon Template**. _If you renamed the project it will say your project name instead_.
 
-Modified icon used in design was created by [Freepik](https://www.flaticon.com/authors/freepik), licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
+This will bring up a small window, where you can select what you want to export.
 
-To export out icon images, click on the **Export** button in the top right. Change the file type to **png** and press **OPEN TAB**; this will open a new tab with your image where you can simply right click to download the image.
+The template is configured to name your files appropriately, but if you use something else in the future make sure your file names are descriptive, especially if you are working on a team.
 
-**Repeat this but for all three resolutions:**
+**Configured Exports:**
 
-- 1024px x 1024px
-- 180px x 180px
-- 120px x 120px
+- 1024px x 1024px: `AppStore-1024@1x`
+- 180px x 180px: `Icon-60@3x`
+- 120px x 120px: `Icon-60@2x`
+- 120px x 120px: `Icon-40@3x`
+- 80px x 80px: `Icon-40@2x`
 
-You should have three download images. Rename them to have descriptive names.
-
-- 1024px x 1024px: **AppStore-1024@1x**
-- 180px x 180px: **Icon-60@3x**
-- 120px x 120px: **Icon-60@2x**
+Once you export the app icon images from Figma, it will download a zip file containing the different files. Unzip this and let's go back to Xcode.
 
 ### Adding Icons in Xcode
 
-To add icons to your app in Xcode navigate to **Assets.xcassets**. You can find it in the navigation area or use open quickly using <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>o</kbd>.
+To add icons to your app in Xcode navigate to `Assets.xcassets`. You can find it in the navigation area or use open quickly using <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>o</kbd>.
 
-Click on the **AppIcon** resource in the editor area. 
+`// todo: add image of Assets.xcassets`
+
+Click on the **AppIcon** resource in the editor area. This should show you all the possible icon size we might need or use for iPhone and iPad.
+
+If you go to the **Attributes Inspector** you'll notice that we can uncheck iPad which hides all the iPad specific icons.
+
+To add your files simply select them from **Finder** and drag and drop them into `Assets.xcassets`. It's that simple.
+
+Well you might get an error (_warning_) as I did where the app store version is unassigned. Simply drag and drop it from the bottom unassigned position into the App Store icon slot.
+
+`// todo: add image of unassigned icon`
+
+You can now build and run your app and see what you icon actually looks like in iOS.
 
 # 3.2 The Fun Part (Coding)
 
