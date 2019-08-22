@@ -397,7 +397,96 @@ You can now build and run your app and see what you icon actually looks like in 
 
 `// create a tic tac toe game in xcode`
 
-## Launch Screen
+## Icons
+
+- Use the icon you created earlier
+- I will be using this one: https://www.figma.com/file/bNCiyAC6W5EBeNiNMA5GCx/Tic-Tac-Toe-App-Icon
+
+### Importing Icons
+
+- Import the image as explained earlier
+- into `Assets.xcassets`
+- uncheck iPad in the attributes inspector
+- make sure you don't have any errors or unassigned icons
+
+## Images
+
+- we are using 128px png images
+- download them from https://www.figma.com/file/UWmK6SvDEelkZuBTIvH6pA/Tic-Tac-Toe-Icons
+- export them, and extract them from the zip file
+- there is one for each player, and a placeholder icon which will be used before a location has been played
+
+### Importing Images
+
+- to import these assets into xcode simply drag and drop them into `Assets.xcassets`
+- now we can use them anywhere in our application
+
+## Button Grid
+
+- we're going to create a 3x3 grid of 9 buttons
+- each button is going to be an image
+- add a button using object library cmd +  shift + l
+- in the attributes inspector, delete the button text
+- in the **Image** field select the placeholder icon `Icon-Placeholder`
+- copy and paste this button two times in a horizontal row (for a total of three buttons)
+- select the **Embed In** button to the left of the constraint buttons in the Storyboard and click on the _Stack View_ option
+- this will create a horizontal stack view with the three buttons
+
+### UIStackView
+
+- a stack view allows us to organize a bunch of views either in a row or column
+- we will be using three horizontal stack views with three buttons themselves inside a bigger vertical stack view
+- using a stack view you can specify spacing / padding between the views / ui elements inside it
+- change the Spacing to 10 in the attributes inspector
+
+[UIStackView](https://developer.apple.com/documentation/uikit/uistackview)
+
+### Making a Grid
+
+- copy the stack view two more times so we have a 3x3 grid of buttons
+- select the stack views from the **Outline View** (left pane of the Storyboard)
+- press the **Embed In** button and select the _Stack View_ again
+- in this super stack view change the spacing to 10 as well
+- you should see that you have nicely arranged 3x3 grid, but because of our original icon size its default size is too large for most iPhone screens
+- we need to ensure that our design is adaptive to all iPhone models, lucky Apple provides plenty of tools for us to do this with
+
+### Adaptive Interfaces
+
+- why it's important to have adaptive interfaces in our apps
+- [Building Adaptive User Interfaces](https://developer.apple.com/design/adaptivity/)
+- we can use auto layout to make our UI adaptive
+
+### Auto Layout
+
+- auto layout allows us to specify where ui elements go relative to other elements or relative to the edge of the screen
+- [Understanding Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html)
+- it also allows us to specify the sizes of elements, including that certain elements should all be the same size (hint: our buttons)
+- select each button individually from the **Outline View** and add the **Equal Widths**, **Equal Heights**, and the **Aspect Ratio** constraints to all of them
+- this will ensure they are all the same, and they don't get squished
+- now select our meta stack view and add the **Aspect Ratio** constraint as well as **Left** and **Right** constraints of 40
+- this ensures that our grid will resize depending on the screen size
+- congrats now we have our grid ready
+
+## Main Initial Screen
+
+- Let's go back to the inital screen and add our game's title and a button to start a new game.
+- add label and a button
+- add segue for button to go to grid view controller
+
+## End Game Screen
+
+- Let's add a view controller for our end of game screen
+- here we will display the winner or specify if the game was draw
+- this will mean that we will have to pass information from one screen to another
+- data source??
+- non-button segue??
+
+## Game Logic
+
+- for each view controller we will define what logic happens in that screen; this is called encapsulation which ensures your code is easy to debug and maintain
+- initial view controller serves as a start menu and launches the game view controller
+- the game view controller is responsible for managing the buttons, player turns, and checking if a player has won yet, and launching the game over view controller, passing the game result
+- the game over view controller is responsible for showing the game result, and giving an option to restart the game or go back to the initial view
 
 # References
 
@@ -423,3 +512,4 @@ This are some of the resources I used to make this workshop, all of them are wor
 
 - [Google](https://google.ca)
 - [Stack Overflow](https://stackoverflow.com)
+- [Xcode Help](https://help.apple.com/xcode/mac/current/)
