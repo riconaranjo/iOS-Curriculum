@@ -168,6 +168,15 @@ There is a second storyboard file created by Xcode, and that is the `LaunchScree
 
 We won't be modifying this file in this workshop.
 
+## Shortcuts
+
+There are a few useful shortcuts for hiding things like the navigation area, which are especially helpful if you are using a laptop screen with limited screen real estate.
+
+1. **Show / Hide Navigation Area:** <kbd>cmd</kbd> + <kbd>0</kbd>
+2. **Show / Hide Utility Area:** <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>0</kbd>
+3. **Open Developer Documentation:** <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>0</kbd>
+4. **Show / Hide Debug Area:** <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>y</kbd>
+
 # 2.2 Building Your Own App
 
 Now that we have everything set up, we can start actually building our app. Let's start with the `Main.storyboard` file.
