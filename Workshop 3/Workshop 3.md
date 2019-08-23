@@ -28,13 +28,13 @@ If you want a quicker summary of the HIG here is a good Medium article: [iOS Hum
 
 ## Getting Started
 
-To get started, let's create a **Project** by opening Xcode and selecting the open the _Create a new Xcode project_ option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
+To get started, let's create a **Project** by opening Xcode and selecting the _Create a new Xcode project_ option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
 
 Select **Single View App** under the iOS tab and press next.
 
 ## Launch Screens
 
-A launch screen is what appears as soon as your app is launched, quickly replaced by your app's first screen. It allows your app to seem to lead faster. According to Apple's [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/), the launch screen should have placeholder UI elements that appear identical to your app's first screen, without any text — _since it won't be localized_.
+A launch screen is what appears as soon as your app is launched, quickly replaced by your app's first screen. It allows your app to seem to loads faster. According to Apple's [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/), the launch screen should have placeholder UI elements that appear identical to your app's first screen, without any text — _since it won't be localized_.
 
 _Localized text means that it changes based on the user's device language settings._
 
@@ -194,7 +194,7 @@ This should change the background colour and tint of our initial view. Repeat th
 
 ### Global Tint
 
-You can set the default tint colour globally for your view controllers within each storyboard. This saves you from having to do what we just did, which is manually set the tint colour of each scene — _although you cannot set a global background colour_.
+You can set the default tint colour globally for your view controllers within each storyboard. This _partially_ saves you from having to do what we just did, which is manually set the tint colour of each scene — _although you cannot set a global background colour_.
 
 To set a global tint colour for a storyboard, click on the **File Inspector** in the utility area — _it's two icons to the left of the attributes inspector_. You can change the global tint now the same was as you did for any individual view controller in the **Global Tint** field.
 
@@ -484,9 +484,38 @@ You can now build and run your app and see what you icon actually looks like in 
 ## Game Logic
 
 - for each view controller we will define what logic happens in that screen; this is called encapsulation which ensures your code is easy to debug and maintain
+- we will have three view controllers
+
+### View Controllers
+
+1. InitialViewController
+2. GameLogicViewController
+3. GameOverViewController
+
 - initial view controller serves as a start menu and launches the game view controller
-- the game view controller is responsible for managing the buttons, player turns, and checking if a player has won yet, and launching the game over view controller, passing the game result
+- the game logic view controller is responsible for managing the buttons, player turns, and checking if a player has won yet, and launching the game over view controller, passing the game result
 - the game over view controller is responsible for showing the game result, and giving an option to restart the game or go back to the initial view
+
+### Initial View Controller
+
+- this view controller will just contain a button to start a new game
+  - segue
+- along with an image and our app title
+  - to make it look more aesthetically pleasing
+
+### GameLogicViewController
+
+- here we will define the actual game logic
+- much like we did in our first workshop, [1. Getting Started with Swift](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%201/Workshop%201.md)
+- we will have a reference to each button
+- we will have an common action that is triggered by every button
+- this action checks who's turn it is, changes the button image, and then checks if that was a winning move
+- if the game is over, then we will transistion to the end game screen
+
+### GameOverViewController
+
+- this is a simple screen that shows who won the game, and a running tally of games won by which player
+- it will have two buttons to segue to either the initial screen or game screen to start a new game
 
 # References
 

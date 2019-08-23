@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		9F9469C522EFC773007F22CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9469C422EFC773007F22CB /* AppDelegate.swift */; };
-		9F9469C722EFC773007F22CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9469C622EFC773007F22CB /* ViewController.swift */; };
+		9F9469C722EFC773007F22CB /* LogicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9469C622EFC773007F22CB /* LogicViewController.swift */; };
 		9F9469CA22EFC773007F22CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9469C822EFC773007F22CB /* Main.storyboard */; };
 		9F9469CF22EFC777007F22CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9469CD22EFC777007F22CB /* LaunchScreen.storyboard */; };
 		9F97FCCF230E21DF00965751 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F97FCCE230E21DF00965751 /* Assets.xcassets */; };
+		9F97FCD1230F3C0500965751 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FCD0230F3C0500965751 /* InitialViewController.swift */; };
+		9F97FCD3230F3C2500965751 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97FCD2230F3C2500965751 /* GameOverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F9469C122EFC773007F22CB /* workshop 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "workshop 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9469C422EFC773007F22CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F9469C622EFC773007F22CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F9469C622EFC773007F22CB /* LogicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicViewController.swift; sourceTree = "<group>"; };
 		9F9469C922EFC773007F22CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F9469CE22EFC777007F22CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F9469D022EFC777007F22CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F97FCCE230E21DF00965751 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F97FCD0230F3C0500965751 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		9F97FCD2230F3C2500965751 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				9F9469C422EFC773007F22CB /* AppDelegate.swift */,
-				9F9469C622EFC773007F22CB /* ViewController.swift */,
+				9F97FCD0230F3C0500965751 /* InitialViewController.swift */,
+				9F9469C622EFC773007F22CB /* LogicViewController.swift */,
+				9F97FCD2230F3C2500965751 /* GameOverViewController.swift */,
 				9F9469C822EFC773007F22CB /* Main.storyboard */,
 				9F9469CD22EFC777007F22CB /* LaunchScreen.storyboard */,
 				9F9469D022EFC777007F22CB /* Info.plist */,
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F9469C722EFC773007F22CB /* ViewController.swift in Sources */,
+				9F97FCD3230F3C2500965751 /* GameOverViewController.swift in Sources */,
+				9F97FCD1230F3C0500965751 /* InitialViewController.swift in Sources */,
+				9F9469C722EFC773007F22CB /* LogicViewController.swift in Sources */,
 				9F9469C522EFC773007F22CB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

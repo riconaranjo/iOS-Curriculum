@@ -10,26 +10,61 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="workshop_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="workshop_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69t-Br-gRT">
+                                <rect key="frame" x="121.5" y="124" width="171" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="Moy-qp-auE"/>
+                                    <constraint firstAttribute="width" constant="171" id="oED-es-QpD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tic-tac-toe" translatesAutoresizingMaskIntoConstraints="NO" id="vhK-Y7-YtK">
+                                <rect key="frame" x="80" y="247" width="254" height="254"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vhK-Y7-YtK" secondAttribute="height" multiplier="1:1" id="Gu5-mE-ZbQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGg-er-dhK">
+                                <rect key="frame" x="162.5" y="561" width="89" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <segue destination="Hp0-C1-bf8" kind="show" id="yLg-vy-6DM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.27450980392156865" green="0.3411764705882353" blue="0.45882352941176469" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.17254901960784313" green="0.6705882352941176" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="69t-Br-gRT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0L7-LW-bNa"/>
+                            <constraint firstItem="69t-Br-gRT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="1o9-gS-xp6"/>
+                            <constraint firstItem="vhK-Y7-YtK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="H1D-tL-ehb"/>
+                            <constraint firstItem="vhK-Y7-YtK" firstAttribute="top" secondItem="69t-Br-gRT" secondAttribute="bottom" constant="80" id="auF-hX-wDG"/>
+                            <constraint firstItem="IGg-er-dhK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g5C-fF-iRz"/>
+                            <constraint firstItem="IGg-er-dhK" firstAttribute="top" secondItem="vhK-Y7-YtK" secondAttribute="bottom" constant="60" id="rb3-Zf-6hn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vhK-Y7-YtK" secondAttribute="trailing" constant="80" id="zvQ-K2-NBg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="275" y="21"/>
+            <point key="canvasLocation" x="273.91304347826087" y="20.758928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Logic View Controller-->
         <scene sceneID="rZJ-1q-Kin">
             <objects>
-                <viewController id="Hp0-C1-bf8" sceneMemberID="viewController">
+                <viewController id="Hp0-C1-bf8" customClass="GameLogicViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v9Y-YM-Azt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,11 +187,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gdX-LT-qWb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076.8115942028987" y="20.758928571428569"/>
+            <point key="canvasLocation" x="1155" y="21"/>
+        </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="aZZ-MU-Isk">
+            <objects>
+                <viewController id="khV-u7-GgY" customClass="GameOverViewController" customModule="workshop_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JTZ-2Y-zG3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05E-kr-LXJ">
+                                <rect key="frame" x="125" y="204" width="164.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuX-eO-TBe">
+                                <rect key="frame" x="162.5" y="431" width="89" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="New Game"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nab-KF-OAq">
+                                <rect key="frame" x="192" y="505" width="30" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Exit"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.3411764706" blue="0.45882352939999999" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.17254901959999999" green="0.6705882353" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xuX-eO-TBe" firstAttribute="centerY" secondItem="JTZ-2Y-zG3" secondAttribute="centerY" id="20l-89-JSv"/>
+                            <constraint firstItem="xuX-eO-TBe" firstAttribute="centerX" secondItem="JTZ-2Y-zG3" secondAttribute="centerX" id="JgM-QC-xaT"/>
+                            <constraint firstItem="05E-kr-LXJ" firstAttribute="top" secondItem="V1v-D5-MU8" secondAttribute="top" constant="160" id="O8M-aA-cPe"/>
+                            <constraint firstItem="nab-KF-OAq" firstAttribute="centerX" secondItem="JTZ-2Y-zG3" secondAttribute="centerX" id="cKx-cx-rpq"/>
+                            <constraint firstItem="nab-KF-OAq" firstAttribute="top" secondItem="xuX-eO-TBe" secondAttribute="bottom" constant="40" id="cyJ-t9-WAF"/>
+                            <constraint firstItem="05E-kr-LXJ" firstAttribute="centerX" secondItem="JTZ-2Y-zG3" secondAttribute="centerX" id="pv3-Zd-Dq7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V1v-D5-MU8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lwf-vz-cU8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2007" y="21"/>
         </scene>
     </scenes>
     <resources>
         <image name="Icon-Placeholder" width="128" height="128"/>
+        <image name="tic-tac-toe" width="512" height="512"/>
     </resources>
     <color key="tintColor" red="0.17254901959999999" green="0.6705882353" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
 </document>
