@@ -438,6 +438,7 @@ You can now build and run your app and see what you icon actually looks like in 
 - we will be using three horizontal stack views with three buttons themselves inside a bigger vertical stack view
 - using a stack view you can specify spacing / padding between the views / ui elements inside it
 - change the Spacing to 10 in the attributes inspector
+- add constraints to each button for **Aspect Ratio**
 
 [UIStackView](https://developer.apple.com/documentation/uikit/uistackview)
 
@@ -461,7 +462,7 @@ You can now build and run your app and see what you icon actually looks like in 
 - auto layout allows us to specify where ui elements go relative to other elements or relative to the edge of the screen
 - [Understanding Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html)
 - it also allows us to specify the sizes of elements, including that certain elements should all be the same size (hint: our buttons)
-- select each button individually from the **Outline View** and add the **Equal Widths**, **Equal Heights**, and the **Aspect Ratio** constraints to all of them
+- select each button individually from the **Outline View** and add the **Equal Widths** (or **Equal Heights**) constraint
 - this will ensure they are all the same, and they don't get squished
 - now select our meta stack view and add the **Aspect Ratio** constraint as well as **Left** and **Right** constraints of 40
 - this ensures that our grid will resize depending on the screen size
@@ -472,21 +473,24 @@ You can now build and run your app and see what you icon actually looks like in 
 - Let's go back to the inital screen and add our game's title and a button to start a new game.
 - add label and a button
 - add segue for button to go to grid view controller
+- segue identifiers **StartGame**
 
 ## End Game Screen
 
 - Let's add a view controller for our end of game screen
 - here we will display the winner or specify if the game was draw
 - this will mean that we will have to pass information from one screen to another
-- data source??
+- [How To: Pass Data Between View Controllers In Swift (Extended)](https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/)
 - non-button segue??
+  - add manual segue
+  - segue identifier **EndGame**
 
 ## Game Logic
 
 - for each view controller we will define what logic happens in that screen; this is called encapsulation which ensures your code is easy to debug and maintain
-- we will have three view controllers
+- we will have three view controllers each tasked with a section of our app
 
-### View Controllers
+## View Controllers
 
 1. InitialViewController
 2. GameLogicViewController
@@ -511,6 +515,12 @@ You can now build and run your app and see what you icon actually looks like in 
 - we will have an common action that is triggered by every button
 - this action checks who's turn it is, changes the button image, and then checks if that was a winning move
 - if the game is over, then we will transistion to the end game screen
+
+#### Play Turn
+
+- ctrl + drag mouse to create a new **@IBAction** function
+  - name it **playTurn** and leave the default options
+- repeat this for every button, ctrl + click to the same function
 
 ### GameOverViewController
 

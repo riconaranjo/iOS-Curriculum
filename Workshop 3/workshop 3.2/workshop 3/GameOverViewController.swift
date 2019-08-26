@@ -10,10 +10,19 @@ import UIKit
 
 class GameOverViewController: UIViewController {
     
+    var winner: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        print("\n# end game view controller\n")
+        
+        if let winnerText = winner {
+            print(winnerText)
+        }
     }
+    
     
     
 }
