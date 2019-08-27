@@ -468,12 +468,27 @@ You can now build and run your app and see what you icon actually looks like in 
 - this ensures that our grid will resize depending on the screen size
 - congrats now we have our grid ready
 
+### Player Turn Label
+
+- this will say who's turn it is
+- as well as show a count of how many moves have been made
+
 ## Main Initial Screen
 
 - Let's go back to the inital screen and add our game's title and a button to start a new game.
 - add label and a button
 - add segue for button to go to grid view controller
-- segue identifiers **StartGame**
+  - with segue identifier **StartGame**
+
+## Game Logic
+
+- for each view controller we will define what logic happens in that screen; this is called encapsulation which ensures your code is easy to debug and maintain
+- we will have three view controllers each tasked with a section of our app
+- non-button segue
+  - add a manual segue, ctrl + drag from game logic view controller from the **Outline View** to the game over view controller
+  - name segue identifier **EndGame**
+- add label to show current player's turn
+  - default text: **X Player's Turn**
 
 ## End Game Screen
 
@@ -481,14 +496,14 @@ You can now build and run your app and see what you icon actually looks like in 
 - here we will display the winner or specify if the game was draw
 - this will mean that we will have to pass information from one screen to another
 - [How To: Pass Data Between View Controllers In Swift (Extended)](https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/)
-- non-button segue??
-  - add manual segue
-  - segue identifier **EndGame**
 
-## Game Logic
-
-- for each view controller we will define what logic happens in that screen; this is called encapsulation which ensures your code is easy to debug and maintain
-- we will have three view controllers each tasked with a section of our app
+- add two text labels
+  - larger one: Game Over (32)
+  - smaller one: Winner (24) [used to show game result]
+- two buttons:
+  - New Game (game logic view)
+  - Exit (initial view) [unwind segue]
+    - we'll get back to this segue later
 
 ## View Controllers
 
@@ -500,14 +515,14 @@ You can now build and run your app and see what you icon actually looks like in 
 - the game logic view controller is responsible for managing the buttons, player turns, and checking if a player has won yet, and launching the game over view controller, passing the game result
 - the game over view controller is responsible for showing the game result, and giving an option to restart the game or go back to the initial view
 
-### Initial View Controller
+## Initial View Controller
 
 - this view controller will just contain a button to start a new game
   - segue
 - along with an image and our app title
   - to make it look more aesthetically pleasing
 
-### GameLogicViewController
+## GameLogicViewController
 
 - here we will define the actual game logic
 - much like we did in our first workshop, [1. Getting Started with Swift](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%201/Workshop%201.md)
@@ -516,16 +531,243 @@ You can now build and run your app and see what you icon actually looks like in 
 - this action checks who's turn it is, changes the button image, and then checks if that was a winning move
 - if the game is over, then we will transistion to the end game screen
 
-#### Play Turn
+### Class Properties
+
+- add some class properties for our game logic
+
+``` swift
+var board: [Int]! = [0,0,0, 0,0,0, 0,0,0]
+var turnCount: Int!
+var xTurn: Bool!
+```
+
+- we need the label reference to change it to say which player's turn it is
+- we also need button references so we can change the button images
+
+``` swift
+@IBOutlet weak var turnLabel: UILabel!
+@IBOutlet weak var buttonA1: UIButton!
+@IBOutlet weak var buttonA2: UIButton!
+@IBOutlet weak var buttonA3: UIButton!
+@IBOutlet weak var buttonB1: UIButton!
+@IBOutlet weak var buttonB2: UIButton!
+@IBOutlet weak var buttonB3: UIButton!
+@IBOutlet weak var buttonC1: UIButton!
+@IBOutlet weak var buttonC2: UIButton!
+@IBOutlet weak var buttonC3: UIButton!
+```
+
+### Setting up the View
+
+``` swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    setUpBoard()
+}
+
+/**
+  Gets everything ready for the board to start a new game.
+  */
+func setUpBoard() {
+    board = [0,0,0, 0,0,0, 0,0,0]
+    turnCount = 1
+    xTurn = true
+
+    buttonA1.tag = 1
+    buttonA2.tag = 2
+    buttonA3.tag = 3
+    buttonB1.tag = 4
+    buttonB2.tag = 5
+    buttonB3.tag = 6
+    buttonC1.tag = 7
+    buttonC2.tag = 8
+    buttonC3.tag = 9
+}
+```
+
+### Play Turn
 
 - ctrl + drag mouse to create a new **@IBAction** function
   - name it **playTurn** and leave the default options
 - repeat this for every button, ctrl + click to the same function
 
-### GameOverViewController
+``` swift
+@IBAction func playTurn(_ sender: UIButton) {
+    print("\n# button pressed with ID: \(sender.tag)\n")
 
-- this is a simple screen that shows who won the game, and a running tally of games won by which player
+    // update board data structure
+    updateBoard(button: sender.tag)
+
+    // update button image
+    updateButton(button: button)
+
+    // exit game if winner found or draw game
+    if winner() {
+        turnLabel.text = xTurn ? "X Wins!" : "O Wins!"
+
+        performSegue(withIdentifier: "endGame", sender: nil)
+        return
+    } else if turnCount == 9 {
+        turnLabel.text = "Draw!"
+
+        performSegue(withIdentifier: "endGame", sender: nil)
+        return
+    }
+
+    xTurn = !xTurn
+    turnCount += 1
+
+    turnLabel.text = xTurn ? "X Player's Turn" : "O Player's Turn"
+}
+```
+
+- we need to update our board data structure so we can analyze it for winning moves
+
+``` swift
+/**
+ Updates the board data structure.
+ */
+func updateBoard(button: Int) {
+    board[button-1] = xTurn ? 1 : -1
+}
+```
+
+- we need to update the image on the button pressed
+
+``` swift
+/**
+ Updates the button that was pressed and disables it.
+ */
+func updateButton(button: UIButton) {
+    let image = xTurn ? UIImage(named: "Icon-X") : UIImage(named: "Icon-O")
+
+    button.setImage(image, for: .disabled)
+    button.isEnabled = false
+}
+```
+
+- we need to check the board for any winning moves
+
+``` swift
+/**
+ Checks if a winning move was played. True if the current player won.
+ - returns: True if a winning combination is detected.
+ */
+func winner() -> Bool {
+    if board[0] == board[1]
+        && board[0] == board[2]
+        && board[0] != 0 {
+        // row 1 //
+        return true
+    } else if board[3] == board[4]
+        && board[3] == board[5]
+        && board[3] != 0 {
+        // row 2 //
+        return true
+    } else if board[6] == board[7]
+        && board[6] == board[8]
+        && board[6] != 0 {
+        // row 3 //
+        return true
+    } else if board[0] == board[3]
+        && board[0] == board[6]
+        && board[0] != 0 {
+        // col 1 //
+        return true
+    } else if board[1] == board[4]
+        && board[1] == board[7]
+        && board[1] != 0 {
+        // col 2 //
+        return true
+    } else if board[2] == board[5]
+        && board[2] == board[8]
+        && board[2] != 0 {
+        // col 1 //
+        return true
+    } else if board[0] == board[4]
+        && board[0] == board[8]
+        && board[0] != 0 {
+        // diagonal 1 //
+        return true
+    } else if board[2] == board[4]
+        && board[2] == board[6]
+        && board[2] != 0 {
+        // diagonal 2 //
+        return true
+    }
+    return false
+}
+```
+
+### Passing Data Between View Controllers
+
+- use `prepareForSegue()`...
+- we will be using class properties to pass data
+
+``` swift
+override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+{
+    if let vc = segue.destination as? GameOverViewController
+    {
+        if turnCount != 9 {
+            vc.winner = xTurn ? "X Player Wins!" : "O Player Wins!"
+        } else {
+            vc.winner = "No winner..."
+        }
+    }
+}
+```
+
+## GameOverViewController
+
+- this is a simple screen that shows who won the game
 - it will have two buttons to segue to either the initial screen or game screen to start a new game
+  - the segue to the initial view will be unwind segue
+
+### Data Passing with Class Parameters
+
+- add the **winner** `String` property so we can use it to pass which player won
+
+``` swift
+var winner: String!
+```
+
+- add a reference for the label to display the game outcome
+
+``` swift
+@IBOutlet weak var winnerLabel: UILabel!
+```
+
+- in the `viewDidLoad()` method change the winner label text to the winner string we passed from the game logic view controller
+
+``` swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view.
+
+    if let winnerText = winner {
+        winnerLabel.text = winnerText
+    }
+}
+```
+
+## Unwinding Segues
+
+- [Unwind Segues Step-by-Step (and 4 Reasons to Use Them)](https://matteomanferdini.com/unwind-segue/)
+
+- add this code to the initial view controller class to set up the unwind segue
+
+``` swift
+@IBAction func unwindToInitialView(_ unwindSegue: UIStoryboardSegue) {
+    _ = unwindSegue.source
+    // Use data from the view controller which initiated the unwind segue
+}
+```
+
+- go back to the game over view controller
+- ctrl + drag our exit button to **Exit** component of the view controller in the storyboard
+- select our function we just added (it should be the only option)
 
 # References
 

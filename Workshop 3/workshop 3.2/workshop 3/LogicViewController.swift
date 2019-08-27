@@ -14,6 +14,7 @@ class GameLogicViewController: UIViewController {
     var turnCount: Int!
     var xTurn: Bool!
     
+    @IBOutlet weak var turnLabel: UILabel!
     @IBOutlet weak var buttonA1: UIButton!
     @IBOutlet weak var buttonA2: UIButton!
     @IBOutlet weak var buttonA3: UIButton!
@@ -24,26 +25,42 @@ class GameLogicViewController: UIViewController {
     @IBOutlet weak var buttonC2: UIButton!
     @IBOutlet weak var buttonC3: UIButton!
     
-    
+    /**
+     Function triggered when a game button is pressed.
+     */
     @IBAction func playTurn(_ sender: UIButton) {
         print("\n# button pressed with ID: \(sender.tag)\n")
 
+        // update board data structure
         updateBoard(button: sender.tag)
-        updateButton(button: sender.tag)
-        
-        if winner() || turnCount == 9 {
+
+        // update button image
+        updateButton(button: sender)
+
+        // exit game if winner found or draw game
+        if winner() {
+            turnLabel.text = xTurn ? "X Wins!" : "O Wins!"
+
             performSegue(withIdentifier: "endGame", sender: nil)
+            return
+        } else if turnCount == 9 {
+            turnLabel.text = "Draw..."
+
+            performSegue(withIdentifier: "endGame", sender: nil)
+            return
         }
-        
+
         xTurn = !xTurn
         turnCount += 1
+
+        turnLabel.text = xTurn ? "X Player's Turn" : "O Player's Turn"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("\n# game view loaded\n")
-        
+
         setUpBoard()
     }
 
@@ -52,9 +69,10 @@ class GameLogicViewController: UIViewController {
         if let vc = segue.destination as? GameOverViewController
         {
             if turnCount != 9 {
-                vc.winner = xTurn ? "X" : "O"
+                vc.winner = xTurn ? "X Player Wins!" : "O Player Wins!"
+                
             } else {
-                vc.winner = "Draw"
+                vc.winner = "No winner..."
             }
         }
     }
@@ -66,7 +84,7 @@ class GameLogicViewController: UIViewController {
         board = [0,0,0, 0,0,0, 0,0,0]
         turnCount = 1
         xTurn = true
-        
+
         buttonA1.tag = 1
         buttonA2.tag = 2
         buttonA3.tag = 3
@@ -78,35 +96,21 @@ class GameLogicViewController: UIViewController {
         buttonC3.tag = 9
     }
     
+    /**
+     Updates the board data structure.
+     */
     func updateBoard(button: Int) {
         board[button-1] = xTurn ? 1 : -1
     }
     
-    func updateButton(button: Int) {
+    /**
+     Updates the button that was pressed and disables it.
+     */
+    func updateButton(button: UIButton) {
         let image = xTurn ? UIImage(named: "Icon-X") : UIImage(named: "Icon-O")
 
-        switch button {
-        case 1:
-            buttonA1.setImage(image, for: .normal)
-        case 2:
-            buttonA2.setImage(image, for: .normal)
-        case 3:
-            buttonA3.setImage(image, for: .normal)
-        case 4:
-            buttonB1.setImage(image, for: .normal)
-        case 5:
-            buttonB2.setImage(image, for: .normal)
-        case 6:
-            buttonB3.setImage(image, for: .normal)
-        case 7:
-            buttonC1.setImage(image, for: .normal)
-        case 8:
-            buttonC2.setImage(image, for: .normal)
-        case 9:
-            buttonC3.setImage(image, for: .normal)
-        default:
-            print("invalid button tag ID (must be in range 1..9)")
-        }
+        button.setImage(image, for: .disabled)
+        button.isEnabled = false
     }
     
     /**
@@ -118,70 +122,43 @@ class GameLogicViewController: UIViewController {
             && board[0] == board[2]
             && board[0] != 0 {
             // row 1 //
-//            buttonA1.setTitleColor(lavaRed, for: .normal)
-//            buttonA2.setTitleColor(lavaRed, for: .normal)
-//            buttonA3.setTitleColor(lavaRed, for: .normal)
             return true
         } else if board[3] == board[4]
             && board[3] == board[5]
             && board[3] != 0 {
             // row 2 //
-//            buttonB1.setTitleColor(lavaRed, for: .normal)
-//            buttonB2.setTitleColor(lavaRed, for: .normal)
-//            buttonB3.setTitleColor(lavaRed, for: .normal)
             return true
         } else if board[6] == board[7]
             && board[6] == board[8]
             && board[6] != 0 {
             // row 3 //
-//            buttonC1.setTitleColor(lavaRed, for: .normal)
-//            buttonC2.setTitleColor(lavaRed, for: .normal)
-//            buttonC3.setTitleColor(lavaRed, for: .normal)
             return true
         } else if board[0] == board[3]
             && board[0] == board[6]
             && board[0] != 0 {
             // col 1 //
-//            buttonA1.setTitleColor(lavaRed, for: .normal)
-//            buttonB1.setTitleColor(lavaRed, for: .normal)
-//            buttonC1.setTitleColor(lavaRed, for: .normal)
             return true
         } else if board[1] == board[4]
             && board[1] == board[7]
             && board[1] != 0 {
             // col 2 //
-//            buttonA2.setTitleColor(lavaRed, for: .normal)
-//            buttonB2.setTitleColor(lavaRed, for: .normal)
-//            buttonC2.setTitleColor(lavaRed, for: .normal)
             return true
         } else if board[2] == board[5]
             && board[2] == board[8]
             && board[2] != 0 {
             // col 1 //
-//            buttonA3.setTitleColor(lavaRed, for: .normal)
-//            buttonB3.setTitleColor(lavaRed, for: .normal)
-//            buttonC3.setTitleColor(lavaRed, for: .normal)
             return true
         } else if board[0] == board[4]
             && board[0] == board[8]
             && board[0] != 0 {
             // diagonal 1 //
-//            buttonA1.setTitleColor(lavaRed, for: .normal)
-//            buttonB2.setTitleColor(lavaRed, for: .normal)
-//            buttonC3.setTitleColor(lavaRed, for: .normal)
             return true
         } else if board[2] == board[4]
             && board[2] == board[6]
             && board[2] != 0 {
             // diagonal 2 //
-//            buttonA3.setTitleColor(lavaRed, for: .normal)
-//            buttonB2.setTitleColor(lavaRed, for: .normal)
-//            buttonC1.setTitleColor(lavaRed, for: .normal)
             return true
         }
         return false
     }
-
-
 }
-

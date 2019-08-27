@@ -12,6 +12,8 @@ class GameOverViewController: UIViewController {
     
     var winner: String!
     
+    @IBOutlet weak var winnerLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,11 +21,7 @@ class GameOverViewController: UIViewController {
         print("\n# end game view controller\n")
         
         if let winnerText = winner {
-            print(winnerText)
+            winnerLabel.text = winnerText
         }
     }
-    
-    
-    
 }
-
