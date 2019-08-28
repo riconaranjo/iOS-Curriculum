@@ -14,6 +14,20 @@ For these workshops you will need to download and install [Xcode](https://apps.a
 
 Xcode is an IDE for developing software for Apples platforms such as iOS and macOS.
 
+### Don't have a mac?
+
+Don't have a mac? No friends to borrow it from? Well if you want to run Xcode you can't simply do that in Windows 10 or linux, as it's an Apple-made app exclusively for macOS. If you simply want to learn Swift you can find several websites online where you can code using Swift such as [iSwift](https://iswift.org/playground) [HackerRank](http://hackerrank.com).
+
+If you want to find out more here's an article: [Xcode for Windows?](https://medium.com/@twister.mr/installing-macos-to-virtualbox-1fcc5cf22801)
+
+For these workshops we will be using Xcode, and unfortunately there are no easy ways to get Xcode running on your machine if you have Windows. Here are some alternatives
+
+**Alternatives:**
+
+- Borrow a MacBook from a friend
+- [Installing MacOS to VirtualBox](https://medium.com/@twister.mr/installing-macos-to-virtualbox-1fcc5cf22801)
+- Buy a [cheap](https://www.apple.com/ca_edu_93120/shop/back-to-school) / [refurbished](https://www.apple.com/ca/shop/refurbished) MacBook
+
 ## 0. Prelude: Installing Xcode on a macOS VM
 
 `// work in progress (backburner)`
