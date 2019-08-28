@@ -32,6 +32,8 @@ To get started, let's create a **Project** by opening Xcode and selecting the _C
 
 Select **Single View App** under the iOS tab and press next.
 
+Give your project a name like **SettingUpAnApp**, as this won't be our tic tac toe app. Finish setting up your project, making sure that **Swift** is selected as the project language.
+
 ## Launch Screens
 
 A launch screen is what appears as soon as your app is launched, quickly replaced by your app's first screen. It allows your app to seem to loads faster. According to Apple's [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/), the launch screen should have placeholder UI elements that appear identical to your app's first screen, without any text — _since it won't be localized_.
@@ -155,7 +157,7 @@ Coolors gives us colour schemes with five colours, but it doesn't tell us how to
 
 _Read more about this: [60-30-10 Color Rule: How to Use It, and How to Break It](https://www.thespruce.com/timeless-color-rule-797859)._
 
-Using the colour scheme from above, this is how I decided to use the colours.
+Using the colour scheme from above, these are the roles I've decided to use these colours in.
 
 `// todo: finalize these colours`
 
@@ -286,11 +288,7 @@ Download your modified icon at the highest resolution possible as a **png**.
 
 ### Figma
 
-https://www.figma.com/file/HUboUyk2DsD1u3JYPHPMo7/iPhone-App-Icon-Template
-
-Icon background #67758E
-
-Open [Figma](https://figma.com) in a new tab / window. This tool allows us to edit vector graphics online without having to purchase or install programs such as [Adobe Illustrator](https://www.adobe.com/ca/products/illustrator.html), [Affinity Designer](https://affinity.serif.com/en-gb/designer/), or [Gimp](https://www.gimp.org) — _all of these are great options, but come either at a financial cost and a potentially steep learning curve_.
+Open [Figma](https://figma.com) in a new tab / window. This tool allows us to edit vector graphics online without having to purchase or install programs such as [Adobe Illustrator](https://www.adobe.com/ca/products/illustrator.html), [Affinity Designer](https://affinity.serif.com/en-gb/designer/), or [Gimp](https://www.gimp.org) — _all of these are great options, but come either at a financial cost and / or a steep learning curve_.
 
 - Industry standard: [Adobe Illustrator](https://www.adobe.com/ca/products/illustrator.html).
 - I personally use [Affinity Designer](https://affinity.serif.com/en-gb/designer/).
@@ -330,7 +328,7 @@ Now it's time to add the icon we downloaded from Flaticon. Press the options but
 
 Alternately, use the shortcut <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>k</kbd>. Upload your icon.
 
-Click and drag your mouse to add your image. You can change it's size manually to something like **668 x 668** so it fills up 2/3 of the area (aesthetically pleasing).
+Click and drag your mouse to add your image. You can change it's size manually to something like **668 x 668** so it fills up 2/3 of the area _(so it looks aesthetically pleasing)_.
 
 _Now how do we centre our icon, so it's perfectly in the centre?_
 
@@ -389,58 +387,101 @@ Well you might get an error (_warning_) as I did where the app store version is 
 
 `// todo: add image of unassigned icon`
 
-You can now build and run your app and see what you icon actually looks like in iOS.
+You can now build and run your app and see what you icon actually looks like on iOS.
 
 # 3.2 The Fun Part (Coding)
 
+Now that we have everything all set-up, now we can get started actually coding — well almost, we still need to finish setting up our UI and a few other things. I promise we'll get to the coding soon enough, _and there's a fair amount of coding_.
+
 ## Tic Tac Toe
 
-`// create a tic tac toe game in xcode`
+So in case you forgot, we're going to be building a simple tic tac toe game. It's going to have three screens:
+
+1. **Initial / Welcome Screen** (Initial View Controller)
+    - _Simple menu with button to start a new game_
+2. **Game Screen** (Game Logic View Controller)
+    - _Grid of buttons, where the game is played_
+3. **Game End Screen** (Game Over View Controller)
+    - _Displays game result, options to start a new game or exit_
+
+Start by creating a new Single View App project, you can name it something creative and inventive like **Tic Tac Toe**.
 
 ## Icons
 
-- Use the icon you created earlier
-- I will be using this one: https://www.figma.com/file/bNCiyAC6W5EBeNiNMA5GCx/Tic-Tac-Toe-App-Icon
+Let's start by importing the icons we created earlier again in [Figma](https://www.figma.com). See if you can remember how to do this by yourself. I will be using [this icon](https://www.figma.com/file/bNCiyAC6W5EBeNiNMA5GCx/Tic-Tac-Toe-App-Icon) for my app.
+
+_If you're having difficulties, scroll up to the [Adding Icons in Xcode](#Adding-Icons-in-Xcode) section for a refresher_
 
 ### Importing Icons
 
-- Import the image as explained earlier
-- into `Assets.xcassets`
-- uncheck iPad in the attributes inspector
-- make sure you don't have any errors or unassigned icons
+- Import the images as explained earlier, into `Assets.xcassets`
+- Uncheck iPad in the Attributes Inspector
+- Make sure you don't have any errors or unassigned icons
 
 ## Images
 
-- we are using 128px png images
-- download them from https://www.figma.com/file/UWmK6SvDEelkZuBTIvH6pA/Tic-Tac-Toe-Icons
+We will be using **three images** for our buttons:
+
+1. Placeholder Icon _(unplayed position)_
+2. X Icon
+3. O Icon
+
+I have arbitrarily decided to use 128px png images, because they are high resolution enough without large file sizes.
+
+Go to [Flaticon](https://www.flaticon.com) and find images you want to use for Xs and Os, as well as a default placeholder icon. You can then use [Figma](https://www.figma.com) to set to them to correct size, but make sure that the background remains transparent when you export as png — _make sure the **Show in exports** option is unchecked for the background_.
+
+- You can use the icons I will be using, found [here](https://www.figma.com/file/UWmK6SvDEelkZuBTIvH6pA/Tic-Tac-Toe-Icons)
 - export them, and extract them from the zip file
-- there is one for each player, and a placeholder icon which will be used before a location has been played
 
 ### Importing Images
 
-- to import these assets into xcode simply drag and drop them into `Assets.xcassets`
-- now we can use them anywhere in our application
+Importing images into Xcode is quite similar to importing app icons except this time we drag and drop them into **below the AppIcon** file. You should see the new files added.
+
+`// todo: add image of added image assets into xcode`
+
+Now we can use these images anywhere in our application.
+
+## Storyboard
+
+Let's go to the storyboard and add our three view controllers. Try and see if you can remember how to do it on your own again. Lay them next to each other in a vertical row.
+
+Change their background and tint colours according to the colours you defined in your colour scheme in the [Colours](#Colours)section.
+
+- I'll be using #465775 (background) and #2CABD8 (tint)
+
+`todo: add image of three view controllers with background colour`
+
+_If you need a hint, see the [Adding View Controllers](#Adding-View-Controllers) section._
 
 ## Button Grid
 
-- we're going to create a 3x3 grid of 9 buttons
-- each button is going to be an image
-- add a button using object library cmd +  shift + l
-- in the attributes inspector, delete the button text
-- in the **Image** field select the placeholder icon `Icon-Placeholder`
-- copy and paste this button two times in a horizontal row (for a total of three buttons)
-- select the **Embed In** button to the left of the constraint buttons in the Storyboard and click on the _Stack View_ option
-- this will create a horizontal stack view with the three buttons
+Now we can't have a tic tac toe game without a 3x3 grid, so let's add one to our middle view controller. This will be our Game Logic View Controller. Our grid will be comprised of 9 buttons, with a background image.
+
+Let's start with the first button. Use <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> to bring up the object library and search for button. Drag and drop it anywhere on the middle view controller.
+
+Delete the text inside the button and in the **Attributes Inspector** select our placeholder icon, it should be named `Icon-Placeholder`.
+
+`todo: add image of selecting a button image`
+
+- Select the button and copy + paste it so you have horizontal row of three buttons.
+- Select the **Embed In** button (left of the constraint buttons) and click on the **Stack View** option
+  - This will create a horizontal stack view with the three buttons evenly spaced out
 
 ### UIStackView
 
-- a stack view allows us to organize a bunch of views either in a row or column
-- we will be using three horizontal stack views with three buttons themselves inside a bigger vertical stack view
-- using a stack view you can specify spacing / padding between the views / ui elements inside it
-- change the Spacing to 10 in the attributes inspector
-- add constraints to each button for **Aspect Ratio**
+"What is this stack view that I've never seen before?", you might be asking yourself right about now.
 
-[UIStackView](https://developer.apple.com/documentation/uikit/uistackview)
+_Fret not, I will explain._
+
+A stack view is a UI element that allows us to organize a bunch of other UI elements (views) either in a row or column. A stack view allows us to evenly space and align elements, without having to manually do it, while also being adaptive for different screen sizes.
+
+For more information read Apple's developer documentation for [UIStackView](https://developer.apple.com/documentation/uikit/uistackview).
+
+For our 3x3 grid we will be using three horizontal stack views — each with three buttons themselves — inside a bigger vertical stack view. We will have a **spacing of 10** between our buttons, we we can define in the **Attributes Inspector**.
+
+`todo: add image of spacing in attributes inspector`
+
+Click on each button and add a constraint for **Aspect Ratio** so they don't get skewed when they get resized.
 
 ### Making a Grid
 
@@ -787,7 +828,9 @@ This are some of the resources I used to make this workshop, all of them are wor
 - [HIG: Image Size and Resolution](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/)
 - [Flaticon](https://www.flaticon.com/)
 - [Figma](https://www.figma.com)
-- [iPhone App Icon Template](https://www.figma.com/file/HUboUyk2DsD1u3JYPHPMo7/iPhone-App-Icon-Template?node-id=0%3A1)
+- [iPhone App Icon Template](https://www.figma.com/file/HUboUyk2DsD1u3JYPHPMo7/iPhone-App-Icon-Template)
+- [Tic Tac Toe App Icon](https://www.figma.com/file/bNCiyAC6W5EBeNiNMA5GCx/Tic-Tac-Toe-App-Icon)
+- [UIStackView](https://developer.apple.com/documentation/uikit/uistackview)
 
 `// todo finish adding references`
 
