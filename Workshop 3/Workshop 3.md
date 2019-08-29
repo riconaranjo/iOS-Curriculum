@@ -449,7 +449,7 @@ Change their background and tint colours according to the colours you defined in
 
 - I'll be using #465775 (background) and #2CABD8 (tint)
 
-`todo: add image of three view controllers with background colour`
+`// todo: add image of three view controllers with background colour`
 
 _If you need a hint, see the [Adding View Controllers](#Adding-View-Controllers) section._
 
@@ -461,7 +461,7 @@ Let's start with the first button. Use <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>
 
 Delete the text inside the button and in the **Attributes Inspector** select our placeholder icon, it should be named `Icon-Placeholder`.
 
-`todo: add image of selecting a button image`
+`// todo: add image of selecting a button image`
 
 - Select the button and copy + paste it so you have horizontal row of three buttons.
 - Select the **Embed In** button (left of the constraint buttons) and click on the **Stack View** option
@@ -469,7 +469,7 @@ Delete the text inside the button and in the **Attributes Inspector** select our
 
 ### UIStackView
 
-"What is this stack view that I've never seen before?", you might be asking yourself right about now.
+_"What is this 'stack view' that I've never seen before?"_ — you might be asking yourself right about now.
 
 _Fret not, I will explain._
 
@@ -479,40 +479,53 @@ For more information read Apple's developer documentation for [UIStackView](http
 
 For our 3x3 grid we will be using three horizontal stack views — each with three buttons themselves — inside a bigger vertical stack view. We will have a **spacing of 10** between our buttons, we we can define in the **Attributes Inspector**.
 
-`todo: add image of spacing in attributes inspector`
+`// todo: add image of spacing in attributes inspector`
 
 Click on each button and add a constraint for **Aspect Ratio** so they don't get skewed when they get resized.
 
 ### Making a Grid
 
-- copy the stack view two more times so we have a 3x3 grid of buttons
-- select the stack views from the **Outline View** (left pane of the Storyboard)
-- press the **Embed In** button and select the _Stack View_ again
-- in this super stack view change the spacing to 10 as well
-- you should see that you have nicely arranged 3x3 grid, but because of our original icon size its default size is too large for most iPhone screens
-- we need to ensure that our design is adaptive to all iPhone models, lucky Apple provides plenty of tools for us to do this with
+To complete our 3x3 grid we will need to copy + paste our stack view twice for a total of 9 buttons.
+
+Select all three stack views in the  **Outline View** (left pane of the Storyboard), and press the **Embed In** button and select the _Stack View_ again.
+
+`// todo: add image of stack views selected in outline view`
+
+This will create a vertical stack view encompassing our three horizontal — _a meta stack view_.
+
+Change the spacing to 10, just like we did with the other stack views. We should have a nicely arranged 3x3 grid, but with slightly oversized icons for most iPhone screens. This is because of the default size of our icons.
+
+We need to ensure that our design is adaptive to all iPhone models, lucky Apple provides plenty of tools for us to do this with [Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html).
 
 ### Adaptive Interfaces
 
-- why it's important to have adaptive interfaces in our apps
-- [Building Adaptive User Interfaces](https://developer.apple.com/design/adaptivity/)
-- we can use auto layout to make our UI adaptive
+It's important for app to adapt to all iPhone screen sizes if we want to publish it on the App Store. Having an adaptive interface allows you to provide the best user experience, regardless of which iPhone your users have.
+
+To learn more about how to build an adaptive user interface for your app, read more about it here: [Building Adaptive User Interfaces](https://developer.apple.com/design/adaptivity/)
+
+Although there are many tools and aspects to building an adaptive interface, we're only going to cover Auto Layout in this workshop.
 
 ### Auto Layout
 
-- auto layout allows us to specify where ui elements go relative to other elements or relative to the edge of the screen
-- [Understanding Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html)
-- it also allows us to specify the sizes of elements, including that certain elements should all be the same size (hint: our buttons)
-- select each button individually from the **Outline View** and add the **Equal Widths** (or **Equal Heights**) constraint
-- this will ensure they are all the same, and they don't get squished
-- now select our meta stack view and add the **Aspect Ratio** constraint as well as **Left** and **Right** constraints of 40
-- this ensures that our grid will resize depending on the screen size
-- congrats now we have our grid ready
+Auto Layout allows us to specify the locations UI elements relative to other UI elements or to the edge of the screen; it also allows us to define the sizes of our buttons, including making sure that certain elements should be the same size. _(hint: our grid buttons)_
+
+**According to Apple's Documentation:**
+
+_"Auto Layout dynamically calculates the size and position of all the views in your view hierarchy, based on constraints placed on those views. For example, you can constrain a button so that it is horizontally centered with an Image view and so that the button’s top edge always remains 8 points below the image’s bottom. If the image view’s size or position changes, the button’s position automatically adjusts to match."_
+
+_"This constraint-based approach to design allows you to build user interfaces that dynamically respond to both internal and external changes."_ — [Understanding Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html)
+
+Select each of our grid buttons individually from the **Outline View** and add the **Equal Widths** (or **Equal Heights**) constraint. This will ensure that even if our grid is resized, all the buttons are the same and don't get squished.
+
+Now select our meta stack view — _a stack view of stack views_— and add the **Aspect Ratio** constraint as well as **Left** and **Right** constraints of 40. This ensures that our grid will resize dynamically depending on the screen size
+
+**Congrats! We have completed our grid!**
+
+Learn more about Auto Layout in this article: [Auto Layout Tutorial in iOS: Getting Started](https://www.raywenderlich.com/811496-auto-layout-tutorial-in-ios-getting-started).
 
 ### Player Turn Label
 
-- this will say who's turn it is
-- as well as show a count of how many moves have been made
+Let's create a label so we can she the players who's turn it is. It's simply going to be a text label saying "Player X's Turn" or "Player O's Turn". We'll also have it say the winner or draw game.
 
 ## Main Initial Screen
 
@@ -831,6 +844,9 @@ This are some of the resources I used to make this workshop, all of them are wor
 - [iPhone App Icon Template](https://www.figma.com/file/HUboUyk2DsD1u3JYPHPMo7/iPhone-App-Icon-Template)
 - [Tic Tac Toe App Icon](https://www.figma.com/file/bNCiyAC6W5EBeNiNMA5GCx/Tic-Tac-Toe-App-Icon)
 - [UIStackView](https://developer.apple.com/documentation/uikit/uistackview)
+- [Building Adaptive User Interfaces](https://developer.apple.com/design/adaptivity/)
+[Understanding Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html)
+- [Auto Layout Tutorial in iOS: Getting Started](https://www.raywenderlich.com/811496-auto-layout-tutorial-in-ios-getting-started)
 
 `// todo finish adding references`
 
