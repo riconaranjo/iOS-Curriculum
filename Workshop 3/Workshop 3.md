@@ -517,7 +517,11 @@ _"This constraint-based approach to design allows you to build user interfaces t
 
 Select each of our grid buttons individually from the **Outline View** and add the **Equal Widths** (or **Equal Heights**) constraint. This will ensure that even if our grid is resized, all the buttons are the same and don't get squished.
 
-Now select our meta stack view — _a stack view of stack views_— and add the **Aspect Ratio** constraint as well as **Left** and **Right** constraints of 40. This ensures that our grid will resize dynamically depending on the screen size
+`// todo: add image of auto layout constraints`
+
+Now select our meta stack view — _a stack view of stack views_— and add the **Aspect Ratio** constraint as well as **Left** and **Right** constraints of 40. This ensures that our grid will resize dynamically depending on the screen size. Add constraints to centre our grid horizontally and vertically.
+
+`// todo: add image of centred grid`
 
 **Congrats! We have completed our grid!**
 
@@ -525,7 +529,14 @@ Learn more about Auto Layout in this article: [Auto Layout Tutorial in iOS: Gett
 
 ### Player Turn Label
 
-Let's create a label so we can she the players who's turn it is. It's simply going to be a text label saying "Player X's Turn" or "Player O's Turn". We'll also have it say the winner or draw game.
+Let's create a label so we can she the players who's turn it is. It's simply going to be a text label saying "X Player's Turn" or "O Player's Turn". We'll also have it say the winner or draw game.
+
+Add a **label** from the object library and drag it above our grid. Give it the following **constraints**:
+
+- 80 on the bottom
+- centred horizontally
+
+Change the **font size** to 24 and change the default text to say **X Player's Turn**.
 
 ## Main Initial Screen
 
@@ -541,8 +552,6 @@ Let's create a label so we can she the players who's turn it is. It's simply goi
 - non-button segue
   - add a manual segue, ctrl + drag from game logic view controller from the **Outline View** to the game over view controller
   - name segue identifier **EndGame**
-- add label to show current player's turn
-  - default text: **X Player's Turn**
 
 ## End Game Screen
 
