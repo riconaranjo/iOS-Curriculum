@@ -445,19 +445,33 @@ Now we can use these images anywhere in our application.
 
 Let's go to the storyboard and add our three view controllers. Try and see if you can remember how to do it on your own again. Lay them next to each other in a vertical row.
 
+_If you need a hint, see the [Adding View Controllers](#Adding-View-Controllers) section._
+
+## View Controllers
+
+We will be adding three view controllers to our app:
+
+1. **InitialViewController**
+    - _serves as a start menu and launches the game view controller._
+2. **GameLogicViewController**
+    - _responsible for managing the buttons, player turns, and checking if a player has won yet, launching the game over view controller, and passing the game result to it._
+3. **GameOverViewController**
+    - _responsible for showing the game result, and giving an option to restart the game or go back to the initial view._
+
+Use <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> to bring up the object library and search for view controller. Drag and drop three view controllers in a row.
+
 Change their background and tint colours according to the colours you defined in your colour scheme in the [Colours](#Colours)section.
 
 - I'll be using #465775 (background) and #2CABD8 (tint)
 
 `// todo: add image of three view controllers with background colour`
 
-_If you need a hint, see the [Adding View Controllers](#Adding-View-Controllers) section._
 
 ## Button Grid
 
 Now we can't have a tic tac toe game without a 3x3 grid, so let's add one to our middle view controller. This will be our Game Logic View Controller. Our grid will be comprised of 9 buttons, with a background image.
 
-Let's start with the first button. Use <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> to bring up the object library and search for button. Drag and drop it anywhere on the middle view controller.
+Let's start with the first button. Bring up the object library and search for 'button'. Drag and drop it anywhere on the middle view controller.
 
 Delete the text inside the button and in the **Attributes Inspector** select our placeholder icon, it should be named `Icon-Placeholder`.
 
@@ -540,10 +554,46 @@ Change the **font size** to 24 and change the default text to say **X Player's T
 
 ## Main Initial Screen
 
-- Let's go back to the inital screen and add our game's title and a button to start a new game.
-- add label and a button
-- add segue for button to go to grid view controller
-  - with segue identifier **StartGame**
+Now let's go back to the inital screen and add our game's title and a button to start a new game. We're going to add label with our app name, a button to start a new game, and an image with our app icon for aesthetic reasons.
+
+`// todo: add image of initial screen`
+
+Let's add a segue so that when you press the **New Game** button it takes you to the second screen so you can actually play a game.
+
+- give it a segue identifier of  **StartGame**
+
+To add a segue identifier select the arrow going from the initial view controller to the game logic view controller, and add a unique name in the **Attributes Inspector** _Segue_ field.
+
+## View Controller Swift Files
+
+We've created our view controllers, and added some of our UI but we are still missing the underlying logic, most notably our game logic. If you press on the buttons in our button grid, they buttons won't do anything at all. Let's add the swift files for each of our view controllers.
+
+The files and their classes must have the same name as our view controllers:
+
+1. InitialViewController
+2. GameLogicViewController
+3. GameOverViewController
+
+In the **Project Navigator** right click and add select **New File...**, choose **Swift File**, and name this first file **InitialViewController**; the _.swift_ will automatically be appended.
+
+Open the file and add the following code, to define our custom view controller:
+
+``` swift
+import UIKit
+
+class InitialViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+
+        print("\n# initial view loaded\n")
+    }
+
+}
+```
+
+Repeat this for the other two view controllers but change the file and class names to their respective view controllers.
 
 ## Game Logic
 
@@ -567,16 +617,6 @@ Change the **font size** to 24 and change the default text to say **X Player's T
   - New Game (game logic view)
   - Exit (initial view) [unwind segue]
     - we'll get back to this segue later
-
-## View Controllers
-
-1. InitialViewController
-2. GameLogicViewController
-3. GameOverViewController
-
-- initial view controller serves as a start menu and launches the game view controller
-- the game logic view controller is responsible for managing the buttons, player turns, and checking if a player has won yet, and launching the game over view controller, passing the game result
-- the game over view controller is responsible for showing the game result, and giving an option to restart the game or go back to the initial view
 
 ## Initial View Controller
 
