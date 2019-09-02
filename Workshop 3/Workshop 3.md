@@ -466,7 +466,6 @@ Change their background and tint colours according to the colours you defined in
 
 `// todo: add image of three view controllers with background colour`
 
-
 ## Button Grid
 
 Now we can't have a tic tac toe game without a 3x3 grid, so let's add one to our middle view controller. This will be our Game Logic View Controller. Our grid will be comprised of 9 buttons, with a background image.
@@ -560,11 +559,39 @@ Now let's go back to the inital screen and add our game's title and a button to 
 
 Let's add a segue so that when you press the **New Game** button it takes you to the second screen so you can actually play a game.
 
-- give it a segue identifier of  **StartGame**
+- give it a segue identifier of **StartGame**
 
 To add a segue identifier select the arrow going from the initial view controller to the game logic view controller, and add a unique name in the **Attributes Inspector** _Segue_ field.
 
-## View Controller Swift Files
+## End Game Screen
+
+We want to display the match result in our end game screen, which means we need to know who won the game, or whether the game was a draw. This means we need to pass data between view controllers.
+
+_How can we do this?_
+
+There are actually a few  ways of doing this, but we can actually use the segue to pass whatever data we want, we just need to create a function to prepare everything for the segue. We'll get back to this in a bit
+
+But first let's add the text labels we're going to use to display the information, as well as the buttons to either start a new game or exit.
+
+**Add two text labels:**
+
+- larger one: _Game Over_ (font size: 32)
+- smaller one: _Winner_ (font size: 24)
+
+**Add two buttons:**
+
+- New Game (segue to: game logic view)
+- Exit (segue to: initial view)
+
+You can add the segue from new game to the game logic view controller, but for the exit view we're going to do an unwind segue which is slightly different. _We'll go over this in a bit._
+
+`// todo: add image of end game view controller`
+
+## Encapsulation
+
+For each of our view controllers, we will be defining the background logic characterizing what happens in that specific screen; this is called encapsulation. [Encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming)) ensures that your code is easy to debug and maintain, as well as facilitates adding new features to your app without having to do a full rewrite of the entire code base.
+
+### View Controller Swift Files
 
 We've created our view controllers, and added some of our UI but we are still missing the underlying logic, most notably our game logic. If you press on the buttons in our button grid, they buttons won't do anything at all. Let's add the swift files for each of our view controllers.
 
@@ -593,30 +620,9 @@ class InitialViewController: UIViewController {
 }
 ```
 
-Repeat this for the other two view controllers but change the file and class names to their respective view controllers.
+Repeat this for the other two view controllers but change their **file** and **class** names to their respective view controllers: **GameLogicViewController** and **GameOverViewController**.
 
-## Game Logic
-
-- for each view controller we will define what logic happens in that screen; this is called encapsulation which ensures your code is easy to debug and maintain
-- we will have three view controllers each tasked with a section of our app
-- non-button segue
-  - add a manual segue, ctrl + drag from game logic view controller from the **Outline View** to the game over view controller
-  - name segue identifier **EndGame**
-
-## End Game Screen
-
-- Let's add a view controller for our end of game screen
-- here we will display the winner or specify if the game was draw
-- this will mean that we will have to pass information from one screen to another
-- [How To: Pass Data Between View Controllers In Swift (Extended)](https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/)
-
-- add two text labels
-  - larger one: Game Over (32)
-  - smaller one: Winner (24) [used to show game result]
-- two buttons:
-  - New Game (game logic view)
-  - Exit (initial view) [unwind segue]
-    - we'll get back to this segue later
+`// todo add image of navigation area with view controller files`
 
 ## Initial View Controller
 
@@ -633,6 +639,20 @@ Repeat this for the other two view controllers but change the file and class nam
 - we will have an common action that is triggered by every button
 - this action checks who's turn it is, changes the button image, and then checks if that was a winning move
 - if the game is over, then we will transistion to the end game screen
+
+## Manual Segue
+
+_What happens once a player wins a game of tic tac toe?_
+
+We want our app to move to the end game screen as soon as a winning move is played, how do we do this? Every time we've used a segue, it's been triggered by pressing a button.
+
+This is where manual segues come in handy. We can define a segue differently than clicking and dragging a button in the storyboard.
+
+You can create a manual segue either by clicking and dragging from the view controller name in the **Outline View**, or by doing the same from the left-most button on the top of the view controller.
+
+`// todo: add images of creating manual segue`
+
+To trigger this segue, we will need to call it programmatically, and thus we will need to assign it a segue identifier. Try and see if you can remember how to do this, if you need a refresher go back to [Main Initial Screen](#Main-Initial-Screen). Give it the segue identifier **endGame**.
 
 ### Class Properties
 
@@ -803,7 +823,9 @@ func winner() -> Bool {
 }
 ```
 
-### Passing Data Between View Controllers
+### Passing Data with Segues
+
+- [How To: Pass Data Between View Controllers In Swift (Extended)](https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/)
 
 - use `prepareForSegue()`...
 - we will be using class properties to pass data
@@ -896,8 +918,9 @@ This are some of the resources I used to make this workshop, all of them are wor
 - [Building Adaptive User Interfaces](https://developer.apple.com/design/adaptivity/)
 [Understanding Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html)
 - [Auto Layout Tutorial in iOS: Getting Started](https://www.raywenderlich.com/811496-auto-layout-tutorial-in-ios-getting-started)
+- [Encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming))
 
-`// todo finish adding references`
+`// todo finish adding references + make sure they're in the right order`
 
 - [Google](https://google.ca)
 - [Stack Overflow](https://stackoverflow.com)
