@@ -913,27 +913,27 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?)
 
 ## GameOverViewController
 
-Now let's finish up and define our Game Over View Controller. This screen is relatively simple with a label and two buttons. If you [End Game Screen](#End-Game-Screen)
+Now let's finish up and define our Game Over View Controller. This screen is relatively simple with a label and two buttons which we set up in the  [End Game Screen](#End-Game-Screen) section.
 
-- this is a simple screen that shows who won the game
-- it will have two buttons to segue to either the initial screen or game screen to start a new game
-  - the segue to the initial view will be unwind segue
+Let's set up the logic for this screen.
 
-### Data Passing with Class Parameters
+### Data Passing with Class Properties
 
-- add the **winner** `String` property so we can use it to pass which player won
+First let's add the add the **winner** `String` property used to pass game result from the Game Logic View Controller.
 
 ``` swift
-var winner: String!
+class GameOverViewController: UIViewController {
+
+    var winner: String!
 ```
 
-- add a reference for the label to display the game outcome
+Next we'll add the refernce for our text label that shows the game outcome. This will allows us to change its text to the appropriate result from the `winner` property.
 
 ``` swift
 @IBOutlet weak var winnerLabel: UILabel!
 ```
 
-- in the `viewDidLoad()` method change the winner label text to the winner string we passed from the Game Logic View Controller
+We also need to make sure that the label text is updated with the `winner` text — _if it's present_ — in the `viewDidLoad()` function.
 
 ``` swift
 override func viewDidLoad() {
@@ -948,9 +948,15 @@ override func viewDidLoad() {
 
 ## Unwinding Segues
 
-- [Unwind Segues Step-by-Step (and 4 Reasons to Use Them)](https://matteomanferdini.com/unwind-segue/)
+The last thing we need to set up is the unwind segue from the Game Over View Controller to the Initial View Controller. If you you've noticed, regular **Show** segues adds a view controller on top of the current view. This is often useful, and in our app it shows the continuation of a series of rematches. But what if we want to start a new series of games?
 
-- add this code to the Inital View Controller class to set up the unwind segue
+`// todo: add image of stacked view controllers after segues`
+
+We don't want our new games to go on top of our old games, we want to start with a fresh stack of games. Using an unwind segue, we can get rid of all the segues we pushed to the top.
+
+Let's start first by adding this code to the Inital View Controller class to set up the unwind segue. This is different from other segues where we usually write the code in the view controller we segue **from** — _instead here we're adding code to the destination view controller_.
+
+You can add it yourself by writing `unwind` and Xcode will suggest the **Swift Unwind Segue Method**. You can press <kbd>tab</kbd> to autocomplete. Rename the function to `unwindToInitalView()`.
 
 ``` swift
 @IBAction func unwindToInitialView(_ unwindSegue: UIStoryboardSegue) {
@@ -959,9 +965,20 @@ override func viewDidLoad() {
 }
 ```
 
-- go back to the Game Over View Controller
-- ctrl + drag our exit button to **Exit** component of the view controller in the storyboard
+Let's head back over to the Game Over View Controller and <kbd>ctrl</kbd> + click and drag our exit button to **Exit** component _(right most button above view controller)_ of the view controller in the storyboard.
 - select our function we just added (it should be the only option)
+
+`// todo: add image of exti component`
+
+More info: [Unwind Segues Step-by-Step (and 4 Reasons to Use Them)](https://matteomanferdini.com/unwind-segue/)
+
+## Play a Game
+
+Congrats! Hopefully you followed all the steps correctly and everything works as expected. You should now have a fully functioning Tic Tac Toe game.
+
+_Try playing it against your friends, see who is the master tic tac toe player._
+
+I encourage you to add to this game, see if you can add new features like and an AI to play against, game saving, or perhaps even online play.
 
 # References
 
