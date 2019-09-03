@@ -15,6 +15,7 @@ class GameLogicViewController: UIViewController {
     var xTurn: Bool!
     
     @IBOutlet weak var turnLabel: UILabel!
+
     @IBOutlet weak var buttonA1: UIButton!
     @IBOutlet weak var buttonA2: UIButton!
     @IBOutlet weak var buttonA3: UIButton!
