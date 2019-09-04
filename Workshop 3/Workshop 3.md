@@ -36,7 +36,7 @@ Give your project a name like **SettingUpAnApp**, as this won't be our tic tac t
 
 ## Launch Screens
 
-A launch screen is what appears as soon as your app is launched, quickly replaced by your app's first screen. It allows your app to seem to loads faster. According to Apple's [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/), the launch screen should have placeholder UI elements that appear identical to your app's first screen, without any text — _since it won't be localized_.
+A launch screen is what appears as soon as your app is launched, quickly replaced by your app's first screen. It allows your app to seem to load faster. According to Apple's [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/), the launch screen should have placeholder UI elements that appear identical to your app's first screen, without any text — _since it won't be localized_.
 
 _Localized text means that it changes based on the user's device language settings._
 
@@ -50,7 +50,7 @@ _We'll return to the launchscreen later once we have main screen UI done._
 
 ## App Transitions
 
-In our last workshop [2. Getting All Set Up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md), we built a simple one view app. All it did was give a personalized greeting when you put your name in a text field and pressed a button. You can take those concepts and build a much more complex UI, but you would still be stuck on the same screen.
+In our last workshop, [2. Getting All Set Up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md), we built a simple one view app. All it did was give a personalized greeting when you put your name in a text field and pressed a button. You can take those concepts and build a much more complex UI, but you would still be stuck on the same screen.
 
 How do we move between screens (in-app transitions) within our app? **Segues**.
 
@@ -64,23 +64,23 @@ To create a segue we first need a new view controller to segue to. Navigate to t
 
 ### Adding View Controllers
 
-We covered view controllers in our last workshop ([2. Getting All Set Up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md)), but here's a recap of what a view controller is:
+We covered view controllers in our last workshop, ([2. Getting All Set Up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md)), but here's a recap of what a view controller is:
 
 - a view controller object is a subclass of [`UIViewController`](https://developer.apple.com/documentation/uikit/uiviewcontroller)
 - a view controller object manages the view hierarchy of a scene in your app
 - a view is a UI item
 
-Now that we are in our main story board, you can add a second view controller from the **Object Library** by pressing the button in the toolbar above the utility area. You can also use the shortcut  <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd>, typing view controller, and pressing enter.
+Now that we are in our main story board, you can add a second view controller from the **Object Library** by pressing the button in the toolbar above the utility area. You can also use the shortcut  <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd>, and typing view controller.
 
 `// todo: add image of object libary view controller`
 
-Drag and drop the view controller to the right of our inital view controller. You can use the guidelines both view controller in-line with each other.
+Drag and drop the new view controller to the right of our already existing view controller. You can use the guidelines both view controller in-line with each other.
 
 `// todo: add image of two view controllers with guidelines`
 
-Use the object library again to add a button to first view controller. Place it in the centre of the first view controller and change the text to **Segue** and increase the font size to 28. I'm going to add horizontal and vertical constraints so it's always in the centre at least for now.
+Use the object library again to add a button to the first view controller. Place it in the centre of the first view controller and change the text to **Segue** and increase the font size to 28. I'm going to add horizontal and vertical constraints so it's always in the centre at least for now.
 
-To add a segue when we press our button, click and drag from button to our second view controller, while holding down <kbd>ctrl</kbd>. A small pop up menu will appear, select the **Show** option; all this option does is move us from one view controller to another, the other options are beyond the scope of this workshop.
+To add a segue when we press our button, click and drag from the button to our second view controller, while holding down <kbd>ctrl</kbd>. A small pop up menu will appear, select the **Show** option; all this option does is move us from one view controller to another, the other options are beyond the scope of this workshop.
 
 _For more information on the other types of segues, read [Using Segues](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)._
 
@@ -88,7 +88,7 @@ _For more information on the other types of segues, read [Using Segues](https://
 
 _Congrats you have created your first segue!_
 
-Let's add a text label to the second view controller so it's easier to see when we transitioned from one view to another. Add this to the centre of the second view controller, add constraints, change it's text to **Second Screen** and change the font size to 28.
+Let's add a text label to the second view controller so it's easier to see when we transitioned from one view to another. Add this to the centre of the second view controller, add constraints, change its text to **Second Screen** and change the font size to 28.
 
 Now let's test our segue; press the **Run** button or use the shortcut <kbd>cmd</kbd> + <kbd>r</kbd> to run our app either in the iOs simulator or on a connected iPhone — _for steps on how to set up Xcode to run apps on your iPhone see [2. Getting All Set Up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md)_.
 
@@ -100,11 +100,11 @@ Now let's learn a bit about colours, because they are an integral part of design
 
 ### Why are colours important in your app?
 
-The colours you use in your app impact how your app is both perceived and how it is used. Choosing a good colour scheme will allow your users to navigate through your app effortlessly, and will allow you to differentiate UI elements easily.
+Colours have a disproportionate effect on your how people view and interact with your app. Choosing a good colour scheme will allow your users to navigate through your app effortlessly, and will allow you to differentiate UI elements easily.
 
-Colour draws your attention to things and pays a vital role in how your perceive your surroundings. Your app's colour scheme can have dramatic positive or negative effect on potential users. Colours can be jarring and make you want to leave the app, or can be pleasant and welcoming to the user.
+Colour draws your attention to things and pays a vital role in how you perceive your surroundings. Your app's colour scheme can have dramatic positive or negative effect on potential users. Colours can be jarring and make you want to leave the app, or can be pleasant and welcoming to the user.
 
-Different colours provoke certain emotions. You can decide to use this to create a certain feel or mood for you app. Generally:
+Different colours provoke certain emotions. You can decide to use this to create a certain feel or mood for your app. Generally:
 
 - **Blue:** calming
 - **Red:** love, passion, war, health
@@ -179,11 +179,11 @@ Let's change our **background** to a dark blueish grey (hex: #465775).
 
 Select our Inital View Controller and open up our attributes inspector. In the **Background** pop up menu select the **Custom** option; this will bring up Apple's colour window.
 
-Click on the **Colour Sliders** tab and select **RGB Sliders**. This will allows us to put our colours in using the hex codes from [Coolers.co](Coolers.co). In the **Hex Color** field enter **465775** and press <kbd>enter</kbd>.
+Click on the **Colour Sliders** tab and select **RGB Sliders**. This will allow us to put our colours in using the hex codes from [Coolers.co](Coolers.co). In the **Hex Color** field enter **465775** and press <kbd>enter</kbd>.
 
 ### Changing the Tint Colour
 
-The **Tint** colour for a `UIView` is it's "default" colour for interactive elements. It will be the colour of new views — _such as buttons_ — added to your view controller. We will be using our primary colour as our tint colour.
+The **Tint** colour for a `UIView` is its "default" colour for interactive elements. It will be the colour of new views — _such as buttons_ — added to your view controller. We will be using our primary colour as our tint colour.
 
 Change the **Tint** colour of our view controller to **#2CABD8**; this should change the colour of our button automatically.
 
@@ -219,13 +219,13 @@ Your app icon is important because it symbolizes your app, and is one of the mos
 
 It should not take someone more than a few seconds to figure out what your app does from the app icon at all. Keep your design focused on a single point that captures attention and identifies your app.
 
-You do not need to add rounded corner to your icon, the operating system will do so for you.
+You do not need to add rounded corners to your icon, the operating system will do so for you.
 
 _For a more through explanation of how to design a proper app icon, read Apple's Human Interface Guidelines on app icons: [HIG: App Icon](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/)_
 
 If you want to distribute your app on the app store, you will have to provide various scaled versions of your app icon for different devices, as well as an app store version.
 
-As per the [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes), these are the icon sizes you'll need for you app.
+As per the [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes), these are the icon sizes you'll need for your app.
 
 | Device or context | Icon size                             |
 | ----------------- | ------------------------------------- |
@@ -377,7 +377,7 @@ To add icons to your app in Xcode navigate to `Assets.xcassets`. You can find it
 
 `// todo: add image of Assets.xcassets`
 
-Click on the **AppIcon** resource in the editor area. This should show you all the possible icon size we might need or use for iPhone and iPad.
+Click on the **AppIcon** resource in the editor area. This should show you all the possible icon sizes we might need or use for iPhone and iPad.
 
 If you go to the **Attributes Inspector** you'll notice that we can uncheck iPad which hides all the iPad specific icons.
 
@@ -508,11 +508,11 @@ This will create a vertical stack view encompassing our three horizontal — _a 
 
 Change the spacing to 10, just like we did with the other stack views. We should have a nicely arranged 3x3 grid, but with slightly oversized icons for most iPhone screens. This is because of the default size of our icons.
 
-We need to ensure that our design is adaptive to all iPhone models, lucky Apple provides plenty of tools for us to do this with [Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html).
+We need to ensure that our design is adaptive to all iPhone models, luckily Apple provides plenty of tools for us to do this with [Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html).
 
 ### Adaptive Interfaces
 
-It's important for app to adapt to all iPhone screen sizes if we want to publish it on the App Store. Having an adaptive interface allows you to provide the best user experience, regardless of which iPhone your users have.
+It's important for your app to adapt to all iPhone screen sizes if we want to publish it on the App Store. Having an adaptive interface allows you to provide the best user experience, regardless of which iPhone your users have.
 
 To learn more about how to build an adaptive user interface for your app, read more about it here: [Building Adaptive User Interfaces](https://developer.apple.com/design/adaptivity/)
 
@@ -542,7 +542,7 @@ Learn more about Auto Layout in this article: [Auto Layout Tutorial in iOS: Gett
 
 ### Player Turn Label
 
-Let's create a label so we can she the players who's turn it is. It's simply going to be a text label saying "X Player's Turn" or "O Player's Turn". We'll also have it say the winner or draw game.
+Let's create a label so we can she the players whose turn it is. It's simply going to be a text label saying "X Player's Turn" or "O Player's Turn". We'll also have it say the winner or draw game.
 
 Add a **label** from the object library and drag it above our grid. Give it the following **constraints**:
 
@@ -553,7 +553,7 @@ Change the **font size** to 24 and change the default text to say **X Player's T
 
 ## Initial Screen
 
-Now let's go back to the inital screen and add our game's title and a button to start a new game. We're going to add label with our app name, a button to start a new game, and an image with our app icon for aesthetic reasons.
+Now let's go back to the inital screen and add our game's title and a button to start a new game. We're going to add a label with our app name, a button to start a new game, and an image with our app icon for aesthetic reasons.
 
 `// todo: add image of initial screen with UI`
 
@@ -635,7 +635,7 @@ The `GameLogicViewController.swift` file will contain our actual game logic. You
 **Game Logic Summary:**
 
 - We want a common action, triggered by every button in the grid
-  - _which changes the button image to and X or O_
+  - _which changes the button image to an X or an O_
   - _and checks if that was a winning move, or if draw game_
 - If the game is over, transistion to the end game screen
 
@@ -659,7 +659,7 @@ Click on the Game Logic View Controller in the storyboard with the **Assistant E
 
 ### Class Properties
 
-Let's start by defining some class properties. These are the data members of our class, or basically anything we want to store while the game is going on; this includes things like plays made, and by which players, who's turn it is, etc.
+Let's start by defining some class properties. These are the data members of our class, or basically anything we want to store while the game is going on; this includes things like plays made, and by which players, whose turn it is, etc.
 
 Add these class properties (class variables) below the class defintion.
 
@@ -675,7 +675,7 @@ class GameLogicViewController: UIViewController {
 
 We are going to add a reference to our player turn label we created back in [Player Turn Label](#Player-Turn-Label) after we created our button grid. This will let us change the text each turn.
 
-We will also need a reference to each button so that we can change it's image when it's pressed, and make sure it's not enabled anymore. Name the button references `buttonA1`, with the letter denoting the rows (A, B, C) and the number denoting the column (1, 2, 3). This will make it easier to keep track of which button is which.
+We will also need a reference to each button so that we can change its image when its pressed, and make sure it's not enabled anymore. Name the button references `buttonA1`, with the letter denoting the rows (A, B, C) and the number denoting the column (1, 2, 3). This will make it easier to keep track of which button is which.
 
 See if you can remember how to create an `@IBOutlet`; if you need a refresher you may want to see **Outlets** in our last workshop: [Workshop 2. Getting All Set-up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md/#Outlets).
 
@@ -752,7 +752,7 @@ The third step is to check for a winner, which we will use the aptly-named funct
 - display a draw game message and segue to end screen
 - or do nothing
 
-If the game isn't over _— i.e. no winner and not a draw —_ then we change the current player's turn to the other player, increment the turn counter, and display who's turn it is now.
+If the game isn't over _— i.e. no winner and not a draw —_ then we change the current player's turn to the other player, increment the turn counter, and display whose turn it is now.
 
 The `performSegue()` method triggers the segue to the end game screen, the manual segue we added earlier.
 
@@ -790,7 +790,7 @@ You may have noticed that we can change the function parameter type from `Any` t
 
 Let's start defining the methods we called in our `playTurn()` function.
 
-The `updateBoard()` function is simply responsible for updating the board array with all the current plays. so it's simple one-liner.
+The `updateBoard()` function is simply responsible for updating the board array with all the current plays. So it's a simple one-liner.
 
 ``` swift
 /**
@@ -801,7 +801,7 @@ func updateBoard(button: Int) {
 }
 ```
 
-To update our button we  will first change the image of the triggering button, depending on who's turn it is. We then set the image for the disabled button state, and disable the button, so it's can't be pressed anymore.
+To update our button we  will first change the image of the triggering button, depending on whose turn it is. We then set the image for the disabled button state, and disable the button, so it's can't be pressed anymore.
 
 If we didn't pass down the reference from `playTurn()`, this would have been a bit more complex.
 
@@ -913,7 +913,7 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?)
 
 ## GameOverViewController
 
-Now let's finish up and define our Game Over View Controller. This screen is relatively simple with a label and two buttons which we set up in the  [End Game Screen](#End-Game-Screen) section.
+Now let's finish up and define our Game Over View Controller. This screen is relatively simple with a label and two buttons which we set up in the [End Game Screen](#End-Game-Screen) section.
 
 Let's set up the logic for this screen.
 
@@ -927,7 +927,7 @@ class GameOverViewController: UIViewController {
     var winner: String!
 ```
 
-Next we'll add the refernce for our text label that shows the game outcome. This will allows us to change its text to the appropriate result from the `winner` property.
+Next we'll add the reference for our text label that shows the game outcome. This will allows us to change its text to the appropriate result from the `winner` property.
 
 ``` swift
 @IBOutlet weak var winnerLabel: UILabel!
