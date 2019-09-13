@@ -38,15 +38,18 @@ This will be a quick introduction into how to write Swift code.
 
 First let's open a **Playground** in Xcode. Playgrounds is a development environment for Swift created by Apple. It allows you to write code and see it in action immediately.
 
+![initial](img/initial.png)
+
 You can open a **Playground** by opening Xcode and selecting the open _Get started with a playground_ option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
 
 In the window that appears, select a **blank iOS template**, give your playground a name, and then press next.
 
 If you want more information on how to do this, check out this online tutorial: [Get Started With Xcode Playgrounds](https://learnappmaking.com/xcode-playground-get-started-with-swift/).
 
-You should see a window like this.
+You should see a window like this. Delete the text inside the playground, let's start with a clean slate.
 
-`// todo: add initial playgrounds image`
+![initial-playground](img/initial-playground.png)
+
 
 Let's write your first line of Swift code.
 
@@ -56,7 +59,7 @@ print("hello world")
 
 Press <kbd>shift</kbd> + <kbd>enter</kbd> to run this line, or press the **Run** button in the linenumbers or at the bottom left of the code editor.
 
-`// todo: add run playground buttons image`
+![play](img/play.png)
 
 You should see the result on the right side of the code editor. and at the bottom in the console panel.
 
@@ -138,7 +141,7 @@ circumference = 2 * pi * distance
 print("Mercury travels about \(circumference) km every year")
 ```
 
-Xcode doesn't like that, does it?
+_Xcode doesn't like that, does it?_
 
 See we told Xcode that we would never change the values of `distance` and `circumference` but here we are trying to change it. We lied to Xcode.
 
@@ -146,7 +149,7 @@ It's ok, Xcode will forgive us; Xcode even offers to fix our problem for us. If 
 
 If you click on this message, it will expand with a small message **Change 'let' to make it mutable** and a **Fix** button (Mutable means it can change; not a constant). If you press the **Fix** button Xcode will change the `let` declaration to a `var` declaration.
 
-`// todo: add image for fix error`
+![fix](img/fix.png)
 
 Do this for both the `distance` and `circumference` variables and run your code.
 
