@@ -50,7 +50,7 @@ _We'll return to the launchscreen later once we have main screen UI done._
 
 ## App Transitions
 
-In our last workshop, [2. Getting All Set Up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md), we built a simple one view app. All it did was give a personalized greeting when you put your name in a text field and pressed a button. You can take those concepts and build a much more complex UI, but you would still be stuck on the same screen.
+In our last workshop, [Getting All Set Up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md), we built a simple one view app. All it did was give a personalized greeting when you put your name in a text field and pressed a button. You can take those concepts and build a much more complex UI, but you would still be stuck on the same screen.
 
 How do we move between screens (in-app transitions) within our app? **Segues**.
 
@@ -249,7 +249,7 @@ In this part of the workshop I'm going to show you how to create your own app ic
 - We are also going to use the vector graphics editing tool [Figma](https://figma.com) to edit our app icon and export it to the various sizes we need.
   - _This tool requires you to create an account._
 
-_If you wish to save your icons ([Flaticon](https://www.flaticon.com/)) or artwork ([Figma](https://figma.com)) you will have to create an account for each (free)._
+_If you wish to save or modify your icons on ([Flaticon](https://www.flaticon.com/)), or save your artwork on ([Figma](https://figma.com)) you will have to create an account for each (free)._
 
 ### Flaticon
 
@@ -488,7 +488,7 @@ _Fret not, I will explain._
 
 A stack view is a UI element that allows us to organize a bunch of other UI elements (views) either in a row or column. A stack view allows us to evenly space and align elements, without having to manually do it, while also being adaptive for different screen sizes.
 
-For more information read Apple's developer documentation for [UIStackView](https://developer.apple.com/documentation/uikit/uistackview).
+For more information read Apple's developer documentation for [`UIStackView`](https://developer.apple.com/documentation/uikit/uistackview).
 
 For our 3x3 grid we will be using three horizontal stack views — each with three buttons themselves — inside a bigger vertical stack view. We will have a **spacing of 10** between our buttons, we we can define in the **Attributes Inspector**.
 
@@ -980,33 +980,42 @@ _Try playing it against your friends, see who is the master tic tac toe player._
 
 I encourage you to add to this game, see if you can add new features like and an AI to play against, game saving, or perhaps even online play.
 
-# References
+# References / Resources
 
 This are some of the resources I used to make this workshop, all of them are worth reading / watching.
 
 - [Apple's Human Interface Guidelines (HIG)](https://developer.apple.com/design/human-interface-guidelines/)
 - [iOS Human Interface Guidelines I](https://medium.com/nona-web/ios-human-interface-guideline-f012a5ba962e)
 - [HIG: Launch Screen](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/)
+- [Workshop 2. Getting All Set Up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md)
 - [Using Segues](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
+- [UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller)
 - [HIG: Color](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/)
-- [HIG: Color and Contrast](https://developer.apple.com/design/human-interface-guidelines/accessibility/overview/color-and-contrast/)
 - [The Importance of Color Theory](https://www.webdesign.org/web-design-basics/color-theory/the-importance-of-color-in-web-designing.12437.html)
 - [How Important is Colour In Design](https://simplygraphic.co.za/2016/05/06/important-colour-design/)
+- [HIG: Color and Contrast](https://developer.apple.com/design/human-interface-guidelines/accessibility/overview/color-and-contrast/)
 - [Coolors](https://coolors.co)
+- [60-30-10 Color Rule: How to Use It, and How to Break It](https://www.thespruce.com/timeless-color-rule-797859)
 - [HIG: App Icon](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/)
 - [HIG: App Icon Sizes](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/app-icon/#app-icon-sizes)
 - [HIG: Image Size and Resolution](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/image-size-and-resolution/)
 - [Flaticon](https://www.flaticon.com/)
 - [Figma](https://www.figma.com)
+- [Adobe Illustrator](https://www.adobe.com/ca/products/illustrator.html)
+- [Affinity Designer](https://affinity.serif.com/en-gb/designer/)
+- [Gimp](https://www.gimp.org)
 - [iPhone App Icon Template](https://www.figma.com/file/HUboUyk2DsD1u3JYPHPMo7/iPhone-App-Icon-Template)
 - [Tic Tac Toe App Icon](https://www.figma.com/file/bNCiyAC6W5EBeNiNMA5GCx/Tic-Tac-Toe-App-Icon)
 - [UIStackView](https://developer.apple.com/documentation/uikit/uistackview)
+- [Understanding Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html)
 - [Building Adaptive User Interfaces](https://developer.apple.com/design/adaptivity/)
-[Understanding Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html)
 - [Auto Layout Tutorial in iOS: Getting Started](https://www.raywenderlich.com/811496-auto-layout-tutorial-in-ios-getting-started)
 - [Encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming))
+[Workshop 1. Getting Started with Swift](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%201/Workshop%201.md)
+- [How To: Pass Data Between View Controllers In Swift (Extended)](https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/)
+More info: [Unwind Segues Step-by-Step (and 4 Reasons to Use Them)](https://matteomanferdini.com/unwind-segue/)
 
-`// todo finish adding references + make sure they're in the right order`
+_And of course..._
 
 - [Google](https://google.ca)
 - [Stack Overflow](https://stackoverflow.com)
