@@ -27,19 +27,12 @@ For these workshops we will be using Xcode, and unfortunately there are no easy 
 - Borrow a MacBook from a friend
 - [Installing MacOS to VirtualBox](https://medium.com/@twister.mr/installing-macos-to-virtualbox-1fcc5cf22801)
 - Buy a [cheap](https://www.apple.com/ca_edu_93120/shop/back-to-school) / [refurbished](https://www.apple.com/ca/shop/refurbished) MacBook
-
-## 0. Prelude: Installing Xcode on a macOS VM
-
-`// work in progress (backburner)`
-
-This workshop will cover how to setup your own macOS Virtual Machine [VM], in case you don't have access to your own mac but you still want to develop iOS / macOS apps.
+- Build a [hackintosh](https://www.youtube.com/watch?v=1-xf80ibl8U&t=578s)
 
 ## 1. Getting Started with Swift
 
 - [Online version](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%201/Workshop%201.md)
 - [Playgrounds version](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%201/workshop%201.playground.zip)
-
-`// rough draft done`
 
 This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
@@ -49,18 +42,7 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 | Control flow | what is it + what is used for      |
 | Functions    | calling + writing functions        |
 | Playgrounds  | how to play around with Swift code |
-
-### References
-
-- [Get Started With Xcode Playgrounds](https://learnappmaking.com/xcode-playground-get-started-with-swift/)
-- [Swift Documentation](https://developer.apple.com/reference/swift)
-- [Swift Language Guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
-- [What are implicitly unwrapped optionals?](https://www.hackingwithswift.com/example-code/language/what-are-implicitly-unwrapped-optionals)
-- [How to make something with Swift Playgrounds](https://www.freecodecamp.org/news/how-to-make-something-with-swift-playgrounds-33e560b84184/)
-- [Awesome Swift Playgrounds](https://github.com/uraimo/Awesome-Swift-Playgrounds)
-- [WWDC 2018: Getting the Most out of Playgrounds in Xcode](https://developer.apple.com/videos/play/wwdc2018/402/)
-- [Markup Documentation](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/AddingMarkup.html#//apple_ref/doc/uid/TP40016497-CH100-SW1)
-
+s
 ## 2. Getting All Set-up
 
 - [Online version](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md)
@@ -76,14 +58,6 @@ This workshop is about learning how to set yourself up with Xcode to create your
 | Creating buttons + textfields      |
 | Creating outlets + actions         |
 | Build + Run app on your own iPhone |
-
-### References
-
-- [Build a Basic UI](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/BuildABasicUI.html#//apple_ref/doc/uid/TP40015214-CH5-SW1)
-- [Introduction to Xcode](https://developer.apple.com/videos/play/wwdc2016/413/)
-- [Breaking Down the AppDelegate (swift 3)](https://medium.com/@Dougly/breaking-down-the-appdelegate-swift-3-258e48f907d6)
-- [Google](https://google.ca)
-- [Stack Overflow](https://stackoverflow.com)
 
 ## 3. Mastering the Basics
 
