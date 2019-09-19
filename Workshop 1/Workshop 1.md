@@ -50,7 +50,6 @@ You should see a window like this. Delete the text inside the playground, let's 
 
 ![initial-playground](img/initial-playground.png)
 
-
 Let's write your first line of Swift code.
 
 ``` swift
