@@ -221,21 +221,27 @@ We also want to see the boundaries of the views (UI elements) we add to our scen
 
 Let's start by adding a simple text label; a text label is a [`UILabel`](https://developer.apple.com/documentation/uikit/uilabel) object that displays read-only text — _like a header or a title_. We will use it to show our app name.
 
-Press the **Library** button in the toolbar or press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> to show the object library, and type **Label**. Drag and drop the label onto your scene and use the guidelines to centre it. Place it about a fifth of the way from the top.
+![objects](img/objects.png)
 
-`// todo: add image of attributes inspector`
+Press the **Library** button in the toolbar or press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> to show the object library (shown above), and type **Label**. Drag and drop the label onto your scene and use the guidelines to centre it. Place it about a fifth of the way from the top.
 
-_In the utility area [far left] you will find the attributes inspector, and a few other inspector which allow you to change the properties of certain UI elements and scenes._
+It should look something like this:
+
+![label](img/label.png)
+
+_In the utility area [far left] you will find the attributes inspector, and a few other inspectors which allow you to change the properties of certain UI elements and scenes._
+
+![attributes](img/attributes.png)
 
 #### Changing the text
 
-You can edit the text in the label in the **attributes inspector** or you can double click on it and type whatever text you want on your label. Add whatever name you want to name your app, I will use _Hello World_. You might have to re-centre your label since the width of the label probably changed.
+You can edit the text in the label in the **attributes inspector** — _after clicking on the label_ — or you can double click on it and type whatever text you want on your label.
+
+Add whatever name you want to name your app, I will use _Hello World_. You might have to recentre your label since the width of the label has probably changed.
 
 #### Changing the font size
 
 To change the font size, you will have to go into the attributes inspector, after selecting the label. You can press the up arrow to increase the text size, next to the **Font** field. I have made my label size 32.
-
-`// todo: add image of attributes inspector font size`
 
 Now you should have a blank scene with your app title centred that looks like this:
 
@@ -243,7 +249,9 @@ Now you should have a blank scene with your app title centred that looks like th
 
 Press <kbd>cmd</kbd> + <kbd>r</kbd> to build and run your app in the iOS simulator.
 
-You might notice that the title isn't actually centred, although in the storyboard it looks perfectly centred. This is because when we place UI elements on a scene we aren't necessarily defining a hard-coded location for the view, since our user interface should be adaptive, for different sized screens.
+You might notice that the title isn't actually centred, although in the storyboard it looks perfectly centred — _if it is centred, try running the iOS simulator as a different iPhone model (with a different resolution), you'll see it isn't centred anymore_.
+
+This is because when we place UI elements on a scene we aren't necessarily defining a hard-coded location for the view, since our user interface should be adaptive, for different sized screens.
 
 But knowing this doesn't actually solve our problem; how do we make sure our text label is centred regardless of the screen size and resolution? **Constraints**.
 
