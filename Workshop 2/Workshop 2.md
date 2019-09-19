@@ -70,7 +70,7 @@ The **Xcode workspace window** is composed of four main components:
 
 We will go over each of these components in greater detail when we need them.
 
-Additionally, if you wish to learn more about Xcode, I recommend watching Apple's WWDC 2016 video  [Introduction to Xcode](https://developer.apple.com/videos/play/wwdc2016/413/).
+Additionally, if you wish to learn more about Xcode, I recommend watching Apple's WWDC 2016 video [Introduction to Xcode](https://developer.apple.com/videos/play/wwdc2016/413/).
 
 ### iOS Simulator
 
@@ -210,16 +210,16 @@ Xcode comes with a libary of UI objects that you can add to your scenes to your 
 
 The storyboard [interface builder](https://developer.apple.com/xcode/interface-builder/) has two main components:
 
-1. **Dock [left]:** lists all the objects in the storyboard file
+1. **Dock / Outline View [left]:** lists all the objects in the storyboard file
 2. **Canvas [right]:** where you add object to your app's user interface / scenes
 
-For more info on the interface builder, here is a very thorough page from Apple's documentation: [Using Interface Builder](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UsingInterfaceBuilder.html)
+For more info on the interface builder, here is a very thorough explanation from Apple's documentation: [Using Interface Builder](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UsingInterfaceBuilder.html)
 
-We also want to show the boundaries of the views we add to our scenes, since some of them have transparent boundaries (like default iOS buttons). We can do this by selecting **Editor > Canvas > Show Bounds Rectangles**.
+We also want to see the boundaries of the views (UI elements) we add to our scenes, since some of them have transparent boundaries (like default iOS buttons). We can do this by selecting **Editor > Canvas > Show Bounds Rectangles**.
 
 ### Adding Labels
 
-Let's start by adding a simple text label; a text label is a `UILabel` object that displays read-only text — _like a header or a title_. We will use it to show our app name.
+Let's start by adding a simple text label; a text label is a [`UILabel`](https://developer.apple.com/documentation/uikit/uilabel) object that displays read-only text — _like a header or a title_. We will use it to show our app name.
 
 Press the **Library** button in the toolbar or press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> to show the object library, and type **Label**. Drag and drop the label onto your scene and use the guidelines to centre it. Place it about a fifth of the way from the top.
 
@@ -476,12 +476,28 @@ If you own an iPhone, you can use Xcode to load, run, and debug apps on it. This
 
 Here is a useful article by Twilio on how to set things up to run apps on your iPhone:[How to Test Your iOS Application on a Real Device](https://www.twilio.com/blog/2018/07/how-to-test-your-ios-application-on-a-real-device.html)
 
-# References
+# References / Resources
 
 This are some of the resources I used to make this workshop, all of them are worth reading / watching.
 
+- [Xcode Project](https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Projects.html)
 - [Build a Basic UI](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/BuildABasicUI.html#//apple_ref/doc/uid/TP40015214-CH5-SW1)
 - [Introduction to Xcode](https://developer.apple.com/videos/play/wwdc2016/413/)
 - [Breaking Down the AppDelegate (swift 3)](https://medium.com/@Dougly/breaking-down-the-appdelegate-swift-3-258e48f907d6)
+- `UIViewController`](https://developer.apple.com/documentation/uikit/uiviewcontroller)
+- [UIKit](https://developer.apple.com/documentation/uikit)
+- [Interface Builder](https://developer.apple.com/xcode/interface-builder/)
+- [Using Interface Builder](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UsingInterfaceBuilder.html)
+- [`UILabel`](https://developer.apple.com/documentation/uikit/uilabel)
+- [Should IBOutlets be weak or strong?](https://www.zerotoappstore.com/should-iboutlets-be-weak-or-strong.html)
+- [UIControl.event](https://developer.apple.com/documentation/uikit/uicontrol/event)
+- [Outlet vs Action Connections in Xcode](https://medium.com/@GanChau/outlet-vs-action-connections-in-xcode-b5331fb233a1)
+[How to Test Your iOS Application on a Real Device](https://www.twilio.com/blog/2018/07/how-to-test-your-ios-application-on-a-real-device.html)
 - [Google](https://google.ca)
 - [Stack Overflow](https://stackoverflow.com)
+
+_And of course..._
+
+- [Google](https://google.ca)
+- [Stack Overflow](https://stackoverflow.com)
+- [Xcode Help](https://help.apple.com/xcode/mac/current/)
