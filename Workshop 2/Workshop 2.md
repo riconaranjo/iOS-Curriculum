@@ -28,13 +28,30 @@ An [Xcode Project](https://developer.apple.com/library/archive/featuredarticles/
 
 _You can think of it as the box that holds all the pieces and assembly instructions we need to build our app._
 
-Let's create our first **Project** by opening Xcode and selecting the open the _Create a new Xcode project_ option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
+![initial](img/initial.png)
+
+Let's create our first **Project** by opening Xcode and selecting the open the **Create a new Xcode project** option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
 
 In the window that appears, select the **iOS Single View App** and press next.
 
-`// todo: add image of initial xcode project`
+![initial-app](img/initial-app.png)
+
+Give you app a name like **MyFirstApp**. You don't need change the default settings but make sure you have the following:
+
+- **Language:** Swift
+- **User Interface:** Storyboard
+
+![app-name](img/app-name.png)
+
+The _Organization Name_ and _Organization Identifier_ are used when you submit your app to the App Store so it doesn't really matter what you put in there now.
+
+Once you are ready, press **Next**.
+
+This will ask you where you want to create your project on your computer. Select a location and press **Create**.
 
 This should open your new project in the workspace window. You may have an error that signing for your app requires a development team. This warning means that you haven't set up Xcode for iOS development yet; we will do this later in the workshop.
+
+![xcode](img/xcode.png)
 
 ## Xcode Crash Course
 
