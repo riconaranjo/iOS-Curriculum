@@ -40,7 +40,7 @@ First let's open a **Playground** in Xcode. Playgrounds is a development environ
 
 ![initial](img/initial.png)
 
-You can open a **Playground** by opening Xcode and selecting the open _Get started with a playground_ option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
+You can open a **Playground** by opening Xcode and selecting the open **Get started with a playground** option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
 
 In the window that appears, select a **blank iOS template**, give your playground a name, and then press next.
 
