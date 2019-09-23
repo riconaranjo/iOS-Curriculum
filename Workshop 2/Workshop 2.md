@@ -259,9 +259,9 @@ But knowing this doesn't actually solve our problem; how do we make sure our tex
 
 #### Constraints
 
-We can add constraints to our text label by selecting it and then pressing the **Align** button at the bottom of the canvas area.
+We can add constraints to our text label by selecting it, and then pressing the **Align** button at the bottom of the canvas area.
 
-`// todo: add image of align constraints button`
+![constraints](img/constraints.png)
 
 In the pop-up menu select the **Horizontally in Container** option to ensure our label is always centred in our screen regardless of iPhone model, then press **Add 1 Constraint**.
 
@@ -275,13 +275,15 @@ So we told Xcode to centre our label in the x-direction, but we said nothing abo
 
 We can fix this by adding a vertical contraint for our label. Click on the **Add new Constraints** button, to the right of the **Align** button.
 
-`// todo: add image of adding vertical constraint`
+![vertical-constraints](img/vertical-constraints.png)
 
 In the pop-up menu, select the top constraint, give it a value of 100, and press **Add 1 Constraint**. This will make sure that your label is always the same distance from the top of the screen, regardless of screen size.
 
 Rerun your app, and see if your title is now properly centred.
 
-Let's add a second label below our title, this is where we will display our personalized greeting to our users. Press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> to bring up the object library, and drag a label below our title label. Change the text on it to **Greetings!** by double clicking it.
+Let's add a second label below our title, this is where we will display our personalized greeting to our users. Press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> to bring up the object library, and drag a label below our title label. Change the text on it to **Greetings!** by double clicking it. Make sure the text is centre-aligned.
+
+![text-alignment](img/text-alignment.png)
 
 Add a horizontal constraint so it's centred horizontally in the **Align** options.
 
@@ -289,13 +291,19 @@ Press the **Add new Constraints** button again and add a top contraint of 25, an
 
 You can rerun your app, and check that everything is in the right place.
 
+![text-labels](img/text-labels.png)
+
 ### Adding Text Fields
 
 Now let's add a text field so our users can type in their name, for a personalized greeting.
 
-Press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> to bring up the object library and search for a text field, then drag and drop it below our label. Drag the edges of the text field to the margins of the scene.
+Press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> to bring up the object library and search for a text field, then drag and drop it below our label.
 
-`// todo: add image of text label + margins`
+![text-field](img/text-field.png)
+
+Drag the edges of the text field to the margins of the scene.
+
+![text-fields](img/text-fields.png)
 
 Our users are going to enter their names into this field, but how will they know to do so? We can add placeholder text that says something like **Enter your name here** to guide our user. To do this, select the text field and click on the attribute inspector in the utility area on the right. Enter the text in the **Placeholder** field.
 
@@ -305,15 +313,41 @@ Now let's add constraints so it always appears centred below our title, and span
 
 Press the **Add new Constraints** button again and select the top, left, and right constraints. Change the top constraint value to 100, and the left and right constraints to 50 each. Press the **Add 3 Constraints** button to apply these.
 
-`// todo: add image of title + greeting label`
+![multiple-constraints](img/multiple-constraints.png)
 
-If you want to see your changes without re-building and running your app every time, you can preview your changes right in the storyboard interface builder.
+If you want to see your changes without re-building and running your app every time, you can preview your changes right in the storyboard interface builder, using the **Assistant Editor**.
 
-#### Assistant Editor
+### Assistant Editor
 
 Press the **Assistant Editor** button in the toolbar to bring it up. By default it should show you the view controller for the selected scene, but we don't need that right now.
 
+**Xcode 11:**
+
+_With Apple's latest version of Xcode (Xcode 11) the UI has changed a little bit, so all you have to do is select the **Preview** option from **Adjust Editor Options**._
+
+Press this button:
+
+![editor-options](img/editor-options.png)
+
+And select **Preview**:
+
+![editor-11](img/assistant-editor-11.png)
+
+**Xcode 10:**
+
 In the editor selector bar, change the assistant editor to **Preview > Main.storyboard** from **Automatic**. You can find it at the top of the assistant editor.
+
+Click on the button with two overlapping circles:
+
+![assistant-editor-10](img/assistant-editor-10.png)
+
+Then click on **Automatic:**
+
+![automatic-editor-1](img/automatic-editor-1.png)
+
+And select the storyboard you want previewed _(we only have one...)_.
+
+![automatic-editor-2](img/automatic-editor-2.png)
 
 Here you can quickly add different iPhone screen size – _using the `+` sign at the bottom left of the assistant editor_ — and also rotate to make sure your UI is properly adaptive, and things are working as intended.
 
@@ -336,11 +370,16 @@ Now that we have our UI all finished, it's now time to start coding the logic of
 
 In order to access our UI elements in code, we need to create a reference to the element in the interface builder in our code. We can do this by creating an outlet — _an outlet is simply a variable with the `@IBOutlet` property_ — in our view controller.
 
-The easiest way of doing is by using the assistant editor in **Automatic**, this should bring up the `ViewController.swift` file. Once you have it visible next to your storyboard, hold <kbd>ctrl</kbd> and drag the greeting text label into the code below the class definition.
+The easiest way of doing is by using the assistant editor in **Automatic** (Xcode 10 or below), this should bring up the `ViewController.swift` file.
+- if you have Xcode 11, select the **Assistant** option under **Adjust Editor Options**
 
-`// todo: add image of outlet creation`
+Once you have it visible next to your storyboard, hold <kbd>ctrl</kbd> and drag the greeting text label into the code below the class definition.
+
+![outlet](img/outlet.png)
 
 You should get a pop-up menu with a few options, we will only be editing the **Name** field.
+
+![outlet-options](img/outlet-options.png)
 
 - **Connection:** type of connection (outlet or outlet collection for a label)
   - _we will leave it at outlet since it is only a reference to one label_
@@ -348,8 +387,8 @@ You should get a pop-up menu with a few options, we will only be editing the **N
 - **Name:** variable name for item reference
   - _give it a descriptive name like **greetingsLabel**_
 - **Type:** class of UI object
-- **Weak / Strong:** whether we want the object to never be destroyed
-  - _we want a weak reference, so that we don't use up extra memory when the scene isn't loaded_
+  - **Weak / Strong:** whether we want the object to never be destroyed
+    - _we want a weak reference, so that we don't use up extra memory when the scene isn't loaded_
 
 _more info about weak vs. strong references: [Should IBOutlets be weak or strong?](https://www.zerotoappstore.com/should-iboutlets-be-weak-or-strong.html)_
 
