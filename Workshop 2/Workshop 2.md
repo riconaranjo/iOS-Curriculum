@@ -531,7 +531,7 @@ This are some of the resources I used to make this workshop, all of them are wor
 - [Build a Basic UI](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/BuildABasicUI.html#//apple_ref/doc/uid/TP40015214-CH5-SW1)
 - [Introduction to Xcode](https://developer.apple.com/videos/play/wwdc2016/413/)
 - [Breaking Down the AppDelegate (swift 3)](https://medium.com/@Dougly/breaking-down-the-appdelegate-swift-3-258e48f907d6)
-- `UIViewController`](https://developer.apple.com/documentation/uikit/uiviewcontroller)
+- [`UIViewController`](https://developer.apple.com/documentation/uikit/uiviewcontroller)
 - [UIKit](https://developer.apple.com/documentation/uikit)
 - [Interface Builder](https://developer.apple.com/xcode/interface-builder/)
 - [Using Interface Builder](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UsingInterfaceBuilder.html)
