@@ -20,7 +20,7 @@
 print("hello world")
 /*:
  
-  Press `shift` + `enter` to run this line, or press the **Run** button in the linenumbers or at the bottom left of the code editor.
+  Press `shift` + `enter` to run this line, or press the **Run** button in the line numbers or at the bottom left of the code editor.
 
 
   You should see the result on the right side of the code editor. and at the bottom in the console panel.
