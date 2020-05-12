@@ -42,7 +42,7 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 | Control flow | what is it + what is used for      |
 | Functions    | calling + writing functions        |
 | Playgrounds  | how to play around with Swift code |
-s
+
 ## 2. Getting All Set-up
 
 - [Online version](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md)
