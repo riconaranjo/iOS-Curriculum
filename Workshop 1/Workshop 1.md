@@ -19,36 +19,36 @@ This will be a quick introduction into how to write Swift code.
 
 ## Topics
 
-1. [Datatypes](#Datatypes)
-2. [Declarations](#Declarations)
-3. [Integers](#Integers)
-4. [Doubles](#Doubles)
-5. [Booleans](#Booleans)
-6. [Strings](#Strings)
-7. [Arrays](#Arrays)
-8. [Sets](#Sets)
-9. [Dictionaries](#Dictionaries)
-10. [Control Flow](#Control%20Flow)
-11. [Conditional Statements](#Conditional%20Statements)
-12. [Switch](#Switch)
-13. [Loops](#Loops)
-14. [Functions](#Functions)
+1. [Datatypes][1]
+2. [Declarations][2]
+3. [Integers][3]
+4. [Doubles][4]
+5. [Booleans][5]
+6. [Strings][6]
+7. [Arrays][7]
+8. [Sets][8]
+9. [Dictionaries][9]
+10. [Control Flow][10]
+11. [Conditional Statements][11]
+12. [Switch][12]
+13. [Loops][13]
+14. [Functions][14]
 
 ## Opening Playgrounds
 
 First let's open a **Playground** in Xcode. Playgrounds is a development environment for Swift created by Apple. It allows you to write code and see it in action immediately.
 
-![initial](img/initial.png)
+![initial][image-1]
 
 You can open a **Playground** by opening Xcode and selecting the open **Get started with a playground** option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
 
 In the window that appears, select a **blank iOS template**, give your playground a name, and then press next.
 
-If you want more information on how to do this, check out this online tutorial: [Get Started With Xcode Playgrounds](https://learnappmaking.com/xcode-playground-get-started-with-swift/).
+If you want more information on how to do this, check out this online tutorial: [Get Started With Xcode Playgrounds][15].
 
 You should see a window like this. Delete the text inside the playground, let's start with a clean slate.
 
-![initial-playground](img/initial-playground.png)
+![initial-playground][image-2]
 
 Let's write your first line of Swift code.
 
@@ -56,9 +56,9 @@ Let's write your first line of Swift code.
 print("hello world")
 ```
 
-Press <kbd>shift</kbd> + <kbd>enter</kbd> to run this line, or press the **Run** button in the linenumbers or at the bottom left of the code editor.
+Press <kbd>shift</kbd> + <kbd>enter</kbd> to run this line, or press the **Run** button in the line numbers or at the bottom left of the code editor.
 
-![play](img/play.png)
+![play][image-3]
 
 You should see the result on the right side of the code editor. and at the bottom in the console panel.
 
@@ -88,7 +88,7 @@ In this workshop we will only cover a few of the basic datatypes in Swift such a
 - `Array` (ordered list)
 - `Dictionary` (list with key + value pairs)
 
-For more informations read [The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html), from the Swift Organization.
+For more informations read [The Basics][16], from the Swift Organization.
 
 ## Declarations
 
@@ -148,7 +148,7 @@ It's ok, Xcode will forgive us; Xcode even offers to fix our problem for us. If 
 
 If you click on this message, it will expand with a small message **Change 'let' to make it mutable** and a **Fix** button (Mutable means it can change; not a constant). If you press the **Fix** button Xcode will change the `let` declaration to a `var` declaration.
 
-![fix](img/fix.png)
+![fix][image-4]
 
 Do this for both the `distance` and `circumference` variables and run your code.
 
@@ -183,7 +183,7 @@ var optionalValue: Int? // -> nil
 
 ### Unwrapping Optionals
 
-Unwrapping an optional means checking the value inside an optional variable. You can check if an optional has a value using an `if` statement (these are explained in [Conditional Statements](#Conditional%20Statements)) to check if the value is `nil`.
+Unwrapping an optional means checking the value inside an optional variable. You can check if an optional has a value using an `if` statement (these are explained in [Conditional Statements][17]) to check if the value is `nil`.
 
 You can then use the `!` operator to force unwrap the value contained in the optional. If you use the `!` you **must** be sure that the optional contains a non-nil value, otherwise your program will crash, and you will be unhappy.
 
@@ -207,7 +207,7 @@ if let value = optionalValue {
 // the optional still has a value of 20
 ```
 
-Read more about optionals in [The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html) in the Swift Book.
+Read more about optionals in [The Basics][18] in the Swift Book.
 
 ## Integers
 
@@ -219,8 +219,8 @@ You can declare integers in a couple of different ways:
 
 1. You can either let Xcode infer that the number is an integer — by the absence of decimals.
 2. You can explicitly tell Xcode the datatype
-    - either by writing `:Int` after the variable name.
-    - or by assigning its value to `Int(someNumber)` and converting `someNumber` to an integer.
+	- either by writing `:Int` after the variable name.
+	- or by assigning its value to `Int(someNumber)` and converting `someNumber` to an integer.
 
 ``` swift
 let x = 1           // implicit
@@ -326,7 +326,7 @@ let escape = "I shouted \"FREEDOM\" as I jumped out the window!"
 
 ### Empty Strings
 
-You can create empty strings — to be filled in later by user input or online data — in two ways (source: [Initializing an Empty String](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html)):
+You can create empty strings — to be filled in later by user input or online data — in two ways (source: [Initializing an Empty String][19]):
 
 ``` swift
 var emptyString = ""               // empty string literal
@@ -372,7 +372,7 @@ let newMessage = "Hello there \(firstName)!"
 print(newMessage)
 ```
 
-Read more about [Strings and Characters](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html).
+Read more about [Strings and Characters][20].
 
 ## Arrays
 
@@ -453,7 +453,7 @@ for (index, value) in intArray.enumerated() {
 */
 ```
 
-Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#) in the Swift Book.
+Read more about [Collection Types][21] in the Swift Book.
 
 ## Sets
 
@@ -501,7 +501,7 @@ for item in intSet.sorted() {
 - A **set** is a bag of items where it doesn't matter where each item is.
   - _good for inserting_
 
-Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#).
+Read more about [Collection Types][22].
 
 ## Dictionaries
 
@@ -548,7 +548,7 @@ if let oldValue = students.updateValue("Emma Rae Martin", forKey: 103) {
 }
 ```
 
-Read more about [Collection Types](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#).
+Read more about [Collection Types][23].
 
 ## Control flow
 
@@ -558,7 +558,7 @@ Control flow allows us to create different actions and combinations of actions b
 
 You might have already seen some control flow in the examples we've used, but now we're going to go over them in-depth.
 
-_"Swift provides a variety of control flow statements. These include while loops to perform a task multiple times; if, guard, and switch statements to execute different branches of code based on certain conditions; and statements such as break and continue to transfer the flow of execution to another point in your code"_ - [Swift Book](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html)
+_"Swift provides a variety of control flow statements. These include while loops to perform a task multiple times; if, guard, and switch statements to execute different branches of code based on certain conditions; and statements such as break and continue to transfer the flow of execution to another point in your code"_ - [Swift Book][24]
 
 ### Topics
 
@@ -688,8 +688,8 @@ To create more complex conditions we can use the `!` (negation), the `&&` (AND),
 
 The negation operator will invert the value of a boolean:
 
-- true -> false
-- false -> true
+- true -\> false
+- false -\> true
 
 The value `!allowedEntry` can be read as 'not `allowedEntry`', as shown below.
 
@@ -737,7 +737,7 @@ if hasDoorKey || knowsOverridePassword {
 // Welcome!
 ```
 
-You can find these examples and more information in [Basic Operators](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html) in the Swift Book.
+You can find these examples and more information in [Basic Operators][25] in the Swift Book.
 
 ### Switch
 
@@ -796,7 +796,7 @@ default:
 // m is too small
 ```
 
-More infomation about [Switch Statements](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html).
+More infomation about [Switch Statements][26].
 
 ### Loops
 
@@ -959,7 +959,7 @@ Functions (methods) allow programmers to encapsulate code and call on it when it
 
 **`DRY:`** `Don't Repeat Yourself`
 
-- _**Functions are self-contained chunks of code that perform a specific task.** You give a function a name that identifies what it does, and this name is used to “call” the function to perform its task when needed._ — [Swift Book](https://docs.swift.org/swift-book/LanguageGuide/Functions.html):
+- _**Functions are self-contained chunks of code that perform a specific task.** You give a function a name that identifies what it does, and this name is used to “call” the function to perform its task when needed._ — [Swift Book][27]:
 
 ### Defining and Calling Functions
 
@@ -1099,7 +1099,7 @@ greet(person: "Tim", from: "Cupertino")
 // Hello Tim! Glad you could visit from Cupertino.
 ```
 
-If you want to learn more about functions in Swift, read the  [Functions](https://docs.swift.org/swift-book/LanguageGuide/Functions.html) page in the Swift Book — _many of these examples come directly from there._
+If you want to learn more about functions in Swift, read the  [Functions][28] page in the Swift Book — _many of these examples come directly from there._
 
 # 1.2 Playing around with Swift
 
@@ -1150,8 +1150,8 @@ A simple tic tac toe game implemented in Swift Playgrounds.
 ### Import Statements
 
 This bit of code imports tools so we can create our tic tac toe game in Swift Playgrounds.
-- [UIKit](https://developer.apple.com/documentation/uikit) is the UI framework for iOS applications.
-- [Playground Support](https://developer.apple.com/documentation/playgroundsupport) allows us to display and interact with live views in playgrounds.
+- [UIKit][29] is the UI framework for iOS applications.
+- [Playground Support][30] allows us to display and interact with live views in playgrounds.
 
 ``` swift
 import UIKit
@@ -1177,7 +1177,7 @@ View controllers are a super important concept in iOS development as every singl
 
 Each view controller manages a top level view which contains smaller subviews / UI element, but it does not necessary manage the subviews — _here in our simple example, it does_.
 
-Read more about view controllers in Apple's [programming guide](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/)
+Read more about view controllers in Apple's [programming guide][31]
 
 ``` swift
 class MyViewController : UIViewController {
@@ -1216,7 +1216,7 @@ You may have noticed that the button variables are all of type `UIButton!` which
 
 Using the `!` operator instead of `?` still makes the variable an optional, but instead it means we don't have to explicitly unwrap it every time we use it; this is called an **implicitly unwrapped optional**.
 
-We are using it here because we want to have class-wide access to the buttons, but we only want to create them once the view is loaded. For more info, here is an article explaining implicitly unwrapped optionals: [What are implicitly unwrapped optionals?](https://www.hackingwithswift.com/example-code/language/what-are-implicitly-unwrapped-optionals).
+We are using it here because we want to have class-wide access to the buttons, but we only want to create them once the view is loaded. For more info, here is an article explaining implicitly unwrapped optionals: [What are implicitly unwrapped optionals?][32].
 
 ### Loading the View
 
@@ -1368,9 +1368,9 @@ This function is what actually loads all of our labels and buttons into the play
 When a button is pressed we want to do a few different things:
 
 1. We want to update that button with that player's move
-    - but only if that button hasn't already been pressed
+	- but only if that button hasn't already been pressed
 2. We want to check if that move was a winning move
-    - and if so we want to stop the game
+	- and if so we want to stop the game
 3. We want to show that it's the next player's turn
 
 ``` swift
@@ -1543,22 +1543,74 @@ PlaygroundPage.current.liveView = MyViewController()
 
 These are some useful topics that I would suggest reading into, and learning how to use them.
 
-- [Basic Operators](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html)
-- [Enumerations](https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html)
-- [Structures and Classes](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html)
-- [Swift Resources](https://developer.apple.com/swift/resources/)
-- [Google](https://google.ca)
-- [Stack Overflow](http://stackoverflow.com/)
+- [Basic Operators][33]
+- [Enumerations][34]
+- [Structures and Classes][35]
+- [Swift Resources][36]
+- [Google][37]
+- [Stack Overflow][38]
 
 # References
 
 This are some of the resources I used to make this workshop, all of them are worth reading / watching.
 
-- [Get Started With Xcode Playgrounds](https://learnappmaking.com/xcode-playground-get-started-with-swift/)
-- [Swift Documentation](https://developer.apple.com/reference/swift)
-- [Swift Language Guide](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
-- [What are implicitly unwrapped optionals?](https://www.hackingwithswift.com/example-code/language/what-are-implicitly-unwrapped-optionals)
-- [How to make something with Swift Playgrounds](https://www.freecodecamp.org/news/how-to-make-something-with-swift-playgrounds-33e560b84184/)
-- [Awesome Swift Playgrounds](https://github.com/uraimo/Awesome-Swift-Playgrounds)
-- [WWDC 2018: Getting the Most out of Playgrounds in Xcode](https://developer.apple.com/videos/play/wwdc2018/402/)
-- [Markup Documentation](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/AddingMarkup.html#//apple_ref/doc/uid/TP40016497-CH100-SW1)
+- [Get Started With Xcode Playgrounds][39]
+- [Swift Documentation][40]
+- [Swift Language Guide][41]
+- [What are implicitly unwrapped optionals?][42]
+- [How to make something with Swift Playgrounds][43]
+- [Awesome Swift Playgrounds][44]
+- [WWDC 2018: Getting the Most out of Playgrounds in Xcode][45]
+- [Markup Documentation][46]
+
+[1]:	#Datatypes
+[2]:	#Declarations
+[3]:	#Integers
+[4]:	#Doubles
+[5]:	#Booleans
+[6]:	#Strings
+[7]:	#Arrays
+[8]:	#Sets
+[9]:	#Dictionaries
+[10]:	#Control%20Flow
+[11]:	#Conditional%20Statements
+[12]:	#Switch
+[13]:	#Loops
+[14]:	#Functions
+[15]:	https://learnappmaking.com/xcode-playground-get-started-with-swift/
+[16]:	https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
+[17]:	#Conditional%20Statements
+[18]:	https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
+[19]:	https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html
+[20]:	https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html
+[21]:	https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#
+[22]:	https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#
+[23]:	https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#
+[24]:	https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html
+[25]:	https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html
+[26]:	https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html
+[27]:	https://docs.swift.org/swift-book/LanguageGuide/Functions.html
+[28]:	https://docs.swift.org/swift-book/LanguageGuide/Functions.html
+[29]:	https://developer.apple.com/documentation/uikit
+[30]:	https://developer.apple.com/documentation/playgroundsupport
+[31]:	https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/
+[32]:	https://www.hackingwithswift.com/example-code/language/what-are-implicitly-unwrapped-optionals
+[33]:	https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html
+[34]:	https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html
+[35]:	https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html
+[36]:	https://developer.apple.com/swift/resources/
+[37]:	https://google.ca
+[38]:	http://stackoverflow.com/
+[39]:	https://learnappmaking.com/xcode-playground-get-started-with-swift/
+[40]:	https://developer.apple.com/reference/swift
+[41]:	https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html
+[42]:	https://www.hackingwithswift.com/example-code/language/what-are-implicitly-unwrapped-optionals
+[43]:	https://www.freecodecamp.org/news/how-to-make-something-with-swift-playgrounds-33e560b84184/
+[44]:	https://github.com/uraimo/Awesome-Swift-Playgrounds
+[45]:	https://developer.apple.com/videos/play/wwdc2018/402/
+[46]:	https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/AddingMarkup.html#//apple_ref/doc/uid/TP40016497-CH100-SW1
+
+[image-1]:	img/initial.png
+[image-2]:	img/initial-playground.png
+[image-3]:	img/play.png
+[image-4]:	img/fix.png

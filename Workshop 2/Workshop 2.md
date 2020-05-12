@@ -333,22 +333,6 @@ And select **Preview**:
 
 ![editor-11](img/assistant-editor-11.png)
 
-**Xcode 10:**
-
-In the editor selector bar, change the assistant editor to **Preview > Main.storyboard** from **Automatic**. You can find it at the top of the assistant editor.
-
-Click on the button with two overlapping circles:
-
-![assistant-editor-10](img/assistant-editor-10.png)
-
-Then click on **Automatic:**
-
-![automatic-editor-1](img/automatic-editor-1.png)
-
-And select the storyboard you want previewed _(we only have one...)_.
-
-![automatic-editor-2](img/automatic-editor-2.png)
-
 Here you can quickly add different iPhone screen size – _using the `+` sign at the bottom left of the assistant editor_ — and also rotate to make sure your UI is properly adaptive, and things are working as intended.
 
 ### Adding Buttons
@@ -370,8 +354,9 @@ Now that we have our UI all finished, it's now time to start coding the logic of
 
 In order to access our UI elements in code, we need to create a reference to the element in the interface builder in our code. We can do this by creating an outlet — _an outlet is simply a variable with the `@IBOutlet` property_ — in our view controller.
 
-The easiest way of doing is by using the assistant editor in **Automatic** (Xcode 10 or below), this should bring up the `ViewController.swift` file.
-- if you have Xcode 11, select the **Assistant** option under **Adjust Editor Options**
+The easiest way of doing is by using the assistant editor.
+
+- select the **Assistant** option under **Adjust Editor Options**
 
 Once you have it visible next to your storyboard, hold <kbd>ctrl</kbd> and drag the greeting text label into the code below the class definition.
 
