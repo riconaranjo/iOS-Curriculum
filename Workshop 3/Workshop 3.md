@@ -18,6 +18,8 @@ In this workshop we are going to create a simple Tic Tac Toe app with three scen
 2. Game board
 3. Game end screen
 
+_This workshop assumes you have the knowledge from the previous two workshops; if you are having difficulties feel free to reference the them [here](https://github.com/riconaranjo/iOS-Curriculum)._
+
 ---
 
 ## Topics
@@ -55,6 +57,8 @@ A launch screen is static — unlike a splash screen — which means it cannot h
 
 To create a launch screen we have to navigate to `LaunchScreen.storyboard`. You can find it in the navigation area on left side of Xcode; if the navigation area isn't visible press <kbd>cmd</kbd> + <kbd>1</kbd> to bring it up.
 
+![launch-screen-file](img/launch-screen-file.png)
+
 The launch screen storyboard acts much like the main storyboard, but it doesn't have a view controller or any back-end logic.
 
 _We'll return to the launchscreen later once we have main screen UI done._
@@ -83,25 +87,33 @@ We covered view controllers in our last workshop, ([2. Getting All Set Up](https
 
 Now that we are in our main story board, you can add a second view controller from the **Object Library** by pressing the button in the toolbar above the utility area. You can also use the shortcut  <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd>, and typing view controller.
 
-`// todo: add image of object libary view controller`
+![object-lib](img/object-lib-view-controller.png)
 
-Drag and drop the new view controller to the right of our already existing view controller. You can use the guidelines both view controller in-line with each other.
+Drag and drop the new view controller to the right of our already existing view controller. You can use the guidelines so that both view controller are in-line with each other.
 
-`// todo: add image of two view controllers with guidelines`
+![view-controller-guidelines](img/view-controller-guidelines.png)
 
-Use the object library again to add a button to the first view controller. Place it in the centre of the first view controller and change the text to **Segue** and increase the font size to 28. I'm going to add horizontal and vertical constraints so it's always in the centre at least for now.
+Use the object library again to add a **Button** to the first view controller.
+
+Place it in the centre of the first view controller and change the text to **Segue**, then increase the font size to 28. I'm going to add horizontal and vertical constraints so it's always in the centre at least for now.
+
+![button-guidelines](img/button-guidelines.png)
 
 To add a segue when we press our button, click and drag from the button to our second view controller, while holding down <kbd>ctrl</kbd>. A small pop up menu will appear, select the **Show** option; all this option does is move us from one view controller to another, the other options are beyond the scope of this workshop.
 
 _For more information on the other types of segues, read [Using Segues](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)._
 
-`// todo: add image of two view controllers adding segue`
+![button-segue](img/button-segue.png)
+
+![button-segue-show](img/button-segue-show.png)
 
 _Congrats you have created your first segue!_
 
-Let's add a text label to the second view controller so it's easier to see when we transitioned from one view to another. Add this to the centre of the second view controller, add constraints, change its text to **Second Screen** and change the font size to 28.
+Let's add a text label to the second view controller so it's easier to see when we transitioned from one view to another. Add this to the centre of the second view controller, add constraints, change its text to **Second Screen**, centre justified, and change the font size to 28.
 
 Now let's test our segue; press the **Run** button or use the shortcut <kbd>cmd</kbd> + <kbd>r</kbd> to run our app either in the iOs simulator or on a connected iPhone — _for steps on how to set up Xcode to run apps on your iPhone see [2. Getting All Set Up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md)_.
+
+![two-views](img/two-views.png)
 
 Once you have your app running, press the button and make sure it transitions to the second screen.
 
@@ -143,7 +155,7 @@ One of Coolors' biggest advantages is that you can just go through tons of poten
 
 If you like some of the colours in a colour scheme but you want to change some of the others, you can lock certain colours or select alternate shades, as well as many other features.
 
-Here is a colour scheme I generated using Coolors: [Colour Scheme](https://coolors.co/56e39f-465775-2cabd8-e3f4ff-ef6f6c)
+Here is a [colour scheme](https://coolors.co/56e39f-465775-2cabd8-e3f4ff-ef6f6c) I generated using Coolors.
 
 3. Medium Aquamarine _(#56E39F)_
 4. Independence _(#465775)_
@@ -151,7 +163,7 @@ Here is a colour scheme I generated using Coolors: [Colour Scheme](https://coolo
 4. Light Cyan _(#E3F4FF)_
 5. Light Carmine Pink _(#EF6F6C)_
 
-`// todo: add image of colour scheme`
+![colour-scheme](img/colour-scheme.png)
 
 Coolors gives us colour schemes with five colours, but it doesn't tell us how to use them; this part is up to us. A good rule of thumb is to use the 60-30-10 rule.
 
@@ -170,13 +182,11 @@ _Read more about this: [60-30-10 Color Rule: How to Use It, and How to Break It]
 
 Using the colour scheme from above, these are the roles I've decided to use these colours in.
 
-`// todo: finalize these colours`
-
-- **Primary:** #2CABD8
-- **Secondary:** #E3F4FF
-- **Accent:** #56E39F
-- **Second Accent:** #EF6F6C
-- **Background:** #465775
+- **Primary:** Bright Cerulean _(#2CABD8)_
+- **Secondary:** Light Cyan _(#E3F4FF)_
+- **Accent:** Medium Aquamarine _(#56E39F)_
+- **Second Accent:** Light Carmine Pink _(#EF6F6C)_
+- **Background:** Independence _(#465775)_
 
 Once you have decided on a colour scheme you can save it either by creating an account and pressing **Save** or by either bookmarking the colour scheme page or saving the link; the colour hex codes are included in the link, which is quite convenient.
 
@@ -192,6 +202,8 @@ Select our Inital View Controller and open up our attributes inspector. In the *
 
 Click on the **Colour Sliders** tab and select **RGB Sliders**. This will allow us to put our colours in using the hex codes from [Coolers.co](Coolers.co). In the **Hex Color** field enter **465775** and press <kbd>enter</kbd>.
 
+![hex-colour](img/hex-colour.png)
+
 ### Changing the Tint Colour
 
 The **Tint** colour for a `UIView` is its "default" colour for interactive elements. It will be the colour of new views — _such as buttons_ — added to your view controller. We will be using our primary colour as our tint colour.
@@ -203,7 +215,7 @@ This should change the background colour and tint of our initial view. Repeat th
 - **Background:** #465775
 - **Tint:** #2CABD8
 
-`// todo: add image of view controller with simple colour scheme`
+![simple-colour](img/simple-colour.png)
 
 ### Global Tint
 
@@ -211,10 +223,20 @@ You can set the default tint colour globally for your view controllers within ea
 
 To set a global tint colour for a storyboard, click on the **File Inspector** in the utility area — _it's two icons to the left of the attributes inspector_. You can change the global tint now the same was as you did for any individual view controller in the **Global Tint** field.
 
-Let's go to the `LaunchScreen.storyboard` file and change it's global tint colour, and while we're at it let's also change the background colour.
+![file-inspector](img/file-inspector.png)
+
+This is what it should look like in the side panel.
+
+![custom-global-tint](img/custom-global-tint.png)
+
+Let's go to the `LaunchScreen.storyboard` file and change it's global tint colour, and while we're at it let's also change the background colour of our launch screen.
 
 - **Background:** #465775
 - **Tint:** #2CABD8
+
+You can select your most recently used colours to save yourself some time.
+
+![recently-used-colours](img/recently-used-colours.png)
 
 ## App Icons
 
@@ -266,7 +288,7 @@ _If you wish to save or modify your icons on ([Flaticon](https://www.flaticon.co
 
 Go to [Flaticon](https://www.flaticon.com/). This website has a lot of free icons you can use in your projects as long as you credit the creators, and premium icons you may use if you pay. We will only be using free icons in this workshop.
 
-`// todo add image of flaticon with tic tac toe search results`
+![flaticon-results](img/flaticon-results.png)
 
 Using the **search bar**, look for an icon you might want to use in your app icon / logo. I will be using this **tic tac toe** [icon](https://www.flaticon.com/free-icon/tic-tac-toe_566294) created by Freepik.
 
@@ -274,9 +296,11 @@ Using the **search bar**, look for an icon you might want to use in your app ico
 
 Flaticon is a particularly useful online tool since it allows you to change the colour of certain icons — _as long as they don't have gradients_ —. **Select an icon** to use for your app icon.
 
-`// todo: add image of selected icon in flaticon`
+![flaticon-selected](img/flaticon-selected.png)
 
-Next to the **Add to collection** button there is a button with a pencil within a colour wheel. If you press this button it will open a window where you can edit the colour of the icon.
+Next to the **Add to collection** button there is a button with a pencil within a colour wheel. If you press this button it will open a window where you can edit the colour of the icon. _(This feature requires you to be logged into an account)._
+
+![flaticon-edit](img/flaticon-edit.png)
 
 - I will be changing the **icon background** to my background colour #465775.
 - The **icon shadow** will be a a darker shade of my background colour #2D384B.
@@ -291,7 +315,7 @@ In **alternate version** I used my primary colour instead of my background colou
 - The **icon shadow** will be a a darker shade of my primary colour #217D9E.
 _You can do the same or you can choose to use the secondary colour or an accent colour._
 
-`// todo: add image of modifying icon colour in flaticon`
+![flaticon-edit-colours](img/flaticon-edit-colours.png)
 
 _If you created an account with Flaticon you will be able to save this a collection so if you want to download it again later you don't have to go through all these steps again._
 
@@ -305,29 +329,27 @@ Open [Figma](https://figma.com) in a new tab / window. This tool allows us to ed
 - I personally use [Affinity Designer](https://affinity.serif.com/en-gb/designer/).
 - [Gimp](https://www.gimp.org) is free.
 
-`// todo: add image of figma homepage`
+![figma](img/figma.png)
 
 This workshop is not on how to use Figma, or how to use design tools, we won't be going into too much detail about how to use it.
 
 If you don't already have an account create a new one by pressing the **Sign Up** button. Once you have completed this, go to this [link](https://www.figma.com/file/HUboUyk2DsD1u3JYPHPMo7/iPhone-App-Icon-Template) where I have set up a template file that will let you create and design your own app icon.
 
-`// todo: add image of figma app icon template`
+![app-icon-template](img/app-icon-template.png)
 
 In this file you can see the full sized version of your app icon (1024px x 1024px) along side the 180px, 120px, and 80px sizes to compare how your app will look when scaled down.
 
 The template app icon is composed of a square background and an icon modified and download from Flaticon. These can be found in the **App-Icon** layer (_technically a frame_). Double click the layer to expand it.
 
-**Copy this file to your drafts, as you cannot directly modify the template.**
-
-`// todo: verify these instructions are correct`
+**[Copy](https://help.figma.com/hc/en-us/articles/360038511533-Duplicate-a-File) this file to your drafts, as you cannot directly modify the template.**
 
 _It is also configured to export all the app icon sizes you'll need for iPhone plus the versions for Spotlight search._
 
 ### Changing the Background Colour
 
-To change our app icon **background colour**, select the square inside the **App-Icon** layer named **Background**. You can change the colour by putting in a new hex colour code in the  **Fill** field.
+To change our app icon **background colour**, select the square inside the **App-Icon** layer named **Background**. You can change the colour by putting in a new hex colour code in the  **Fill** field. _We will add the icon image in a bit._
 
-`// todo: add image of Fill colour field in figma`
+![figma-fill-colour](img/figma-fill-colour.png)
 
 Try out different colours and shades from your colour scheme and think about how our icon will look on top of it. You can also go back and change the icon colour on Flaticon, if you think another colour would work better.
 
@@ -337,15 +359,17 @@ I will be using a light shade of my app background colour (#67758E) as my icon b
 
 Now it's time to add the icon we downloaded from Flaticon. Press the options button at the top left corner — _it looks like a stack of three horizontal lines_ — and search for **Place Image**. This will bring up a file selection window.
 
-Alternately, use the shortcut <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>k</kbd>. Upload your icon.
+_(Alternately, use the shortcut <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>k</kbd>. )_
 
-Click and drag your mouse to add your image. You can change it's size manually to something like **668 x 668** so it fills up 2/3 of the area _(so it looks aesthetically pleasing)_.
+Upload your icon.
+
+Click and drag your mouse to add your image _(hold <knd>shift</kbd> so that icon maintains its aspect ratio)_. You can change it's size manually to something like **668 x 668** so it fills up 2/3 of the area _(so it looks aesthetically pleasing)_.
 
 _Now how do we centre our icon, so it's perfectly in the centre?_
 
 If you move the uploaded image you will see that it snaps into place with guidelines at the centre of the frame.
 
-`// todo: add image of finished app icon here`
+![figma-app-icon](img/figma-app-icon.png)
 
 Modified icon used in design was created by [Freepik](https://www.flaticon.com/authors/freepik), licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/).
 
@@ -368,11 +392,13 @@ Let's start with the 1024 x 1024 version first, then the 120 x 120, then the 80 
 
 To export our icon at these different resolutions, click on the actual figma background and press **Export iPhone App Icon Template**. _If you renamed the project it will say your project name instead_.
 
-This will bring up a small window, where you can select what you want to export.
+This will bring up a small window, where you can select what you want to export. You can select the first option which is an image of the entire workspace.
+
+![figma-export](img/figma-export.png)
 
 The template is configured to name your files appropriately, but if you use something else in the future make sure your file names are descriptive, especially if you are working on a team.
 
-**Configured Exports:**
+**Suggested File Names:**
 
 - 1024px x 1024px: `AppStore-1024@1x`
 - 180px x 180px: `Icon-60@3x`
@@ -386,17 +412,23 @@ Once you export the app icon images from Figma, it will download a zip file cont
 
 To add icons to your app in Xcode navigate to `Assets.xcassets`. You can find it in the navigation area or use open quickly using <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>o</kbd>.
 
-`// todo: add image of Assets.xcassets`
+![assets](img/assets.png)
 
 Click on the **AppIcon** resource in the editor area. This should show you all the possible icon sizes we might need or use for iPhone and iPad.
 
+![app-icon](img/app-icon.png)
+
 If you go to the **Attributes Inspector** you'll notice that we can uncheck iPad which hides all the iPad specific icons.
 
-To add your files simply select them from **Finder** and drag and drop them into `Assets.xcassets`. It's that simple.
+To add your files simply select them from **Finder** and drag and drop them below AppIcon. It's that simple.
 
-Well you might get an error (_warning_) as I did where the app store version is unassigned. Simply drag and drop it from the bottom unassigned position into the App Store icon slot.
+You might get an error (_warning_) as I did where the app store version is unassigned.
 
-`// todo: add image of unassigned icon`
+![app-icon-warning](img/app-icon-warning.png)
+
+Simply drag and drop it from the bottom unassigned position into the App Store icon slot.
+
+![app-icon-app-store](img/app-icon-app-store.png)
 
 You can now build and run your app and see what you icon actually looks like on iOS.
 
@@ -1016,6 +1048,7 @@ I encourage you to add to this game, see if you can add new features like and an
 
 This are some of the resources I used to make this workshop, all of them are worth reading / watching.
 
+- [iOS Curriculum](https://github.com/riconaranjo/iOS-Curriculum)
 - [Apple's Human Interface Guidelines (HIG)](https://developer.apple.com/design/human-interface-guidelines/)
 - [iOS Human Interface Guidelines I](https://medium.com/nona-web/ios-human-interface-guideline-f012a5ba962e)
 - [HIG: Launch Screen](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/launch-screen/)
@@ -1037,6 +1070,7 @@ This are some of the resources I used to make this workshop, all of them are wor
 - [Affinity Designer](https://affinity.serif.com/en-gb/designer/)
 - [Gimp](https://www.gimp.org)
 - [iPhone App Icon Template](https://www.figma.com/file/HUboUyk2DsD1u3JYPHPMo7/iPhone-App-Icon-Template)
+- [How to Duplicate a Figma File](https://help.figma.com/hc/en-us/articles/360038511533-Duplicate-a-File)
 - [Tic Tac Toe App Icon](https://www.figma.com/file/bNCiyAC6W5EBeNiNMA5GCx/Tic-Tac-Toe-App-Icon)
 - [UIStackView](https://developer.apple.com/documentation/uikit/uistackview)
 - [Understanding Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html)
