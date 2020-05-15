@@ -135,7 +135,7 @@ Different colours provoke certain emotions. You can decide to use this to create
 - **Purple:** royalty, wisdom
 - **White:** purity
 
-_For more information read Apple's own Human Interface Guidelines:[HIG: Color](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/)._
+_For more information read Apple's own Human Interface Guidelines: [HIG: Color](https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/)._
 
 _For more about colour theory read [The Importance of Color Theory](https://www.webdesign.org/web-design-basics/color-theory/the-importance-of-color-in-web-designing.12437.html) and [How Important is Colour In Design](https://simplygraphic.co.za/2016/05/06/important-colour-design/)._
 
