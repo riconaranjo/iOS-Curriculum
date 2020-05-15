@@ -43,7 +43,7 @@ To get started, let's create a **Project** by opening Xcode and selecting the _C
 
 Select **Single View App** under the iOS tab and press next.
 
-Give your project a name like **SettingUpAnApp**, as this won't be our tic tac toe app. Finish setting up your project, making sure that **Swift** is selected as the project language.
+Give your project a name like **SettingUpAnApp**, as this won't be our tic tac toe app. Finish setting up your project, making sure that **Swift** is selected as the project language and that **Storyboard** is selected for the user interface.
 
 ## Launch Screens
 
