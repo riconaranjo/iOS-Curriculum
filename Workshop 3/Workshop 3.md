@@ -10,8 +10,6 @@ _In this workshop, we will learn how to add a splash screen and how to create ap
 | Adding an app icon               | how to give your app a unique icon         |
 | Create your own Tic Tac Toe app  | how to create a proper app in Xcode        |
 
-`// todo: add links to headers (+ playground pages?)`
-
 # 3.1 The Setup
 
 In this workshop we are going to create a simple Tic Tac Toe app with three scenes:
@@ -19,6 +17,19 @@ In this workshop we are going to create a simple Tic Tac Toe app with three scen
 1. Main menu
 2. Game board
 3. Game end screen
+
+---
+
+## Topics
+
+- [Human Interface Guidelines](#Human-Interface-Guidelines)
+- [Getting Started](#Getting-Started)
+- [Launch Screens](#Launch-Screens)
+- [App Transitions](#App-Transitions)
+- [Colours](#Colours)
+- [App Icons](#App-Icons)
+
+---
 
 ## Human Interface Guidelines
 
@@ -392,6 +403,27 @@ You can now build and run your app and see what you icon actually looks like on 
 # 3.2 The Fun Part (Coding)
 
 Now that we have everything all set-up, now we can get started actually coding — well almost, we still need to finish setting up our UI and a few other things. I promise we'll get to the coding soon enough, _and there's a fair amount of coding_.
+
+---
+
+## Topics
+
+[Tic Tac Toe](#Tic-Tac-Toe)
+[Icons](#Icons)
+[Images](#Images)
+[Storyboard](#Storyboard)
+[View Controllers](#View-Controllers)
+[Button Grid](#Button-Grid)
+[Initial Screen](#Initial-Screen)
+[End Game Screen](#End-Game-Screen)
+[Encapsulation](#Encapsulation)
+[Initial View Controller](#Initial-View-Controller)
+[GameLogicViewController](#GameLogicViewController)
+[GameOverViewController](#GameOverViewController)
+[Unwinding Segues](#Unwinding-Segues)
+[Play a Game](#Play-a-Game)
+
+---
 
 ## Tic Tac Toe
 
