@@ -10,8 +10,6 @@ _This workshop is about learning how to set yourself up with Xcode to create you
 | Creating outlets + actions         | how to tie logic to your UI        |
 | Build + Run app on your own iPhone | how to run your own apps           |
 
-`// todo: add links to headers (+ playground pages?)`
-
 # 2.1 The Setup
 
 This workshop will be a quick introduction on how to use Xcode to create iOS apps.
@@ -19,6 +17,13 @@ This workshop will be a quick introduction on how to use Xcode to create iOS app
 1. **how to create + use an Xcode project**
 2. **how to add UI elements + connect them to logic**
 3. **how to run your project on your own iPhone**
+
+## Topics
+
+- [Xcode Projects](#Xcode-Projects)
+- [Xcode Crash Course](#Xcode-Crash-Course)
+- [Source Code](#Source-Code)
+- [Shortcuts](#Shortcuts)
 
 _First let's start with how to create an Xcode project._
 
@@ -76,9 +81,9 @@ Additionally, if you wish to learn more about Xcode, I recommend watching Apple'
 
 By downloading and installing Xcode, you automatically get an **iOS simulator** so you can actually test your app running on iOS, even if you don't own an iPhone. It also allows you to test your app on various different iPhone models with different screen sizes and resolutions to make sure it works fine on the smallest and biggest iPhones.
 
-In top left corner in the toolbar, select **iPhone Xs** in the scheme pop-up menu. This menu allows you to select which type of iPhone you would like to simulate your app on.
+In top left corner in the toolbar, select **iPhone 11** in the scheme pop-up menu. This menu allows you to select which type of iPhone you would like to simulate your app on.
 
-Press the **Run** button to build and run your app. This will run it on the **iPhone Xs** simulator we configured. You can also press <kbd>cmd</kbd> + <kbd>r</kbd> to do this.
+Press the **Run** button to build and run your app. This will run it on the **iPhone 11** simulator we configured. You can also press <kbd>cmd</kbd> + <kbd>r</kbd> to do this.
 
 If this is your first time running an app, you should get a prompt to enable Developer Mode; this mode allows Xcode to access certain debugging features without asking for your password every time.
 
@@ -200,6 +205,11 @@ Now that we have everything set up, we can start actually building our app. Let'
 
 We are going to build a simple app that displays a greeting when we enter our name in a text field and press a button.
 
+## Topics
+
+- [Storyboards](#Storyboards)
+- [Running Your Own App](#Running-Your-Own-App)
+
 ## Storyboards
 
 As explained earlier, storyboard are used to create the user interface design for your app scenes and the transitions between them. For our app we will just stick to one scene.
@@ -309,7 +319,7 @@ Our users are going to enter their names into this field, but how will they know
 
 We can also change the **Text Input Traits** such as capitalizing all words or changing the return key to say **Done** or something else. Set the capitalization trait to words since we want names to be capitalized.
 
-Now let's add constraints so it always appears centred below our title, and spans the width of our screen, even on different iPhone models like the SE or iPhone Xs Max.
+Now let's add constraints so it always appears centred below our title, and spans the width of our screen, even on different iPhone models like the SE or iPhone 11 Pro Max.
 
 Press the **Add new Constraints** button again and select the top, left, and right constraints. Change the top constraint value to 100, and the left and right constraints to 50 each. Press the **Add 3 Constraints** button to apply these.
 
@@ -516,11 +526,11 @@ This are some of the resources I used to make this workshop, all of them are wor
 - [Build a Basic UI](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/BuildABasicUI.html#//apple_ref/doc/uid/TP40015214-CH5-SW1)
 - [Introduction to Xcode](https://developer.apple.com/videos/play/wwdc2016/413/)
 - [Breaking Down the AppDelegate (swift 3)](https://medium.com/@Dougly/breaking-down-the-appdelegate-swift-3-258e48f907d6)
-- [`UIViewController`](https://developer.apple.com/documentation/uikit/uiviewcontroller)
+- [UIViewController](https://developer.apple.com/documentation/uikit/uiviewcontroller)
 - [UIKit](https://developer.apple.com/documentation/uikit)
 - [Interface Builder](https://developer.apple.com/xcode/interface-builder/)
 - [Using Interface Builder](https://developer.apple.com/library/archive/documentation/ToolsLanguages/Conceptual/Xcode_Overview/UsingInterfaceBuilder.html)
-- [`UILabel`](https://developer.apple.com/documentation/uikit/uilabel)
+- [UILabel](https://developer.apple.com/documentation/uikit/uilabel)
 - [Should IBOutlets be weak or strong?](https://www.zerotoappstore.com/should-iboutlets-be-weak-or-strong.html)
 - [UIControl.event](https://developer.apple.com/documentation/uikit/uicontrol/event)
 - [Outlet vs Action Connections in Xcode](https://medium.com/@GanChau/outlet-vs-action-connections-in-xcode-b5331fb233a1)

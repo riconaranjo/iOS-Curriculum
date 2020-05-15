@@ -28,4 +28,4 @@ print("hello world")
   _Congrats you have now written your first line of Swift code!_
  
  */
-//:  Click here for [Datatypes](@next)
+//:  Click here to [start](@next)
