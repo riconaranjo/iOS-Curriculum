@@ -494,20 +494,20 @@ I have arbitrarily decided to use 128px png images, because they are high resolu
 
 Go to [Flaticon](https://www.flaticon.com) and find images you want to use for Xs and Os, as well as a default placeholder icon. You can then use [Figma](https://www.figma.com) to set to them to correct size, but make sure that the background remains transparent when you export as png — _make sure the **Show in exports** option is unchecked for the background_.
 
-- You can use the icons I will be using, found [here](https://www.figma.com/file/UWmK6SvDEelkZuBTIvH6pA/Tic-Tac-Toe-Icons)
-- export them, and extract them from the zip file
+- You can use the icons I will be using, found [here](https://www.figma.com/file/UWmK6SvDEelkZuBTIvH6pA/Tic-Tac-Toe-Icons).
+- Export them, and extract them from the zip file.
 
 ### Importing Images
 
 Importing images into Xcode is quite similar to importing app icons except this time we drag and drop them into **below the AppIcon** file. You should see the new files added.
 
-`// todo: add image of added image assets into xcode`
+![icons](img/icons.png)
 
-Now we can use these images anywhere in our application.
+_Now we can use these images anywhere in our application._
 
 ## Storyboard
 
-Let's go to the storyboard and add our three view controllers. Try and see if you can remember how to do it on your own again. Lay them next to each other in a vertical row.
+Let's go to our main storyboard and add our three view controllers. Try and see if you can remember how to do it on your own again. Lay them next to each other in a horizontal row.
 
 _If you need a hint, see the [Adding View Controllers](#Adding-View-Controllers) section._
 
@@ -515,20 +515,22 @@ _If you need a hint, see the [Adding View Controllers](#Adding-View-Controllers)
 
 We will be adding three view controllers to our app:
 
-1. **InitialViewController**
+1. **InitialViewController** (left)
     - _serves as a start menu and launches the game view controller._
-2. **GameLogicViewController**
+2. **GameLogicViewController** (middle)
     - _responsible for managing the buttons, player turns, and checking if a player has won yet, launching the Game Over View Controller, and passing the game result to it._
-3. **GameOverViewController**
+3. **GameOverViewController** (right)
     - _responsible for showing the game result, and giving an option to restart the game or go back to the initial view._
 
 Use <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> to bring up the object library and search for view controller. Drag and drop three view controllers in a row.
 
-Change their background and tint colours according to the colours you defined in your colour scheme in the [Colours](#Colours)section.
+_Don't worry about their names yet, we'll change that later, just place the blank view controller for now._
+
+Change their background and tint colours according to the colours you defined in your colour scheme in the [Colours](#Colours) section.
 
 - I'll be using #465775 (background) and #2CABD8 (tint)
 
-`// todo: add image of three view controllers with background colour`
+![three-view-controllers](img/three-view-controllers.png)
 
 ## Button Grid
 
@@ -538,11 +540,21 @@ Let's start with the first button. Bring up the object library and search for 'b
 
 Delete the text inside the button and in the **Attributes Inspector** select our placeholder icon, it should be named `Icon-Placeholder`.
 
-`// todo: add image of selecting a button image`
+![button-image](img/button-image.png)
+
+It should look like this:
+
+![button-grid-1](img/button-grid-1.png)
 
 - Select the button and copy + paste it so you have horizontal row of three buttons.
-- Select the **Embed In** button (left of the constraint buttons) and click on the **Stack View** option
+- Select the three buttons, then the **Embed In** button (left of the constraint buttons) and click on the **Stack View** option
   - This will create a horizontal stack view with the three buttons evenly spaced out
+
+![button-grid-2](img/button-grid-2.png)
+
+It should look like this, one row of three buttons.
+
+![button-grid-3](img/button-grid-3.png)
 
 ### UIStackView
 
@@ -554,23 +566,31 @@ A stack view is a UI element that allows us to organize a bunch of other UI elem
 
 For more information read Apple's developer documentation for [`UIStackView`](https://developer.apple.com/documentation/uikit/uistackview).
 
-For our 3x3 grid we will be using three horizontal stack views — each with three buttons themselves — inside a bigger vertical stack view. We will have a **spacing of 10** between our buttons, we we can define in the **Attributes Inspector**.
+For our 3x3 grid we will be using three horizontal stack views — each with three buttons themselves — inside a bigger vertical stack view. We will have a **spacing of 10** between our buttons, we we can define in the **Attributes Inspector** (Select the Stack View from the Outline View panel on the left).
 
-`// todo: add image of spacing in attributes inspector`
+![button-grid-4](img/button-grid-4.png)
 
 Click on each button and add a constraint for **Aspect Ratio** so they don't get skewed when they get resized.
+
+![button-grid-5](img/button-grid-5.png)
 
 ### Making a Grid
 
 To complete our 3x3 grid we will need to copy + paste our stack view twice for a total of 9 buttons.
 
+![button-grid-6](img/button-grid-6.png)
+
+_You don't have to worry about placement or alignment yet, we will add some constraints in a bit._
+
 Select all three stack views in the  **Outline View** (left pane of the Storyboard), and press the **Embed In** button and select the _Stack View_ again.
 
-`// todo: add image of stack views selected in outline view`
+![button-grid-7](img/button-grid-7.png)
 
 This will create a vertical stack view encompassing our three horizontal — _a meta stack view_.
 
-Change the spacing to 10, just like we did with the other stack views. We should have a nicely arranged 3x3 grid, but with slightly oversized icons for most iPhone screens. This is because of the default size of our icons.
+Change the spacing to 10, just like we did with the other stack views. We should have a nicely arranged 3x3 grid, but with slightly oversized icons for most iPhone screens. This is because of the default size of our icons (128x128).
+
+![button-grid-8](img/button-grid-8.png)
 
 We need to ensure that our design is adaptive to all iPhone models, luckily Apple provides plenty of tools for us to do this with [Auto Layout](https://developer.apple.com/library/archive/documentation/UserExperience/Conceptual/AutolayoutPG/index.html).
 
@@ -594,11 +614,17 @@ _"This constraint-based approach to design allows you to build user interfaces t
 
 Select each of our grid buttons individually from the **Outline View** and add the **Equal Widths** (or **Equal Heights**) constraint. This will ensure that even if our grid is resized, all the buttons are the same and don't get squished.
 
-`// todo: add image of auto layout constraints`
+![button-grid-9](img/button-grid-9.png)
 
 Now select our meta stack view — _a stack view of stack views_— and add the **Aspect Ratio** constraint as well as **Left** and **Right** constraints of 40. This ensures that our grid will resize dynamically depending on the screen size. Add constraints to centre our grid horizontally and vertically.
 
-`// todo: add image of centred grid`
+![button-grid-10](img/button-grid-10.png)
+
+![button-grid-11](img/button-grid-11.png)
+
+It should look like this:
+
+![button-grid-12](img/button-grid-12.png)
 
 **Congrats! We have completed our grid!**
 
