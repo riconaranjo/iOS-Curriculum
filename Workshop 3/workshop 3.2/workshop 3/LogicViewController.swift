@@ -69,7 +69,7 @@ class GameLogicViewController: UIViewController {
     {
         if let vc = segue.destination as? GameOverViewController
         {
-            if turnCount != 9 {
+            if winner() {
                 vc.winner = xTurn ? "X Player Wins!" : "O Player Wins!"
                 
             } else {
