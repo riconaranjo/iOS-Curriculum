@@ -532,6 +532,8 @@ Change their background and tint colours according to the colours you defined in
 
 ![three-view-controllers](img/three-view-controllers.png)
 
+Don't forget to change the colours for the launch screen too.
+
 ## Button Grid
 
 Now we can't have a tic tac toe game without a 3x3 grid, so let's add one to our middle view controller. This will be our Game Logic View Controller. Our grid will be comprised of 9 buttons, with a background image.
@@ -858,7 +860,7 @@ Next up is our common action function. This function is triggered every time a m
 
 Create an `@IBAction` from one of the buttons in our grid, and name it **playTurn**, leaving the default options as is.
 
-Now <kbd>ctrl</kbd> + mouse click and drag all the other buttons in the grid to the same action, you should see the function get highlighted.
+Now <kbd>ctrl</kbd> + mouse click and drag all the other buttons (individually) in the grid to the same action, you should see the function get highlighted.
 
 - _or you can right click and drag_
 
