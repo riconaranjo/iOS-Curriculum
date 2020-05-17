@@ -634,24 +634,30 @@ Learn more about Auto Layout in this article: [Auto Layout Tutorial in iOS: Gett
 
 Let's create a label so we can she the players whose turn it is. It's simply going to be a text label saying "X Player's Turn" or "O Player's Turn". We'll also have it say the winner or draw game.
 
-Add a **label** from the object library and drag it above our grid. Give it the following **constraints**:
+Add a **Label** from the object library and drag it above our grid. Give it the following **constraints**:
 
 - 80 on the bottom
 - centred horizontally
 
-Change the **font size** to 24 and change the default text to say **X Player's Turn**.
+Change the **font size** to 24, change the default text to say **X Player's Turn**, and change the font colour to Light Cyan (#E3F4FF).
+
+![player-turn-label](img/player-turn-label.png)
 
 ## Initial Screen
 
-Now let's go back to the inital screen and add our game's title and a button to start a new game. We're going to add a label with our app name, a button to start a new game, and an image with our app icon for aesthetic reasons.
+Now let's go back to the inital screen and add our game's title and a button to start a new game. We're going to add a label with our app name, a button to start a new game, and an image with our app logo — _that we downloaded from [Flaticon](https://flaticon.com)_ — for aesthetic reasons.
 
-`// todo: add image of initial screen with UI`
+_Recreating the design of this initial screen is left as an exercise to the reader...(hint: all elements have an upper constraint of 80)_
+
+![initial-screen](img/initial-screen.png)
 
 Let's add a segue so that when you press the **New Game** button it takes you to the second screen so you can actually play a game.
 
 - give it a segue identifier of **StartGame**
 
 To add a segue identifier select the arrow going from the Inital View Controller to the Game Logic View Controller, and add a unique name in the **Attributes Inspector** _Segue_ field.
+
+![segue](img/segue.png)
 
 ## End Game Screen
 
@@ -665,17 +671,23 @@ But first let's add the text labels we're going to use to display the informatio
 
 **Add two text labels:**
 
-- larger one: _Game Over_ (font size: 32)
-- smaller one: _Winner_ (font size: 24)
+- larger one: **Game Over**
+  - _font size: 32, horizontally centred, top constraint: 160_
+- smaller one: **Winner**
+  - _font size: 24, horizontally centred, top  constraint: 15_
 
 **Add two buttons:**
 
-- New Game (segue to: game logic view)
-- Exit (segue to: initial view)
+- **New Game**
+  - _font size: 18, horizontally and vertically centred_
+  - _segue to: game logic view (middle)_
+- **Exit**
+  - _font size: 18, horizontally centred, top constraint: 40_
+  - _segue to: initial view (left)_
 
-You can add the segue from new game to the Game Logic View Controller, but for the exit view we're going to do an unwind segue which is slightly different. _We'll go over this in a bit._
+**You can add the segue from new game to the Game Logic View Controller**, but for the Exit view we're going to do an unwind segue which is slightly different. _We'll go over this in a bit._
 
-`// todo: add image of end game view controller`
+![end-screen](img/end-screen.png)
 
 ## Encapsulation
 
@@ -691,11 +703,11 @@ The files and their classes must have the same name as our view controllers:
 2. GameLogicViewController
 3. GameOverViewController
 
-Let's start with the first view controller: InitialViewController.
+Let's start with the first view controller: **InitialViewController**.
 
 ## Initial View Controller
 
-In the **Project Navigator** right click and add select **New File...**, choose **Swift File**, and name this first file **InitialViewController**; the _.swift_ will automatically be appended.
+In the **Project Navigator** right click the main folder, select **New File...**, choose **Swift File**, and name this first file **InitialViewController**; the _.swift_ will automatically be appended.
 
 Open the file and add the following code, to define our custom view controller:
 
@@ -714,9 +726,19 @@ class InitialViewController: UIViewController {
 }
 ```
 
-Repeat this for the other two view controllers but change their **file** and **class** names to their respective view controllers: **GameLogicViewController** and **GameOverViewController**.
+You can remove the default code in the file:
 
-`// todo add image of navigation area with view controller files`
+``` swift
+import Foundation
+```
+
+Repeat this for the other two view controllers but change their **file** and **class** names to their respective view controllers: **GameLogicViewController** and **GameOverViewController** _(and the print statement text)_.
+
+![swift-files](img/swift-files.png)
+
+Don't forget to go back to the storyboard and add the classes to the each view controller.
+
+![class-name](img/class-name.png)
 
 ## GameLogicViewController
 
@@ -727,25 +749,35 @@ The `GameLogicViewController.swift` file will contain our actual game logic. You
 - We want a common action, triggered by every button in the grid
   - _which changes the button image to an X or an O_
   - _and checks if that was a winning move, or if draw game_
-- If the game is over, transistion to the end game screen
+- If the game is over, transition to the end game screen
 
-Before we start on the actual logic though, let's create that manual segue we talked about before.
+Before we start on the actual logic though, let's create that manual segue for when the game is over.
 
 ### Manual Segue
 
 _What happens once a player wins a game of tic tac toe?_
 
-We want our app to move to the end game screen as soon as a winning move is played, how do we do this? Every time we've used a segue so far, it's been triggered by pressing a button.
+We want our app to move to the end game screen as soon as a winning move is played, how do we do this?
+
+- Every time we've used a segue so far, it's been triggered directly by pressing a button.
 
 This is where manual segues come in handy. We can define a segue differently than clicking and dragging a button in the storyboard.
 
-You can create a manual segue either by clicking and dragging from the view controller name in the **Outline View**, or by doing the same from the left-most button on the top of the view controller.
+You can create a manual segue either by clicking and dragging from the view controller name – of the **Game Logic View Controller** (middle) – in the **Outline View** (in the main storyboard), to the **Game Over View Controller** (right).
 
-`// todo: add images of creating manual segue`
+- Select the **Show** option for the segue.
+
+![manual-segue](img/manual-segue.png)
+
+You could do the same from the left-most button on the top of the view controller.
+
+![manual-segue-2](img/manual-segue-2.png)
 
 To trigger this segue, we will need to call it programmatically, and thus we will need to assign it a segue identifier. Try and see if you can remember how to do this, if you need a refresher go back to [Main Initial Screen](#Main-Initial-Screen). Give it the segue identifier **endGame**.
 
-Click on the Game Logic View Controller in the storyboard with the **Assistant Editor**, so that you have the swift file open next to the canvas. Now let's add our game logic.
+Click on the **Game Logic View Controller** in the storyboard with the **Assistant Editor**, so that you have the swift file open next to the canvas. Now let's add our game logic.
+
+![assistant](img/assistant.png)
 
 ### Class Properties
 
@@ -828,7 +860,9 @@ Create an `@IBAction` from one of the buttons in our grid, and name it **playTur
 
 Now <kbd>ctrl</kbd> + mouse click and drag all the other buttons in the grid to the same action, you should see the function get highlighted.
 
-`// todo: add image of adding linking to existing action`
+- _or you can right click and drag_
+
+![button-action](img/button-action.png)
 
 _Refresher: [Workshop 2. Getting All Set-up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md/#Actions)_
 
@@ -856,7 +890,7 @@ You may have noticed that we can change the function parameter type from `Any` t
     updateBoard(button: sender.tag)
 
     // update button image
-    updateButton(button: button)
+    updateButton(button: sender)
 
     // exit game if winner found or draw game
     if winner() {
@@ -978,21 +1012,16 @@ Fortunately, this is actually quite simple in iOS, especially since we can use t
 
 All we need to do is add a method which will automatically be called by the system once we trigger a segue: `prepare()`.
 
-This function simply checks if the turn count is 9, as this would mean a draw game, and then puts a string describing the game resolution in the Game Over View Controller `winner` class property — _not to be confused with the `winner()` function in this view controller_.
+This function simply checks if there was a winner or a draw, and puts a string describing the game resolution in the Game Over View Controller `winner` class property — _not to be confused with the `winner()` function in this view controller_.
 
-_You might get an error that `vc.winner` does not exist, which is not false, but we will add it shortly so ignore this for now._
-
-- [How To: Pass Data Between View Controllers In Swift (Extended)](https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/)
-
-- use `prepareForSegue()`...
-- we will be using class properties to pass data
+_You might get an error that `vc.winner` does not exist, which is not incorrect, but we will add it shortly so ignore this for now._
 
 ``` swift
 override func prepare(for segue: UIStoryboardSegue, sender: Any?)
 {
     if let vc = segue.destination as? GameOverViewController
     {
-        if turnCount != 9 {
+        if winner() {
             vc.winner = xTurn ? "X Player Wins!" : "O Player Wins!"
         } else {
             vc.winner = "No winner..."
@@ -1000,6 +1029,8 @@ override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     }
 }
 ```
+
+For more information check out: [How To: Pass Data Between View Controllers In Swift (Extended)](https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/)
 
 ## GameOverViewController
 
@@ -1040,11 +1071,11 @@ override func viewDidLoad() {
 
 The last thing we need to set up is the unwind segue from the Game Over View Controller to the Initial View Controller. If you you've noticed, regular **Show** segues adds a view controller on top of the current view. This is often useful, and in our app it shows the continuation of a series of rematches. But what if we want to start a new series of games?
 
-`// todo: add image of stacked view controllers after segues`
+![unwinding](img/unwinding.jpeg)
 
-We don't want our new games to go on top of our old games, we want to start with a fresh stack of games. Using an unwind segue, we can get rid of all the segues we pushed to the top.
+We don't want our new series of games to go on top of our old games, we want to start with a fresh stack of games. Using an unwind segue, we can get rid of all the segues we pushed to the top.
 
-Let's start first by adding this code to the Inital View Controller class to set up the unwind segue. This is different from other segues where we usually write the code in the view controller we segue **from** — _instead here we're adding code to the destination view controller_.
+Let's start first by adding this code to the **Inital View Controller** class to set up the unwind segue. This is different from other segues where we usually write the code in the view controller we segue **from** — _instead here we're adding code to the destination view controller_.
 
 You can add it yourself by writing `unwind` and Xcode will suggest the **Swift Unwind Segue Method**. You can press <kbd>tab</kbd> to autocomplete. Rename the function to `unwindToInitalView()`.
 
@@ -1055,10 +1086,10 @@ You can add it yourself by writing `unwind` and Xcode will suggest the **Swift U
 }
 ```
 
-Let's head back over to the Game Over View Controller and <kbd>ctrl</kbd> + click and drag our exit button to **Exit** component _(right most button above view controller)_ of the view controller in the storyboard.
-- select our function we just added (it should be the only option)
+Let's head back over to the **Game Over View Controller** and <kbd>ctrl</kbd> + click and drag our exit button to **Exit** component _(right most button above view controller)_ of the view controller in the storyboard.
+- select our function (`unwindToInitialView:`) we just added (it should be the only option)
 
-`// todo: add image of exti component`
+![unwinding-2](img/unwinding-2.png)
 
 More info: [Unwind Segues Step-by-Step (and 4 Reasons to Use Them)](https://matteomanferdini.com/unwind-segue/)
 
@@ -1103,9 +1134,9 @@ This are some of the resources I used to make this workshop, all of them are wor
 - [Building Adaptive User Interfaces](https://developer.apple.com/design/adaptivity/)
 - [Auto Layout Tutorial in iOS: Getting Started](https://www.raywenderlich.com/811496-auto-layout-tutorial-in-ios-getting-started)
 - [Encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming))
-[Workshop 1. Getting Started with Swift](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%201/Workshop%201.md)
+- [Workshop 1. Getting Started with Swift](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%201/Workshop%201.md)
 - [How To: Pass Data Between View Controllers In Swift (Extended)](https://learnappmaking.com/pass-data-between-view-controllers-swift-how-to/)
-More info: [Unwind Segues Step-by-Step (and 4 Reasons to Use Them)](https://matteomanferdini.com/unwind-segue/)
+- [Unwind Segues Step-by-Step (and 4 Reasons to Use Them)](https://matteomanferdini.com/unwind-segue/)
 
 _And of course..._
 

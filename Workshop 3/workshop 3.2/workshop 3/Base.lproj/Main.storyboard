@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -66,11 +64,11 @@
             <objects>
                 <viewController id="Hp0-C1-bf8" customClass="GameLogicViewController" customModule="workshop_3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v9Y-YM-Azt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Odq-54-WxU">
-                                <rect key="frame" x="40" y="260.66666666666669" width="295" height="291.00000000000006"/>
+                                <rect key="frame" x="40" y="233.66666666666663" width="295" height="291"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OB8-0N-YW8">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="91.666666666666671"/>
@@ -112,7 +110,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nIo-RN-GV6">
-                                        <rect key="frame" x="0.0" y="99.666666666666629" width="295" height="91.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="99.666666666666657" width="295" height="91.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5n-7h-5lf">
                                                 <rect key="frame" x="0.0" y="0.0" width="91.666666666666671" height="91.666666666666671"/>
@@ -147,7 +145,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ecT-Zh-a8b">
-                                        <rect key="frame" x="0.0" y="199.33333333333331" width="295" height="91.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="199.33333333333334" width="295" height="91.666666666666657"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csk-qp-MmM">
                                                 <rect key="frame" x="0.0" y="0.0" width="91.666666666666671" height="91.666666666666671"/>
@@ -192,7 +190,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X Player's Turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3D-Cf-vrb">
-                                <rect key="frame" x="99" y="147" width="177" height="33.666666666666657"/>
+                                <rect key="frame" x="99" y="120.00000000000001" width="177" height="33.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" red="0.8901960784313725" green="0.95686274509803915" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -233,17 +231,17 @@
             <objects>
                 <viewController id="khV-u7-GgY" customClass="GameOverViewController" customModule="workshop_3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JTZ-2Y-zG3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Over!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05E-kr-LXJ">
-                                <rect key="frame" x="105.33333333333333" y="204" width="164.33333333333337" height="38.666666666666657"/>
+                                <rect key="frame" x="105.33333333333333" y="160" width="164.33333333333337" height="38.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuX-eO-TBe">
-                                <rect key="frame" x="143" y="389" width="89" height="34"/>
+                                <rect key="frame" x="143" y="362" width="89" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="New Game"/>
                                 <connections>
@@ -251,7 +249,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nab-KF-OAq">
-                                <rect key="frame" x="172.66666666666666" y="463" width="30" height="34"/>
+                                <rect key="frame" x="172.66666666666666" y="436" width="30" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Exit"/>
                                 <connections>
@@ -259,7 +257,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8u7-9Y-ZwQ">
-                                <rect key="frame" x="150" y="257.66666666666669" width="75" height="29"/>
+                                <rect key="frame" x="150" y="213.66666666666666" width="75" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.89019607840000003" green="0.95686274510000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -289,13 +287,13 @@
             <point key="canvasLocation" x="2007" y="21"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Icon-Placeholder" width="128" height="128"/>
-        <image name="tic-tac-toe" width="512" height="512"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="GGO-81-yjU"/>
         <segue reference="uI1-XI-Mdg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.17254901959999999" green="0.6705882353" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+    <resources>
+        <image name="Icon-Placeholder" width="128" height="128"/>
+        <image name="tic-tac-toe" width="512" height="512"/>
+    </resources>
 </document>
