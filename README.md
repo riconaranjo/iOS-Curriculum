@@ -1,10 +1,12 @@
 # iOS Curriculum
 
-This is a series of **5 workshops** designed to walk you through every step in the iOS app development process: how to install Xcode, how to design and program your app, and how to put your app on your phone.
+This is a series of **3 workshops** designed to walk you through every step in the iOS app development process: how to install Xcode, how to design and program your app, and how to put your app on your iPhone.
 
 **Each workshop will build on the previous ones;** if you missed a workshop or you just want to join in halfway through the series, all the material covered in each workshop can be found in its respective workshop folder.
 
-`// todo: insert folder links here`
+- [1. Getting Started with Swift](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%201/Workshop%201.md)
+- [2. Getting All Set-up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md)
+- [3. Mastering the Basics](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%203/Workshop%203.md)
 
 This series of workshops is designed for beginners. Even if you have never created a program before, you should be able to follow along. If you get lost while actually attending the workshops, you can view all the material online and work on it at your own pace at the [GitHub repo](github.com/riconaranjo/iOS-Curriculum/tree/master).
 
@@ -47,8 +49,6 @@ This workshop is about learning how to code in Swift, using Xcode Playgrounds.
 
 - [Online version](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md)
 
-`// rough draft complete`
-
 This workshop is about learning how to set yourself up with Xcode to create your own iOS apps. We will learn how to create UI elements, and create actions for when you press a button.
 
 | Topics                             |
@@ -63,8 +63,6 @@ This workshop is about learning how to set yourself up with Xcode to create your
 
 - [Online version](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%203/Workshop%203.md)
 
-`// work in progress`
-
 In this workshop, we will learn how to add a splash screen and how to create apps with more than one View in the Storyboard; we will also learn more about colour schemes, why they're important, and how to apply one to your app. We will learn how to add app icons, and then we will use all the knowledge we've learn so far to make our very own TicTacToe app.
 
 | Topics                           |
@@ -75,48 +73,6 @@ In this workshop, we will learn how to add a splash screen and how to create app
 | Adding an app icon               |
 | Create your own Tic Tac Toe app  |
 
-## 4. Next Level
+# Feedback
 
-`// work in progress`
-
-This workshop is about how to create a more complex app that uses the MapKit framework. We will create a simple app to with two views to save different places on a map using a long press.
-
-| Topics                                    |
-| ----------------------------------------- |
-| Adding a MapView                          |
-| Showing user's location on map            |
-| Saving locations from a long press on map |
-| Showing saved locations from segue        |
-
-## 5. iOS Master
-
-`// work in progress`
-
-Here we will learn about CoreData and how use it to save data between sessions. Also we will learn how to add a settings menu where you can change the colour theme of your app.
-
-| Topics                              |
-| ----------------------------------- |
-| Creating project with CoreData      |
-| Adding CoreData to existing Project |
-| How to save a custom class          |
-| Implementing CoreData in Places App |
-| Adding Settings to your app         |
-
-## The Finish Line
-
-`// work in progress`
-
-If you made it through all of these workshops, then congratulations! You are now a super totally officially certified 🔥 iOS Master. I hope you learned a lot and enjoyed participating in my workshops.
-
-After this I would suggest you keep going, try and make something you think would be cool to make; perhaps make something that you can't find on the app store, or perhaps see if you can replicate an already famous app.
-
-| Project Ideas            |
-| ------------------------ |
-| Temperature Converter    |
-| Calculator               |
-| Emoji Dictionary         |
-| Package Delivery Tracker |
-| Twitter Clone            |
-
-`// todo: add link for feedback`
-If you have any questions, or [feedback]() [good or bad] I would love to hear from you.
+If you have any questions or [feedback](https://riconaranjo.typeform.com/to/xz7Dh8) [good or bad], I would love to hear from you.
