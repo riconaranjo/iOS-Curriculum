@@ -9,6 +9,10 @@ _This workshop is about learning how to code in Swift, using Xcode Playgrounds._
 | Functions    | calling + writing functions        |
 | Playgrounds  | how to play around with Swift code |
 
+You can download a Swift Playgrounds version of this workshop [here](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%201/workshop%201.playground.zip).
+
+---
+
 # 1.1 A Swift Start
 
 This will be a quick introduction into how to write Swift code.
