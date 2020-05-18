@@ -1,7 +1,7 @@
 /*:
  
  # 1. Getting Started with Swift
-
+ 
  _This workshop is about learning how to code in Swift, using Xcode Playgrounds._
  
  ---
@@ -12,6 +12,8 @@
  - **Control flow:** what is it + what is it used for
  - **Functions:** calling + writing functions
  - **Playgrounds:** how to play around with Swift code
+ 
+ You can find an online version of this workshop [here](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%201/Workshop%201.md).
  
  ---
  
