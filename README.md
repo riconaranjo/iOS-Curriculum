@@ -8,7 +8,7 @@ This is a series of **3 workshops** designed to walk you through every step in t
 - [2. Getting All Set-up](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%202/Workshop%202.md)
 - [3. Mastering the Basics](https://github.com/riconaranjo/iOS-Curriculum/blob/master/Workshop%203/Workshop%203.md)
 
-This series of workshops is designed for beginners. Even if you have never created a program before, you should be able to follow along. If you get lost while actually attending the workshops, you can view all the material online and work on it at your own pace at the [GitHub repo](github.com/riconaranjo/iOS-Curriculum/tree/master).
+This series of workshops is designed for beginners. Even if you have never created a program before, you should be able to follow along. If you get lost while actually attending the workshops, you can view all the material online and work on it at your own pace at the [GitHub repo](https://github.com/riconaranjo/iOS-Curriculum).
 
 _If you have any questions or need some help getting through these workshops feel free to get in touch with me at [federico.naranjo@gmail.com](mailto:federico.naranjo+ios@gmail.com)._
 
