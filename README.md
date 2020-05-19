@@ -10,6 +10,10 @@ This is a series of **3 workshops** designed to walk you through every step in t
 
 This series of workshops is designed for beginners. Even if you have never created a program before, you should be able to follow along. If you get lost while actually attending the workshops, you can view all the material online and work on it at your own pace at the [GitHub repo](github.com/riconaranjo/iOS-Curriculum/tree/master).
 
+_If you have any questions or need some help getting through these workshops feel free to get in touch with me at [federico.naranjo@gmail.com](mailto:federico.naranjo+ios@gmail.com)._
+
+---
+
 ## Xcode
 
 For these workshops you will need to download and install [Xcode](https://apps.apple.com/ca/app/xcode/id497799835) beforehand as it can take a long time to download from the App Store.
